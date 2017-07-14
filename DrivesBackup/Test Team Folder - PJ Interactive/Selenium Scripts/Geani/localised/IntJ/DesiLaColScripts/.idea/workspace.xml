@@ -1,0 +1,1601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bbcd2172-1e55-4634-99ca-6dde0123494d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/DesiLaColScripts$Desi.coverage" NAME="Desi Coverage Results" MODIFIED="1491212393539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Product Import XML 14.06.2017.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Product Import XML/Product Import XML 14.06.2017.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="8001" column="40" lean-forward="false" selection-start-line="8001" selection-start-column="40" selection-end-line="8001" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DesiFELOOPTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Desi_FE_LOOP_Script/DesiFELOOPTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5917">
+              <caret line="383" column="75" lean-forward="true" selection-start-line="383" selection-start-column="75" selection-end-line="383" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PIM_Create_Product.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/E2E/PIM_Products/PIM_Create_Product.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1903">
+              <caret line="428" column="0" lean-forward="false" selection-start-line="428" selection-start-column="0" selection-end-line="428" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PIM_Create_Variant.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/E2E/PIM_Products/PIM_Create_Variant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-52">
+              <caret line="254" column="55" lean-forward="true" selection-start-line="254" selection-start-column="55" selection-end-line="254" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Emails.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Desi_FE_LOOP_Script/Emails.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1139">
+              <caret line="33" column="6" lean-forward="false" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="intConf.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Desi_FE_LOOP_Script/intConf.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-548">
+              <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="intXpath.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Desi_FE_LOOP_Script/intXpath.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>&lt;brand tag=&quot;Diane von Furstenberg&quot;/&gt;</find>
+      <find>&lt;product code=&quot;</find>
+      <find>Size 2</find>
+      <find>Size 4</find>
+      <find>_8</find>
+      <find>10&lt;</find>
+      <find>12&lt;</find>
+      <find>DLC0000360</find>
+      <find>DLC0000362</find>
+      <find>DLC0000363</find>
+      <find>DLC0000364</find>
+      <find>DLC0000365</find>
+      <find>DLC0000366</find>
+      <find>DLC0000367</find>
+      <find>&lt;category tag=&quot;DRESS&quot;/&gt;</find>
+      <find>hhttps</find>
+      <find>net=&quot;12975.28&quot;</find>
+      <find>39.95</find>
+      <find>net=&quot;495&quot;</find>
+      <find>DLC0000331</find>
+      <find>DLC0000330</find>
+      <find>_regular</find>
+      <find>https://images.anthropologie.com/is/image/Anthropologie/4130461056348_066_b2</find>
+      <find>&lt;value&gt;maella_off-the-shoulder_tunic_dress</find>
+      <find>maella_off-the-shoulder_tunic_dress_</find>
+      <find>&lt;value&gt;MOSS&lt;/value&gt;</find>
+      <find>&lt;value&gt;Red&lt;/value&gt;</find>
+      <find>DRAPEY SLEEVELESS SCOOP-NECK DRESS</find>
+      <find>drapey_sleeveless_scoop_neck_dress_black_xs</find>
+      <find>drapey_sleeveless_scoop_neck_dress_black_l</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>DLC0000345</replace>
+      <replace>_2</replace>
+      <replace>DLC0000349</replace>
+      <replace>_4</replace>
+      <replace>DLC0000351</replace>
+      <replace>_8&lt;</replace>
+      <replace>DLC0000353</replace>
+      <replace>tag=&quot;DVF&quot;</replace>
+      <replace>_14&lt;</replace>
+      <replace>DLC0000355</replace>
+      <replace>Size 2</replace>
+      <replace>&lt;brand tag=&quot;DVF&quot;/&gt;</replace>
+      <replace>Size 4</replace>
+      <replace>Size 8</replace>
+      <replace>12&lt;</replace>
+      <replace>14&lt;</replace>
+      <replace>DLC0000362</replace>
+      <replace>DLC0000363</replace>
+      <replace>DLC0000364</replace>
+      <replace>DLC0000365</replace>
+      <replace>DLC0000366</replace>
+      <replace>DLC0000367</replace>
+      <replace>DLC0000368</replace>
+      <replace>Diane</replace>
+      <replace>&lt;category tag=&quot;W_DRESS&quot;/&gt;</replace>
+      <replace>https</replace>
+      <replace>net=&quot;12980&quot;</replace>
+      <replace>net=&quot;495.99&quot;</replace>
+      <replace>https://www.localised.com/import/4130461056348_066_b2_2400.jpg</replace>
+      <replace>&lt;value&gt;RED&lt;/value&gt;</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test/java/Desi_FE_Script/intConf.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Desi_FE_Script/_Desi_FE_Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Desi_FE_LOOP_Script/intXpath.java" />
+        <option value="$PROJECT_DIR$/src/test/java/intConf.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Desi_FE_LOOP_Script/_Desi_FE_LOOP_Test.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/Desi_FE_LOOP_Script/Assert.java" />
+        <option value="$PROJECT_DIR$/_Desi_FE_LOOP_Test.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/Desi_FE_LOOP_Script/_Desi_FE_LOOP_Test.java" />
+        <option value="$PROJECT_DIR$/Desi_FE_LOOP_Test.xml" />
+        <option value="$PROJECT_DIR$/DesiFELOOPTest.xml" />
+        <option value="$PROJECT_DIR$/testing.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/Desi_FE_LOOP_Script/Emails.java" />
+        <option value="$PROJECT_DIR$/Logs/Console Logs 2017-04-06 16.01.19.txt" />
+        <option value="$PROJECT_DIR$/Logs/Console Logs 2017-04-06 16.20.10.txt" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/E2E/PIM_Create_Product.java" />
+        <option value="$PROJECT_DIR$/src/test/java/E2E/e2eEmails.java" />
+        <option value="$PROJECT_DIR$/src/test/java/E2E/PIM_Configs.java" />
+        <option value="$PROJECT_DIR$/src/test/java/E2E/PIM_Emails.java" />
+        <option value="$PROJECT_DIR$/src/test/java/E2E/PIM/PIM_xPaths.java" />
+        <option value="$PROJECT_DIR$/src/test/java/E2E/PIM_xPaths.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Desi_FE_LOOP_Script/DesiFELOOPTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/E2E/PIM_Offerings/PIM_Create_Offerings.java" />
+        <option value="$PROJECT_DIR$/src/test/java/E2E/PIM_Offerings/PIM_OfferingsxPaths.java" />
+        <option value="$PROJECT_DIR$/src/test/java/E2E/PIM_Offerings/PIM_OfferingsConfigs.java" />
+        <option value="$PROJECT_DIR$/src/test/java/E2E/PIM_Offerings/PIM_OfferingsEmails.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Desi_FE_LOOP_Script/intConf.java" />
+        <option value="$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-04-10 18.05.41.txt" />
+        <option value="$PROJECT_DIR$/src/test/java/E2E/PIM_Products/PIM_IFDBFAIL.java" />
+        <option value="$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 14.13.29.txt" />
+        <option value="$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 14.20.31.txt" />
+        <option value="$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 14.27.10.txt" />
+        <option value="$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 14.46.33.txt" />
+        <option value="$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 16.32.53.txt" />
+        <option value="$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 17.04.36.txt" />
+        <option value="$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 17.33.43.txt" />
+        <option value="$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-03 11.09.02.txt" />
+        <option value="$PROJECT_DIR$/src/test/java/E2E/PIM_Products/PIM_ProductxPaths.java" />
+        <option value="$PROJECT_DIR$/src/test/java/E2E/PIM_Products/PIM_ProductConfigs.java" />
+        <option value="$PROJECT_DIR$/src/test/java/E2E/PIM_Products/PIM_ProductEmails.java" />
+        <option value="$PROJECT_DIR$/#PRODUCT IMPORT XML/test1.xml" />
+        <option value="$PROJECT_DIR$/phantomjsdriver.log" />
+        <option value="$PROJECT_DIR$/src/test/java/CodeTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/JenkinsLinuxCodeTest.java" />
+        <option value="$PROJECT_DIR$/testng.xml" />
+        <option value="$PROJECT_DIR$/#PRODUCT IMPORT XML/Product Import XML 04.05.2017corrected by Bartek.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/E2E/PIM_Products/PIM_Create_Variant.java" />
+        <option value="$PROJECT_DIR$/src/test/java/E2E/PIM_Products/PIM_Create_Product.java" />
+        <option value="$PROJECT_DIR$/Product Import XML/Product Import XML 12.06.2017 - Copy.xml" />
+        <option value="$PROJECT_DIR$/Product Import XML/Product Import XML 12.06.2017.xml" />
+        <option value="$PROJECT_DIR$/Product Import XML/Product Import XML 14.06.2017.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1374" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Code maturity issuesJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>ThrowablePrintedToSystemOut</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesiLaColScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesiLaColScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesiLaColScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesiLaColScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesiLaColScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesiLaColScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesiLaColScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesiLaColScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="E2E" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesiLaColScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesiLaColScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Desi_FE_LOOP_Script" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesiLaColScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesiLaColScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshots" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesiLaColScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesiLaColScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Product Import XML" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesiLaColScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesiLaColScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Logs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\catalinf\Projects\IntJ\DesiLaColScripts\src\test\java\Desi_FE_LOOP_Script" />
+      <recent name="C:\Users\catalinf\Google Drive\IntelliJ Scripts\DesiLaColScripts\src\test\java" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="drv" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.PIM_Create_Product">
+    <configuration default="false" name="DesiFELOOPTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Desi_FE_LOOP_Script.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="DesiLaColScripts" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Desi_FE_LOOP_Script" />
+      <option name="MAIN_CLASS_NAME" value="Desi_FE_LOOP_Script.DesiFELOOPTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="DesiFELOOPTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Desi_FE_LOOP_Script.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="DesiLaColScripts" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="Desi_FE_LOOP_Script" />
+      <option name="MAIN_CLASS_NAME" value="Desi_FE_LOOP_Script.DesiFELOOPTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="Desi_FE_LOOP_Script in DesiLaColScripts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="DesiLaColScripts" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="directory" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <dir value="$PROJECT_DIR$/src/test/java/Desi_FE_LOOP_Script" />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CodeTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="DesiLaColScripts" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CodeTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="DesiLaColScripts" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="CodeTest" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="test" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="true" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="PIM_Create_Product" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="E2E.PIM_Products.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="DesiLaColScripts" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="E2E.PIM_Products" />
+      <option name="MAIN_CLASS_NAME" value="E2E.PIM_Products.PIM_Create_Product" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Maven.CodeTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.PIM_Create_Product" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.DesiFELOOPTest" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.DesiFELOOPTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.Desi_FE_LOOP_Script in DesiLaColScripts" />
+      <item index="5" class="java.lang.String" itemvalue="TestNG.CodeTest" />
+    </list>
+    <recent_temporary>
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="TestNG.CodeTest" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.DesiFELOOPTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.Desi_FE_LOOP_Script in DesiLaColScripts" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.DesiFELOOPTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bbcd2172-1e55-4634-99ca-6dde0123494d" name="Default" comment="" />
+      <created>1490172009534</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1490172009534</updated>
+    </task>
+    <task id="LOCAL-00079" summary="pim product create progress">
+      <created>1493725078514</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1493725078514</updated>
+    </task>
+    <task id="LOCAL-00080" summary="pim product create progress">
+      <created>1493725853105</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1493725853105</updated>
+    </task>
+    <task id="LOCAL-00081" summary="pim product create progress">
+      <created>1493728126862</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1493728126862</updated>
+    </task>
+    <task id="LOCAL-00082" summary="pim product create progress">
+      <created>1493729364698</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1493729364698</updated>
+    </task>
+    <task id="LOCAL-00083" summary="pim product create progress">
+      <created>1493733434062</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1493733434063</updated>
+    </task>
+    <task id="LOCAL-00084" summary="pim product create progress">
+      <created>1493734030122</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1493734030122</updated>
+    </task>
+    <task id="LOCAL-00085" summary="pim product create progress">
+      <created>1493734090839</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1493734090839</updated>
+    </task>
+    <task id="LOCAL-00086" summary="pim product create progress">
+      <created>1493738764305</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1493738764306</updated>
+    </task>
+    <task id="LOCAL-00087" summary="pim product create progress">
+      <created>1493805308470</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1493805308470</updated>
+    </task>
+    <task id="LOCAL-00088" summary="pim product create progress">
+      <created>1493805367899</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1493805367899</updated>
+    </task>
+    <task id="LOCAL-00089" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493808045825</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1493808045825</updated>
+    </task>
+    <task id="LOCAL-00090" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493891071139</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1493891071139</updated>
+    </task>
+    <task id="LOCAL-00091" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493891120490</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1493891120491</updated>
+    </task>
+    <task id="LOCAL-00092" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493891650898</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1493891650899</updated>
+    </task>
+    <task id="LOCAL-00093" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493892182968</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1493892183006</updated>
+    </task>
+    <task id="LOCAL-00094" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493895756954</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1493895756954</updated>
+    </task>
+    <task id="LOCAL-00095" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493901206974</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1493901207014</updated>
+    </task>
+    <task id="LOCAL-00096" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493902460278</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1493902460278</updated>
+    </task>
+    <task id="LOCAL-00097" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493904298142</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1493904298143</updated>
+    </task>
+    <task id="LOCAL-00098" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493908574107</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1493908574108</updated>
+    </task>
+    <task id="LOCAL-00099" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493910724521</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1493910724521</updated>
+    </task>
+    <task id="LOCAL-00100" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493971371590</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1493971371591</updated>
+    </task>
+    <task id="LOCAL-00101" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493971532423</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1493971532423</updated>
+    </task>
+    <task id="LOCAL-00102" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493975327185</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1493975327185</updated>
+    </task>
+    <task id="LOCAL-00103" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493975348203</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1493975348203</updated>
+    </task>
+    <task id="LOCAL-00104" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493975391758</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1493975391758</updated>
+    </task>
+    <task id="LOCAL-00105" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493977542015</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1493977542015</updated>
+    </task>
+    <task id="LOCAL-00106" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493977806668</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1493977806668</updated>
+    </task>
+    <task id="LOCAL-00107" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493978532506</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1493978532506</updated>
+    </task>
+    <task id="LOCAL-00108" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493978649502</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1493978649502</updated>
+    </task>
+    <task id="LOCAL-00109" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493994782956</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1493994782956</updated>
+    </task>
+    <task id="LOCAL-00110" summary="pim product varinat create progress WIP!!!!!">
+      <created>1493995008332</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1493995008332</updated>
+    </task>
+    <task id="LOCAL-00111" summary="pim product varinat create progress WIP!!!!!">
+      <created>1494502262344</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1494502262344</updated>
+    </task>
+    <task id="LOCAL-00112" summary="pim product varinat create progress WIP!!!!!">
+      <created>1494934025395</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1494934025396</updated>
+    </task>
+    <task id="LOCAL-00113" summary="pim product varinat create progress WIP!!!!!">
+      <created>1494934063891</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1494934063891</updated>
+    </task>
+    <task id="LOCAL-00114" summary="pim product varinat create progress WIP!!!!!">
+      <created>1494934173056</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1494934173056</updated>
+    </task>
+    <task id="LOCAL-00115" summary="pim product varinat create progress WIP!!!!!">
+      <created>1495712661499</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1495712661500</updated>
+    </task>
+    <task id="LOCAL-00116" summary="pim product varinat create progress WIP!!!!!">
+      <created>1495712860512</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1495712860512</updated>
+    </task>
+    <task id="LOCAL-00117" summary="pim product varinat create progress WIP!!!!!">
+      <created>1497254845540</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1497254845541</updated>
+    </task>
+    <task id="LOCAL-00118" summary="pim product varinat create progress WIP!!!!!">
+      <created>1497255313502</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1497255313503</updated>
+    </task>
+    <task id="LOCAL-00119" summary="product xml import">
+      <created>1497261240138</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1497261240139</updated>
+    </task>
+    <task id="LOCAL-00120" summary="product xml import">
+      <created>1497265807351</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1497265807351</updated>
+    </task>
+    <task id="LOCAL-00121" summary="product xml import">
+      <created>1497273819461</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1497273819461</updated>
+    </task>
+    <task id="LOCAL-00122" summary="product xml import">
+      <created>1497275584075</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1497275584076</updated>
+    </task>
+    <task id="LOCAL-00123" summary="product xml import">
+      <created>1497278274237</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1497278274237</updated>
+    </task>
+    <task id="LOCAL-00124" summary="product xml import">
+      <created>1497278312663</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1497278312663</updated>
+    </task>
+    <task id="LOCAL-00125" summary="product xml import">
+      <created>1497431463944</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1497431463945</updated>
+    </task>
+    <task id="LOCAL-00126" summary="product xml import">
+      <created>1497440891692</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1497440891692</updated>
+    </task>
+    <task id="LOCAL-00127" summary="product xml import">
+      <created>1497448122613</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1497448122614</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="PIM_Create_Product - 2017.05.03 at 12h 19m 22s.xml">
+      <configuration name="PIM_Create_Product" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PIM_Create_Product - 2017.05.03 at 12h 20m 02s.xml">
+      <configuration name="PIM_Create_Product" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PIM_Create_Product - 2017.05.03 at 12h 20m 55s.xml">
+      <configuration name="PIM_Create_Product" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PIM_Create_Product - 2017.05.03 at 12h 22m 02s.xml">
+      <configuration name="PIM_Create_Product" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PIM_Create_Product - 2017.05.03 at 12h 30m 45s.xml">
+      <configuration name="PIM_Create_Product" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PIM_Create_Product - 2017.05.03 at 12h 44m 25s.xml">
+      <configuration name="PIM_Create_Product" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PIM_Create_Product - 2017.05.03 at 12h 47m 33s.xml">
+      <configuration name="PIM_Create_Product" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PIM_Create_Product - 2017.05.03 at 12h 49m 15s.xml">
+      <configuration name="PIM_Create_Product" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PIM_Create_Product - 2017.05.03 at 12h 50m 16s.xml">
+      <configuration name="PIM_Create_Product" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PIM_Create_Product - 2017.05.03 at 12h 53m 14s.xml">
+      <configuration name="PIM_Create_Product" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1374" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.50732064" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.49267936" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26573938" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39802632" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32730263" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32072368" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2631579" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="pom edit v7" />
+    <MESSAGE value="message" />
+    <MESSAGE value="testng edit" />
+    <MESSAGE value="creating folders" />
+    <MESSAGE value="testng.xml changes" />
+    <MESSAGE value="pom.xml changes" />
+    <MESSAGE value="some changes" />
+    <MESSAGE value="switch to ff" />
+    <MESSAGE value="WORK DAMINT" />
+    <MESSAGE value="no ss forr headless browser" />
+    <MESSAGE value="random changes" />
+    <MESSAGE value="fixing driver" />
+    <MESSAGE value="xing logs" />
+    <MESSAGE value="phantomJS" />
+    <MESSAGE value="codetest" />
+    <MESSAGE value="some driver changes" />
+    <MESSAGE value="uploading the driver ffs" />
+    <MESSAGE value="chmod 775 try" />
+    <MESSAGE value="chmod" />
+    <MESSAGE value="pom edits" />
+    <MESSAGE value="PIM product create WIP" />
+    <MESSAGE value="small edits" />
+    <MESSAGE value="pim product create progress" />
+    <MESSAGE value="pim product varinat create progress WIP!!!!!" />
+    <MESSAGE value="product xml import" />
+    <option name="LAST_COMMIT_MESSAGE" value="product xml import" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint enabled="true" log-message="true" type="java-exception">
+          <properties />
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="27" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 15.16.38.txt" />
+    <entry file="file://$PROJECT_DIR$/Screenshots/2017-05-02 15.23.24 ppe6 .png" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 15.23.24.txt" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 15.33.33.txt" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 15.36.25.txt" />
+    <entry file="file://$PROJECT_DIR$/Screenshots/2017-05-02 15.37.52 ppe6 .png" />
+    <entry file="file://$PROJECT_DIR$/Screenshots/2017-05-02 16.17.32 ppe6 .png" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 16.25.56.txt" />
+    <entry file="file://$PROJECT_DIR$/Screenshots/2017-05-02 16.25.56 ppe6 .png" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 16.32.53.txt" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 16.43.31.txt" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 16.49.34.txt" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 17.04.36.txt" />
+    <entry file="file://$PROJECT_DIR$/Screenshots/2017-05-02 17.21.08 ppe6 .png" />
+    <entry file="file://$PROJECT_DIR$/Screenshots/2017-05-02 17.21.08 ppe7 .png" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 17.21.08.txt" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 17.28.00.txt" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 17.31.32.txt" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 17.33.43.txt" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 17.36.20.txt" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 17.38.05.txt" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 17.43.12.txt" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 17.45.50.txt" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 17.59.26.txt" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 18.02.12.txt" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 18.05.01.txt" />
+    <entry file="file://$PROJECT_DIR$/Screenshots/2017-05-02 18.10.51 ppe7 .png" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-02 18.10.51.txt" />
+    <entry file="file://$PROJECT_DIR$/Logs/Pim Product Console Logs 2017-05-03 11.09.02.txt" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/E2E/PIM_Products/PIM_ProductConfigs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="28" column="32" lean-forward="false" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/E2E/PIM_Products/PIM_ProductxPaths.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/E2E/PIM_Products/PIM_ProductEmails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="365" column="154" lean-forward="false" selection-start-line="365" selection-start-column="154" selection-end-line="365" selection-end-column="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/#PRODUCT IMPORT XML/test1.xml" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phantomjsdriver.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="5" column="184" lean-forward="true" selection-start-line="5" selection-start-column="103" selection-end-line="5" selection-end-column="184" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logs/Maven Logs .txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/JenkinsLinuxCodeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/#PRODUCT IMPORT XML/Product Import XML 04.05.2017.xml" />
+    <entry file="file://$PROJECT_DIR$/#PRODUCT IMPORT XML/Product Import XML 04.05.2017corrected by Bartek.xml" />
+    <entry file="file://$PROJECT_DIR$/#PRODUCT IMPORT XML/Product Import XML 05.05.2017corrected by Bartek.xml" />
+    <entry file="file://$PROJECT_DIR$/Product Import XML/Product Import XML 05.05.2017corrected by Bartek.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="2799" column="26" lean-forward="false" selection-start-line="2799" selection-start-column="26" selection-end-line="2799" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Product Import XML/Product Import XML 12.06.2017 - Copy.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2550">
+          <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="155" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Product Import XML/import.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/E2E/PIM_Products/PIM_Create_Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1903">
+          <caret line="428" column="0" lean-forward="false" selection-start-line="428" selection-start-column="0" selection-end-line="428" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/E2E/PIM_Products/PIM_Create_Variant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-52">
+          <caret line="254" column="55" lean-forward="true" selection-start-line="254" selection-start-column="55" selection-end-line="254" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Desi_FE_LOOP_Script/DesiFELOOPTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5917">
+          <caret line="383" column="75" lean-forward="true" selection-start-line="383" selection-start-column="75" selection-end-line="383" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Desi_FE_LOOP_Script/Emails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1139">
+          <caret line="33" column="6" lean-forward="false" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Desi_FE_LOOP_Script/intConf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-548">
+          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Desi_FE_LOOP_Script/intXpath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Product Import XML/Product Import XML 14.06.2017.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="8001" column="40" lean-forward="false" selection-start-line="8001" selection-start-column="40" selection-end-line="8001" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>DesiLaColScripts</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: cglib:cglib-nodep:3.2.4</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

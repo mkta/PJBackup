@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Desi_FE_LOOP_Script">
+    <test name="Desi_FE_LOOP_Script">
+        <classes>
+            <class name="Desi_FE_LOOP_Script.intConf"/>
+            <class name="Desi_FE_LOOP_Script.intXpath"/>
+            <class name="Desi_FE_LOOP_Script.DesiFELOOPTest"/>
+            <class name="Desi_FE_LOOP_Script.Assert"/>
+            <class name="Desi_FE_LOOP_Script.Emails"/>
+        </classes>
+    </test> <!--Test-->
+</suite><!--Suite-->
