@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://vfq-preprod.pjmedia.ro/" />
+<title>add phone to basket</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">add phone to basket</td></tr>
+</thead><tbody>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>phoneCount</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>repeat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/en/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=All Handsets</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=All</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=(//*[@id='product-holder']/div/ul/li[*]/div/div[3]/a)</td>
+	<td>phoneNumber</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${phoneNumber}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='product-holder']/div/ul/li[${phoneCount}]/div/h3</td>
+	<td>phoneName</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${phoneName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//*[@id='product-holder']/div/ul/li[${phoneCount}]/div/div[3]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeTextPresent</td>
+	<td>Add to basket</td>
+	<td>OnStock</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${OnStock}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${OnStock}==false</td>
+	<td>oos</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//button[@value='Add to basket']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Continue to next step</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>oos</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${phoneNumber}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${phoneName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${phoneCount}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${OnStock}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.phoneCount++}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>javascript{storedVars.phoneCount == storedVars.phoneNumber + 1}</td>
+	<td>end</td>
+</tr>
+<tr>
+	<td>gotolabel</td>
+	<td>repeat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>end</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

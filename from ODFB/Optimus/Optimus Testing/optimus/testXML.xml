@@ -1,0 +1,132 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.oms.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:createOrder>
+         <authentication>
+            <channelTag>ONLINE</channelTag>
+            <clientTag>BRANDPATH</clientTag>
+            <siteTag>MICROSITE</siteTag>
+            <territoryCode>ROU</territoryCode>
+         </authentication>
+         <orderHeader>
+            <language>RO</language>
+            <orderReference>test</orderReference>
+            <customerOrderReference>testCustomer</customerOrderReference>
+            <placedDate>${=new java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS").format(new Date())}</placedDate>
+            <orderProperties>
+            	<!--1 or more repetitions:-->
+            	<orderProperty>
+	               <name>FIRSTNAME</name>
+	               <value>${#firstName}</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>MIDDLENAME</name>
+	               <value>test12</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>LASTNAME</name>
+	               <value>${#lastName}</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>TITLE</name>
+	               <value>${#title}</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>PHONENUMBER</name>
+	               <value>777test31</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>EMAIL</name>
+	               <value>test4sss2@ccc.ro</value>
+               </orderProperty>
+           </orderProperties>
+            <statusTag>AWAITING_APPROVAL</statusTag>
+            <totalDiscount>1.43</totalDiscount>
+            <totalPrice>100.45</totalPrice>
+            <totalTax>21.44</totalTax>
+            <totalWeight>1.89</totalWeight>
+            <type>STDDELIVERY</type>
+         </orderHeader>
+         <orderPackages>
+         		<orderPackage>
+               <bundleReference>asda</bundleReference>
+               <discount>1.2</discount>
+               <discountType>bgdbgd</discountType>
+               <!--Optional:-->
+               <offeringId>asdas</offeringId>
+               <packageItems>
+		         	   <!--1 or more repetitions:-->
+		         	   <packageItem>
+			            <price>24.45</price>
+			            <!--Optional:-->
+	                     <productDescription>asdas</productDescription>
+	                     <productId>3</productId>
+			            <!--Zero or more repetitions:-->
+			            <itemProperties>
+			               <!--Zero or more repetitions:-->
+		                  	<itemProperty>
+		                       <name>WEIGHT</name>
+		                       <value>12.34</value>
+		                  	</itemProperty>
+		                  	<itemProperty>
+		                       <name>bla</name>
+		                       <value>asdsad</value>
+		                  	</itemProperty>
+		                  	<itemProperty>
+		                       <name>COLOR</name>
+		                       <value>Blue</value>
+		                  	</itemProperty>
+		                  	<itemProperty>
+		                       <name>COLOR</name>
+		                       <value>White</value>
+		                  	</itemProperty>
+		                  	<itemProperty>
+		                       <name>PIECES</name>
+		                       <value>3</value>
+		                  	</itemProperty>
+		                  	<itemProperty>
+		                       <name>LENGTH</name>
+		                       <value>8</value>
+		                  	</itemProperty>
+			            </itemProperties>
+			            <quantity>4</quantity>
+		                <quantityUnitId>2</quantityUnitId>
+		                <tax>0.4</tax>
+		                <taxRate>2</taxRate>
+		                <type>HANDSET</type>
+			        </packageItem>
+               </packageItems>
+               <price>20</price>
+               <!--Optional:-->
+               <quantity>1</quantity>
+               <tax>33</tax>
+               <!--Optional:-->
+               <weight>7</weight>
+            </orderPackage>
+	    </orderPackages>
+         <orderAddresses>
+              <!--1 or more repetitions:-->
+	         <orderAddress>
+	            <city>${#city}</city>
+	            <line1>43 High Street</line1>
+	            <!--Optional:-->
+	            <line2>Corner building</line2>
+	            <!--Optional:-->
+	            <postcode>${postcode}</postcode>
+	            <!--Optional:-->
+	            <region>Bucks</region>
+	            <territoryCode>ROU</territoryCode>
+	            <type>BILLING</type>
+	         </orderAddress>
+	    </orderAddresses>
+         <!--Optional:-->
+         <orderComments>
+            <!--1 or more repetitions:-->
+            <orderComment>
+               <comment>YES Comment!</comment>
+               <type>POSITIVE</type>
+            </orderComment>
+         </orderComments>
+      </sei:createOrder>
+   </soapenv:Body>
+</soapenv:Envelope>

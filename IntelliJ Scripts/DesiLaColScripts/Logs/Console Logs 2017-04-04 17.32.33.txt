@@ -1,0 +1,51 @@
+Set drivers property
+End of drivers property
+Initiate gmail
+End of initiate email
+Initiate Variables
+Initiate date
+Initiate drivers array
+Initiate contry array
+Initiate payment URLS
+Initiate Credit cards array
+Initiate some variables
+Initiate order Reference array
+Initiate product names array
+end of variables
+Starting Test
+Test Loop number : 10
+Driver loop number : 2
+Starting Chrome Driver
+Country Loop number : 2
+Country number :us
+Country name :us
+Payment Loop number : 4
+Payment number :4
+Product Loop number : 9
+Product number :1
+https://tst.bpc-aws.com/ Initiated
+ Site name is : Home | Desi La Col USA
+Expected Site name is : DESI LA COL USA
+PLP Opened
+Product Name for product loop : 9 = AIR JORDAN 11 - SIZE 8
+Product on stock
+Basket Element is Absent, try add to basket again
+Basket Opened
+Product check failed
+Checkout Opened
+Payment redirect ok
+Payment step 2 ok
+Order complete
+Order Reference for product loop : 9 = YUNUJ-ZKPVNT
+No Screenshot
+End of product loops
+All order numbers = [null, null, null, null, null, null, null, null, null, YUNUJ-ZKPVNT]
+All products = [null, null, null, null, null, null, null, null, null, AIR JORDAN 11 - SIZE 8]
+Test product loops done
+Sending email
+Email sent
+End of payment loops
+End of country loops
+End of driver loops
+End of test loops
+Ending Test

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://pimtest.brandpath.com:8080/" />
+<title>Send Email With Results</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Send Email With Results</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://mail.google.com/mail/h/</td>
+	<td></td>
+</tr>
+<!--verify homepage-->
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>xpath=html/body/div[1]/div/div[2]/a[2]</td>
+	<td>frontpage</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${frontpage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${frontpage}==false</td>
+	<td>nofrontpage</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=gmail-sign-in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>nofrontpage</td>
+	<td></td>
+</tr>
+<!--verify login-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>xpath=html/body/div/div[2]/div[1]/h2</td>
+	<td>login</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${login}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${login}==false</td>
+	<td>nologin</td>
+</tr>
+<!--verify email-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>id=next</td>
+	<td>email</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${email}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${email}==false</td>
+	<td>noemail</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Email</td>
+	<td>catalin.fleancu@pj-interactive.ro</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=signIn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>noemail</td>
+	<td></td>
+</tr>
+<!--pswrd-->
+<tr>
+	<td>type</td>
+	<td>id=Passwd</td>
+	<td>Dorel123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=signIn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>nologin</td>
+	<td></td>
+</tr>
+<!--reopen html gmail-->
+<tr>
+	<td>open</td>
+	<td>http://mail.google.com/mail/h/</td>
+	<td></td>
+</tr>
+<!--compose email-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Compose Mail</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=to</td>
+	<td>catalin.fleancu@pj-interactive.ro</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=cc</td>
+	<td>stefan.chiosea@pj-interactive.ro, ionut.delcea@pj-interactive.ro</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=subject</td>
+	<td>${nameDate} - Selenium Script Results </td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=body</td>
+	<td>Results: <br /><br /><br /><br />***Product Create***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />Product name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${productName}&nbsp;&nbsp;&nbsp;<br /><br />Product Sku&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PSKU-${skuDate}&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />ProductStatus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${roductStatus}&nbsp;&nbsp;&nbsp;<br /><br />Stock level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${stock}&nbsp;&nbsp;<br /><br />ProductPID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${PpID}&nbsp;&nbsp;<br /><br /><br /><br />***Product Variant Create***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />ProductVariant1 Name&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${v1productName} <br /><br />ProductVariant1 Sku&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PV1SKU-${v1skuDate} <br /><br />ProductVariant1 Sts&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${vroductStatus} <br /><br />VarProductPID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${vPpID}&nbsp;&nbsp;<br /><br /><br /><br />***Offering Create***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />Offering Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${offeringName}&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />Offering Sku&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OSKU-${skuDateOffering}&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />OfferingStatus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${offStatus}&nbsp;&nbsp;&nbsp;<br /><br />OfferingPID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${OffpID}&nbsp;&nbsp;<br /><br /><br /><br />***Offering Variant Create***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />OfferingVar name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${VofferingName} <br /><br />OfferingVarSku&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OV1SKU-${vskuDateOffering} <br /><br />OferingVarStatus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${voffStatus} <br /><br />VarOfferingPID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${vOffpID}&nbsp;&nbsp;<br /><br /><br /><br />***Upsell Offering 1 Create***<br /><br />&nbsp;&nbsp;&nbsp;<br /><br />UpsellOffering Name&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${uofferingName}&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />UpsellOffering Sku&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OSKU-${skuDateuOffering} <br /><br />UpsellOfferingStatus&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${uoffStatus} <br /><br />UpsellOfferingPID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${upsellOffpID}&nbsp;&nbsp;<br /><br /><br /><br />***Upsell Offering 2 Create***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />UpsellOffering2 Name&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${uofferingName2}&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />UpsellOffering2 Sku&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OSKU2-${skuDateuOffering2} <br /><br />UpsellOffering2Status =&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${uoffStatus2} <br /><br />UpsellOffering2PID&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${upsellOffpID2}&nbsp;&nbsp;<br /><br /><br /><br />***Upsell Offering 3 Create***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />UpsellOffering3 Name&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${uofferingName3}&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />UpsellOffering3 Sku&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OSKU3-${skuDateuOffering3} <br /><br />UpsellOffering3Status =&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${uoffStatus3} <br /><br />UpsellOffering3PID&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${upsellOffpID3}&nbsp;&nbsp;<br /><br /><br /><br />***Upsell Offering 4 Create***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />UpsellOffering4 Name&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${uofferingName4}&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />UpsellOffering4 Sku&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OSKU4-${skuDateuOffering4} <br /><br />UpsellOffering4Status =&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${uoffStatus4} <br /><br />UpsellOffering4PID&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${upsellOffpID4}&nbsp;&nbsp;<br /><br /><br /><br />***Cash Refresh***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />OriginalOfferingNR&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${ono} <br /><br />NewOfferingNR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${nno}&nbsp;&nbsp;<br /><br /><br /><br />***Web Part - PayPall - no same shipping addres***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />Web Script Start Time =&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${WebScriptStartTime} <br /><br />Variant on listing?&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${v} <br /><br />BasketProductName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${basketProduct}&nbsp;&nbsp;<br /><br />SubTotal Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${sprice}&nbsp;&nbsp;<br /><br />VoucherMsg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${vouchermsg}&nbsp;&nbsp;<br /><br />VoucherDiscout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${vouchdis}&nbsp;&nbsp;<br /><br />FinalPrice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${fprice}&nbsp;&nbsp;<br /><br />PayPallPrice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${paypallprice}&nbsp;&nbsp;<br /><br />WebScriptRedirectToPayPallTime=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${WebScriptRedirectToPayPallTime} <br /><br />WebScriptPayPallFinishTime=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${WebScriptPayPallFinishTime} <br /><br />Order Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${OrderNumber}&nbsp;&nbsp;<br /><br /><br /><br />***Web Part - WprldPay - no same shipping addres***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />Web Script Start Time =&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${WebScriptStartTime2} <br /><br />Variant on listing?&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${v2} <br /><br />BasketProductName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${basketProduct2}&nbsp;&nbsp;<br /><br />SubTotal Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${sprice2}&nbsp;&nbsp;<br /><br />VoucherMsg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${vouchermsg2}&nbsp;&nbsp;<br /><br />VoucherDiscout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${vouchdis2}&nbsp;&nbsp;<br /><br />FinalPrice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${fprice2}&nbsp;&nbsp;<br /><br />Order Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${OrderNumber2}&nbsp;&nbsp;<br /><br /><br /><br />***Web Part - WprldPay - same shipping addres***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />Web Script Start Time =&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${WebScriptStartTime3} <br /><br />Variant on listing?&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${v3} <br /><br />BasketProductName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${basketProduct3}&nbsp;&nbsp;<br /><br />SubTotal Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${sprice3}&nbsp;&nbsp;<br /><br />VoucherMsg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${vouchermsg3}&nbsp;&nbsp;<br /><br />VoucherDiscout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${vouchdis3}&nbsp;&nbsp;<br /><br />FinalPrice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${fprice3}&nbsp;&nbsp;<br /><br />Order Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${OrderNumber3}&nbsp;&nbsp;<br /><br /><br /><br />***Web Part - WprldPay -tetra- same shipping addres***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />Web Script Start Time =&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${WebScriptStartTimelaw} <br /><br />BasketProductName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${basketProductlaw}&nbsp;&nbsp;<br /><br />SubTotal Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${spricelaw}&nbsp;&nbsp;<br /><br />VoucherMsg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${vouchermsglaw}&nbsp;&nbsp;<br /><br />VoucherDiscout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${vouchdislaw}&nbsp;&nbsp;<br /><br />FinalPrice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${fpricelaw}&nbsp;&nbsp;<br /><br />Order Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${OrderNumberlaw}&nbsp;&nbsp;<br /><br /><br /><br />***Web Part - PayPall - same shipping addres***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />Web Script Start Time =&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${WebScriptStartTime4} <br /><br />Variant on listing?&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${v4} <br /><br />BasketProductName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${basketProduct4}&nbsp;&nbsp;<br /><br />SubTotal Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${sprice4}&nbsp;&nbsp;<br /><br />VoucherMsg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${vouchermsg4}&nbsp;&nbsp;<br /><br />VoucherDiscout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${vouchdis4}&nbsp;&nbsp;<br /><br />FinalPrice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${fprice4}&nbsp;&nbsp;<br /><br />Order Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${OrderNumber4}&nbsp;&nbsp;<br /><br /><br /><br />***Web Part - PayPall -tetra- same shipping addres***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />Web Script Start Time =&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${WebScriptStartTimelap} <br /><br />BasketProductName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${basketProductlap}&nbsp;&nbsp;<br /><br />SubTotal Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${spricelap}&nbsp;&nbsp;<br /><br />VoucherMsg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${vouchermsglap}&nbsp;&nbsp;<br /><br />VoucherDiscout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${vouchdislap}&nbsp;&nbsp;<br /><br />FinalPrice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${fpricelap}&nbsp;&nbsp;<br /><br />Order Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${OrderNumberlap}&nbsp;&nbsp;<br /><br /><br /><br />***Oms Part - PayPall - Manual Approve***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />Order Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${OrderNumber} <br /><br />OrderCreateDate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${ordercreatedate} <br /><br />Oder Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Status} <br /><br />Oder Status After Schedule Task&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Statuss}&nbsp;&nbsp;<br /><br /><br /><br />***Oms Part - WorldPay - Manual Approve***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />Order Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${OrderNumber2} <br /><br />OrderCreateDate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${ordercreatedate2} <br /><br />Oder Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Status2} <br /><br />Oder Status After Schedule Task&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Statuss2}&nbsp;&nbsp;<br /><br /><br /><br />***Oms Part - WorldPay - Automatic Approve***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />Order Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${OrderNumber3} <br /><br />OrderCreateDate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${ordercreatedate3} <br /><br />Oder Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Status3} <br /><br />Oder Status After Schedule Task&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Statuss3}&nbsp;&nbsp;<br /><br /><br /><br />***Oms Part - PayPall - Automatic Approve***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />Order Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${OrderNumber4} <br /><br />OrderCreateDate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${ordercreatedate4} <br /><br />Oder Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Status4} <br /><br />Oder Status After Schedule Task&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Statuss4}&nbsp;&nbsp;<br /><br /><br /><br />***Oms Part - WorldPay -Tetra- Automatic Approve***<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />Order Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${OrderNumberlaw} <br /><br />OrderCreateDate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${ordercreatedatelaw} <br /><br />Oder Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Statuslaw} <br /><br />Oder Status After Schedule Task&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Statusslaw}&nbsp;&nbsp;<br /><br /><br /><br />***Oms Part - PayPall - Tetra- Automatic Approve***<br /><br />&nbsp;&nbsp;&nbsp;<br /><br />Order Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${OrderNumberlap} <br /><br />OrderCreateDate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${ordercreatedatelap} <br /><br />Oder Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Statuslap} <br /><br />Oder Status After Schedule Task&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Statusslap}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>document.f.nvp_bu_send[1]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

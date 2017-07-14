@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="TS1-Prepaid-Freenumber-NoPrivileges-Nophone-NoAccessories.html">TS1-Prepaid-Freenumber-NoPrivileges-Nophone-NoAccessories</a></td></tr>
+<tr><td><a href="TS2-Prepaid-StarNumber-NoPrivileges-Nophone-NoAccessories.html">TS2-Prepaid-StarNumber-NoPrivileges-Nophone-NoAccessories</a></td></tr>
+<tr><td><a href="TS3-Prepaid-Freenumber-Privileges-Nophone-NoAccessories.html">TS3-Prepaid-Freenumber-Privileges-Nophone-NoAccessories</a></td></tr>
+<tr><td><a href="TS4-Prepaid-StarNumber-Privileges-Nophone-NoAccessories.html">TS4-Prepaid-StarNumber-Privileges-Nophone-NoAccessories</a></td></tr>
+<tr><td><a href="TS5-Prepaid-Freenumber-NoPrivileges-Phone-NoAccessories.html">TS5-Prepaid-Freenumber-NoPrivileges-Phone-NoAccessories</a></td></tr>
+<tr><td><a href="TS6-Prepaid-StarNumber-NoPrivileges-Phone-NoAccessories.html">TS6-Prepaid-StarNumber-NoPrivileges-Phone-NoAccessories</a></td></tr>
+<tr><td><a href="TS7-Prepaid-Freenumber-NoPrivileges-Phone-Accessories.html">TS7-Prepaid-Freenumber-NoPrivileges-Phone-Accessories</a></td></tr>
+<tr><td><a href="TS8-Prepaid-StarNumber-NoPrivileges-Phone-Accessories.html">TS8-Prepaid-StarNumber-NoPrivileges-Phone-Accessories</a></td></tr>
+<tr><td><a href="TS9-Prepaid-Freenumber-Privileges-Phone-Accessories.html">TS9-Prepaid-Freenumber-Privileges-Phone-Accessories</a></td></tr>
+<tr><td><a href="TS10-Prepaid-StarNumber-Privileges-Phone-Accessories.html">TS10-Prepaid-StarNumber-Privileges-Phone-Accessories</a></td></tr>
+<tr><td><a href="TS11-Red-Freenumber-NoPrivilege-Nophone-NoAccessories.html">TS11-Red-Freenumber-NoPrivilege-Nophone-NoAccessories</a></td></tr>
+<tr><td><a href="TS12-Red-StarNumber-NoPrivilege-Nophone-NoAccessories.html">TS12-Red-StarNumber-NoPrivilege-Nophone-NoAccessories</a></td></tr>
+<tr><td><a href="TS13-Red-Freenumber-noPrivilege-Phone-NoAccessories.html">TS13-Red-Freenumber-noPrivilege-Phone-NoAccessories</a></td></tr>
+<tr><td><a href="TS14-Red-StarNumberr-noPrivilege-Phone-NoAccessories.html">TS14-Red-StarNumberr-noPrivilege-Phone-NoAccessories</a></td></tr>
+<tr><td><a href="TS15-Red-Freenumber-noPrivilege-Phone-Accessories.html">TS15-Red-Freenumber-noPrivilege-Phone-Accessories</a></td></tr>
+<tr><td><a href="TS16-Red-StarNumber-noPrivilege-Phone-Accessories.html">TS16-Red-StarNumber-noPrivilege-Phone-Accessories</a></td></tr>
+<tr><td><a href="TS17-Falla-Freenumber-NoPrivilege-Nophone-NoAccessories.html">TS17-Falla-Freenumber-NoPrivilege-Nophone-NoAccessories</a></td></tr>
+<tr><td><a href="TS18-Falla-StarNumber-NoPrivilege-Nophone-NoAccessories.html">TS18-Falla-StarNumber-NoPrivilege-Nophone-NoAccessories</a></td></tr>
+<tr><td><a href="TS19-Falla-Freenumber-NoPrivilege-Phone-NoAccessories.html">TS19-Falla-Freenumber-NoPrivilege-Phone-NoAccessories</a></td></tr>
+<tr><td><a href="TS20-Falla-StarNumber-NoPrivilege-Phone-NoAccessories.html">TS20-Falla-StarNumber-NoPrivilege-Phone-NoAccessories</a></td></tr>
+<tr><td><a href="TS21-Falla-Freenumber-NoPrivilege-Phone-Accessories.html">TS21-Falla-Freenumber-NoPrivilege-Phone-Accessories</a></td></tr>
+<tr><td><a href="TS22-Falla-StarNumber-NoPrivilege-Phone-Accessories.html">TS22-Falla-StarNumber-NoPrivilege-Phone-Accessories</a></td></tr>
+<tr><td><a href="TS23-Phone-NoPlan-NoPrivilege-NoAccessories.html">TS23-Phone-NoPlan-NoPrivilege-NoAccessories</a></td></tr>
+<tr><td><a href="TS24-Phone-NoPlan-NoPrivilege-Accessories.html">TS24-Phone-NoPlan-NoPrivilege-Accessories</a></td></tr>
+<tr><td><a href="TS25-Phone-Plan-FreeNumber-NoPrivilege-NoAccessories.html">TS25-Phone-Plan-FreeNumber-NoPrivilege-NoAccessories</a></td></tr>
+<tr><td><a href="TS26-Phone-Plan-StarNumber-NoPrivilege-NoAccessories.html">TS26-Phone-Plan-StarNumber-NoPrivilege-NoAccessories</a></td></tr>
+<tr><td><a href="TS27-BestDeals-NoPlan-NoAccessories.html">TS27-BestDeals-NoPlan-NoAccessories</a></td></tr>
+<tr><td><a href="TS28-BestDeals-NoPlan-Accessories.html">TS28-BestDeals-NoPlan-Accessories</a></td></tr>
+<tr><td><a href="TS29-BestDeals-Plan-NoAccessories.html">TS29-BestDeals-Plan-NoAccessories</a></td></tr>
+</tbody></table>
+</body>
+</html>

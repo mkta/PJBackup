@@ -1,0 +1,3 @@
+Start test
+Test Loop number : 10
+Starting Chrome Driver

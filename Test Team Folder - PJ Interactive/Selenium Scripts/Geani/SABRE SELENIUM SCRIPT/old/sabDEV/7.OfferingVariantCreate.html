@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://pimtest.brandpath.com:8080/" />
+<title>OfferingVariantCreate</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">OfferingVariantCreate</td></tr>
+</thead><tbody>
+<tr>
+	<td>store</td>
+	<td>javascript{new Date().getFullYear() + &quot;-&quot; + (new Date().getMonth() +1) + &quot;-&quot; + new Date().getDate().toString() + &quot;&quot;+ &quot;_&quot;+new Date().getHours()+&quot;&quot; + new Date().getMinutes() + &quot;&quot; + new Date().getSeconds()}</td>
+	<td>ov1ScriptDate</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${ov1ScriptDate}</td>
+	<td>VofferingName</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${ov1ScriptDate}</td>
+	<td>vskuDateOffering</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${ov1ScriptDate}</td>
+	<td>voffStatus</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${ov1ScriptDate}</td>
+	<td>vOffpID</td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://sabtstpim.brandpath.net/pim-web/</td>
+	<td></td>
+</tr>
+<!--LogIn Present?-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>xpath=//*[@id='kc-login']</td>
+	<td>LogIn</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>LogIn = ${LogIn}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${LogIn}==false</td>
+	<td>noLogin</td>
+</tr>
+<!--LogIn Data-->
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>Dorel123456</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>catalinf</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=rememberMe</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=kc-login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>noLogin</td>
+	<td></td>
+</tr>
+<!--Go To Offering Listing-->
+<tr>
+	<td>click</td>
+	<td>//li[@id='0_2']/a/span[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=html/body/div[2]/div[1]/div/form/div/div/div/div/div/ul/li[3]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<!--Search for Offering Product-->
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div/div[1]/div[1]/span/input</td>
+	<td>${offeringName}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div/div[2]/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--Open Searched Offering-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[3]/div[2]/table/tbody/tr/td[10]/a/img</td>
+	<td></td>
+</tr>
+<!--Create Draft-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[1]/div/div[3]/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--Go to variants-->
+<tr>
+	<td>click</td>
+	<td>link=Variants</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[4]/div[3]/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--Base name-->
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[31]/div[2]/form/table/tbody/tr[1]/td/table/tbody/tr/td[2]/input</td>
+	<td>${offeringName}</td>
+</tr>
+<!--VarName-->
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[31]/div[2]/form/table/tbody/tr[2]/td/div/div/table/tbody/tr/td[1]/input</td>
+	<td>V1-${offeringName}</td>
+</tr>
+<!--VarSku-->
+<tr>
+	<td>store</td>
+	<td>javascript{new Date().getFullYear() + &quot;&quot; + (new Date().getMonth() +1) + &quot;&quot; + new Date().getDate().toString() + &quot;&quot;+ &quot;&quot;+new Date().getHours()+&quot;&quot; + new Date().getMinutes() + &quot;&quot; + new Date().getSeconds()}</td>
+	<td>vskuDateOffering</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[31]/div[2]/form/table/tbody/tr[2]/td/div/div/table/tbody/tr/td[2]/input</td>
+	<td>OV1SKU-${vskuDateOffering}</td>
+</tr>
+<!--CreateVar-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[31]/div[2]/form/table/tbody/tr[3]/td/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>15000</td>
+	<td></td>
+</tr>
+<!--Go to variants-->
+<tr>
+	<td>click</td>
+	<td>link=Variants</td>
+	<td></td>
+</tr>
+<!--OpenCreatedVar-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[4]/div[4]/div/div/div/div[1]/table/tbody/tr/td[5]/table/tbody/tr/td[1]/button</td>
+	<td></td>
+</tr>
+<!--EditVar-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[1]/div/div[3]/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<!--Offering Teaser-->
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[1]/div/div[1]/table[2]/tbody/tr[2]/td/input</td>
+	<td>Offering teaser Offering teaser Offering teaser Offering teaser Offering teaser Offering teaser Offering teaser Offering teaser </td>
+</tr>
+<!--Offering Description-->
+<tr>
+	<td>runScript</td>
+	<td>$('.ui-editor textarea').show()</td>
+	<td></td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[1]/div/div[1]/table[3]/tbody/tr[2]/td/div/div/textarea</td>
+	<td>focus</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[1]/div/div[1]/table[3]/tbody/tr[2]/td/div/div/textarea</td>
+	<td>&lt;center&gt;&lt;img src=&quot;https://www.w3.org/Graphics/PNG/alphatest.png&quot;&gt; &lt;br&gt; Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;&lt;/center&gt;&lt;br&gt;&lt;center&gt;&lt;img src=&quot;https://www.w3.org/Graphics/PNG/alphatest.png&quot;&gt; &lt;br&gt; Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;&lt;/center&gt;&lt;br&gt;&lt;center&gt;&lt;img src=&quot;https://www.w3.org/Graphics/PNG/alphatest.png&quot;&gt; &lt;br&gt; Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;Offering Description&nbsp;&nbsp;&lt;/center&gt;</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$('.ui-editor textarea').hide()</td>
+	<td></td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[1]/div/div[1]/table[3]/tbody/tr[2]/td/div/div/textarea</td>
+	<td>blur</td>
+</tr>
+<!--Add SEO-->
+<tr>
+	<td>click</td>
+	<td>link=Details</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[2]/div/table/tbody/tr/td/div[3]/div/div/div[1]/div/table/tbody/tr/td[2]/input</td>
+	<td>V1-${offeringName}</td>
+</tr>
+<!--add promo url-->
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[2]/div/table/tbody/tr/td/div[3]/div/div/div[2]/div/table/tbody/tr[2]/td[2]/input</td>
+	<td>V1-${offeringName}-promoURL</td>
+</tr>
+<!--Go to pricelist-->
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Price Lists')]</td>
+	<td></td>
+</tr>
+<!--Select RRP and Was price-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[5]/div/div[1]/div/div[1]/div[1]/div/div[3]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[29]/div[2]/ul/li[2]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[29]/div[2]/ul/li[4]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<!--Chekc pricelist without offerings-->
+<!--Select UK site-->
+<!--Search-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[5]/div/div[1]/div/div[3]/button</td>
+	<td></td>
+</tr>
+<!--Add prices-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[5]/div/div[2]/div[1]/table/tbody/tr/td[4]/input</td>
+	<td>900</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[5]/div/div[2]/div[1]/table/tbody/tr/td[5]/input</td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[5]/div/div[2]/div[1]/table/tbody/tr/td[6]/input</td>
+	<td>600</td>
+</tr>
+<!--Go to assets-->
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Assets')]</td>
+	<td></td>
+</tr>
+<!--remove main assets-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[3]/div/table/tbody/tr[1]/td[1]/div/div/ul/li[1]/table/tbody/tr/td[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[19]/div[2]/form/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[3]/div/table/tbody/tr[1]/td[1]/div/div/ul/li[1]/table/tbody/tr/td[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[19]/div[2]/form/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[3]/div/table/tbody/tr[1]/td[1]/div/div/ul/li[1]/table/tbody/tr/td[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[19]/div[2]/form/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--add new assets-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[3]/div/table/tbody/tr/td[1]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--waitForElementPresent-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=assetDialogForm:sourceFileNameInput</td>
+	<td></td>
+</tr>
+<!--Asset name-->
+<tr>
+	<td>label</td>
+	<td>noinput</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=assetDialogForm:sourceFileNameInput</td>
+	<td>GSSku-${skuDate}</td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>id=assetDialogForm:sourceFileNameInput</td>
+	<td>13</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=assetDialogForm:sourceFileNameInput</td>
+	<td>13</td>
+</tr>
+<!--uploadloop-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>//input[@type='file'] </td>
+	<td>input</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${input}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${input}==false</td>
+	<td>noinput</td>
+</tr>
+<!--Upload asset-->
+<tr>
+	<td>type</td>
+	<td>//input[@type='file'] </td>
+	<td>C:\Users\catalinf\OneDrive for Business\@prodcut images\ScriptImages\GS5BluVzn_600x600_xlarge_grp.jpg</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>9000</td>
+	<td></td>
+</tr>
+<!--Save asset-->
+<tr>
+	<td>click</td>
+	<td>id=assetDialogForm:editCreate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--Second Asset name-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[3]/div/table/tbody/tr[1]/td[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>noinput2</td>
+	<td></td>
+</tr>
+<!--waitForElementPresent-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=assetDialogForm:sourceFileNameInput</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=assetDialogForm:sourceFileNameInput</td>
+	<td>GSSku-${skuDate}1</td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>id=assetDialogForm:sourceFileNameInput</td>
+	<td>13</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=assetDialogForm:sourceFileNameInput</td>
+	<td>13</td>
+</tr>
+<!--uploadloop-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>//input[@type='file'] </td>
+	<td>input</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${input}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${input}==false</td>
+	<td>noinput2</td>
+</tr>
+<!--Upload second asset-->
+<tr>
+	<td>type</td>
+	<td>//input[@type='file'] </td>
+	<td>C:\Users\catalinf\OneDrive for Business\@prodcut images\ScriptImages\GS5Blk_600x600_xlarge_1 - Copy.jpg</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>9000</td>
+	<td></td>
+</tr>
+<!--Save second asset-->
+<tr>
+	<td>click</td>
+	<td>id=assetDialogForm:editCreate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--third Asset name-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[3]/div/table/tbody/tr[1]/td[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>noinput3</td>
+	<td></td>
+</tr>
+<!--waitForElementPresent-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=assetDialogForm:sourceFileNameInput</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=assetDialogForm:sourceFileNameInput</td>
+	<td>GSSku-${skuDate}2</td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>id=assetDialogForm:sourceFileNameInput</td>
+	<td>13</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=assetDialogForm:sourceFileNameInput</td>
+	<td>13</td>
+</tr>
+<!--uploadloop-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>//input[@type='file'] </td>
+	<td>input</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${input}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${input}==false</td>
+	<td>noinput3</td>
+</tr>
+<!--Upload thied asset-->
+<tr>
+	<td>type</td>
+	<td>//input[@type='file'] </td>
+	<td>C:\Users\catalinf\OneDrive for Business\@prodcut images\ScriptImages\GS5Blk_600x600_xlarge_cr_1 - Copy.jpg</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>9000</td>
+	<td></td>
+</tr>
+<!--Save third asset-->
+<tr>
+	<td>click</td>
+	<td>id=assetDialogForm:editCreate</td>
+	<td></td>
+</tr>
+<!--Go to general-->
+<tr>
+	<td>click</td>
+	<td>link=General</td>
+	<td></td>
+</tr>
+<!--Save-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[1]/div/div[3]/button[2]</td>
+	<td></td>
+</tr>
+<!--Publish-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[1]/div/div[3]/button[1]</td>
+	<td></td>
+</tr>
+<!--Store VOffering name-->
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>V1-${offeringName}</td>
+	<td>VofferingName</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${VofferingName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>OV1SKU-${vskuDateOffering}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='main-content']/h1</td>
+	<td>vOfferinfStatus1</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>vosection1</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['vOfferinfStatus1'].split('[')[storedVars['vosection1']]}</td>
+	<td>vorf</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>vosection2</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['vorf'].split(']')[storedVars['vosection2']]}</td>
+	<td>voffStatus</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${voffStatus}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>ScriptRun - ${ov1ScriptDate}</td>
+	<td>VofferingName</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[1]/div/div[1]/input[3]</td>
+	<td>vOffpID</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${vOffpID}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeTextPresent</td>
+	<td>Published v.1</td>
+	<td>ovsv</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${ovsv}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

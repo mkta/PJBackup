@@ -1,0 +1,147 @@
+2016/07/28 17:26:38 INFO  - jmeter.util.JMeterUtils: Setting Locale to en_US 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: Loading user properties from: C:\Users\catalinf\Google Drive\###Test Team Folder\apache-jmeter-3.0\bin\user.properties 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: Loading system properties from: C:\Users\catalinf\Google Drive\###Test Team Folder\apache-jmeter-3.0\bin\system.properties 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: Copyright (c) 1998-2016 The Apache Software Foundation 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: Version 3.0 r1743807 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: java.version=1.8.0_65 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: java.vm.name=Java HotSpot(TM) Client VM 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: os.name=Windows 10 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: os.arch=x86 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: os.version=10.0 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: file.encoding=Cp1252 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: Max memory     =259522560 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: Available Processors =4 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: Default Locale=English (United States) 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: JMeter  Locale=English (United States) 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: JMeterHome=C:\Users\catalinf\Google Drive\###Test Team Folder\apache-jmeter-3.0 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: user.dir  =C:\Users\catalinf\Google Drive\###Test Team Folder\apache-jmeter-3.0\bin 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: PWD       =C:\Users\catalinf\Google Drive\###Test Team Folder\apache-jmeter-3.0\bin 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: IP: 10.41.3.129 Name: L10-GeaniF FullName: L10-GeaniF.central.local 
+2016/07/28 17:26:38 INFO  - jmeter.gui.action.LookAndFeelCommand: Using look and feel: javax.swing.plaf.metal.MetalLookAndFeel [Metal, CrossPlatform] 
+2016/07/28 17:26:38 INFO  - jmeter.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties 
+2016/07/28 17:26:40 INFO  - jmeter.engine.util.CompoundVariable: Note: Function class names must contain the string: '.functions.' 
+2016/07/28 17:26:40 INFO  - jmeter.engine.util.CompoundVariable: Note: Function class names must not contain the string: '.gui.' 
+2016/07/28 17:26:40 WARN  - org.jmeterplugins.repository.PluginManagerMenuCreator: Was unable to install pmgr cmdline tool 
+2016/07/28 17:26:42 INFO  - org.jmeterplugins.repository.PluginManager: Plugins Status: [jmeter-ftp=3.0, jmeter-http=3.0, jmeter-jdbc=3.0, jmeter-jms=3.0, jmeter-monitors=3.0, jmeter-core=3.0, jmeter-junit=3.0, jmeter-java=3.0, jmeter-ldap=3.0, jmeter-mail=3.0, jmeter-mongodb=3.0, jmeter-native=3.0, jpgc-plugins-manager=0.9, jmeter-tcp=3.0, jmeter-components=3.0] 
+2016/07/28 17:26:43 WARN  - org.jmeterplugins.repository.PluginManagerMenuItem: Failed to load plugin updates info java.nio.file.AccessDeniedException: Have no write access for JMeter directories, not possible to use Plugins Manager: C:\Users\catalinf\Google%20Drive\%23%23%23Test%20Team%20Folder\apache-jmeter-3.0\lib\ext
+	at org.jmeterplugins.repository.PluginManager.load(PluginManager.java:123)
+	at org.jmeterplugins.repository.PluginManagerMenuItem.<init>(PluginManagerMenuItem.java:22)
+	at org.jmeterplugins.repository.PluginManagerMenuCreator.getMenuItemsAtLocation(PluginManagerMenuCreator.java:22)
+	at org.apache.jmeter.gui.util.JMeterMenuBar.addPluginsMenuItems(JMeterMenuBar.java:572)
+	at org.apache.jmeter.gui.util.JMeterMenuBar.makeOptionsMenu(JMeterMenuBar.java:349)
+	at org.apache.jmeter.gui.util.JMeterMenuBar.createMenuBar(JMeterMenuBar.java:268)
+	at org.apache.jmeter.gui.util.JMeterMenuBar.<init>(JMeterMenuBar.java:161)
+	at org.apache.jmeter.gui.MainFrame.init(MainFrame.java:493)
+	at org.apache.jmeter.gui.MainFrame.<init>(MainFrame.java:241)
+	at org.apache.jmeter.JMeter.startGui(JMeter.java:327)
+	at org.apache.jmeter.JMeter.start(JMeter.java:480)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.jmeter.NewDriver.main(NewDriver.java:259)
+
+2016/07/28 17:26:43 INFO  - jmeter.util.BSFTestElement: Registering JMeter version of JavaScript engine as work-round for BSF-22 
+2016/07/28 17:26:44 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2016/07/28 17:26:44 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2016/07/28 17:26:44 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2016/07/28 17:26:44 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2016/07/28 17:26:44 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser 
+2016/07/28 17:26:44 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser 
+2016/07/28 17:26:44 INFO  - jorphan.exec.KeyToolUtils: keytool found at 'keytool' 
+2016/07/28 17:26:44 INFO  - jmeter.protocol.http.proxy.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file C:\Users\catalinf\Google Drive\###Test Team Folder\apache-jmeter-3.0\bin\proxyserver.jks 
+2016/07/28 17:26:45 INFO  - jmeter.gui.util.MenuFactory: Skipping org.apache.jmeter.protocol.mongodb.config.MongoSourceElement 
+2016/07/28 17:26:45 INFO  - jmeter.gui.util.MenuFactory: Skipping org.apache.jmeter.protocol.mongodb.sampler.MongoScriptSampler 
+2016/07/28 17:26:45 INFO  - jmeter.gui.util.MenuFactory: Skipping org.apache.jmeter.visualizers.DistributionGraphVisualizer 
+2016/07/28 17:26:45 INFO  - jmeter.samplers.SampleResult: Note: Sample TimeStamps are START times 
+2016/07/28 17:26:45 INFO  - jmeter.samplers.SampleResult: sampleresult.default.encoding is set to ISO-8859-1 
+2016/07/28 17:26:45 INFO  - jmeter.samplers.SampleResult: sampleresult.useNanoTime=true 
+2016/07/28 17:26:45 INFO  - jmeter.samplers.SampleResult: sampleresult.nanoThreadSleep=5000 
+2016/07/28 17:26:45 INFO  - jmeter.gui.util.MenuFactory: Skipping org.apache.jmeter.visualizers.SplineVisualizer 
+2016/07/28 17:26:48 ERROR - org.jmeterplugins.repository.PluginManagerDialog: Failed to load plugins manager java.lang.IllegalStateException: Invalid use of BasicClientConnManager: connection still allocated.
+Make sure to release the connection before allocating another one.
+	at org.apache.http.util.Asserts.check(Asserts.java:34)
+	at org.apache.http.impl.conn.BasicClientConnectionManager.getConnection(BasicClientConnectionManager.java:166)
+	at org.apache.http.impl.conn.BasicClientConnectionManager$1.getConnection(BasicClientConnectionManager.java:148)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:424)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:107)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.jmeterplugins.repository.PluginManager.getJSON(PluginManager.java:137)
+	at org.jmeterplugins.repository.PluginManager.load(PluginManager.java:78)
+	at org.jmeterplugins.repository.PluginManagerDialog.componentShown(PluginManagerDialog.java:178)
+	at java.awt.AWTEventMulticaster.componentShown(Unknown Source)
+	at java.awt.Component.processComponentEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Window.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.WaitDispatchSupport$2.run(Unknown Source)
+	at java.awt.WaitDispatchSupport$4.run(Unknown Source)
+	at java.awt.WaitDispatchSupport$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.awt.WaitDispatchSupport.enter(Unknown Source)
+	at java.awt.Dialog.show(Unknown Source)
+	at java.awt.Component.show(Unknown Source)
+	at java.awt.Component.setVisible(Unknown Source)
+	at java.awt.Window.setVisible(Unknown Source)
+	at java.awt.Dialog.setVisible(Unknown Source)
+	at org.jmeterplugins.repository.PluginManagerMenuItem.actionPerformed(PluginManagerMenuItem.java:41)
+	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at javax.swing.AbstractButton.doClick(Unknown Source)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(Unknown Source)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+

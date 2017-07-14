@@ -1,0 +1,11 @@
+<dependency>
+  <groupId>junit</groupId>
+  <artifactId>junit</artifactId>
+  <version>4.12</version>
+  <scope>test</scope>
+</dependency>
+   <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>3.3.1</version>
+    </dependency>

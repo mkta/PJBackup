@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://pimtest.brandpath.com:8080/" />
+<title>PIMCacheRefresh</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">PIMCacheRefresh</td></tr>
+</thead><tbody>
+<tr>
+	<td>store</td>
+	<td>javascript{new Date().getFullYear() + &quot;-&quot; + (new Date().getMonth() +1) + &quot;-&quot; + new Date().getDate().toString() + &quot;&quot;+ &quot;_&quot;+new Date().getHours()+&quot;&quot; + new Date().getMinutes() + &quot;&quot; + new Date().getSeconds()}</td>
+	<td>pcrDate</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${pcrDate}</td>
+	<td>ono</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${pcrDate}</td>
+	<td>nno</td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://pimtest.brandpath.com:8080/pim-web/pim/dashboard/dashboard.xhtml</td>
+	<td></td>
+</tr>
+<!--LogIn Present?-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>xpath=//*[@id='kc-login']</td>
+	<td>LogIn</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>LogIn = ${LogIn}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${LogIn}==false</td>
+	<td>noLogin</td>
+</tr>
+<!--LogIn Data-->
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>QAZ123wsx</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>catalinf</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=rememberMe</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=kc-login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>noLogin</td>
+	<td></td>
+</tr>
+<!--AcheRefresh-->
+<tr>
+	<td>click</td>
+	<td>//li[@id='0_4']/a/span[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='0_4_3']/a/span[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[@id='0_4_3']/ul/li/a/span</td>
+	<td></td>
+</tr>
+<!--OriginalOfferings-->
+<tr>
+	<td>storeValue</td>
+	<td>xpath=html/body/div[2]/div[2]/form[2]/div[1]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[3]/td[2]/input</td>
+	<td>ono</td>
+</tr>
+<!--Refresh-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form[2]/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>85000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--NewOfferings-->
+<tr>
+	<td>storeValue</td>
+	<td>xpath=html/body/div[2]/div[2]/form[2]/div[1]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[3]/td[2]/input</td>
+	<td>nno</td>
+</tr>
+</tbody></table>
+</body>
+</html>

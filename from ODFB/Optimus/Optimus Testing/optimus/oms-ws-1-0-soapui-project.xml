@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="oms-ws-1.0" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" id="94a94abe-4416-4542-a1d2-7a8329ea2699" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="TestSuite" value="OrderProcessingServiceSoapBinding TestSuite"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Save Project" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="TestCase" value="createOrder TestCase"/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="OrderProcessingServiceSoapBinding" type="wsdl" bindingName="{http://sei.ws.oms.brandpath.com/}OrderProcessingServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://omsdev.optimus.local:8080/oms-ws/OrderProcessingService?wsdl" id="2b8492d5-2615-4632-9199-a2626e9ea1e7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://omsdev.optimus.local:8080/oms-ws/OrderProcessingService?wsdl"><con:part><con:url>http://omsdev.optimus.local:8080/oms-ws/OrderProcessingService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="OrderProcessingService" targetNamespace="http://sei.ws.oms.brandpath.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://sei.ws.oms.brandpath.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://sei.ws.oms.brandpath.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="CreateOrderResult" type="tns:createOrderResult"/>
+      <xs:element name="createOrder" type="tns:createOrder"/>
+      <xs:element name="createOrderResponse" type="tns:createOrderResponse"/>
+      <xs:element name="property" type="tns:property"/>
+      <xs:complexType name="createOrder">
+        <xs:sequence>
+          <xs:element name="authentication" type="tns:authentication"/>
+          <xs:element name="orderHeader" type="tns:orderHeader"/>
+          <xs:element name="orderPackages" type="tns:orderPackages"/>
+          <xs:element name="orderAddresses" type="tns:orderAddresses"/>
+          <xs:element minOccurs="0" name="orderComments" type="tns:orderComments"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="authentication">
+        <xs:sequence>
+          <xs:element name="channelTag" type="xs:string"/>
+          <xs:element name="clientTag" type="xs:string"/>
+          <xs:element name="siteTag" type="xs:string"/>
+          <xs:element name="territoryCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderHeader">
+        <xs:sequence>
+          <xs:element name="language" type="xs:string"/>
+          <xs:element name="orderReference" type="xs:string"/>
+          <xs:element name="placedDate" type="xs:dateTime"/>
+          <xs:element name="orderProperties" type="tns:orderProperties"/>
+          <xs:element name="statusLabel" type="xs:string"/>
+          <xs:element name="territoryCode" type="xs:string"/>
+          <xs:element name="totalDiscount" type="xs:decimal"/>
+          <xs:element name="totalPrice" type="xs:decimal"/>
+          <xs:element name="totalTax" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="totalWeight" type="xs:decimal"/>
+          <xs:element name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderProperties">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="orderProperty" type="tns:property"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="property">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string"/>
+          <xs:element name="value" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderPackages">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="orderPackage" type="tns:orderPackage"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderPackage">
+        <xs:sequence>
+          <xs:element name="bundleReference" type="xs:string"/>
+          <xs:element name="discount" type="xs:decimal"/>
+          <xs:element name="discountType" type="xs:string"/>
+          <xs:element minOccurs="0" name="offeringId" type="xs:string"/>
+          <xs:element name="packageItems" type="tns:packageItems"/>
+          <xs:element name="price" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="quantity" type="xs:decimal"/>
+          <xs:element name="tax" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="weight" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="packageItems">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="packageItem" type="tns:packageItem"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="packageItem">
+        <xs:sequence>
+          <xs:element name="price" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="productDescription" type="xs:string"/>
+          <xs:element name="productId" type="xs:string"/>
+          <xs:element name="itemProperties" type="tns:packageItemProperties"/>
+          <xs:element name="quantity" type="xs:decimal"/>
+          <xs:element name="quantityUnitId" type="xs:int"/>
+          <xs:element name="tax" type="xs:decimal"/>
+          <xs:element name="taxRate" type="xs:int"/>
+          <xs:element name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="packageItemProperties">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="itemProperty" type="tns:property"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderAddresses">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="orderAddress" type="tns:orderAddress"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderAddress">
+        <xs:sequence>
+          <xs:element name="city" type="xs:string"/>
+          <xs:element name="line1" type="xs:string"/>
+          <xs:element minOccurs="0" name="line2" type="xs:string"/>
+          <xs:element minOccurs="0" name="postcode" type="xs:string"/>
+          <xs:element minOccurs="0" name="region" type="xs:string"/>
+          <xs:element name="territoryCode" type="xs:string"/>
+          <xs:element name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderComments">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="orderComment" type="tns:orderComment"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderComment">
+        <xs:sequence>
+          <xs:element name="comment" type="xs:string"/>
+          <xs:element name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createOrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="createOrderReturn" type="tns:createOrderResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createOrderResult">
+        <xs:sequence>
+          <xs:element name="result" type="xs:boolean"/>
+          <xs:element name="message" type="xs:string"/>
+          <xs:element minOccurs="0" name="orderId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="createOrderResponse">
+    <wsdl:part element="tns:createOrderResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createOrder">
+    <wsdl:part element="tns:createOrder" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="OrderProcessing">
+    <wsdl:operation name="createOrder">
+      <wsdl:input message="tns:createOrder" name="createOrder"></wsdl:input>
+      <wsdl:output message="tns:createOrderResponse" name="createOrderResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OrderProcessingServiceSoapBinding" type="tns:OrderProcessing">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="createOrder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createOrder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createOrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OrderProcessingService">
+    <wsdl:port binding="tns:OrderProcessingServiceSoapBinding" name="OrderProcessingPort">
+      <soap:address location="http://localhost:8080/oms-ws/OrderProcessingService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/oms-ws-1.0.0/OrderProcessingService</con:endpoint><con:endpoint>http://localhost:8080/oms-ws/OrderProcessingService</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="createOrder" bindingOperationName="createOrder" type="Request-Response" outputName="createOrderResponse" inputName="createOrder" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="d617cbeb-7d45-4648-adaa-64957a1b5133"><con:settings/><con:call name="Request 1" id="e0457704-5db1-4cb1-a19a-c693bebf8640"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI2N2JkNTFkMS1hYThiLTQ1YjAtYmVhMi1iY2IxNzNhY2M5ZDEiLCJleHAiOjE0MjUzOTgzMTIsIm5iZiI6MCwiaWF0IjoxNDI1Mzk4MDEyLCJpc3MiOiJicmFuZHBhdGgiLCJhdWQiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzdWIiOiI1Y2UxZjBlZi00OTcwLTRiZmEtYjlhNC1jM2IyNTllZmFjOGEiLCJhenAiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzZXNzaW9uX3N0YXRlIjoiOGQ4NGJiNDUtNDFiMi00MDUzLTk1NWQtYjA2YTQzYmEzZTgzIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9yZGVyLWFwcHJvdmVyIiwib3JkZXItcHJvY2Vzc29yIiwib3JkZXItdmlld2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsib21zLXdzMiI6eyJyb2xlcyI6WyJvcmRlci1jcmVhdGUiXX0sIm9tcyI6eyJyb2xlcyI6WyJhY2Nlc3Mtb21zIiwidmlldy1vcmRlciIsImFwcHJvdmUtb3JkZXIiLCJhbWVuZC1vcmRlciIsImNoYW5nZS1wYXltZW50Il19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50Iiwidmlldy1wcm9maWxlIl19fX0.Ze6Yd9HasPhPdDpBMZQiJSzkzF4mFyk9WmnqlqCoY4XlC6b8ioPmfYFTin3G191nsl63w_tbquna9NmcTLcypvERzs0CXv3u3ydXwUCvKO6kWGN0_hzSNZdzJF3-9fzl0bpCGZWsNgxh052dMAWpYfd-dgWaXWENC0ItUm5GZQQ" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/oms-ws/OrderProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.oms.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:createOrder>
+         <authentication>
+            <clientTag>BRANDPATH</clientTag>
+            <channelTag>ONLINE</channelTag>
+            <siteTag>MICROSITE</siteTag>
+            <territoryCode>ROU</territoryCode>
+         </authentication>
+         <orderHeader>
+            <language>ROM</language>
+            <orderReference>test</orderReference>
+            <placedDate>2015-02-06T15:55:23.923</placedDate>
+            <orderProperties>
+            	<!--1 or more repetitions:-->
+            	<orderProperty>
+	               <name>FIRSTNAME</name>
+	               <value>test11</value>
+               </orderProperty>
+               <orderProperty>
+                    <name>EMAIL</name>
+	               <value>test40@dd.com</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>MIDDLENAME</name>
+	               <value>test12</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>LASTNAME</name>
+	               <value>test21</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>TITLE</name>
+	               <value>Mrs</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>TITLE</name>
+	               <value>Mrs</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>PHONENUMBER</name>
+	               <value>777test31</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>EMAIL</name>
+	               <value>test41@s.ss</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>EMAIL</name>
+	               <value>test4sss2@ccc.ro</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>TEST</name>
+	               <value>testr1</value>
+               </orderProperty>
+            </orderProperties>
+            <statusLabel>Awaiting</statusLabel>
+            <territory>EUR</territory>
+            <totalDiscount>333</totalDiscount>
+            <totalPrice>34</totalPrice>
+            <totalVAT>23</totalVAT>
+            <type>Basic</type>
+         </orderHeader>
+         <orderItems>
+         	   <!--1 or more repetitions:-->
+         	   <orderItem>
+	            <discount>23</discount>
+	            <discountType>test</discountType>
+	            <offeringCode>test</offeringCode>
+	            <orderItemReference>BLA!</orderItemReference>
+	            <price>44</price>
+	            <!--Zero or more repetitions:-->
+	            <itemProperties>
+	               <!--Zero or more repetitions:-->
+                  	<itemProperty>
+                       <name>WEIGHT</name>
+                       <value>12.34</value>
+                  	</itemProperty>
+                  	<itemProperty>
+                       <name>bla</name>
+                       <value>asdsad</value>
+                  	</itemProperty>
+                  	<itemProperty>
+                       <name>COLOR</name>
+                       <value>blue</value>
+                  	</itemProperty>
+                  	<itemProperty>
+                       <name>COLOR</name>
+                       <value>white</value>
+                  	</itemProperty>
+	            </itemProperties>
+	            <quantity>12</quantity>
+	            <type>HANDSET</type>
+	            <vat>3</vat>
+	        </orderItem>
+         </orderItems>
+         <orderAddresses>
+              <!--1 or more repetitions:-->
+	         <orderAddress>
+	            <city>test</city>
+	            <line1>test</line1>
+	            <!--Optional:-->
+	            <line2>test</line2>
+	            <!--Optional:-->
+	            <postcode>test</postcode>
+	            <!--Optional:-->
+	            <region>test</region>
+	            <territory>1</territory>
+	            <type>2</type>
+	         </orderAddress>
+	    </orderAddresses>
+         <!--Optional:-->
+         <orderComments>
+            <!--1 or more repetitions:-->
+            <orderComment>
+               <comment>YES Comment!</comment>
+               <type>POSITIVE</type>
+            </orderComment>
+         </orderComments>
+      </sei:createOrder>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>asd</con:username><con:password>asda</con:password><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://so.ws.oms.optimus.com/OrderProcessing/createOrder"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Request New" id="6e169e16-fcd0-41bd-92c1-5897f60d0867"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/oms-ws-1.0.0/OrderProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.oms.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:createOrder>
+         <authentication>
+            <channelTag>?</channelTag>
+            <clientTag>?</clientTag>
+            <siteTag>?</siteTag>
+            <territoryCode>?</territoryCode>
+         </authentication>
+         <orderHeader>
+            <language>?</language>
+            <orderReference>?</orderReference>
+            <placedDate>?</placedDate>
+            <orderProperties>
+               <!--1 or more repetitions:-->
+               <orderProperty>
+                  <name>?</name>
+                  <value>?</value>
+               </orderProperty>
+            </orderProperties>
+            <statusLabel>?</statusLabel>
+            <territoryCode>?</territoryCode>
+            <totalDiscount>?</totalDiscount>
+            <totalPrice>?</totalPrice>
+            <totalTax>?</totalTax>
+            <!--Optional:-->
+            <totalWeight>?</totalWeight>
+            <type>?</type>
+         </orderHeader>
+         <orderPackages>
+            <!--1 or more repetitions:-->
+            <orderPackage>
+               <bundleReference>?</bundleReference>
+               <discount>?</discount>
+               <discountType>?</discountType>
+               <!--Optional:-->
+               <offeringId>?</offeringId>
+               <packageItems>
+                  <!--1 or more repetitions:-->
+                  <packageItem>
+                     <price>?</price>
+                     <!--Optional:-->
+                     <productDescription>?</productDescription>
+                     <productId>?</productId>
+                     <itemProperties>
+                        <!--Zero or more repetitions:-->
+                        <itemProperty>
+                           <name>?</name>
+                           <value>?</value>
+                        </itemProperty>
+                     </itemProperties>
+                     <quantity>?</quantity>
+                     <quantityUnitId>?</quantityUnitId>
+                     <tax>?</tax>
+                     <taxRate>?</taxRate>
+                     <type>?</type>
+                  </packageItem>
+               </packageItems>
+               <price>?</price>
+               <!--Optional:-->
+               <quantity>?</quantity>
+               <tax>?</tax>
+               <!--Optional:-->
+               <weight>?</weight>
+            </orderPackage>
+         </orderPackages>
+         <orderAddresses>
+            <!--1 or more repetitions:-->
+            <orderAddress>
+               <city>?</city>
+               <line1>?</line1>
+               <!--Optional:-->
+               <line2>?</line2>
+               <!--Optional:-->
+               <postcode>?</postcode>
+               <!--Optional:-->
+               <region>?</region>
+               <territoryCode>?</territoryCode>
+               <type>?</type>
+            </orderAddress>
+         </orderAddresses>
+         <!--Optional:-->
+         <orderComments>
+            <!--1 or more repetitions:-->
+            <orderComment>
+               <comment>?</comment>
+               <type>?</type>
+            </orderComment>
+         </orderComments>
+      </sei:createOrder>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.oms.brandpath.com/OrderProcessing/createOrder"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Copy of Request 1" id="77de720a-35d4-441c-8f7d-67398da97d47"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI3MTI2NjU1Yi1lYzEzLTRiZWQtOTFlMy02Y2RhMmFmZDZkMDUiLCJleHAiOjE0MjcyMTI3ODYsIm5iZiI6MCwiaWF0IjoxNDI3MjEyNDg2LCJpc3MiOiJicmFuZHBhdGgiLCJhdWQiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzdWIiOiI1Y2UxZjBlZi00OTcwLTRiZmEtYjlhNC1jM2IyNTllZmFjOGEiLCJhenAiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzZXNzaW9uX3N0YXRlIjoiNjdmZDFjMTctYjM1NC00ZjI0LThjNzYtNTU2N2UwN2YxMzNjIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9yZGVyLWFwcHJvdmVyIiwib3JkZXItcHJvY2Vzc29yIiwib3JkZXItdmlld2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsib21zIjp7InJvbGVzIjpbImFjY2Vzcy1vbXMiLCJ2aWV3LW9yZGVyIiwiYXBwcm92ZS1vcmRlciIsImFtZW5kLW9yZGVyIiwiY2hhbmdlLXBheW1lbnQiXX0sIm9tcy13cyI6eyJyb2xlcyI6WyJvcmRlci1jcmVhdGUiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19fQ.M-J8z-GVbAq_oW8OBaBKlzCeNkWZlaZB6hOChnL4FefePBNyP73mLefrY1yhB6vQMzcJlgpn2ccYQg0qyuPMm9ou3LdbVrTED_ghMQ3RBCaoE_lVdVf0gYHCtRaN7BesDHJGc1x3NC2adWX953EV6-f7ehd6d2pdtzU48liSxIc" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/oms-ws/OrderProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.oms.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:createOrder>
+         <authentication>
+            <clientTag>BRANDPATH</clientTag>
+            <channelTag>ONLINE</channelTag>
+            <siteTag>MICROSITE</siteTag>
+            <territoryCode>ROU</territoryCode>
+         </authentication>
+         <orderHeader>
+            <language>ROM</language>
+            <orderReference>test</orderReference>
+            <placedDate>2015-02-06T15:55:23.923</placedDate>
+            <orderProperties>
+            	<!--1 or more repetitions:-->
+            	<orderProperty>
+	               <name>FIRSTNAME</name>
+	               <value>test11</value>
+               </orderProperty>
+               <orderProperty>
+                    <name>EMAIL</name>
+	               <value>test40@dd.com</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>MIDDLENAME</name>
+	               <value>test12</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>LASTNAME</name>
+	               <value>test21</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>TITLE</name>
+	               <value>Mrs</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>TITLE</name>
+	               <value>Mrs</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>PHONENUMBER</name>
+	               <value>777test31</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>EMAIL</name>
+	               <value>test41@s.ss</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>EMAIL</name>
+	               <value>test4sss2@ccc.ro</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>TEST</name>
+	               <value>testr1</value>
+               </orderProperty>
+            </orderProperties>
+            <statusLabel>Awaiting</statusLabel>
+            <territoryCode>EUR</territoryCode>
+            <totalDiscount>333</totalDiscount>
+            <totalPrice>34</totalPrice>
+            <totalTax>23</totalTax>
+            <totalWeight>34</totalWeight>
+            <type>Basic</type>
+         </orderHeader>
+         <orderPackages>
+         		<orderPackage>
+               <bundleReference>asda</bundleReference>
+               <discount>33</discount>
+               <discountType>123</discountType>
+               <!--Optional:-->
+               <offeringId>asdas</offeringId>
+               <packageItems>
+		         	   <!--1 or more repetitions:-->
+		         	   <packageItem>
+			            <price>44</price>
+			            <!--Optional:-->
+	                     <productDescription>asdas</productDescription>
+	                     <productId>3</productId>
+			            <!--Zero or more repetitions:-->
+			            <itemProperties>
+			               <!--Zero or more repetitions:-->
+		                  	<itemProperty>
+		                       <name>WEIGHT</name>
+		                       <value>12.34</value>
+		                  	</itemProperty>
+		                  	<itemProperty>
+		                       <name>bla</name>
+		                       <value>asdsad</value>
+		                  	</itemProperty>
+		                  	<itemProperty>
+		                       <name>COLOR</name>
+		                       <value>blue</value>
+		                  	</itemProperty>
+		                  	<itemProperty>
+		                       <name>COLOR</name>
+		                       <value>white</value>
+		                  	</itemProperty>
+			            </itemProperties>
+			            <quantity>?</quantity>
+		                <quantityUnitId>3</quantityUnitId>
+		                <tax>23</tax>
+		                <taxRate>2</taxRate>
+		                <type>HANDSET</type>
+			        </packageItem>
+               </packageItems>
+               <price>?</price>
+               <!--Optional:-->
+               <quantity>?</quantity>
+               <tax>?</tax>
+               <!--Optional:-->
+               <weight>?</weight>
+            </orderPackage>
+	    </orderPackages>
+         <orderAddresses>
+              <!--1 or more repetitions:-->
+	         <orderAddress>
+	            <city>test</city>
+	            <line1>test</line1>
+	            <!--Optional:-->
+	            <line2>test</line2>
+	            <!--Optional:-->
+	            <postcode>test</postcode>
+	            <!--Optional:-->
+	            <region>test</region>
+	            <territoryCode>ROU</territoryCode>
+	            <type>2</type>
+	         </orderAddress>
+	    </orderAddresses>
+         <!--Optional:-->
+         <orderComments>
+            <!--1 or more repetitions:-->
+            <orderComment>
+               <comment>YES Comment!</comment>
+               <type>POSITIVE</type>
+            </orderComment>
+         </orderComments>
+      </sei:createOrder>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>asd</con:username><con:password>asda</con:password><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.oms.brandpath.com/OrderProcessing/createOrder"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="TokenServiceSoapBinding" type="wsdl" bindingName="{http://www.brandpath.com/oms/ws/jaxws/TokenService}TokenServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/oms-keycloak-token/TokenService?wsdl" id="1e5f5389-59a7-4108-9607-493673c1cce3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/oms-keycloak-token/TokenService?wsdl"><con:part><con:url>http://localhost:8080/oms-keycloak-token/TokenService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="TokenService" targetNamespace="http://www.brandpath.com/oms/ws/jaxws/TokenService" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.brandpath.com/oms/ws/jaxws/TokenService" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.brandpath.com/oms/ws/jaxws/TokenService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getToken" type="tns:getToken"/>
+      <xs:element name="getTokenResponse" type="tns:getTokenResponse"/>
+      <xs:element name="isTokenActive" type="tns:isTokenActive"/>
+      <xs:element name="isTokenActiveResponse" type="tns:isTokenActiveResponse"/>
+      <xs:complexType name="isTokenActive">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="isTokenActiveResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getToken">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="getTokenResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:accessTokenResponse"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="accessTokenResponse">
+        <xs:sequence>
+          <xs:element name="expiresIn" type="xs:long"/>
+          <xs:element minOccurs="0" name="idToken" type="xs:string"/>
+          <xs:element name="notBeforePolicy" type="xs:int"/>
+          <xs:element name="refreshExpiresIn" type="xs:long"/>
+          <xs:element minOccurs="0" name="refreshToken" type="xs:string"/>
+          <xs:element minOccurs="0" name="sessionState" type="xs:string"/>
+          <xs:element minOccurs="0" name="token" type="xs:string"/>
+          <xs:element minOccurs="0" name="tokenType" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GenericSoapFault" type="tns:GenericSoapFault"/>
+      <xs:complexType name="GenericSoapFault">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="VerificationException" type="tns:VerificationException"/>
+      <xs:complexType name="VerificationException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="isTokenActive">
+    <wsdl:part element="tns:isTokenActive" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getToken">
+    <wsdl:part element="tns:getToken" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isTokenActiveResponse">
+    <wsdl:part element="tns:isTokenActiveResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GenericSoapFault">
+    <wsdl:part element="tns:GenericSoapFault" name="GenericSoapFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="VerificationException">
+    <wsdl:part element="tns:VerificationException" name="VerificationException"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTokenResponse">
+    <wsdl:part element="tns:getTokenResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="TokenService">
+    <wsdl:operation name="isTokenActive">
+      <wsdl:input message="tns:isTokenActive" name="isTokenActive"></wsdl:input>
+      <wsdl:output message="tns:isTokenActiveResponse" name="isTokenActiveResponse"></wsdl:output>
+      <wsdl:fault message="tns:GenericSoapFault" name="GenericSoapFault"></wsdl:fault>
+      <wsdl:fault message="tns:VerificationException" name="VerificationException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getToken">
+      <wsdl:input message="tns:getToken" name="getToken"></wsdl:input>
+      <wsdl:output message="tns:getTokenResponse" name="getTokenResponse"></wsdl:output>
+      <wsdl:fault message="tns:GenericSoapFault" name="GenericSoapFault"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TokenServiceSoapBinding" type="tns:TokenService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="isTokenActive">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="isTokenActive">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isTokenActiveResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GenericSoapFault">
+        <soap:fault name="GenericSoapFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="VerificationException">
+        <soap:fault name="VerificationException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getToken">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getToken">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTokenResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GenericSoapFault">
+        <soap:fault name="GenericSoapFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TokenService">
+    <wsdl:port binding="tns:TokenServiceSoapBinding" name="Token">
+      <soap:address location="http://localhost:8080/oms-keycloak-token"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/oms-keycloak-token</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="getToken" bindingOperationName="getToken" type="Request-Response" outputName="getTokenResponse" inputName="getToken" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="7cb89e98-99aa-4d87-a1f1-0094a7941592"><con:settings/><con:call name="Request 1" id="caab8c71-c26d-4c75-a76a-b625c46e20ec"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="userName" value="oms-ws"/>
+  &lt;con:entry key="password" value="oms-ws12.GHgfL1"/>
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/oms-keycloak-token</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tok="http://www.brandpath.com/oms/ws/jaxws/TokenService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tok:getToken/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.brandpath.com/oms/ws/jaxws/TokenService/TokenService/getToken"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="isTokenActive" bindingOperationName="isTokenActive" type="Request-Response" outputName="isTokenActiveResponse" inputName="isTokenActive" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="ce065869-8a71-4d3b-9d14-fda21f0b3a12"><con:settings/><con:call name="Request 1" id="5a359e86-8ba4-4ae7-a9f2-fcd1bdc20153"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/oms-keycloak-token</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tok="http://www.brandpath.com/oms/ws/jaxws/TokenService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tok:isTokenActive>
+         <!--Optional:-->
+         <arg0>eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJkZGRjYzhkOC0yZTNhLTRmNzUtOGY3NC1mMjRiNmY5NWQ1NTAiLCJleHAiOjE0MjYwNjc2MTEsIm5iZiI6MCwiaWF0IjoxNDI2MDY3MzExLCJpc3MiOiJicmFuZHBhdGgiLCJhdWQiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzdWIiOiI1Y2UxZjBlZi00OTcwLTRiZmEtYjlhNC1jM2IyNTllZmFjOGEiLCJhenAiOiJvbXMta2V5Y2xvYWstdG9rZW4ifQ.VnzwkJcxZ5wX7sumILIlUAcgVtNolCTST9gFZN0iTJ_55UPcZXS3zuM--UJDE9AxKnqg5XG46TVckHPh1df7L1l4JRyT-xRHOC9-eiAnRGD9dGY9RuEp1aHxCKR37UxZMLgjuDHzDKzr_mP_O20hCrgBGeW8LbnixllfrydnGI4</arg0>
+      </tok:isTokenActive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.brandpath.com/oms/ws/jaxws/TokenService/TokenService/isTokenActive"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite name="OrderProcessingServiceSoapBinding TestSuite" id="95c7153f-5223-4183-ac4f-17b4f8816d63"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="createOrder TestCase" searchProperties="true" id="8df77db4-67f4-4875-9459-4f8a0fa3b4ce"><con:settings/><con:testStep type="request" name="GetToken Request" id="dfba9a83-9017-4a3d-9c72-30bfbe11984c"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>OrderProcessingServiceSoapBinding</con:interface><con:operation>createOrder</con:operation><con:request name="GetToken Request" id="787a66ca-7616-4c33-a9be-29be53d12c74"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="userName" value="oms-ws"/>
+  &lt;con:entry key="password" value="oms-ws12.GHgfL1"/>
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/oms-keycloak-token</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tok="http://www.brandpath.com/oms/ws/jaxws/TokenService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tok:getToken/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="ced378ca-a4ea-4d75-aea1-2b196a5db094"/><con:assertion type="Simple Contains" name="Contains" id="6ded9535-5057-455f-aa37-40b940a49070"><con:configuration><token>return</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Token Transfer" id="0fe4494f-2162-4644-bb62-c28669ae4350"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="true" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>GetToken Request</con:sourceStep><con:sourcePath>//return/token</con:sourcePath><con:targetType>token</con:targetType><con:targetStep>Properties</con:targetStep><con:targetPath/><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties" id="c3282916-0e72-4c24-af4e-e6c729702698"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>token</con:name><con:value>eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI3MjY5NTA3MC0zNTRhLTQ1NmQtOTViMS0xZTMzZjgwOGU0MjQiLCJleHAiOjE0Mjc3MTE4MDEsIm5iZiI6MCwiaWF0IjoxNDI3NzExNTAxLCJpc3MiOiJicmFuZHBhdGgiLCJhdWQiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzdWIiOiI1Y2UxZjBlZi00OTcwLTRiZmEtYjlhNC1jM2IyNTllZmFjOGEiLCJhenAiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzZXNzaW9uX3N0YXRlIjoiZjQ0NmU4NmEtNTliYS00NmE1LTkwODktMGJlYTFjMTUxZGNhIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9yZGVyLWFwcHJvdmVyIiwib3JkZXItcHJvY2Vzc29yIiwib3JkZXItdmlld2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsib21zIjp7InJvbGVzIjpbImFjY2Vzcy1vbXMiLCJ2aWV3LW9yZGVyIiwiYXBwcm92ZS1vcmRlciIsImFtZW5kLW9yZGVyIiwiY2hhbmdlLXBheW1lbnQiXX0sIm9tcy13cyI6eyJyb2xlcyI6WyJvcmRlci1jcmVhdGUiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19fQ.bEn1sEldTlCk28ezypqGPcelJ6cTXTUjHD1T5XftenTgBqh9R_lG1eHvUeG_jMnTzTX6Pqc-iiE6mSd59QvplKFHy4M5TpU-bzzxEsESjY2j3WMuohOnK9RUuhbkcSbo-BXhW0mPPKtc3JUE2cP9tWrx9q3XkmbhA21yUz-h9ls</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" name="IsTokenActive - Request" id="bebe7b5d-4582-468f-928e-0375760a3664"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>TokenServiceSoapBinding</con:interface><con:operation>isTokenActive</con:operation><con:request name="IsTokenActive - Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="d4ebe986-21e0-4752-9eea-e53f4afedbc0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/oms-keycloak-token</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tok="http://www.brandpath.com/oms/ws/jaxws/TokenService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tok:isTokenActive>
+         <token>${token}</token>
+      </tok:isTokenActive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response" id="78bf7d3c-0304-4fff-b5d5-7843949a68c6"/><con:assertion type="Simple Contains" name="Contains" id="1e948a21-61e1-417b-b876-dccdf0644ab2"><con:configuration><token>&lt;return>true&lt;/return></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.brandpath.com/oms/ws/jaxws/TokenService/TokenService/isTokenActive"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script - Http Header" id="63b58229-c673-48f3-a4dd-594bf3065db7"><con:settings/><con:config><script>import com.eviware.soapui.impl.wsdl.teststeps.*
+import com.eviware.soapui.support.types.StringToStringMap ;
+def tc = testRunner.testCase.testSuite.getTestCaseByName("createOrder TestCase")
+def tsp = tc.getTestStepByName("Properties")
+def token = tsp.getPropertyValue("token");
+def ts = tc.getTestStepByName("createOrder")
+
+def headers = new StringToStringMap()
+
+headers.put("Authorization","Bearer "+token)
+testRunner.testCase.getTestStepByName("CreateOrder").testRequest.setRequestHeaders(headers)
+</script></con:config></con:testStep><con:testStep type="properties" name="CreateOrder Properties" id="e5d91938-e69f-448a-a490-9e26d75b8646"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>firstName</con:name><con:value>Jan</con:value></con:property><con:property><con:name>lastName</con:name><con:value>Robinson</con:value></con:property><con:property><con:name>title</con:name><con:value>Dr</con:value></con:property><con:property><con:name>email</con:name><con:value/></con:property><con:property><con:name>phone</con:name><con:value/></con:property><con:property><con:name>orderType</con:name><con:value/></con:property><con:property><con:name>city</con:name><con:value>Hereford</con:value></con:property><con:property><con:name>postcode</con:name><con:value>HP11 2AT</con:value></con:property><con:property><con:name>territoryCode</con:name><con:value>ROU</con:value></con:property><con:property><con:name>packageItems</con:name><con:value><![CDATA[<packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem><packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem><packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem>]]></con:value></con:property><con:property><con:name>itemsSum</con:name><con:value>73.35</con:value></con:property><con:property><con:name>OrderPackages</con:name><con:value><![CDATA[<orderPackage><bundleReference>asda</bundleReference><discount>1.2</discount><discountType>bgdbgd</discountType><!--Optional:--><offeringId>asdas</offeringId><!--1 or more repetitions:--><packageItems>${packageItems}</packageItems><price>${sum}</price><!--Optional:--><quantity>1</quantity><tax>33</tax><!--Optional:--><weight>7</weight></orderPackage><orderPackage><bundleReference>asda</bundleReference><discount>1.2</discount><discountType>bgdbgd</discountType><!--Optional:--><offeringId>asdas</offeringId><!--1 or more repetitions:--><packageItems>${packageItems}</packageItems><price>${sum}</price><!--Optional:--><quantity>1</quantity><tax>33</tax><!--Optional:--><weight>7</weight></orderPackage><orderPackage><bundleReference>asda</bundleReference><discount>1.2</discount><discountType>bgdbgd</discountType><!--Optional:--><offeringId>asdas</offeringId><!--1 or more repetitions:--><packageItems>${packageItems}</packageItems><price>${sum}</price><!--Optional:--><quantity>1</quantity><tax>33</tax><!--Optional:--><weight>7</weight></orderPackage>]]></con:value></con:property><con:property><con:name>totalPrice</con:name><con:value>1540.35</con:value></con:property><con:property><con:name>price</con:name><con:value>2</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="Randomize order properties" id="cba6d59f-d8d7-47cc-9da3-75604efed645"><con:settings/><con:config><script><![CDATA[//Tip to generate a random element from an array
+def myTestCase = context.testCase
+def firstNames = ["Lena","Zuzanna","Julia","Maja","Hanna","Aleksandra","Amelia","Jakub","Kacper","Antoni","Filip","Jan","Szymon","Franciszek","Michał","Oliver","Jack","Charlie","Harry","Oscar","Thomas","Jacob","Ethan","Noah"]
+def lastNames = ["Smith","Jones","Williams","Taylor","Brown","Davies","Evans","Wilson","Craven","Johnson","Robinson","Thompson","Wright","Walker","White","Edwards","Hughes","Green","Hall", "Małecki","Maj","Sowa","Milewski","Gajda","Klimek","Olejniczak","Ratajczak","Romanowski","Matuszewski"]
+def titles = ["Mr","Mrs","Ms","Miss","Dr"]
+def cities = ["Bath","Birmingham","Bradford","Brighton & Hove","Bristol","Cambridge","Canterbury","Carlisle","Chelmsford","Chester","Chichester","Coventry","Derby","Durham","Ely","Exeter","Gloucester","Hereford","Kingston upon Hull","Lancaster","Leeds","Leicester","Lichfield","Lincoln","Liverpool","City of London","Manchester","Newcastle upon Tyne","Norwich","Nottingham","Oxford","Peterborough","Plymouth","Portsmouth","Preston","Ripon","St Albans","Salford","Salisbury","Sheffield","Southampton","Stoke-on-Trent","Sunderland","Truro","Wakefield","Wells","City of Westminster","Winchester","Wolverhampton","Worcester","York"]
+def packageItems = ["<packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem>","<packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem><packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem>","<packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem><packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem><packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem>","<packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem><packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem><packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem><packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem>","<packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem><packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem><packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem><packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem><packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem>"]
+def itemsSums = ["24.45" , "48.90" , "73.35" , "97.80" , "122.25"]
+def orderPackages = ['<orderPackage><bundleReference>asda</bundleReference><discount>1.2</discount><discountType>bgdbgd</discountType><!--Optional:--><offeringId>asdas</offeringId><!--1 or more repetitions:--><packageItems>${packageItems}</packageItems><price>${sum}</price><!--Optional:--><quantity>1</quantity><tax>33</tax><!--Optional:--><weight>7</weight></orderPackage>' , '<orderPackage><bundleReference>asda</bundleReference><discount>1.2</discount><discountType>bgdbgd</discountType><!--Optional:--><offeringId>asdas</offeringId><!--1 or more repetitions:--><packageItems>${packageItems}</packageItems><price>${sum}</price><!--Optional:--><quantity>1</quantity><tax>33</tax><!--Optional:--><weight>7</weight></orderPackage><orderPackage><bundleReference>asda</bundleReference><discount>1.2</discount><discountType>bgdbgd</discountType><!--Optional:--><offeringId>asdas</offeringId><!--1 or more repetitions:--><packageItems>${packageItems}</packageItems><price>${sum}</price><!--Optional:--><quantity>1</quantity><tax>33</tax><!--Optional:--><weight>7</weight></orderPackage>' , '<orderPackage><bundleReference>asda</bundleReference><discount>1.2</discount><discountType>bgdbgd</discountType><!--Optional:--><offeringId>asdas</offeringId><!--1 or more repetitions:--><packageItems>${packageItems}</packageItems><price>${sum}</price><!--Optional:--><quantity>1</quantity><tax>33</tax><!--Optional:--><weight>7</weight></orderPackage><orderPackage><bundleReference>asda</bundleReference><discount>1.2</discount><discountType>bgdbgd</discountType><!--Optional:--><offeringId>asdas</offeringId><!--1 or more repetitions:--><packageItems>${packageItems}</packageItems><price>${sum}</price><!--Optional:--><quantity>1</quantity><tax>33</tax><!--Optional:--><weight>7</weight></orderPackage><orderPackage><bundleReference>asda</bundleReference><discount>1.2</discount><discountType>bgdbgd</discountType><!--Optional:--><offeringId>asdas</offeringId><!--1 or more repetitions:--><packageItems>${packageItems}</packageItems><price>${sum}</price><!--Optional:--><quantity>1</quantity><tax>33</tax><!--Optional:--><weight>7</weight></orderPackage>' , '<orderPackage><bundleReference>asda</bundleReference><discount>1.2</discount><discountType>bgdbgd</discountType><!--Optional:--><offeringId>asdas</offeringId><!--1 or more repetitions:--><packageItems>${packageItems}</packageItems><price>${sum}</price><!--Optional:--><quantity>1</quantity><tax>33</tax><!--Optional:--><weight>7</weight></orderPackage><orderPackage><bundleReference>asda</bundleReference><discount>1.2</discount><discountType>bgdbgd</discountType><!--Optional:--><offeringId>asdas</offeringId><!--1 or more repetitions:--><packageItems>${packageItems}</packageItems><price>${sum}</price><!--Optional:--><quantity>1</quantity><tax>33</tax><!--Optional:--><weight>7</weight></orderPackage><orderPackage><bundleReference>asda</bundleReference><discount>1.2</discount><discountType>bgdbgd</discountType><!--Optional:--><offeringId>asdas</offeringId><!--1 or more repetitions:--><packageItems>${packageItems}</packageItems><price>${sum}</price><!--Optional:--><quantity>1</quantity><tax>33</tax><!--Optional:--><weight>7</weight></orderPackage><orderPackage><bundleReference>asda</bundleReference><discount>1.2</discount><discountType>bgdbgd</discountType><!--Optional:--><offeringId>asdas</offeringId><!--1 or more repetitions:--><packageItems>${packageItems}</packageItems><price>${sum}</price><!--Optional:--><quantity>1</quantity><tax>33</tax><!--Optional:--><weight>7</weight></orderPackage>' , '<orderPackage><bundleReference>asda</bundleReference><discount>1.2</discount><discountType>bgdbgd</discountType><!--Optional:--><offeringId>asdas</offeringId><!--1 or more repetitions:--><packageItems>${packageItems}</packageItems><price>${sum}</price><!--Optional:--><quantity>1</quantity><tax>33</tax><!--Optional:--><weight>7</weight></orderPackage><orderPackage><bundleReference>asda</bundleReference><discount>1.2</discount><discountType>bgdbgd</discountType><!--Optional:--><offeringId>asdas</offeringId><!--1 or more repetitions:--><packageItems>${packageItems}</packageItems><price>${sum}</price><!--Optional:--><quantity>1</quantity><tax>33</tax><!--Optional:--><weight>7</weight></orderPackage><orderPackage><bundleReference>asda</bundleReference><discount>1.2</discount><discountType>bgdbgd</discountType><!--Optional:--><offeringId>asdas</offeringId><!--1 or more repetitions:--><packageItems>${packageItems}</packageItems><price>${sum}</price><!--Optional:--><quantity>1</quantity><tax>33</tax><!--Optional:--><weight>7</weight></orderPackage><orderPackage><bundleReference>asda</bundleReference><discount>1.2</discount><discountType>bgdbgd</discountType><!--Optional:--><offeringId>asdas</offeringId><!--1 or more repetitions:--><packageItems>${packageItems}</packageItems><price>${sum}</price><!--Optional:--><quantity>1</quantity><tax>33</tax><!--Optional:--><weight>7</weight></orderPackage><orderPackage><bundleReference>asda</bundleReference><discount>1.2</discount><discountType>bgdbgd</discountType><!--Optional:--><offeringId>asdas</offeringId><!--1 or more repetitions:--><packageItems>${packageItems}</packageItems><price>${sum}</price><!--Optional:--><quantity>1</quantity><tax>33</tax><!--Optional:--><weight>7</weight></orderPackage>']
+def prices = ["0","1","2","3","4"]
+
+random = new Random()
+i = random.nextInt(5)
+
+
+propTestStep = myTestCase.getTestStepByName("CreateOrder Properties") // get the Property TestStep
+propTestStep.setPropertyValue("firstName", firstNames[random.nextInt(24)].toString())
+propTestStep.setPropertyValue("lastName", lastNames[random.nextInt(29)].toString())
+propTestStep.setPropertyValue("title", titles[random.nextInt(5)].toString())
+propTestStep.setPropertyValue("city", cities[random.nextInt(51)].toString())
+propTestStep.setPropertyValue("packageItems", packageItems[i].toString())
+propTestStep.setPropertyValue("itemsSum", itemsSums[i])
+propTestStep.setPropertyValue("OrderPackages", orderPackages[i].toString())
+propTestStep.setPropertyValue("price", prices[i])
+totalPrice = itemsSums[i].toBigDecimal()
+totalPrice = totalPrice.multiply((prices[i] + 1).toInteger())
+propTestStep.setPropertyValue("totalPrice", totalPrice.toString())
+log.info firstNames[random.nextInt(24)]
+log.info lastNames[random.nextInt(29)]
+log.info titles[random.nextInt(5)]
+log.info cities[random.nextInt(51)]
+log.info packageItems[i]
+log.info itemsSums[i]
+log.info orderPackages[i]
+log.info prices[i] + 1
+log.info totalPrice
+log.info i + 1
+]]></script></con:config></con:testStep><con:testStep type="request" name="CreateOrder" id="a6746e60-9d76-4847-962e-efa815aa2708"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>OrderProcessingServiceSoapBinding</con:interface><con:operation>createOrder</con:operation><con:request name="CreateOrder" id="4248ce63-10ab-415d-acb3-b562a612bbde"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI3MjY5NTA3MC0zNTRhLTQ1NmQtOTViMS0xZTMzZjgwOGU0MjQiLCJleHAiOjE0Mjc3MTE4MDEsIm5iZiI6MCwiaWF0IjoxNDI3NzExNTAxLCJpc3MiOiJicmFuZHBhdGgiLCJhdWQiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzdWIiOiI1Y2UxZjBlZi00OTcwLTRiZmEtYjlhNC1jM2IyNTllZmFjOGEiLCJhenAiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzZXNzaW9uX3N0YXRlIjoiZjQ0NmU4NmEtNTliYS00NmE1LTkwODktMGJlYTFjMTUxZGNhIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9yZGVyLWFwcHJvdmVyIiwib3JkZXItcHJvY2Vzc29yIiwib3JkZXItdmlld2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsib21zIjp7InJvbGVzIjpbImFjY2Vzcy1vbXMiLCJ2aWV3LW9yZGVyIiwiYXBwcm92ZS1vcmRlciIsImFtZW5kLW9yZGVyIiwiY2hhbmdlLXBheW1lbnQiXX0sIm9tcy13cyI6eyJyb2xlcyI6WyJvcmRlci1jcmVhdGUiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19fQ.bEn1sEldTlCk28ezypqGPcelJ6cTXTUjHD1T5XftenTgBqh9R_lG1eHvUeG_jMnTzTX6Pqc-iiE6mSd59QvplKFHy4M5TpU-bzzxEsESjY2j3WMuohOnK9RUuhbkcSbo-BXhW0mPPKtc3JUE2cP9tWrx9q3XkmbhA21yUz-h9ls" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/oms-ws/OrderProcessingService?wsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.oms.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:createOrder>
+         <authentication>
+            <channelTag>ONLINE</channelTag>
+            <clientTag>BRANDPATH</clientTag>
+            <siteTag>MICROSITE</siteTag>
+            <territoryCode>ROU</territoryCode>
+         </authentication>
+         <order>
+            <language>RO</language>
+            <orderReference>test</orderReference>
+            <customerOrderReference>testCustomer</customerOrderReference>
+            <placedDate>${=new java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS").format(new Date())}</placedDate>
+            <orderProperties>
+             <!--1 or more repetitions:-->
+             <orderProperty>
+                <name>FIRSTNAME</name>
+                <value>${#firstName}</value>
+               </orderProperty>
+               <orderProperty>
+                <name>MIDDLENAME</name>
+                <value>test12</value>
+               </orderProperty>
+               <orderProperty>
+                <name>LASTNAME</name>
+                <value>${#lastName}</value>
+               </orderProperty>
+               <orderProperty>
+                <name>TITLE</name>
+                <value>${#title}</value>
+               </orderProperty>
+               <orderProperty>
+                <name>PHONENUMBER</name>
+                <value>777test31</value>
+               </orderProperty>
+               <orderProperty>
+                <name>EMAIL</name>
+                <value>test4sss2@ccc.ro</value>
+               </orderProperty>
+           </orderProperties>
+            <totalDiscount>1.43</totalDiscount>
+            <totalPrice>${totalPrice}</totalPrice>
+            <totalTax>21.44</totalTax>
+            <totalWeight>1.89</totalWeight>
+            <type>CONTRACT</type>
+         </order>
+         <orderPackages>${OrderPackages}<orderPackage>
+     </orderPackages>
+         <orderAddresses>
+              <!--1 or more repetitions:-->
+          <orderAddress>
+             <city>${#city}</city>
+             <line1>43 High Street</line1>
+             <!--Optional:-->
+             <line2>Corner building</line2>
+             <!--Optional:-->
+             <postcode>${postcode}</postcode>
+             <!--Optional:-->
+             <region>Bucks</region>
+             <territoryCode>ROU</territoryCode>
+             <type>BILLING</type>
+          </orderAddress>
+     </orderAddresses>
+         <!--Optional:-->
+         <orderComments>
+            <!--1 or more repetitions:-->
+            <orderComment>
+               <comment>YES Comment!</comment>
+               <type>POSITIVE</type>
+            </orderComment>
+         </orderComments>
+      </sei:createOrder>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" name="Contains" id="161ee5b4-fed1-4c54-b8f4-856816cc0029"><con:configuration><token>&lt;result>true&lt;/result></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:domain>eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI3NTA0NTA5MS0wNGQ3LTQyOGUtODc2Yi00ZGJjODFhNmNmOTciLCJleHAiOjE0MjU0NjE2MTIsIm5iZiI6MCwiaWF0IjoxNDI1NDYxMzEyLCJpc3MiOiJicmFuZHBhdGgiLCJhdWQiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzdWIiOiI1Y2UxZjBlZi00OTcwLTRiZmEtYjlhNC1jM2IyNTllZmFjOGEiLCJhenAiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzZXNzaW9uX3N0YXRlIjoiODBlNjczZmItODMzZi00MmE5LTlmODItMDE4NWUwM2MyNjhlIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9yZGVyLWFwcHJvdmVyIiwib3JkZXItcHJvY2Vzc29yIiwib3JkZXItdmlld2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsib21zIjp7InJvbGVzIjpbImFjY2Vzcy1vbXMiLCJ2aWV3LW9yZGVyIiwiYXBwcm92ZS1vcmRlciIsImFtZW5kLW9yZGVyIiwiY2hhbmdlLXBheW1lbnQiXX0sIm9tcy13cyI6eyJyb2xlcyI6WyJvcmRlci1jcmVhdGUiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19fQ.hQiEtTrh4PKx8QQ-Vjm-vmhPnfJg7mGIkx09Ms-BovI5bhne4il_ygS26UScrGXchLRQHWxwDX2ZbEl6XHtTwXz5_Fqo-l_Al9kD43Gb9dtoUqe3rpbDVUTGZcPKl1XVWWwPCZkBBsOu4QFOhYxyiJ-dIHTPMsKIY-FiO03-tHg</con:domain><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://sei.ws.oms.brandpath.com/OrderProcessing/createOrder" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>firstName</con:name><con:value>Julia</con:value></con:property><con:property><con:name>lastName</con:name><con:value>Smith</con:value></con:property></con:properties></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="createOrder TestCase 2" searchProperties="true" id="758b6ffd-1481-4832-bceb-5a5c79c049da" disabled="true"><con:settings/><con:testStep type="request" name="GetToken Request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>OrderProcessingServiceSoapBinding</con:interface><con:operation>createOrder</con:operation><con:request name="GetToken Request" id="787a66ca-7616-4c33-a9be-29be53d12c74"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="userName" value="oms-ws"/>
+  &lt;con:entry key="password" value="oms-ws12.GHgfL1"/>
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/oms-keycloak-token</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tok="http://www.brandpath.com/oms/ws/jaxws/TokenService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tok:getToken/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="ced378ca-a4ea-4d75-aea1-2b196a5db094"/><con:assertion type="Simple Contains" name="Contains" id="6ded9535-5057-455f-aa37-40b940a49070"><con:configuration><token>return</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Token Transfer"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="true" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>GetToken Request</con:sourceStep><con:sourcePath>//return/token</con:sourcePath><con:targetType>token</con:targetType><con:targetStep>Properties</con:targetStep><con:targetPath/><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>token</con:name><con:value>eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI3MjY5NTA3MC0zNTRhLTQ1NmQtOTViMS0xZTMzZjgwOGU0MjQiLCJleHAiOjE0Mjc3MTE4MDEsIm5iZiI6MCwiaWF0IjoxNDI3NzExNTAxLCJpc3MiOiJicmFuZHBhdGgiLCJhdWQiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzdWIiOiI1Y2UxZjBlZi00OTcwLTRiZmEtYjlhNC1jM2IyNTllZmFjOGEiLCJhenAiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzZXNzaW9uX3N0YXRlIjoiZjQ0NmU4NmEtNTliYS00NmE1LTkwODktMGJlYTFjMTUxZGNhIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9yZGVyLWFwcHJvdmVyIiwib3JkZXItcHJvY2Vzc29yIiwib3JkZXItdmlld2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsib21zIjp7InJvbGVzIjpbImFjY2Vzcy1vbXMiLCJ2aWV3LW9yZGVyIiwiYXBwcm92ZS1vcmRlciIsImFtZW5kLW9yZGVyIiwiY2hhbmdlLXBheW1lbnQiXX0sIm9tcy13cyI6eyJyb2xlcyI6WyJvcmRlci1jcmVhdGUiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19fQ.bEn1sEldTlCk28ezypqGPcelJ6cTXTUjHD1T5XftenTgBqh9R_lG1eHvUeG_jMnTzTX6Pqc-iiE6mSd59QvplKFHy4M5TpU-bzzxEsESjY2j3WMuohOnK9RUuhbkcSbo-BXhW0mPPKtc3JUE2cP9tWrx9q3XkmbhA21yUz-h9ls</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" name="IsTokenActive - Request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>TokenServiceSoapBinding</con:interface><con:operation>isTokenActive</con:operation><con:request name="IsTokenActive - Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="d4ebe986-21e0-4752-9eea-e53f4afedbc0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/oms-keycloak-token</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tok="http://www.brandpath.com/oms/ws/jaxws/TokenService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tok:isTokenActive>
+         <token>${token}</token>
+      </tok:isTokenActive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response" id="78bf7d3c-0304-4fff-b5d5-7843949a68c6"/><con:assertion type="Simple Contains" name="Contains" id="1e948a21-61e1-417b-b876-dccdf0644ab2"><con:configuration><token>&lt;return>true&lt;/return></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.brandpath.com/oms/ws/jaxws/TokenService/TokenService/isTokenActive"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script - Http Header"><con:settings/><con:config><script>import com.eviware.soapui.impl.wsdl.teststeps.*
+import com.eviware.soapui.support.types.StringToStringMap ;
+def tc = testRunner.testCase.testSuite.getTestCaseByName("createOrder TestCase")
+def tsp = tc.getTestStepByName("Properties")
+def token = tsp.getPropertyValue("token");
+def ts = tc.getTestStepByName("createOrder")
+
+def headers = new StringToStringMap()
+
+headers.put("Authorization","Bearer "+token)
+testRunner.testCase.getTestStepByName("CreateOrder").testRequest.setRequestHeaders(headers)
+</script></con:config></con:testStep><con:testStep type="groovy" name="Randomize order properties"><con:settings/><con:config><script><![CDATA[//Tip to generate a random element from an array
+def myTestCase = context.testCase
+def firstNames = ["Lena","Zuzanna","Julia","Maja","Hanna","Aleksandra","Amelia","Jakub","Kacper","Antoni","Filip","Jan","Szymon","Franciszek","Michał","Oliver","Jack","Charlie","Harry","Oscar","Thomas","Jacob","Ethan","Noah"]
+def lastNames = ["Smith","Jones","Williams","Taylor","Brown","Davies","Evans","Wilson","Craven","Johnson","Robinson","Thompson","Wright","Walker","White","Edwards","Hughes","Green","Hall", "Małecki","Maj","Sowa","Milewski","Gajda","Klimek","Olejniczak","Ratajczak","Romanowski","Matuszewski"]
+def titles = ["Mr","Mrs","Ms","Miss","Dr"]
+def cities = ["Bath","Birmingham","Bradford","Brighton & Hove","Bristol","Cambridge","Canterbury","Carlisle","Chelmsford","Chester","Chichester","Coventry","Derby","Durham","Ely","Exeter","Gloucester","Hereford","Kingston upon Hull","Lancaster","Leeds","Leicester","Lichfield","Lincoln","Liverpool","City of London","Manchester","Newcastle upon Tyne","Norwich","Nottingham","Oxford","Peterborough","Plymouth","Portsmouth","Preston","Ripon","St Albans","Salford","Salisbury","Sheffield","Southampton","Stoke-on-Trent","Sunderland","Truro","Wakefield","Wells","City of Westminster","Winchester","Wolverhampton","Worcester","York"]
+def packageItems = ["<packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem>","<packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem><packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem>","<packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem><packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem><packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem>"]
+
+
+random = new Random()
+propTestStep = myTestCase.getTestStepByName("CreateOrder Properties") // get the Property TestStep
+propTestStep.setPropertyValue("firstName", firstNames[random.nextInt(24)].toString())
+propTestStep.setPropertyValue("lastName", lastNames[random.nextInt(29)].toString())
+propTestStep.setPropertyValue("title", titles[random.nextInt(5)].toString())
+propTestStep.setPropertyValue("city", cities[random.nextInt(51)].toString())
+propTestStep.setPropertyValue("packageItems", packageItems[random.nextInt(3)].toString())
+log.info firstNames[random.nextInt(24)]
+log.info lastNames[random.nextInt(29)]
+log.info titles[random.nextInt(5)]
+log.info cities[random.nextInt(51)]
+log.info packageItems[random.nextInt(3)]
+]]></script></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script"><con:settings/><con:config><script>def sampleMap = ["Mr","Mrs","Ms","Miss","Dr"]
+assert sampleMap[0..4]  // We can use ranges.
+log.info sampleMap</script></con:config></con:testStep><con:testStep type="properties" name="CreateOrder Properties"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>title</con:name><con:value>Mrs</con:value></con:property><con:property><con:name>territoryCode</con:name><con:value>ROU</con:value></con:property><con:property><con:name>postcode</con:name><con:value>HP11 2AT</con:value></con:property><con:property><con:name>phone</con:name><con:value/></con:property><con:property><con:name>packageItems</con:name><con:value><![CDATA[<packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem><packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem><packageItem><price>24.45</price><productDescription>asdas</productDescription><productId>3</productId><itemProperties><itemProperty><name>WEIGHT</name><value>12.34</value></itemProperty><itemProperty><name>bla</name><value>asdsad</value></itemProperty><itemProperty><name>COLOR</name><value>Blue</value></itemProperty><itemProperty><name>COLOR</name><value>White</value></itemProperty><itemProperty><name>PIECES</name><value>3</value></itemProperty><itemProperty><name>LENGTH</name><value>8</value></itemProperty></itemProperties><quantity>4</quantity><quantityUnitId>2</quantityUnitId><tax>0.4</tax><taxRate>2</taxRate><type>HANDSET</type></packageItem>]]></con:value></con:property><con:property><con:name>orderType</con:name><con:value/></con:property><con:property><con:name>lastName</con:name><con:value>Małecki</con:value></con:property><con:property><con:name>firstName</con:name><con:value>Jacob</con:value></con:property><con:property><con:name>email</con:name><con:value/></con:property><con:property><con:name>city</con:name><con:value>Brighton &amp; Hove</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" name="CreateOrder"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>OrderProcessingServiceSoapBinding</con:interface><con:operation>createOrder</con:operation><con:request name="CreateOrder" id="4248ce63-10ab-415d-acb3-b562a612bbde"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI3MjY5NTA3MC0zNTRhLTQ1NmQtOTViMS0xZTMzZjgwOGU0MjQiLCJleHAiOjE0Mjc3MTE4MDEsIm5iZiI6MCwiaWF0IjoxNDI3NzExNTAxLCJpc3MiOiJicmFuZHBhdGgiLCJhdWQiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzdWIiOiI1Y2UxZjBlZi00OTcwLTRiZmEtYjlhNC1jM2IyNTllZmFjOGEiLCJhenAiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzZXNzaW9uX3N0YXRlIjoiZjQ0NmU4NmEtNTliYS00NmE1LTkwODktMGJlYTFjMTUxZGNhIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9yZGVyLWFwcHJvdmVyIiwib3JkZXItcHJvY2Vzc29yIiwib3JkZXItdmlld2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsib21zIjp7InJvbGVzIjpbImFjY2Vzcy1vbXMiLCJ2aWV3LW9yZGVyIiwiYXBwcm92ZS1vcmRlciIsImFtZW5kLW9yZGVyIiwiY2hhbmdlLXBheW1lbnQiXX0sIm9tcy13cyI6eyJyb2xlcyI6WyJvcmRlci1jcmVhdGUiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19fQ.bEn1sEldTlCk28ezypqGPcelJ6cTXTUjHD1T5XftenTgBqh9R_lG1eHvUeG_jMnTzTX6Pqc-iiE6mSd59QvplKFHy4M5TpU-bzzxEsESjY2j3WMuohOnK9RUuhbkcSbo-BXhW0mPPKtc3JUE2cP9tWrx9q3XkmbhA21yUz-h9ls" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/oms-ws/OrderProcessingService?wsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.oms.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:createOrder>
+         <authentication>
+            <channelTag>ONLINE</channelTag>
+            <clientTag>BRANDPATH</clientTag>
+            <siteTag>MICROSITE</siteTag>
+            <territoryCode>ROU</territoryCode>
+         </authentication>
+         <orderHeader>
+            <language>RO</language>
+            <orderReference>test</orderReference>
+            <customerOrderReference>testCustomer</customerOrderReference>
+            <placedDate>${=new java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS").format(new Date())}</placedDate>
+            <orderProperties>
+            	<!--1 or more repetitions:-->
+            	<orderProperty>
+	               <name>FIRSTNAME</name>
+	               <value>${#firstName}</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>MIDDLENAME</name>
+	               <value>test12</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>LASTNAME</name>
+	               <value>${#lastName}</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>TITLE</name>
+	               <value>${#title}</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>PHONENUMBER</name>
+	               <value>777test31</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>EMAIL</name>
+	               <value>test4sss2@ccc.ro</value>
+               </orderProperty>
+           </orderProperties>
+            <statusTag>AWAITING_APPROVAL</statusTag>
+            <totalDiscount>1.43</totalDiscount>
+            <totalPrice>100.45</totalPrice>
+            <totalTax>21.44</totalTax>
+            <totalWeight>1.89</totalWeight>
+            <type>STDDELIVERY</type>
+         </orderHeader>
+         <orderPackages>
+         		<orderPackage>
+               <bundleReference>asda</bundleReference>
+               <discount>1.2</discount>
+               <discountType>bgdbgd</discountType>
+               <!--Optional:-->
+               <offeringId>asdas</offeringId>
+               <packageItems>${packageItems}</packageItems>
+               <price>20</price>
+               <!--Optional:-->
+               <quantity>1</quantity>
+               <tax>33</tax>
+               <!--Optional:-->
+               <weight>7</weight>
+            </orderPackage>
+	    </orderPackages>
+         <orderAddresses>
+              <!--1 or more repetitions:-->
+	         <orderAddress>
+	            <city>${#city}</city>
+	            <line1>43 High Street</line1>
+	            <!--Optional:-->
+	            <line2>Corner building</line2>
+	            <!--Optional:-->
+	            <postcode>${postcode}</postcode>
+	            <!--Optional:-->
+	            <region>Bucks</region>
+	            <territoryCode>ROU</territoryCode>
+	            <type>BILLING</type>
+	         </orderAddress>
+	    </orderAddresses>
+         <!--Optional:-->
+         <orderComments>
+            <!--1 or more repetitions:-->
+            <orderComment>
+               <comment>YES Comment!</comment>
+               <type>POSITIVE</type>
+            </orderComment>
+         </orderComments>
+      </sei:createOrder>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" name="Contains" id="161ee5b4-fed1-4c54-b8f4-856816cc0029"><con:configuration><token>&lt;result>true&lt;/result></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:domain>eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI3NTA0NTA5MS0wNGQ3LTQyOGUtODc2Yi00ZGJjODFhNmNmOTciLCJleHAiOjE0MjU0NjE2MTIsIm5iZiI6MCwiaWF0IjoxNDI1NDYxMzEyLCJpc3MiOiJicmFuZHBhdGgiLCJhdWQiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzdWIiOiI1Y2UxZjBlZi00OTcwLTRiZmEtYjlhNC1jM2IyNTllZmFjOGEiLCJhenAiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzZXNzaW9uX3N0YXRlIjoiODBlNjczZmItODMzZi00MmE5LTlmODItMDE4NWUwM2MyNjhlIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9yZGVyLWFwcHJvdmVyIiwib3JkZXItcHJvY2Vzc29yIiwib3JkZXItdmlld2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsib21zIjp7InJvbGVzIjpbImFjY2Vzcy1vbXMiLCJ2aWV3LW9yZGVyIiwiYXBwcm92ZS1vcmRlciIsImFtZW5kLW9yZGVyIiwiY2hhbmdlLXBheW1lbnQiXX0sIm9tcy13cyI6eyJyb2xlcyI6WyJvcmRlci1jcmVhdGUiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19fQ.hQiEtTrh4PKx8QQ-Vjm-vmhPnfJg7mGIkx09Ms-BovI5bhne4il_ygS26UScrGXchLRQHWxwDX2ZbEl6XHtTwXz5_Fqo-l_Al9kD43Gb9dtoUqe3rpbDVUTGZcPKl1XVWWwPCZkBBsOu4QFOhYxyiJ-dIHTPMsKIY-FiO03-tHg</con:domain><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://sei.ws.oms.brandpath.com/OrderProcessing/createOrder" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>firstName</con:name><con:value>Julia</con:value></con:property><con:property><con:name>lastName</con:name><con:value>Smith</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

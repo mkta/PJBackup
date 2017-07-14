@@ -1,0 +1,151 @@
+<?xml version="1.0" ?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://sei.ws.esom.brandpath.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="TokenService" targetNamespace="http://sei.ws.esom.brandpath.com/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://sei.ws.esom.brandpath.com/" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://sei.ws.esom.brandpath.com/">
+  <xs:element name="getToken" type="tns:getToken"></xs:element>
+  <xs:element name="getTokenResponse" type="tns:getTokenResponse"></xs:element>
+  <xs:element name="isTokenActive" type="tns:isTokenActive"></xs:element>
+  <xs:element name="isTokenActiveResponse" type="tns:isTokenActiveResponse"></xs:element>
+  <xs:element name="refreshToken" type="tns:refreshToken"></xs:element>
+  <xs:element name="refreshTokenResponse" type="tns:refreshTokenResponse"></xs:element>
+  <xs:complexType name="isTokenActive">
+    <xs:sequence>
+      <xs:element name="token" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="isTokenActiveResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getToken">
+    <xs:sequence></xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTokenResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:kcToken"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="kcToken">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="expiresIn" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="refreshToken" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="token" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="refreshToken">
+    <xs:sequence>
+      <xs:element name="oldToken" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="refreshTokenResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GenericSoapFault" type="tns:GenericSoapFault"></xs:element>
+  <xs:complexType name="GenericSoapFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="isTokenActive">
+    <wsdl:part element="tns:isTokenActive" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isTokenActiveResponse">
+    <wsdl:part element="tns:isTokenActiveResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getToken">
+    <wsdl:part element="tns:getToken" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="refreshToken">
+    <wsdl:part element="tns:refreshToken" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GenericSoapFault">
+    <wsdl:part element="tns:GenericSoapFault" name="GenericSoapFault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTokenResponse">
+    <wsdl:part element="tns:getTokenResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="refreshTokenResponse">
+    <wsdl:part element="tns:refreshTokenResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Token">
+    <wsdl:operation name="isTokenActive">
+      <wsdl:input message="tns:isTokenActive" name="isTokenActive">
+    </wsdl:input>
+      <wsdl:output message="tns:isTokenActiveResponse" name="isTokenActiveResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:GenericSoapFault" name="GenericSoapFault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getToken">
+      <wsdl:input message="tns:getToken" name="getToken">
+    </wsdl:input>
+      <wsdl:output message="tns:getTokenResponse" name="getTokenResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:GenericSoapFault" name="GenericSoapFault">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="refreshToken">
+      <wsdl:input message="tns:refreshToken" name="refreshToken">
+    </wsdl:input>
+      <wsdl:output message="tns:refreshTokenResponse" name="refreshTokenResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:GenericSoapFault" name="GenericSoapFault">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TokenServiceSoapBinding" type="tns:Token">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+    <wsdl:operation name="isTokenActive">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="isTokenActive">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="isTokenActiveResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+      <wsdl:fault name="GenericSoapFault">
+        <soap:fault name="GenericSoapFault" use="literal"></soap:fault>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getToken">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getToken">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getTokenResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+      <wsdl:fault name="GenericSoapFault">
+        <soap:fault name="GenericSoapFault" use="literal"></soap:fault>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="refreshToken">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="refreshToken">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="refreshTokenResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+      <wsdl:fault name="GenericSoapFault">
+        <soap:fault name="GenericSoapFault" use="literal"></soap:fault>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TokenService">
+    <wsdl:port binding="tns:TokenServiceSoapBinding" name="Token">
+      <soap:address location="http://ecb8801e5cd8:8080/esom-ws"></soap:address>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

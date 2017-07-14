@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://rodc-opt-tst-14-qkm1:8080/" />
+<title>ProdcutCreatev1</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ProdcutCreatev1</td></tr>
+</thead><tbody>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://pimtest.brandpath.com:8080/pim-web/pim/dashboard/dashboard.xhtml</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>xpath=//*[@id='kc-login']</td>
+	<td>LogIn</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>LogIn = ${LogIn}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${LogIn}==false</td>
+	<td>noLogin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>QAZ123wsx</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>catalinf</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=rememberMe</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=kc-login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>noLogin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[@id='0_1']/ul/li/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//*[@id='productVersionFilterForm:j_idt81:addButton']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{(new Date().getHours()+&quot;:&quot; + new Date().getMinutes() + &quot;:&quot; + new Date().getSeconds() + &quot;(&quot; + new Date().getFullYear() + &quot;/&quot; + (new Date().getMonth() +1) + &quot;/&quot; + new Date().getDate().toString() + &quot;)&quot;)}</td>
+	<td>nameDate</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=productTabsForm:tabViewId:name</td>
+	<td>ScriptProduct-${nameDate}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:manufacturer']/div[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=productTabsForm:tabViewId:manufacturer_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:productCatalogue']/span/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:productCatalogue_panel']/div[2]/ul/li[2]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:productCatalogue_panel']/div[2]/ul/li[3]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:categories']/span/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:categories_panel']/div[2]/ul/li[33]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:categories_panel']/div[2]/ul/li[34]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:categories_panel']/div[2]/ul/li[35]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:categories_panel']/div[2]/ul/li[14]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:categories_panel']/div[2]/ul/li[15]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:categories_panel']/div[2]/ul/li[16]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:categories_panel']/div[2]/ul/li[43]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:categories_panel']/div[2]/ul/li[44]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:categories_panel']/div[2]/ul/li[45]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:categories_panel']/div[2]/ul/li[46]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:categories_panel']/div[2]/ul/li[47]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:categories_panel']/div[2]/ul/li[48]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:categories_panel']/div[2]/ul/li[49]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:type']/div[3]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=productTabsForm:tabViewId:type_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//*[@id='productTabsForm:tabViewId:j_idt117']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{(new Date().getHours()+&quot;&quot; + new Date().getMinutes() + &quot;&quot; + new Date().getSeconds() + &quot;&quot; + new Date().getFullYear() + &quot;&quot; + (new Date().getMonth() +1) + &quot;&quot; + new Date().getDate().toString() + &quot;&quot;)}</td>
+	<td>skuDate</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=productTabsForm:tabViewId:code</td>
+	<td>GSSku-${skuDate}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//*[@id='productTabsForm:tabViewId:j_idt113:1:j_idt114']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Details</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=productTabsForm:tabViewId:j_idt125:1:j_idt126:j_idt129:6:j_idt138</td>
+	<td>yes</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=productTabsForm:tabViewId:j_idt125:1:j_idt126:j_idt129:8:j_idt138</td>
+	<td>yes</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=productTabsForm:tabViewId:j_idt125:1:j_idt126:j_idt129:10:j_idt139:0:j_idt140</td>
+	<td>aye</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=productTabsForm:tabViewId:j_idt125:1:j_idt126:j_idt150:1:j_idt159</td>
+	<td>5MP</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=productTabsForm:tabViewId:j_idt125:1:j_idt126:j_idt150:7:j_idt159</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=productTabsForm:tabViewId:j_idt125:1:j_idt126:j_idt150:7:j_idt159</td>
+	<td>300h</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=productTabsForm:tabViewId:j_idt125:1:j_idt126:j_idt150:9:j_idt159</td>
+	<td>100h</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody[@id='productTabsForm:tabViewId:j_idt125:2:j_idt126:j_idt129_data']/tr/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=productTabsForm:tabViewId:j_idt125:2:j_idt126:j_idt129:0:j_idt138</td>
+	<td>300mm</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=productTabsForm:tabViewId:j_idt125:2:j_idt126:j_idt129:4:j_idt138</td>
+	<td>300mm</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=productTabsForm:tabViewId:j_idt125:2:j_idt126:j_idt129:6:j_idt139:0:j_idt140</td>
+	<td>yes</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=productTabsForm:tabViewId:j_idt125:2:j_idt126:j_idt150:1:j_idt159</td>
+	<td>100g</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=productTabsForm:tabViewId:j_idt125:2:j_idt126:j_idt150:3:j_idt159</td>
+	<td>200x500x90</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=productTabsForm:tabViewId:j_idt125:2:j_idt126:j_idt150:5:j_idt160:0:j_idt161</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=productTabsForm:tabViewId:j_idt125:2:j_idt126:j_idt150:5:j_idt160:0:j_idt161</td>
+	<td>metal</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=productTabsForm:tabViewId:j_idt125:2:j_idt126:j_idt150:7:j_idt160:0:j_idt161</td>
+	<td>yes</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Assets')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//*[@id='productTabsForm:tabViewId:j_idt193']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=assetDialogForm:sourceFileNameInput</td>
+	<td>GSSku-${skuDate}</td>
+</tr>
+<tr>
+	<td>keyDown</td>
+	<td>id=assetDialogForm:sourceFileNameInput</td>
+	<td>13</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=assetDialogForm:sourceFileNameInput</td>
+	<td>13</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@type='file'] </td>
+	<td>D:\ODFB\OneDrive for Business 1\@prodcut images\9456204_sa.jpg</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=assetDialogForm:editCreate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=General</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//*[@id='productTabsForm:tabViewId:j_idt117']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//*[@id='productTabsForm:tabViewId:j_idt113:0:j_idt114']</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://pimtest.brandpath.com:8080/" />
+<title>WebPArt-PPCFF</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">WebPArt-PPCFF</td></tr>
+</thead><tbody>
+<tr>
+	<td>store</td>
+	<td>javascript{new Date().getFullYear() + &quot;-&quot; + (new Date().getMonth() +1) + &quot;-&quot; + new Date().getDate().toString() + &quot;&quot;+ &quot;_&quot;+new Date().getHours()+&quot;:&quot; + new Date().getMinutes() + &quot;:&quot; + new Date().getSeconds()}</td>
+	<td>WebScriptStartTimePPCFF</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{new Date().getFullYear() + &quot;-&quot; + (new Date().getMonth() +1) + &quot;-&quot; + new Date().getDate().toString() + &quot;&quot;+ &quot;_&quot;+new Date().getHours()+&quot;&quot; + new Date().getMinutes() + &quot;&quot; + new Date().getSeconds()}</td>
+	<td>webScriptDate</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>basketProductPPCFF</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>spricePPCFF</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>vouchermsgPPCFF</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>fpricePPCFF</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>paypallpricePPCFF</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>OrderNumberPPCFF</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>ordercreatedatePPCFF</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>vouchdisPPCFF</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>WebScriptRedirectToPayPallTimePPCFF</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>WebScriptPayPallFinishTimePPCFF</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>otonPPCFF</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>tsPPCFF</td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://sabtst.brandpath.net/</td>
+	<td></td>
+</tr>
+<!--Clear Cookies-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>System.import('config').then(function(module){&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var config = module.AppConfig,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container = document.body.aurelia.container,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AppConfig = container.get(config);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AppConfig.clearSession(); });</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<!--Go to TV-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[1]/header/nav/div[3]/div/div[3]/ul[1]/li[2]/div[1]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=sizeAll</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--Open QuickView-->
+<tr>
+	<td>click</td>
+	<td>link=Samsung Galaxy S6 Testing Test</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--Add to basket-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[1]/compose[1]/div/div/div[2]/div/div/div[2]/div[1]/div/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--Go to basket-->
+<tr>
+	<td>click</td>
+	<td>link=See basket</td>
+	<td></td>
+</tr>
+<!--Paypall-->
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=paypal_credit</td>
+	<td></td>
+</tr>
+<!--AddVoucher-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>id=voucher</td>
+	<td>vouchaddPPCFF</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${vouchaddPPCFF}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${vouchaddPPCFF}==false</td>
+	<td>vaadd</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=voucher</td>
+	<td>geani-script</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>vaadd</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[1]/router-view/section/div/div/div[1]/div[2]/table/tbody[4]/tr[1]/td[1]/form/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>7000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=html/body/div[1]/router-view/section/div/div/div[1]/div[2]/table/tbody[4]/tr[1]/td[1]/div/p[2]/span</td>
+	<td>vouchermsgPPCFF</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${vouchermsgPPCFF}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>xpath=html/body/div[1]/router-view/section/div/div/div[1]/div[2]/table/tbody[4]/tr[1]/td[3]/div/span</td>
+	<td>vouchdiPPCFF</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${vouchdiPPCFF}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${vouchdiPPCFF}==false</td>
+	<td>novPPCFF</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=html/body/div[1]/router-view/section/div/div/div[1]/div[2]/table/tbody[4]/tr[1]/td[3]/div/span</td>
+	<td>vouchdisPPCFF</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${vouchdisPPCFF}</td>
+	<td></td>
+</tr>
+<!--StoreStuff-->
+<tr>
+	<td>label</td>
+	<td>novPPCFF</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=html/body/div[1]/router-view/section/div/div/div[1]/div[2]/table/tbody[1]/tr/td[6]/div/span</td>
+	<td>spricePPCFF</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${spricePPCFF}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=html/body/div[1]/router-view/section/div/div/div[1]/div[2]/table/tbody[1]/tr/td[2]/span/a</td>
+	<td>basketProductPPCFF</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${basketProductPPCFF}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=html/body/div[1]/router-view/section/div/div/div[1]/div[2]/table/tbody[5]/tr/td[2]/p/span</td>
+	<td>fpricePPCFF</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${fpricePPCFF}</td>
+	<td></td>
+</tr>
+<!--Go to chekcout-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[1]/router-view/section/div/div/div[1]/div[3]/div/form/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--Add billing details-->
+<tr>
+	<td>select</td>
+	<td>id=bill_title</td>
+	<td>label=Mr</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=option[value=&quot;Mr&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_first_name</td>
+	<td>Geani test first name </td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_second_name</td>
+	<td>test last name script</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_address_1</td>
+	<td>test addes 1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_address_2</td>
+	<td>test addes 2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_city</td>
+	<td>test city</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_state</td>
+	<td>test county</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_zipcode</td>
+	<td>DH98 1BT</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_email</td>
+	<td>catalin.fleancu@brandpath.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_email_confirm</td>
+	<td>catalin.fleancu@brandpath.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_phone</td>
+	<td>0766831683683</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=terms</td>
+	<td></td>
+</tr>
+<!--Proceed to PayPall payment (checkout)-->
+<tr>
+	<td>store</td>
+	<td>javascript{new Date().getFullYear() + &quot;-&quot; + (new Date().getMonth() +1) + &quot;-&quot; + new Date().getDate().toString() + &quot;&quot;+ &quot;_&quot;+new Date().getHours()+&quot;:&quot; + new Date().getMinutes() + &quot;:&quot; + new Date().getSeconds()}</td>
+	<td>WebScriptRedirectToPayPallTimePPCFF</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=html/body/div[1]/router-view/section/div/div/div[1]/form/div/div[3]/div[3]/button[1]</td>
+	<td></td>
+</tr>
+<!--PPCredit-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@value='Select'])[3]</td>
+	<td></td>
+</tr>
+<!--PayPall LogIn Info-->
+<tr>
+	<td>pause</td>
+	<td>15000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=html/body/div[1]/div/div[1]/div[1]/div/div/div[2]/div/span/span[2]/span[2]</td>
+	<td>paypallpricePPCFF</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${paypallpricePPCFF}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>xpath=html/body/div[1]/div/div[1]/div[2]/section[2]/div[2]/div[1]/div/div[1]/form/div[1]/div[1]/input</td>
+	<td>paylog</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Paypall login = ${paylog}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${paylog}==false</td>
+	<td>nopaylog</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[1]/div/div[1]/div[2]/section[2]/div[2]/div[1]/div/div[1]/form/div[1]/div[1]/input</td>
+	<td>bpcbuyeruk@pj-interactive.ro</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[1]/div/div[1]/div[2]/section[2]/div[2]/div[1]/div/div[1]/form/div[1]/div[2]/input</td>
+	<td>S1nc1ty0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[1]/div/div[1]/div[2]/section[2]/div[2]/div[1]/div/div[1]/form/div[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<!--Confirm Payment-->
+<tr>
+	<td>label</td>
+	<td>nopaylog</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{new Date().getFullYear() + &quot;-&quot; + (new Date().getMonth() +1) + &quot;-&quot; + new Date().getDate().toString() + &quot;&quot;+ &quot;_&quot;+new Date().getHours()+&quot;:&quot; + new Date().getMinutes() + &quot;:&quot; + new Date().getSeconds()}</td>
+	<td>WebScriptPayPallFinishTimePPCFF</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=confirmButtonTop</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>50000</td>
+	<td></td>
+</tr>
+<!--ThankYouPage-->
+<!--Store Full order text-->
+<tr>
+	<td>storeText</td>
+	<td>xpath=//*[@id='complete-basket']/div/div/h1[2]</td>
+	<td>fullText</td>
+</tr>
+<!--Remove First Part-->
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>section1</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['fullText'].split('#')[storedVars['section1']]}</td>
+	<td>rFirstPart</td>
+</tr>
+<!--Remove Second Part And Store Order Number-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>section2</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['rFirstPart'].split(' s')[storedVars['section2']]}</td>
+	<td>OrderNumberPPCFF</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${OrderNumberPPCFF}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{new Date().getFullYear() + &quot;-&quot; + (new Date().getMonth() +1) + &quot;-&quot; + new Date().getDate().toString() + &quot;&quot;+ &quot;_&quot;+new Date().getHours()+&quot;&quot; + new Date().getMinutes() + &quot;&quot; + new Date().getSeconds()}</td>
+	<td>ordercreatedatePPCFF</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${ordercreatedatePPCFF}</td>
+	<td></td>
+</tr>
+<!--Othder tacking Page-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=html/body/div[1]/router-view/section/div/div/p[4]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=html/body/div[1]/router-view/div[2]/h2/span</td>
+	<td>otonPPCFF</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${otonPPCFF}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=html/body/div[1]/router-view/div[2]/h2/span</td>
+	<td>${OrderNumberPPCFF}</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=html/body/div[1]/router-view/div[2]/table/tbody/tr/td[3]</td>
+	<td>tsPPCFF</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

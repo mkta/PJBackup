@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://vfq-preprod.pjmedia.ro/" />
+<title>TS29-BestDeals-Plan-NoAccessories</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TS29-BestDeals-Plan-NoAccessories</td></tr>
+</thead><tbody>
+<tr>
+	<td>echo</td>
+	<td>TS29-BestDeals-Plan-NoAccessories</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>offerCount</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>newOffer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>planCount</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>repeatPhone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://www.vodafone.qa/en</td>
+	<td></td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Handsets</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='content']/div/div[2]/ul/li[3]/a/span</td>
+	<td></td>
+</tr>
+<!--offer-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=//*[@id='page-results']/div[*]/div/div[3]/div[1]/a/span</td>
+	<td>offerNumber</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Offer Number: ${offerCount}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='product-holder']/div/ul/li[${offerCount}]/div/h3</td>
+	<td>offerName</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Offer Name: ${offerName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//*[@id='page-results']/div[${offerCount}]/div/div[3]/div[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>xpath=//*[@id='prepayd']/form[1]/button</td>
+	<td>OnStock</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Offer on stock? = ${OnStock}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${OnStock}==false</td>
+	<td>oos</td>
+</tr>
+<!--Plan-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=(//*[@id='view_plan_details_select']/option)</td>
+	<td>planNumber</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=(//*[@id='view_plan_details_select']/option)[position()=${planCount}]</td>
+	<td>planLabel</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=view_plan_details_select</td>
+	<td>label=${planLabel}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Plan name : ${planLabel}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//*[@id='prepayd']/form[1]/button</td>
+	<td></td>
+</tr>
+<!--accessories-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Continue to next step</td>
+	<td></td>
+</tr>
+<!--basket-->
+<tr>
+	<td>storeText</td>
+	<td>css=p.title</td>
+	<td>BP</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Basket plan = ${BP} / Selected plan = ${planLabel}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//*[@id='frmBasketTable']/table/tbody/tr[7]/td/table/tbody/tr/td[1]/p[1]</td>
+	<td>phoneNameBasket</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Offer name in basket: ${offerNameBasket} / Offer name selected : ${offerName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.planCount++}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>javascript{storedVars.planCount == storedVars.planNumber + 1}</td>
+	<td>nextOffer</td>
+</tr>
+<tr>
+	<td>gotolabel</td>
+	<td>repeat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>nextOffer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>oos</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.offerCount++}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>javascript{storedVars.offerCount == storedVars.offerNumber + 1}</td>
+	<td>end</td>
+</tr>
+<tr>
+	<td>gotolabel</td>
+	<td>newOffer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>end</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://pimtest.brandpath.com:8080/" />
+<title>18.1.WebPArt-bt</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">18.1.WebPArt-bt</td></tr>
+</thead><tbody>
+<tr>
+	<td>store</td>
+	<td>javascript{new Date().getFullYear() + &quot;-&quot; + (new Date().getMonth() +1) + &quot;-&quot; + new Date().getDate().toString() + &quot;&quot;+ &quot;_&quot;+new Date().getHours()+&quot;:&quot; + new Date().getMinutes() + &quot;:&quot; + new Date().getSeconds()}</td>
+	<td>WebScriptStartTimebt</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{new Date().getFullYear() + &quot;-&quot; + (new Date().getMonth() +1) + &quot;-&quot; + new Date().getDate().toString() + &quot;&quot;+ &quot;_&quot;+new Date().getHours()+&quot;&quot; + new Date().getMinutes() + &quot;&quot; + new Date().getSeconds()}</td>
+	<td>webScriptDate</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>basketProductbt</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>spricebt</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>vouchermsgbt</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>fpricebt</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>paypallpricebt</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>OrderNumberbt</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>ordercreatedatebt</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>vouchdisbt</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>WebScriptRedirectToPayPallTimebt</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>WebScriptPayPallFinishTimebt</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>trackingstatusbt</td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://sabtst.brandpath.net/</td>
+	<td></td>
+</tr>
+<!--Clear Cookies-->
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>System.import('config').then(function(module){&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var config = module.AppConfig,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container = document.body.aurelia.container,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AppConfig = container.get(config);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AppConfig.clearSession(); });</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--Go to TV-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/header/nav/div[3]/div/div[3]/ul[1]/li[5]/div[1]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=sizeAll</td>
+	<td></td>
+</tr>
+<!--Open PDP-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--Open Main-->
+<tr>
+	<td>click</td>
+	<td>link=24&quot; Professional UHD Monitor with multi-tasking functionality</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>skip</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--Add to basket-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/compose[1]/div/div/div[2]/div/div/div[2]/div[3]/div/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--Go to basket-->
+<tr>
+	<td>click</td>
+	<td>link=See basket</td>
+	<td></td>
+</tr>
+<!--Paypall-->
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=transfer</td>
+	<td></td>
+</tr>
+<!--AddVoucher-->
+<tr>
+	<td>type</td>
+	<td>id=voucher</td>
+	<td>sv-MEUH-FNVO</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/router-view/section[1]/div/div/div[2]/div[1]/table/tbody[4]/tr[1]/td[1]/form/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>7000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>xpath=html/body/router-view/router-view/section[1]/div/div/div[2]/div[1]/table/tbody[4]/tr/td[3]/div/span</td>
+	<td>vouchdibt</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${vouchdibt}==false</td>
+	<td>novbt</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=html/body/router-view/router-view/section[1]/div/div/div[2]/div[1]/table/tbody[4]/tr/td[1]/div/p[2]</td>
+	<td>vouchermsgbt</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=html/body/router-view/router-view/section[1]/div/div/div[2]/div[1]/table/tbody[4]/tr/td[3]/div/span</td>
+	<td>vouchdisbt</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${vouchermsgbt}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${vouchdibt}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${vouchdisbt}</td>
+	<td></td>
+</tr>
+<!--StoreStuff-->
+<tr>
+	<td>label</td>
+	<td>novbt</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=html/body/router-view/section[1]/div/div/div[2]/div[1]/table/tbody[1]/tr/td[6]/div/span</td>
+	<td>spricebt</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${spricebt}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=html/body/router-view/section[1]/div/div/div[2]/div[1]/table/tbody[1]/tr/td[2]/span/a</td>
+	<td>basketProductbt</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${basketProductbt}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=html/body/router-view/section[1]/div/div/div[2]/div[1]/table/tbody[5]/tr/td[2]/p/span</td>
+	<td>fpricebt</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${fpricebt}</td>
+	<td></td>
+</tr>
+<!--Go to chekcout-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/router-view/section[1]/div/div/div[2]/div[2]/div/form/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--Add billing details-->
+<tr>
+	<td>click</td>
+	<td>id=terms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=bill_title</td>
+	<td>label=Mr</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=option[value=&quot;Mr&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_first_name</td>
+	<td>Geani test first name </td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_second_name</td>
+	<td>test last name script</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_address_1</td>
+	<td>test addes 1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_address_2</td>
+	<td>test addes 2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_city</td>
+	<td>test city</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_state</td>
+	<td>test state</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_zipcode</td>
+	<td>SL7 1NN</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ship_zipcode</td>
+	<td>SL7 1NN</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_email</td>
+	<td>catalin.fleancu@pj-interactive.ro</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_email_confirm</td>
+	<td>catalin.fleancu@pj-interactive.ro</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_phone</td>
+	<td>0774589143</td>
+</tr>
+<!--Proceed to bt payment (checkout)-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/router-view/section/div/div/div[1]/form/div/div[3]/div[3]/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/router-view/section/div/div/div[1]/form/div/div[3]/div[2]/button[1]</td>
+	<td></td>
+</tr>
+<!--ThankYouPage-->
+<!--Store Full order text-->
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//*[@id='complete-basket']/div/div/h1[2]</td>
+	<td>fullText</td>
+</tr>
+<!--Remove First Part-->
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>section1</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['fullText'].split('#')[storedVars['section1']]}</td>
+	<td>rFirstPart</td>
+</tr>
+<!--Remove Second Part And Store Order Number-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>section2</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['rFirstPart'].split(' s')[storedVars['section2']]}</td>
+	<td>OrderNumberbt</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${OrderNumberbt}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{new Date().getFullYear() + &quot;-&quot; + (new Date().getMonth() +1) + &quot;-&quot; + new Date().getDate().toString() + &quot;&quot;+ &quot;_&quot;+new Date().getHours()+&quot;&quot; + new Date().getMinutes() + &quot;&quot; + new Date().getSeconds()}</td>
+	<td>ordercreatedatebt</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${ordercreatedatebt}</td>
+	<td></td>
+</tr>
+<!--Order TrackingPart-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=html/body/router-view/section/div/div/p[4]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>15000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=html/body/router-view/div[2]/h2/span</td>
+	<td>${OrderNumberbt}</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=html/body/router-view/div[2]/table/tbody/tr/td[3]</td>
+	<td>trackingstatusbt</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${trackingstatusbt}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

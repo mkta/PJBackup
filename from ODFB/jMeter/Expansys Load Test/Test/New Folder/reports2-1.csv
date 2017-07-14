@@ -1,0 +1,788 @@
+elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,grpThreads,allThreads,URL,Latency
+512,HomePage,200,OK,Thread Group2 1-1,text,true,,1,1,http://www.expansys.com/,429
+1200,Samsung-Details-Page,200,OK,Thread Group2 1-1,text,true,,3,3,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,512
+1276,HomePage,200,OK,Thread Group2 1-2,text,true,,4,4,http://www.expansys.com/,395
+244,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-1,text,true,,4,4,http://www.expansys.com/more/?sbadd=274865,192
+413,Basket,200,OK,Thread Group2 1-1,text,true,,4,4,http://www.expansys.com/basket/,413
+735,HomePage,200,OK,Thread Group2 1-4,text,true,,4,4,http://www.expansys.com/,551
+679,HomePage,200,OK,Thread Group2 1-5,text,true,,5,5,http://www.expansys.com/,361
+2018,HomePage,200,OK,Thread Group2 1-3,text,true,,5,5,http://www.expansys.com/,648
+1165,Samsung-Details-Page,200,OK,Thread Group2 1-5,text,true,,7,7,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,237
+1112,Samsung-Details-Page,200,OK,Thread Group2 1-3,text,true,,7,7,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,426
+982,HomePage,200,OK,Thread Group2 1-7,text,true,,7,7,http://www.expansys.com/,449
+770,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-3,text,true,,8,8,http://www.expansys.com/more/?sbadd=274865,599
+3262,Samsung-Details-Page,200,OK,Thread Group2 1-2,text,true,,8,8,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,552
+843,Basket,200,OK,Thread Group2 1-3,text,true,,9,9,http://www.expansys.com/basket/,842
+1578,HomePage,200,OK,Thread Group2 1-9,text,true,,9,9,http://www.expansys.com/,1170
+2559,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-5,text,true,,10,10,http://www.expansys.com/more/?sbadd=274865,330
+4705,Samsung-Details-Page,200,OK,Thread Group2 1-4,text,true,,11,11,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,484
+2175,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-2,text,true,,11,11,http://www.expansys.com/more/?sbadd=274865,590
+1482,Samsung-Details-Page,200,OK,Thread Group2 1-9,text,true,,12,12,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,326
+633,Basket,200,OK,Thread Group2 1-2,text,true,,12,12,http://www.expansys.com/basket/,179
+5438,HomePage,200,OK,Thread Group2 1-6,text,true,,12,12,http://www.expansys.com/,658
+1995,Basket,200,OK,Thread Group2 1-5,text,true,,12,12,http://www.expansys.com/basket/,553
+1872,HomePage,200,OK,Thread Group2 1-13,text,true,,12,12,http://www.expansys.com/,798
+1549,HomePage,200,OK,Thread Group2 1-14,text,true,,12,12,http://www.expansys.com/,522
+3235,HomePage,200,OK,Thread Group2 1-12,text,true,,13,13,http://www.expansys.com/,1553
+2193,Samsung-Details-Page,200,OK,Thread Group2 1-6,text,true,,14,14,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,750
+3533,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-4,text,true,,15,15,http://www.expansys.com/more/?sbadd=274865,484
+6596,HomePage,200,OK,Thread Group2 1-8,text,true,,15,15,http://www.expansys.com/,935
+317,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-6,text,true,,15,15,http://www.expansys.com/more/?sbadd=274865,281
+2580,Samsung-Details-Page,200,OK,Thread Group2 1-13,text,true,,16,16,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,885
+2420,Samsung-Details-Page,200,OK,Thread Group2 1-14,text,true,,16,16,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,730
+1051,Basket,200,OK,Thread Group2 1-4,text,true,,16,16,http://www.expansys.com/basket/,1050
+7467,Samsung-Details-Page,200,OK,Thread Group2 1-7,text,true,,16,16,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,479
+2019,HomePage,200,OK,Thread Group2 1-18,text,true,,16,16,http://www.expansys.com/,798
+1908,HomePage,200,OK,Thread Group2 1-19,text,true,,17,17,http://www.expansys.com/,564
+7353,HomePage,200,OK,Thread Group2 1-10,text,true,,17,17,http://www.expansys.com/,884
+1927,Basket,200,OK,Thread Group2 1-6,text,true,,17,17,http://www.expansys.com/basket/,237
+8869,HomePage,200,OK,Thread Group2 1-11,text,true,,19,19,http://www.expansys.com/,1085
+6588,HomePage,200,OK,Thread Group2 1-15,text,true,,19,19,http://www.expansys.com/,523
+5357,HomePage,200,OK,Thread Group2 1-17,text,true,,20,20,http://www.expansys.com/,4047
+2984,HomePage,200,OK,Thread Group2 1-22,text,true,,21,21,http://www.expansys.com/,914
+1767,HomePage,200,OK,Thread Group2 1-25,text,true,,21,21,http://www.expansys.com/,755
+1370,HomePage,200,OK,Thread Group2 1-26,text,true,,22,22,http://www.expansys.com/,780
+3815,HomePage,200,OK,Thread Group2 1-23,text,true,,23,23,http://www.expansys.com/,2242
+5611,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-13,text,true,,23,23,http://www.expansys.com/more/?sbadd=274865,1108
+8382,HomePage,200,OK,Thread Group2 1-16,text,true,,24,24,http://www.expansys.com/,613
+5800,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-14,text,true,,24,24,http://www.expansys.com/more/?sbadd=274865,158
+6047,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-7,text,true,,25,25,http://www.expansys.com/more/?sbadd=274865,598
+3801,Samsung-Details-Page,200,OK,Thread Group2 1-11,text,true,,26,26,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1013
+11904,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-9,text,true,,28,28,http://www.expansys.com/more/?sbadd=274865,1228
+0,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-9,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,28,28,http://www.expansys.com/basket/,0
+8561,HomePage,200,OK,Thread Group2 1-21,text,true,,28,28,http://www.expansys.com/,1055
+3608,HomePage,200,OK,Thread Group2 1-31,text,true,,29,29,http://www.expansys.com/,1587
+4382,Basket,200,OK,Thread Group2 1-13,text,true,,30,30,http://www.expansys.com/basket/,1033
+4279,Basket,200,OK,Thread Group2 1-14,text,true,,29,29,http://www.expansys.com/basket/,1732
+3797,Basket,200,OK,Thread Group2 1-7,text,true,,28,28,http://www.expansys.com/basket/,1304
+3385,HomePage,200,OK,Thread Group2 1-32,text,true,,27,27,http://www.expansys.com/,1639
+11215,HomePage,200,OK,Thread Group2 1-20,text,true,,28,28,http://www.expansys.com/,975
+2,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-20,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,28,28,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+5372,HomePage,200,OK,Thread Group2 1-30,text,true,,28,28,http://www.expansys.com/,1149
+13845,Samsung-Details-Page,200,OK,Thread Group2 1-12,text,true,,30,30,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,879
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-12,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,30,30,http://www.expansys.com/more/?sbadd=274865,0
+1418,Basket,200,OK,Thread Group2 1-12,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,32,32,http://www.expansys.com/basket/,1417
+4302,Samsung-Details-Page,200,OK,Thread Group2 1-31,text,true,,33,33,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,790
+10623,Samsung-Details-Page,200,OK,Thread Group2 1-22,text,true,,33,33,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,2104
+4336,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-20,text,true,,35,35,http://www.expansys.com/more/?sbadd=274865,1647
+5258,Samsung-Details-Page,200,OK,Thread Group2 1-30,text,true,,36,36,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,959
+17808,Samsung-Details-Page,200,OK,Thread Group2 1-8,text,true,,37,37,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1490
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-8,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,37,37,http://www.expansys.com/more/?sbadd=274865,0
+2489,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-22,text,true,,37,37,http://www.expansys.com/more/?sbadd=274865,1133
+1198,Basket,200,OK,Thread Group2 1-8,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,39,39,http://www.expansys.com/basket/,1197
+5391,HomePage,200,OK,Thread Group2 1-42,text,true,,38,38,http://www.expansys.com/,1807
+15823,Samsung-Details-Page,200,OK,Thread Group2 1-17,text,true,,40,40,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1368
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-17,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,40,40,http://www.expansys.com/more/?sbadd=274865,0
+16238,Samsung-Details-Page,200,OK,Thread Group2 1-15,text,true,,40,40,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1191
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-15,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,40,40,http://www.expansys.com/more/?sbadd=274865,0
+2795,HomePage,200,OK,Thread Group2 1-51,text,true,,43,43,http://www.expansys.com/,1528
+2099,Basket,200,OK,Thread Group2 1-17,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,43,43,http://www.expansys.com/basket/,2098
+11919,HomePage,200,OK,Thread Group2 1-36,text,true,,42,42,http://www.expansys.com/,2396
+16151,HomePage,200,OK,Thread Group2 1-29,text,true,,42,42,http://www.expansys.com/,2846
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-29,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,42,42,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+7038,Basket,200,OK,Thread Group2 1-20,text,true,,44,44,http://www.expansys.com/basket/,984
+21618,Samsung-Details-Page,200,OK,Thread Group2 1-19,text,true,,44,44,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,293
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-19,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,44,44,http://www.expansys.com/more/?sbadd=274865,0
+7922,HomePage,200,OK,Thread Group2 1-46,text,true,,45,45,http://www.expansys.com/,1389
+5579,HomePage,200,OK,Thread Group2 1-50,text,true,,45,45,http://www.expansys.com/,1364
+15745,HomePage,200,OK,Thread Group2 1-33,text,true,,45,45,http://www.expansys.com/,1615
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-33,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,45,45,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+9103,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-31,text,true,,45,45,http://www.expansys.com/more/?sbadd=274865,1282
+5076,Samsung-Details-Page,200,OK,Thread Group2 1-42,text,true,,45,45,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1318
+3838,Basket,200,OK,Thread Group2 1-15,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,45,45,http://www.expansys.com/basket/,1531
+19582,HomePage,200,OK,Thread Group2 1-27,text,true,,44,44,http://www.expansys.com/,1259
+0,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-27,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,44,44,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+22998,Samsung-Details-Page,200,OK,Thread Group2 1-18,text,true,,44,44,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1624
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-18,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,44,44,http://www.expansys.com/more/?sbadd=274865,0
+17873,Samsung-Details-Page,200,OK,Thread Group2 1-16,text,true,,44,44,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1400
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-16,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,44,44,http://www.expansys.com/more/?sbadd=274865,0
+18668,Samsung-Details-Page,200,OK,Thread Group2 1-23,text,true,,45,45,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,761
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-23,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,45,45,http://www.expansys.com/more/?sbadd=274865,0
+13669,HomePage,200,OK,Thread Group2 1-38,text,true,,45,45,http://www.expansys.com/,13064
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-38,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,45,45,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+8305,HomePage,200,OK,Thread Group2 1-47,text,true,,45,45,http://www.expansys.com/,1298
+22283,HomePage,200,OK,Thread Group2 1-24,text,true,,46,46,http://www.expansys.com/,1473
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-24,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,46,46,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+13395,HomePage,200,OK,Thread Group2 1-39,text,true,,46,46,http://www.expansys.com/,1775
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-39,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,46,46,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+10798,HomePage,200,OK,Thread Group2 1-45,text,true,,48,48,http://www.expansys.com/,4775
+3198,Basket,200,OK,Thread Group2 1-19,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,48,48,http://www.expansys.com/basket/,2397
+14535,HomePage,200,OK,Thread Group2 1-41,text,true,,49,49,http://www.expansys.com/,3388
+0,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-41,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,49,49,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+3533,Basket,200,OK,Thread Group2 1-18,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,49,49,http://www.expansys.com/basket/,1668
+3691,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-27,text,true,,48,48,http://www.expansys.com/more/?sbadd=274865,1659
+3111,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-24,text,true,,49,49,http://www.expansys.com/more/?sbadd=274865,1566
+23020,Samsung-Details-Page,200,OK,Thread Group2 1-26,text,true,,49,49,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1008
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-26,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,49,49,http://www.expansys.com/more/?sbadd=274865,0
+23191,HomePage,200,OK,Thread Group2 1-28,text,true,,49,49,http://www.expansys.com/,1609
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-28,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,49,49,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+3070,HomePage,200,OK,Thread Group2 1-62,text,true,,50,50,http://www.expansys.com/,1487
+11013,Basket,200,OK,Thread Group2 1-22,text,true,,50,50,http://www.expansys.com/basket/,1355
+8416,HomePage,200,OK,Thread Group2 1-54,text,true,,49,49,http://www.expansys.com/,1888
+4959,Basket,200,OK,Thread Group2 1-16,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,50,50,http://www.expansys.com/basket/,1706
+6757,HomePage,200,OK,Thread Group2 1-57,text,true,,49,49,http://www.expansys.com/,2076
+5626,Samsung-Details-Page,200,OK,Thread Group2 1-46,text,true,,49,49,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1060
+19206,Samsung-Details-Page,200,OK,Thread Group2 1-32,text,true,,50,50,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1065
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-32,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,50,50,http://www.expansys.com/more/?sbadd=274865,0
+2572,HomePage,200,OK,Thread Group2 1-66,text,true,,51,51,http://www.expansys.com/,1666
+6879,Basket,200,OK,Thread Group2 1-31,text,true,,51,51,http://www.expansys.com/basket/,1053
+29325,Samsung-Details-Page,200,OK,Thread Group2 1-10,text,true,,51,51,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,472
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-10,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,51,51,http://www.expansys.com/more/?sbadd=274865,0
+6675,Samsung-Details-Page,200,OK,Thread Group2 1-47,text,true,,51,51,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,2036
+4301,HomePage,200,OK,Thread Group2 1-65,text,true,,52,52,http://www.expansys.com/,1599
+19579,HomePage,200,OK,Thread Group2 1-40,text,true,,52,52,http://www.expansys.com/,1898
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-40,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,52,52,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+7610,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-39,text,true,,53,53,http://www.expansys.com/more/?sbadd=274865,1042
+3252,Samsung-Details-Page,200,OK,Thread Group2 1-66,text,true,,55,55,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1256
+10776,HomePage,200,OK,Thread Group2 1-58,text,true,,55,55,http://www.expansys.com/,1923
+4425,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-46,text,true,,55,55,http://www.expansys.com/more/?sbadd=274865,1095
+9308,Basket,200,OK,Thread Group2 1-23,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,55,55,http://www.expansys.com/basket/,1504
+5721,Basket,200,OK,Thread Group2 1-26,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,55,55,http://www.expansys.com/basket/,1910
+10588,HomePage,200,OK,Thread Group2 1-60,text,true,,55,55,http://www.expansys.com/,3108
+5862,HomePage,200,OK,Thread Group2 1-69,text,true,,56,56,http://www.expansys.com/,1819
+4744,Basket,200,OK,Thread Group2 1-10,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,56,56,http://www.expansys.com/basket/,1798
+2512,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-66,text,true,,56,56,http://www.expansys.com/more/?sbadd=274865,1167
+7099,HomePage,200,OK,Thread Group2 1-68,text,true,,56,56,http://www.expansys.com/,2069
+6732,Basket,200,OK,Thread Group2 1-32,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,57,57,http://www.expansys.com/basket/,2054
+15229,Samsung-Details-Page,200,OK,Thread Group2 1-51,text,true,,56,56,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,876
+0,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-51,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,56,56,http://www.expansys.com/more/?sbadd=274865,0
+1945,Basket,200,OK,Thread Group2 1-66,text,true,,59,59,http://www.expansys.com/basket/,605
+15411,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-42,text,true,,60,60,http://www.expansys.com/more/?sbadd=274865,1104
+5,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-42,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,60,60,http://www.expansys.com/basket/,0
+19410,HomePage,200,OK,Thread Group2 1-53,text,true,,59,59,http://www.expansys.com/,1585
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-53,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,59,59,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+11507,Basket,200,OK,Thread Group2 1-24,text,true,,59,59,http://www.expansys.com/basket/,1231
+34660,Samsung-Details-Page,200,OK,Thread Group2 1-25,text,true,,58,58,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1381
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-25,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,58,58,http://www.expansys.com/more/?sbadd=274865,0
+6159,Basket,200,OK,Thread Group2 1-46,text,true,,59,59,http://www.expansys.com/basket/,1227
+7649,HomePage,200,OK,Thread Group2 1-74,text,true,,58,58,http://www.expansys.com/,2258
+26451,HomePage,200,OK,Thread Group2 1-43,text,true,,58,58,http://www.expansys.com/,1884
+0,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-43,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,58,58,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+3686,Basket,200,OK,Thread Group2 1-51,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,59,59,http://www.expansys.com/basket/,1870
+5605,HomePage,200,OK,Thread Group2 1-78,text,true,,58,58,http://www.expansys.com/,1717
+13555,Basket,200,OK,Thread Group2 1-27,text,true,,59,59,http://www.expansys.com/basket/,1020
+17450,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-33,text,true,,58,58,http://www.expansys.com/more/?sbadd=274865,1643
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-33,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,58,58,http://www.expansys.com/basket/,0
+12046,Samsung-Details-Page,200,OK,Thread Group2 1-57,text,true,,57,57,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1085
+8681,Basket,200,OK,Thread Group2 1-39,text,true,,57,57,http://www.expansys.com/basket/,1581
+473,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-57,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,57,57,http://www.expansys.com/more/?sbadd=274865,0
+13667,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-28,text,true,,57,57,http://www.expansys.com/more/?sbadd=274865,1924
+11193,HomePage,200,OK,Thread Group2 1-71,text,true,,57,57,http://www.expansys.com/,1277
+32598,Samsung-Details-Page,200,OK,Thread Group2 1-21,text,true,,57,57,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,895
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-21,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,57,57,http://www.expansys.com/more/?sbadd=274865,0
+5264,HomePage,200,OK,Thread Group2 1-82,text,true,,58,58,http://www.expansys.com/,2066
+948,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-28,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,59,59,http://www.expansys.com/basket/,0
+9340,HomePage,200,OK,Thread Group2 1-76,text,true,,58,58,http://www.expansys.com/,3036
+12363,HomePage,200,OK,Thread Group2 1-72,text,true,,59,59,http://www.expansys.com/,2147
+6176,HomePage,200,OK,Thread Group2 1-83,text,true,,60,60,http://www.expansys.com/,1789
+12854,Samsung-Details-Page,200,OK,Thread Group2 1-65,text,true,,60,60,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,989
+3,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-65,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,60,60,http://www.expansys.com/more/?sbadd=274865,0
+5203,HomePage,200,OK,Thread Group2 1-85,text,true,,60,60,http://www.expansys.com/,1767
+30051,HomePage,200,OK,Thread Group2 1-44,text,true,,61,61,http://www.expansys.com/,1950
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-44,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,61,61,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+8310,HomePage,200,OK,Thread Group2 1-81,text,true,,61,61,http://www.expansys.com/,1877
+23601,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-29,text,true,,62,62,http://www.expansys.com/more/?sbadd=274865,3469
+0,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-29,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,62,62,http://www.expansys.com/basket/,0
+12505,Samsung-Details-Page,200,OK,Thread Group2 1-58,text,true,,62,62,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1223
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-58,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,62,62,http://www.expansys.com/more/?sbadd=274865,0
+7198,HomePage,200,OK,Thread Group2 1-86,text,true,,63,63,http://www.expansys.com/,1607
+8848,HomePage,200,OK,Thread Group2 1-84,text,true,,64,64,http://www.expansys.com/,1909
+30407,HomePage,200,OK,Thread Group2 1-49,text,true,,65,65,http://www.expansys.com/,1233
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-49,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,65,65,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+31225,HomePage,200,OK,Thread Group2 1-48,text,true,,66,66,http://www.expansys.com/,2620
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-48,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,66,66,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+4682,Basket,200,OK,Thread Group2 1-65,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,66,66,http://www.expansys.com/basket/,1430
+7571,Basket,200,OK,Thread Group2 1-57,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,65,65,http://www.expansys.com/basket/,4094
+7347,Samsung-Details-Page,200,OK,Thread Group2 1-71,text,true,,65,65,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1070
+7421,Basket,200,OK,Thread Group2 1-21,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,64,64,http://www.expansys.com/basket/,2654
+9855,Basket,200,OK,Thread Group2 1-25,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,63,63,http://www.expansys.com/basket/,1636
+32796,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-30,text,true,,62,62,http://www.expansys.com/more/?sbadd=274865,1536
+0,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-30,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,62,62,http://www.expansys.com/basket/,0
+18356,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-47,text,true,,61,61,http://www.expansys.com/more/?sbadd=274865,1176
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-47,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,61,61,http://www.expansys.com/basket/,0
+16478,HomePage,200,OK,Thread Group2 1-77,text,true,,60,60,http://www.expansys.com/,1809
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-77,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,60,60,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+40581,HomePage,200,OK,Thread Group2 1-37,text,true,,60,60,http://www.expansys.com/,1647
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-37,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,60,60,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+26315,HomePage,200,OK,Thread Group2 1-61,text,true,,60,60,http://www.expansys.com/,1530
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-61,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,60,60,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+15734,HomePage,200,OK,Thread Group2 1-79,text,true,,60,60,http://www.expansys.com/,8377
+23049,Samsung-Details-Page,200,OK,Thread Group2 1-62,text,true,,60,60,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1072
+0,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-62,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,60,60,http://www.expansys.com/more/?sbadd=274865,0
+12186,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-53,text,true,,60,60,http://www.expansys.com/more/?sbadd=274865,3098
+43195,HomePage,200,OK,Thread Group2 1-34,text,true,,60,60,http://www.expansys.com/,986
+0,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-34,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,60,60,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+16112,Samsung-Details-Page,200,OK,Thread Group2 1-68,text,true,,60,60,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1133
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-68,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,60,60,http://www.expansys.com/more/?sbadd=274865,0
+44176,HomePage,200,OK,Thread Group2 1-35,text,true,,60,60,http://www.expansys.com/,3158
+0,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-35,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,60,60,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+31568,Samsung-Details-Page,200,OK,Thread Group2 1-36,text,true,,60,60,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,4445
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-36,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,60,60,http://www.expansys.com/more/?sbadd=274865,0
+7225,Basket,200,OK,Thread Group2 1-58,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,60,60,http://www.expansys.com/basket/,1979
+9326,Samsung-Details-Page,200,OK,Thread Group2 1-83,text,true,,59,59,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1335
+4241,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-71,text,true,,59,59,http://www.expansys.com/more/?sbadd=274865,1242
+27660,HomePage,200,OK,Thread Group2 1-63,text,true,,59,59,http://www.expansys.com/,1518
+2,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-63,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,59,59,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+6840,Samsung-Details-Page,200,OK,Thread Group2 1-86,text,true,,59,59,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1793
+2460,Basket,200,OK,Thread Group2 1-53,text,true,,59,59,http://www.expansys.com/basket/,1187
+27612,HomePage,200,OK,Thread Group2 1-64,text,true,,58,58,http://www.expansys.com/,1146
+0,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-64,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,58,58,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+32513,HomePage,200,OK,Thread Group2 1-56,text,true,,58,58,http://www.expansys.com/,2672
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-56,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,58,58,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+11324,Samsung-Details-Page,200,OK,Thread Group2 1-76,text,true,,58,58,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1597
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-76,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,58,58,http://www.expansys.com/more/?sbadd=274865,0
+10173,Samsung-Details-Page,200,OK,Thread Group2 1-85,text,true,,58,58,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1279
+7756,HomePage,200,OK,Thread Group2 1-98,text,true,,58,58,http://www.expansys.com/,1799
+3313,Basket,200,OK,Thread Group2 1-62,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,58,58,http://www.expansys.com/basket/,1980
+6693,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-48,text,true,,57,57,http://www.expansys.com/more/?sbadd=274865,2084
+3803,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-61,text,true,,57,57,http://www.expansys.com/more/?sbadd=274865,1829
+4352,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-77,text,true,,57,57,http://www.expansys.com/more/?sbadd=274865,1651
+31846,HomePage,200,OK,Thread Group2 1-59,text,true,,57,57,http://www.expansys.com/,1592
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-59,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,57,57,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+10335,HomePage,200,OK,Thread Group2 1-95,text,true,,57,57,http://www.expansys.com/,1829
+13618,HomePage,200,OK,Thread Group2 1-90,text,true,,57,57,http://www.expansys.com/,2578
+31229,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-38,text,true,,57,57,http://www.expansys.com/more/?sbadd=274865,987
+0,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-38,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,57,57,http://www.expansys.com/basket/,0
+12131,Samsung-Details-Page,200,OK,Thread Group2 1-72,text,true,,56,56,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1447
+8431,HomePage,200,OK,Thread Group2 1-99,text,true,,56,56,http://www.expansys.com/,2060
+24652,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-40,text,true,,56,56,http://www.expansys.com/more/?sbadd=274865,2394
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-40,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,56,56,http://www.expansys.com/basket/,0
+10124,HomePage,200,OK,Thread Group2 1-97,text,true,,55,55,http://www.expansys.com/,2067
+27802,Samsung-Details-Page,200,OK,Thread Group2 1-54,text,true,,55,55,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,753
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-54,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,55,55,http://www.expansys.com/more/?sbadd=274865,0
+13981,HomePage,200,OK,Thread Group2 1-91,text,true,,55,55,http://www.expansys.com/,2513
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-91,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,55,55,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+29462,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-41,text,true,,55,55,http://www.expansys.com/more/?sbadd=274865,1734
+0,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-41,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,55,55,http://www.expansys.com/basket/,0
+4888,Basket,200,OK,Thread Group2 1-68,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,54,54,http://www.expansys.com/basket/,4888
+3673,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-85,text,true,,53,53,http://www.expansys.com/more/?sbadd=274865,3250
+10270,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-49,text,true,,53,53,http://www.expansys.com/more/?sbadd=274865,1877
+30426,HomePage,200,OK,Thread Group2 1-67,text,true,,53,53,http://www.expansys.com/,1372
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-67,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,53,53,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+4343,Basket,200,OK,Thread Group2 1-76,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,53,53,http://www.expansys.com/basket/,3022
+11503,Samsung-Details-Page,200,OK,Thread Group2 1-84,text,true,,52,52,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1192
+5825,Basket,200,OK,Thread Group2 1-71,text,true,,52,52,http://www.expansys.com/basket/,4120
+5364,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-64,text,true,,51,51,http://www.expansys.com/more/?sbadd=274865,3674
+5380,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-56,text,true,,51,51,http://www.expansys.com/more/?sbadd=274865,3642
+4780,Samsung-Details-Page,200,OK,Thread Group2 1-99,text,true,,51,51,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1026
+26065,Samsung-Details-Page,200,OK,Thread Group2 1-60,text,true,,51,51,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1092
+0,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-60,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,51,51,http://www.expansys.com/more/?sbadd=274865,0
+4157,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-91,text,true,,51,51,http://www.expansys.com/more/?sbadd=274865,2428
+27849,HomePage,200,OK,Thread Group2 1-75,text,true,,51,51,http://www.expansys.com/,2062
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-75,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,51,51,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+20751,HomePage,200,OK,Thread Group2 1-87,text,true,,51,51,http://www.expansys.com/,1544
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-87,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,51,51,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+4516,Basket,200,OK,Thread Group2 1-54,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,51,51,http://www.expansys.com/basket/,2400
+6047,Basket,200,OK,Thread Group2 1-77,text,true,,50,50,http://www.expansys.com/basket/,2406
+9496,Basket,200,OK,Thread Group2 1-36,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,49,49,http://www.expansys.com/basket/,8889
+7346,Samsung-Details-Page,200,OK,Thread Group2 1-90,text,true,,48,48,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,533
+37516,Samsung-Details-Page,200,OK,Thread Group2 1-45,text,true,,48,48,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1012
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-45,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,48,48,http://www.expansys.com/more/?sbadd=274865,0
+3919,Basket,200,OK,Thread Group2 1-56,text,true,,48,48,http://www.expansys.com/basket/,998
+6463,Basket,200,OK,Thread Group2 1-85,text,true,,47,47,http://www.expansys.com/basket/,1265
+43597,HomePage,200,OK,Thread Group2 1-55,text,true,,46,46,http://www.expansys.com/,2139
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-55,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,46,46,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+6480,Basket,200,OK,Thread Group2 1-49,text,true,,46,46,http://www.expansys.com/basket/,1268
+10040,Basket,200,OK,Thread Group2 1-48,text,true,,45,45,http://www.expansys.com/basket/,2819
+1569,Basket,200,OK,Thread Group2 1-45,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,44,44,http://www.expansys.com/basket/,1568
+4392,Basket,200,OK,Thread Group2 1-91,text,true,,43,43,http://www.expansys.com/basket/,942
+41844,Samsung-Details-Page,200,OK,Thread Group2 1-50,text,true,,42,42,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1496
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-50,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,42,42,http://www.expansys.com/more/?sbadd=274865,0
+4713,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-75,text,true,,42,42,http://www.expansys.com/more/?sbadd=274865,721
+6399,Basket,200,OK,Thread Group2 1-64,text,true,,42,42,http://www.expansys.com/basket/,5531
+5219,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-99,text,true,,41,41,http://www.expansys.com/more/?sbadd=274865,4396
+468,Basket,200,OK,Thread Group2 1-99,text,true,,41,41,http://www.expansys.com/basket/,467
+6124,Basket,200,OK,Thread Group2 1-60,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,40,40,http://www.expansys.com/basket/,5157
+2010,Basket,200,OK,Thread Group2 1-75,text,true,,39,39,http://www.expansys.com/basket/,850
+13234,Basket,200,OK,Thread Group2 1-61,text,true,,38,38,http://www.expansys.com/basket/,3085
+9208,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-84,text,true,,37,37,http://www.expansys.com/more/?sbadd=274865,1136
+32088,HomePage,200,OK,Thread Group2 1-80,text,true,,37,37,http://www.expansys.com/,1732
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-80,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,37,37,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+15106,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-35,text,true,,37,37,http://www.expansys.com/more/?sbadd=274865,4315
+5,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-35,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,37,37,http://www.expansys.com/basket/,0
+14909,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-83,text,true,,36,36,http://www.expansys.com/more/?sbadd=274865,4596
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-83,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,36,36,http://www.expansys.com/basket/,0
+14709,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-86,text,true,,35,35,http://www.expansys.com/more/?sbadd=274865,4270
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-86,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,35,35,http://www.expansys.com/basket/,0
+23486,Samsung-Details-Page,200,OK,Thread Group2 1-81,text,true,,34,34,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1153
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-81,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,34,34,http://www.expansys.com/more/?sbadd=274865,0
+36830,HomePage,200,OK,Thread Group2 1-73,text,true,,34,34,http://www.expansys.com/,3144
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-73,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,34,34,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+17964,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-37,text,true,,34,34,http://www.expansys.com/more/?sbadd=274865,1744
+0,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-37,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,34,34,http://www.expansys.com/basket/,0
+24408,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-44,text,true,,33,33,http://www.expansys.com/more/?sbadd=274865,1875
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-44,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,33,33,http://www.expansys.com/basket/,0
+28974,Samsung-Details-Page,200,OK,Thread Group2 1-74,text,true,,32,32,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,973
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-74,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,32,32,http://www.expansys.com/more/?sbadd=274865,0
+39101,HomePage,200,OK,Thread Group2 1-70,text,true,,32,32,http://www.expansys.com/,1479
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-70,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,32,32,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+28766,Samsung-Details-Page,200,OK,Thread Group2 1-78,text,true,,32,32,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1041
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-78,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,32,32,http://www.expansys.com/more/?sbadd=274865,0
+780,Basket,200,OK,Thread Group2 1-81,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,32,32,http://www.expansys.com/basket/,780
+1224,Basket,200,OK,Thread Group2 1-84,text,true,,31,31,http://www.expansys.com/basket/,1223
+26826,Samsung-Details-Page,200,OK,Thread Group2 1-82,text,true,,30,30,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1614
+0,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-82,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,30,30,http://www.expansys.com/more/?sbadd=274865,0
+10751,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-67,text,true,,30,30,http://www.expansys.com/more/?sbadd=274865,2351
+23863,HomePage,200,OK,Thread Group2 1-96,text,true,,30,30,http://www.expansys.com/,1965
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-96,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,30,30,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+14154,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-72,text,true,,30,30,http://www.expansys.com/more/?sbadd=274865,1992
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-72,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,30,30,http://www.expansys.com/basket/,0
+1170,Basket,200,OK,Thread Group2 1-74,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,29,29,http://www.expansys.com/basket/,1170
+27071,HomePage,200,OK,Thread Group2 1-92,text,true,,28,28,http://www.expansys.com/,2308
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-92,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,28,28,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+1148,Basket,200,OK,Thread Group2 1-78,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,28,28,http://www.expansys.com/basket/,1148
+29084,HomePage,200,OK,Thread Group2 1-89,text,true,,27,27,http://www.expansys.com/,2179
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-89,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,27,27,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+26094,HomePage,200,OK,Thread Group2 1-94,text,true,,27,27,http://www.expansys.com/,1878
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-94,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,27,27,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+5325,Basket,200,OK,Thread Group2 1-50,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,27,27,http://www.expansys.com/basket/,1289
+35901,Samsung-Details-Page,200,OK,Thread Group2 1-69,text,true,,26,26,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1099
+0,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-69,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,26,26,http://www.expansys.com/more/?sbadd=274865,0
+31065,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-43,text,true,,26,26,http://www.expansys.com/more/?sbadd=274865,1491
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-43,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,26,26,http://www.expansys.com/basket/,0
+2015,Basket,200,OK,Thread Group2 1-82,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,25,25,http://www.expansys.com/basket/,1627
+16533,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-59,text,true,,24,24,http://www.expansys.com/more/?sbadd=274865,3539
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-59,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,24,24,http://www.expansys.com/basket/,0
+11346,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-87,text,true,,23,23,http://www.expansys.com/more/?sbadd=274865,1854
+24515,HomePage,200,OK,Thread Group2 1-100,text,true,,23,23,http://www.expansys.com/,2072
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-100,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,23,23,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+9593,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-90,text,true,,23,23,http://www.expansys.com/more/?sbadd=274865,1606
+1750,Basket,200,OK,Thread Group2 1-69,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,23,23,http://www.expansys.com/basket/,1503
+8484,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-55,text,true,,22,22,http://www.expansys.com/more/?sbadd=274865,2175
+29771,HomePage,200,OK,Thread Group2 1-93,text,true,,22,22,http://www.expansys.com/,2086
+2,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-93,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,22,22,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+3412,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-92,text,true,,22,22,http://www.expansys.com/more/?sbadd=274865,719
+23401,Samsung-Details-Page,200,OK,Thread Group2 1-79,text,true,,22,22,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,957
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-79,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,22,22,http://www.expansys.com/more/?sbadd=274865,0
+1589,Basket,200,OK,Thread Group2 1-55,text,true,,22,22,http://www.expansys.com/basket/,1589
+5667,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-70,text,true,,21,21,http://www.expansys.com/more/?sbadd=274865,1714
+1062,Basket,200,OK,Thread Group2 1-92,text,true,,21,21,http://www.expansys.com/basket/,1061
+2480,Basket,200,OK,Thread Group2 1-87,text,true,,20,20,http://www.expansys.com/basket/,1165
+6228,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-73,text,true,,19,19,http://www.expansys.com/more/?sbadd=274865,1776
+2480,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-100,text,true,,19,19,http://www.expansys.com/more/?sbadd=274865,2104
+5880,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-96,text,true,,19,19,http://www.expansys.com/more/?sbadd=274865,821
+24137,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-34,text,true,,19,19,http://www.expansys.com/more/?sbadd=274865,6349
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-34,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,19,19,http://www.expansys.com/basket/,0
+891,Basket,200,OK,Thread Group2 1-73,text,true,,18,18,http://www.expansys.com/basket/,891
+7697,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-80,text,true,,17,17,http://www.expansys.com/more/?sbadd=274865,1640
+20785,Samsung-Details-Page,200,OK,Thread Group2 1-95,text,true,,17,17,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,983
+3566,Basket,200,OK,Thread Group2 1-90,text,true,,17,17,http://www.expansys.com/basket/,1781
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-95,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,16,16,http://www.expansys.com/more/?sbadd=274865,0
+5842,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-94,text,true,,16,16,http://www.expansys.com/more/?sbadd=274865,815
+1048,Basket,200,OK,Thread Group2 1-96,text,true,,16,16,http://www.expansys.com/basket/,828
+470,Basket,200,OK,Thread Group2 1-95,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,15,15,http://www.expansys.com/basket/,469
+6362,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-89,text,true,,14,14,http://www.expansys.com/more/?sbadd=274865,1404
+2133,Basket,200,OK,Thread Group2 1-70,text,true,,14,14,http://www.expansys.com/basket/,665
+2603,Basket,200,OK,Thread Group2 1-79,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,13,13,http://www.expansys.com/basket/,972
+339,Basket,200,OK,Thread Group2 1-89,text,true,,12,12,http://www.expansys.com/basket/,339
+1392,Basket,200,OK,Thread Group2 1-80,text,true,,12,12,http://www.expansys.com/basket/,475
+2360,Basket,200,OK,Thread Group2 1-100,text,true,,10,10,http://www.expansys.com/basket/,1090
+1128,Basket,200,OK,Thread Group2 1-94,text,true,,9,9,http://www.expansys.com/basket/,368
+4055,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-93,text,true,,8,8,http://www.expansys.com/more/?sbadd=274865,1272
+252,Basket,200,OK,Thread Group2 1-93,text,true,,8,8,http://www.expansys.com/basket/,252
+23022,Samsung-Details-Page,200,OK,Thread Group2 1-97,text,true,,7,7,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,899
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-97,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,7,7,http://www.expansys.com/more/?sbadd=274865,0
+632,Basket,200,OK,Thread Group2 1-97,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,7,7,http://www.expansys.com/basket/,333
+25423,Samsung-Details-Page,200,OK,Thread Group2 1-98,text,true,,6,6,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,966
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-98,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,6,6,http://www.expansys.com/more/?sbadd=274865,0
+232,Basket,200,OK,Thread Group2 1-98,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,6,6,http://www.expansys.com/basket/,232
+13836,Basket,200,OK,Thread Group2 1-67,text,true,,5,5,http://www.expansys.com/basket/,1240
+30228,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-63,text,true,,4,4,http://www.expansys.com/more/?sbadd=274865,4051
+0,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-63,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,4,4,http://www.expansys.com/basket/,0
+69042,HomePage,Non HTTP response code: java.net.SocketException,Non HTTP response message: Socket closed,Thread Group2 1-88,text,false,Test failed: text expected to contain / Samsung Galaxy S6/,3,3,http://www.expansys.com/,1569
+102628,Samsung-AddConfirm-Page,Non HTTP response code: java.net.SocketException,Non HTTP response message: Socket closed,Thread Group2 1-11,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,3,3,http://www.expansys.com/more/?sbadd=274865,1912
+90659,HomePage,Non HTTP response code: java.net.SocketException,Non HTTP response message: Socket closed,Thread Group2 1-52,text,false,Test failed: text expected to contain / Samsung Galaxy S6/,3,3,http://www.expansys.com/,2755
+376,HomePage,200,OK,Thread Group2 1-2,text,true,,2,2,http://www.expansys.com/,297
+1102,HomePage,200,OK,Thread Group2 1-1,text,true,,2,2,http://www.expansys.com/,394
+574,HomePage,200,OK,Thread Group2 1-4,text,true,,4,4,http://www.expansys.com/,335
+1204,HomePage,200,OK,Thread Group2 1-5,text,true,,6,6,http://www.expansys.com/,635
+1276,Samsung-Details-Page,200,OK,Thread Group2 1-4,text,true,,7,7,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,328
+2655,Samsung-Details-Page,200,OK,Thread Group2 1-1,text,true,,7,7,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,271
+3108,HomePage,200,OK,Thread Group2 1-3,text,true,,8,8,http://www.expansys.com/,406
+3849,Samsung-Details-Page,200,OK,Thread Group2 1-2,text,true,,9,9,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,303
+1345,HomePage,200,OK,Thread Group2 1-7,text,true,,9,9,http://www.expansys.com/,395
+2027,HomePage,200,OK,Thread Group2 1-9,text,true,,12,12,http://www.expansys.com/,622
+3184,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-4,text,true,,12,12,http://www.expansys.com/more/?sbadd=274865,167
+2297,HomePage,200,OK,Thread Group2 1-10,text,true,,13,13,http://www.expansys.com/,715
+862,HomePage,200,OK,Thread Group2 1-13,text,true,,14,14,http://www.expansys.com/,585
+3505,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-2,text,true,,14,14,http://www.expansys.com/more/?sbadd=274865,616
+2694,HomePage,200,OK,Thread Group2 1-12,text,true,,16,16,http://www.expansys.com/,1450
+6374,HomePage,200,OK,Thread Group2 1-6,text,true,,16,16,http://www.expansys.com/,530
+2933,Basket,200,OK,Thread Group2 1-4,text,true,,17,17,http://www.expansys.com/basket/,748
+6233,Samsung-Details-Page,200,OK,Thread Group2 1-5,text,true,,16,16,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,771
+2413,Samsung-Details-Page,200,OK,Thread Group2 1-13,text,true,,17,17,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,712
+2892,Samsung-Details-Page,200,OK,Thread Group2 1-10,text,true,,17,17,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,344
+583,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-10,text,true,,18,18,http://www.expansys.com/more/?sbadd=274865,236
+1874,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-5,text,true,,19,19,http://www.expansys.com/more/?sbadd=274865,1122
+3765,Basket,200,OK,Thread Group2 1-2,text,true,,20,20,http://www.expansys.com/basket/,1630
+7900,HomePage,200,OK,Thread Group2 1-8,text,true,,19,19,http://www.expansys.com/,878
+3487,Samsung-Details-Page,200,OK,Thread Group2 1-12,text,true,,20,20,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1136
+9320,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-1,text,true,,20,20,http://www.expansys.com/more/?sbadd=274865,563
+1534,Basket,200,OK,Thread Group2 1-5,text,true,,21,21,http://www.expansys.com/basket/,270
+3052,Basket,200,OK,Thread Group2 1-10,text,true,,21,21,http://www.expansys.com/basket/,682
+2868,HomePage,200,OK,Thread Group2 1-20,text,true,,20,20,http://www.expansys.com/,1023
+10176,Samsung-Details-Page,200,OK,Thread Group2 1-3,text,true,,21,21,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,314
+1934,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-12,text,true,,21,21,http://www.expansys.com/more/?sbadd=274865,1442
+5053,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-13,text,true,,22,22,http://www.expansys.com/more/?sbadd=274865,1744
+2766,Basket,200,OK,Thread Group2 1-1,text,true,,23,23,http://www.expansys.com/basket/,357
+1164,Basket,200,OK,Thread Group2 1-12,text,true,,22,22,http://www.expansys.com/basket/,1164
+11152,Samsung-Details-Page,200,OK,Thread Group2 1-7,text,true,,21,21,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,797
+3141,HomePage,200,OK,Thread Group2 1-24,text,true,,23,23,http://www.expansys.com/,786
+4374,HomePage,200,OK,Thread Group2 1-23,text,true,,24,24,http://www.expansys.com/,1589
+3058,Basket,200,OK,Thread Group2 1-13,text,true,,26,26,http://www.expansys.com/basket/,1079
+9385,HomePage,200,OK,Thread Group2 1-17,text,true,,25,25,http://www.expansys.com/,1340
+12703,Samsung-Details-Page,200,OK,Thread Group2 1-9,text,true,,26,26,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,2430
+4,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-9,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,26,26,http://www.expansys.com/more/?sbadd=274865,0
+3905,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-7,text,true,,27,27,http://www.expansys.com/more/?sbadd=274865,971
+12378,HomePage,200,OK,Thread Group2 1-14,text,true,,27,27,http://www.expansys.com/,1578
+11974,HomePage,200,OK,Thread Group2 1-15,text,true,,27,27,http://www.expansys.com/,2354
+1738,Basket,200,OK,Thread Group2 1-7,text,true,,30,30,http://www.expansys.com/basket/,1737
+3976,HomePage,200,OK,Thread Group2 1-32,text,true,,30,30,http://www.expansys.com/,2079
+3053,HomePage,200,OK,Thread Group2 1-34,text,true,,31,31,http://www.expansys.com/,541
+5586,HomePage,200,OK,Thread Group2 1-30,text,true,,31,31,http://www.expansys.com/,1711
+11190,HomePage,200,OK,Thread Group2 1-21,text,true,,31,31,http://www.expansys.com/,1512
+14568,HomePage,200,OK,Thread Group2 1-16,text,true,,32,32,http://www.expansys.com/,728
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-16,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,32,32,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+14318,Samsung-Details-Page,200,OK,Thread Group2 1-6,text,true,,32,32,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1145
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-6,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,32,32,http://www.expansys.com/more/?sbadd=274865,0
+3559,Samsung-Details-Page,200,OK,Thread Group2 1-15,text,true,,32,32,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1412
+13729,HomePage,200,OK,Thread Group2 1-19,text,true,,33,33,http://www.expansys.com/,3482
+250,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-19,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,34,34,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+3251,HomePage,200,OK,Thread Group2 1-37,text,true,,34,34,http://www.expansys.com/,1291
+10854,Samsung-Details-Page,200,OK,Thread Group2 1-20,text,true,,34,34,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,279
+12740,HomePage,200,OK,Thread Group2 1-22,text,true,,35,35,http://www.expansys.com/,1829
+3154,HomePage,200,OK,Thread Group2 1-38,text,true,,35,35,http://www.expansys.com/,1256
+347,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-22,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,35,35,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+4754,HomePage,200,OK,Thread Group2 1-36,text,true,,35,35,http://www.expansys.com/,868
+6465,Basket,200,OK,Thread Group2 1-9,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,36,36,http://www.expansys.com/basket/,1085
+3036,Samsung-Details-Page,200,OK,Thread Group2 1-21,text,true,,35,35,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,291
+2392,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-15,text,true,,35,35,http://www.expansys.com/more/?sbadd=274865,1619
+20374,HomePage,200,OK,Thread Group2 1-11,text,true,,35,35,http://www.expansys.com/,1260
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-11,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,35,35,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+3935,HomePage,200,OK,Thread Group2 1-40,text,true,,37,37,http://www.expansys.com/,1471
+17475,HomePage,200,OK,Thread Group2 1-18,text,true,,38,38,http://www.expansys.com/,784
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-18,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,38,38,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+2877,HomePage,200,OK,Thread Group2 1-44,text,true,,39,39,http://www.expansys.com/,1217
+4994,HomePage,200,OK,Thread Group2 1-41,text,true,,40,40,http://www.expansys.com/,1869
+10354,HomePage,200,OK,Thread Group2 1-33,text,true,,41,41,http://www.expansys.com/,2046
+12812,HomePage,200,OK,Thread Group2 1-31,text,true,,43,43,http://www.expansys.com/,2784
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-31,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,43,43,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+11838,Samsung-Details-Page,200,OK,Thread Group2 1-17,text,true,,43,43,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1496
+0,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-17,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,43,43,http://www.expansys.com/more/?sbadd=274865,0
+18004,HomePage,200,OK,Thread Group2 1-26,text,true,,46,46,http://www.expansys.com/,907
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-26,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,46,46,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+5011,Samsung-Details-Page,200,OK,Thread Group2 1-41,text,true,,48,48,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1315
+19568,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-3,text,true,,48,48,http://www.expansys.com/more/?sbadd=274865,1749
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-3,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,48,48,http://www.expansys.com/basket/,0
+5481,HomePage,200,OK,Thread Group2 1-49,text,true,,48,48,http://www.expansys.com/,1416
+3868,Basket,200,OK,Thread Group2 1-17,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,48,48,http://www.expansys.com/basket/,1517
+5556,Samsung-Details-Page,200,OK,Thread Group2 1-33,text,true,,48,48,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,864
+9346,Basket,200,OK,Thread Group2 1-15,text,true,,49,49,http://www.expansys.com/basket/,1335
+12162,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-16,text,true,,48,48,http://www.expansys.com/more/?sbadd=274865,1406
+23743,Samsung-Details-Page,200,OK,Thread Group2 1-8,text,true,,48,48,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,617
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-8,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,48,48,http://www.expansys.com/more/?sbadd=274865,0
+412,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-16,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,49,49,http://www.expansys.com/basket/,0
+2423,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-41,text,true,,48,48,http://www.expansys.com/more/?sbadd=274865,902
+11435,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-21,text,true,,50,50,http://www.expansys.com/more/?sbadd=274865,1134
+11675,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-11,text,true,,51,51,http://www.expansys.com/more/?sbadd=274865,1972
+10153,HomePage,200,OK,Thread Group2 1-48,text,true,,51,51,http://www.expansys.com/,1464
+21806,HomePage,200,OK,Thread Group2 1-29,text,true,,52,52,http://www.expansys.com/,4478
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-29,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,52,52,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+8089,HomePage,200,OK,Thread Group2 1-52,text,true,,52,52,http://www.expansys.com/,1447
+12365,HomePage,200,OK,Thread Group2 1-46,text,true,,53,53,http://www.expansys.com/,1819
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-46,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,53,53,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+14957,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-19,text,true,,54,54,http://www.expansys.com/more/?sbadd=274865,1848
+0,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-19,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,54,54,http://www.expansys.com/basket/,0
+13384,HomePage,200,OK,Thread Group2 1-45,text,true,,53,53,http://www.expansys.com/,1913
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-45,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,53,53,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+15090,Samsung-Details-Page,200,OK,Thread Group2 1-37,text,true,,53,53,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1550
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-37,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,53,53,http://www.expansys.com/more/?sbadd=274865,0
+4090,Basket,200,OK,Thread Group2 1-8,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,53,53,http://www.expansys.com/basket/,1788
+24721,HomePage,200,OK,Thread Group2 1-27,text,true,,53,53,http://www.expansys.com/,1855
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-27,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,53,53,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+15304,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-20,text,true,,53,53,http://www.expansys.com/more/?sbadd=274865,1039
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-20,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,53,53,http://www.expansys.com/basket/,0
+18116,Samsung-Details-Page,200,OK,Thread Group2 1-32,text,true,,52,52,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1179
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-32,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,52,52,http://www.expansys.com/more/?sbadd=274865,0
+9812,HomePage,200,OK,Thread Group2 1-53,text,true,,53,53,http://www.expansys.com/,1512
+26939,HomePage,200,OK,Thread Group2 1-25,text,true,,53,53,http://www.expansys.com/,1161
+0,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-25,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,53,53,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+6065,Basket,200,OK,Thread Group2 1-41,text,true,,55,55,http://www.expansys.com/basket/,1503
+8462,Samsung-Details-Page,200,OK,Thread Group2 1-49,text,true,,55,55,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,639
+23122,HomePage,200,OK,Thread Group2 1-35,text,true,,56,56,http://www.expansys.com/,1562
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-35,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,56,56,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+5695,Basket,200,OK,Thread Group2 1-11,text,true,,56,56,http://www.expansys.com/basket/,1409
+3797,Basket,200,OK,Thread Group2 1-32,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,57,57,http://www.expansys.com/basket/,1698
+4859,Basket,200,OK,Thread Group2 1-37,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,56,56,http://www.expansys.com/basket/,1052
+11234,HomePage,200,OK,Thread Group2 1-58,text,true,,56,56,http://www.expansys.com/,2479
+4056,HomePage,200,OK,Thread Group2 1-70,text,true,,56,56,http://www.expansys.com/,1637
+1936,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-35,text,true,,56,56,http://www.expansys.com/more/?sbadd=274865,1738
+8814,Basket,200,OK,Thread Group2 1-21,text,true,,58,58,http://www.expansys.com/basket/,1320
+23913,Samsung-Details-Page,200,OK,Thread Group2 1-30,text,true,,58,58,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1249
+0,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-30,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,58,58,http://www.expansys.com/more/?sbadd=274865,0
+7143,Samsung-Details-Page,200,OK,Thread Group2 1-53,text,true,,60,60,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1124
+6198,HomePage,200,OK,Thread Group2 1-71,text,true,,60,60,http://www.expansys.com/,1850
+12259,HomePage,200,OK,Thread Group2 1-61,text,true,,60,60,http://www.expansys.com/,1906
+0,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-61,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,60,60,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+31926,Samsung-Details-Page,200,OK,Thread Group2 1-24,text,true,,61,61,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1225
+0,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-24,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,61,61,http://www.expansys.com/more/?sbadd=274865,0
+10332,HomePage,200,OK,Thread Group2 1-66,text,true,,62,62,http://www.expansys.com/,1728
+16316,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-26,text,true,,62,62,http://www.expansys.com/more/?sbadd=274865,2341
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-26,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,62,62,http://www.expansys.com/basket/,0
+12252,HomePage,200,OK,Thread Group2 1-63,text,true,,61,61,http://www.expansys.com/,1979
+24960,HomePage,200,OK,Thread Group2 1-42,text,true,,61,61,http://www.expansys.com/,2110
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-42,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,61,61,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+33710,HomePage,200,OK,Thread Group2 1-28,text,true,,62,62,http://www.expansys.com/,1316
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-28,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,62,62,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+11956,HomePage,200,OK,Thread Group2 1-65,text,true,,62,62,http://www.expansys.com/,1980
+21754,Samsung-Details-Page,200,OK,Thread Group2 1-44,text,true,,63,63,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1435
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-44,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,63,63,http://www.expansys.com/more/?sbadd=274865,0
+10860,HomePage,200,OK,Thread Group2 1-67,text,true,,63,63,http://www.expansys.com/,1635
+27039,Basket,200,OK,Thread Group2 1-6,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,63,63,http://www.expansys.com/basket/,3359
+28033,Samsung-Details-Page,200,OK,Thread Group2 1-34,text,true,,62,62,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,2787
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-34,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,62,62,http://www.expansys.com/more/?sbadd=274865,0
+15854,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-33,text,true,,62,62,http://www.expansys.com/more/?sbadd=274865,1073
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-33,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,62,62,http://www.expansys.com/basket/,0
+13307,HomePage,200,OK,Thread Group2 1-64,text,true,,62,62,http://www.expansys.com/,2029
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-64,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,62,62,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+13886,Samsung-Details-Page,200,OK,Thread Group2 1-48,text,true,,64,64,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1345
+5449,Basket,200,OK,Thread Group2 1-30,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,64,64,http://www.expansys.com/basket/,2240
+9710,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-49,text,true,,63,63,http://www.expansys.com/more/?sbadd=274865,1213
+34875,Samsung-Details-Page,200,OK,Thread Group2 1-23,text,true,,63,63,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1184
+29766,HomePage,200,OK,Thread Group2 1-39,text,true,,63,63,http://www.expansys.com/,1526
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-39,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,63,63,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+27430,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-22,text,true,,64,64,http://www.expansys.com/more/?sbadd=274865,1433
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-22,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,64,64,http://www.expansys.com/basket/,0
+25774,HomePage,200,OK,Thread Group2 1-47,text,true,,63,63,http://www.expansys.com/,1664
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-47,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,63,63,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+4971,Basket,200,OK,Thread Group2 1-24,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,64,64,http://www.expansys.com/basket/,2006
+6193,HomePage,200,OK,Thread Group2 1-81,text,true,,64,64,http://www.expansys.com/,1987
+11914,HomePage,200,OK,Thread Group2 1-72,text,true,,64,64,http://www.expansys.com/,1835
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-72,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,64,64,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+5153,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-42,text,true,,65,65,http://www.expansys.com/more/?sbadd=274865,2001
+5808,Samsung-Details-Page,200,OK,Thread Group2 1-63,text,true,,66,66,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1230
+8467,HomePage,200,OK,Thread Group2 1-79,text,true,,66,66,http://www.expansys.com/,2253
+25309,HomePage,200,OK,Thread Group2 1-51,text,true,,66,66,http://www.expansys.com/,2006
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-51,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,66,66,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+5147,Basket,200,OK,Thread Group2 1-44,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,66,66,http://www.expansys.com/basket/,2019
+28169,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-18,text,true,,66,66,http://www.expansys.com/more/?sbadd=274865,1714
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-18,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,66,66,http://www.expansys.com/basket/,0
+12392,HomePage,200,OK,Thread Group2 1-74,text,true,,65,65,http://www.expansys.com/,1676
+16586,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-45,text,true,,65,65,http://www.expansys.com/more/?sbadd=274865,1612
+0,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-45,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,65,65,http://www.expansys.com/basket/,0
+10850,HomePage,200,OK,Thread Group2 1-77,text,true,,65,65,http://www.expansys.com/,1754
+8857,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-53,text,true,,65,65,http://www.expansys.com/more/?sbadd=274865,1149
+12058,Basket,200,OK,Thread Group2 1-35,text,true,,66,66,http://www.expansys.com/basket/,1077
+37488,Samsung-Details-Page,200,OK,Thread Group2 1-14,text,true,,66,66,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1611
+0,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-14,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,66,66,http://www.expansys.com/more/?sbadd=274865,0
+3274,HomePage,200,OK,Thread Group2 1-92,text,true,,66,66,http://www.expansys.com/,1979
+6930,HomePage,200,OK,Thread Group2 1-86,text,true,,66,66,http://www.expansys.com/,2052
+27261,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-31,text,true,,66,66,http://www.expansys.com/more/?sbadd=274865,1481
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-31,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,66,66,http://www.expansys.com/basket/,0
+32482,Samsung-Details-Page,200,OK,Thread Group2 1-36,text,true,,66,66,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1218
+4,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-36,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,66,66,http://www.expansys.com/more/?sbadd=274865,0
+5867,Basket,200,OK,Thread Group2 1-49,text,true,,66,66,http://www.expansys.com/basket/,1244
+26936,HomePage,200,OK,Thread Group2 1-54,text,true,,65,65,http://www.expansys.com/,4725
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-54,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,65,65,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+33683,Samsung-Details-Page,200,OK,Thread Group2 1-38,text,true,,66,66,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1330
+0,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-38,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,66,66,http://www.expansys.com/more/?sbadd=274865,0
+9881,HomePage,200,OK,Thread Group2 1-83,text,true,,66,66,http://www.expansys.com/,1977
+4593,Basket,200,OK,Thread Group2 1-42,text,true,,66,66,http://www.expansys.com/basket/,1241
+4177,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-63,text,true,,66,66,http://www.expansys.com/more/?sbadd=274865,1256
+5302,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-72,text,true,,66,66,http://www.expansys.com/more/?sbadd=274865,1937
+35025,HomePage,200,OK,Thread Group2 1-43,text,true,,66,66,http://www.expansys.com/,1272
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-43,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,66,66,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+9398,Basket,200,OK,Thread Group2 1-34,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,66,66,http://www.expansys.com/basket/,2099
+21748,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-46,text,true,,65,65,http://www.expansys.com/more/?sbadd=274865,1642
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-46,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,65,65,http://www.expansys.com/basket/,0
+28867,HomePage,200,OK,Thread Group2 1-55,text,true,,64,64,http://www.expansys.com/,2759
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-55,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,64,64,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+13235,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-61,text,true,,64,64,http://www.expansys.com/more/?sbadd=274865,1973
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-61,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,64,64,http://www.expansys.com/basket/,0
+28026,HomePage,200,OK,Thread Group2 1-57,text,true,,63,63,http://www.expansys.com/,1485
+0,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-57,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,63,63,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+21500,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-27,text,true,,63,63,http://www.expansys.com/more/?sbadd=274865,1162
+12865,Samsung-Details-Page,200,OK,Thread Group2 1-66,text,true,,63,63,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1331
+0,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-66,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,63,63,http://www.expansys.com/more/?sbadd=274865,0
+28749,HomePage,200,OK,Thread Group2 1-59,text,true,,63,63,http://www.expansys.com/,1509
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-59,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,63,63,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+25082,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-29,text,true,,63,63,http://www.expansys.com/more/?sbadd=274865,1880
+0,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-29,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,63,63,http://www.expansys.com/basket/,0
+6489,Basket,200,OK,Thread Group2 1-14,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,62,62,http://www.expansys.com/basket/,2222
+31212,HomePage,200,OK,Thread Group2 1-56,text,true,,61,61,http://www.expansys.com/,1650
+0,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-56,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,61,61,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+5298,Basket,200,OK,Thread Group2 1-38,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,61,61,http://www.expansys.com/basket/,2436
+14829,HomePage,200,OK,Thread Group2 1-84,text,true,,60,60,http://www.expansys.com/,8239
+6855,Samsung-Details-Page,200,OK,Thread Group2 1-86,text,true,,60,60,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,930
+3755,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-55,text,true,,60,60,http://www.expansys.com/more/?sbadd=274865,2256
+8661,Basket,200,OK,Thread Group2 1-53,text,true,,60,60,http://www.expansys.com/basket/,1582
+7555,Basket,200,OK,Thread Group2 1-36,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,59,59,http://www.expansys.com/basket/,7447
+9153,HomePage,200,OK,Thread Group2 1-96,text,true,,58,58,http://www.expansys.com/,2463
+2344,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-56,text,true,,58,58,http://www.expansys.com/more/?sbadd=274865,1692
+6744,Basket,200,OK,Thread Group2 1-72,text,true,,58,58,http://www.expansys.com/basket/,1524
+11528,HomePage,200,OK,Thread Group2 1-93,text,true,,57,57,http://www.expansys.com/,10811
+39526,Samsung-Details-Page,200,OK,Thread Group2 1-40,text,true,,57,57,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1167
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-40,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,57,57,http://www.expansys.com/more/?sbadd=274865,0
+5162,Basket,200,OK,Thread Group2 1-66,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,57,57,http://www.expansys.com/basket/,2092
+15915,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-48,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,56,56,http://www.expansys.com/more/?sbadd=274865,0
+10062,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-54,text,true,,56,56,http://www.expansys.com/more/?sbadd=274865,2203
+9325,Basket,200,OK,Thread Group2 1-63,text,true,,56,56,http://www.expansys.com/basket/,1490
+4111,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-86,text,true,,55,55,http://www.expansys.com/more/?sbadd=274865,1082
+30333,Samsung-Details-Page,200,OK,Thread Group2 1-52,text,true,,55,55,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1244
+0,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-52,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,55,55,http://www.expansys.com/more/?sbadd=274865,0
+4359,Basket,200,OK,Thread Group2 1-55,text,true,,55,55,http://www.expansys.com/basket/,1087
+11241,HomePage,200,OK,Thread Group2 1-98,text,true,,54,54,http://www.expansys.com/,7180
+10436,Samsung-Details-Page,200,OK,Thread Group2 1-83,text,true,,54,54,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,3747
+10787,HomePage,200,OK,Thread Group2 1-99,text,true,,54,54,http://www.expansys.com/,5000
+1609,Basket,200,OK,Thread Group2 1-48,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,54,54,http://www.expansys.com/basket/,1609
+6270,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-59,text,true,,53,53,http://www.expansys.com/more/?sbadd=274865,1838
+8137,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-27,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,53,53,http://www.expansys.com/basket/,0
+11149,HomePage,200,OK,Thread Group2 1-100,text,true,,52,52,http://www.expansys.com/,2420
+19768,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-64,text,true,,52,52,http://www.expansys.com/more/?sbadd=274865,2137
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-64,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,52,52,http://www.expansys.com/basket/,0
+11575,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-43,text,true,,51,51,http://www.expansys.com/more/?sbadd=274865,2356
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-43,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,51,51,http://www.expansys.com/basket/,0
+15409,Samsung-Details-Page,200,OK,Thread Group2 1-77,text,true,,50,50,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1638
+16528,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-51,text,true,,50,50,http://www.expansys.com/more/?sbadd=274865,1877
+0,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-77,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,50,50,http://www.expansys.com/more/?sbadd=274865,0
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-51,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,50,50,http://www.expansys.com/basket/,0
+7362,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-84,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,49,49,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+28847,HomePage,200,OK,Thread Group2 1-73,text,true,,49,49,http://www.expansys.com/,1866
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-73,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,49,49,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+5181,Basket,200,OK,Thread Group2 1-40,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,49,49,http://www.expansys.com/basket/,2728
+20480,HomePage,200,OK,Thread Group2 1-87,text,true,,48,48,http://www.expansys.com/,2039
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-87,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,48,48,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+848,Basket,200,OK,Thread Group2 1-77,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,48,48,http://www.expansys.com/basket/,847
+3700,Basket,200,OK,Thread Group2 1-52,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,47,47,http://www.expansys.com/basket/,1878
+11545,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-57,text,true,,46,46,http://www.expansys.com/more/?sbadd=274865,2242
+25135,Samsung-Details-Page,200,OK,Thread Group2 1-71,text,true,,46,46,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,9616
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-71,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,46,46,http://www.expansys.com/more/?sbadd=274865,0
+20254,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-47,text,true,,46,46,http://www.expansys.com/more/?sbadd=274865,1973
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-47,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,46,46,http://www.expansys.com/basket/,0
+32388,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-25,text,true,,45,45,http://www.expansys.com/more/?sbadd=274865,1655
+0,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-25,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,45,45,http://www.expansys.com/basket/,0
+33313,HomePage,200,OK,Thread Group2 1-69,text,true,,44,44,http://www.expansys.com/,1199
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-69,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,44,44,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+21954,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-39,text,true,,44,44,http://www.expansys.com/more/?sbadd=274865,1850
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-39,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,44,44,http://www.expansys.com/basket/,0
+24977,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-28,text,true,,43,43,http://www.expansys.com/more/?sbadd=274865,7890
+0,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-28,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,43,43,http://www.expansys.com/basket/,0
+5717,Basket,200,OK,Thread Group2 1-59,text,true,,42,42,http://www.expansys.com/basket/,1113
+39038,HomePage,200,OK,Thread Group2 1-62,text,true,,41,41,http://www.expansys.com/,2045
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-62,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,41,41,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+31219,HomePage,200,OK,Thread Group2 1-75,text,true,,41,41,http://www.expansys.com/,1699
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-75,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,41,41,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+46280,HomePage,200,OK,Thread Group2 1-50,text,true,,41,41,http://www.expansys.com/,1449
+0,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-50,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,41,41,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+6980,Basket,200,OK,Thread Group2 1-86,text,true,,41,41,http://www.expansys.com/basket/,1296
+31217,HomePage,200,OK,Thread Group2 1-76,text,true,,40,40,http://www.expansys.com/,2157
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-76,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,40,40,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+25922,Samsung-Details-Page,200,OK,Thread Group2 1-65,text,true,,40,40,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1229
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-65,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,40,40,http://www.expansys.com/more/?sbadd=274865,0
+10185,Basket,200,OK,Thread Group2 1-56,text,true,,40,40,http://www.expansys.com/basket/,5415
+4302,Basket,200,OK,Thread Group2 1-71,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,39,39,http://www.expansys.com/basket/,2500
+4582,Basket,200,OK,Thread Group2 1-57,text,true,,38,38,http://www.expansys.com/basket/,958
+25221,HomePage,200,OK,Thread Group2 1-90,text,true,,37,37,http://www.expansys.com/,4255
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-90,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,37,37,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+26155,HomePage,200,OK,Thread Group2 1-89,text,true,,37,37,http://www.expansys.com/,1281
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-89,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,37,37,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+32797,HomePage,200,OK,Thread Group2 1-78,text,true,,37,37,http://www.expansys.com/,2204
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-78,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,37,37,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+28591,Samsung-Details-Page,200,OK,Thread Group2 1-67,text,true,,37,37,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1191
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-67,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,37,37,http://www.expansys.com/more/?sbadd=274865,0
+31773,HomePage,200,OK,Thread Group2 1-80,text,true,,37,37,http://www.expansys.com/,2030
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-80,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,37,37,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+22987,HomePage,200,OK,Thread Group2 1-95,text,true,,37,37,http://www.expansys.com/,3457
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-95,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,37,37,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+29159,HomePage,200,OK,Thread Group2 1-85,text,true,,37,37,http://www.expansys.com/,2043
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-85,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,37,37,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+34104,Samsung-Details-Page,200,OK,Thread Group2 1-70,text,true,,37,37,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1095
+0,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-70,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,37,37,http://www.expansys.com/more/?sbadd=274865,0
+3288,Basket,200,OK,Thread Group2 1-65,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,37,37,http://www.expansys.com/basket/,2158
+31680,HomePage,200,OK,Thread Group2 1-82,text,true,,36,36,http://www.expansys.com/,1500
+0,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-82,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,36,36,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+1289,Basket,200,OK,Thread Group2 1-67,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,36,36,http://www.expansys.com/basket/,1289
+8678,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-73,text,true,,35,35,http://www.expansys.com/more/?sbadd=274865,1421
+1761,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-80,text,true,,35,35,http://www.expansys.com/more/?sbadd=274865,1454
+1672,Basket,200,OK,Thread Group2 1-70,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,35,35,http://www.expansys.com/basket/,1672
+2369,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-89,text,true,,34,34,http://www.expansys.com/more/?sbadd=274865,1738
+2362,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-78,text,true,,34,34,http://www.expansys.com/more/?sbadd=274865,1797
+41140,HomePage,200,OK,Thread Group2 1-68,text,true,,34,34,http://www.expansys.com/,1639
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-68,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,34,34,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+1953,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-95,text,true,,34,34,http://www.expansys.com/more/?sbadd=274865,1356
+2838,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-85,text,true,,34,34,http://www.expansys.com/more/?sbadd=274865,2179
+28485,HomePage,200,OK,Thread Group2 1-91,text,true,,34,34,http://www.expansys.com/,1923
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-91,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,34,34,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+10448,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-87,text,true,,34,34,http://www.expansys.com/more/?sbadd=274865,933
+1699,Basket,200,OK,Thread Group2 1-80,text,true,,34,34,http://www.expansys.com/basket/,979
+10935,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-84,text,true,,33,33,http://www.expansys.com/more/?sbadd=274865,1343
+27215,HomePage,200,OK,Thread Group2 1-94,text,true,,33,33,http://www.expansys.com/,2216
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-94,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,33,33,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+14342,Basket,200,OK,Thread Group2 1-54,text,true,,33,33,http://www.expansys.com/basket/,1346
+25714,HomePage,200,OK,Thread Group2 1-97,text,true,,32,32,http://www.expansys.com/,6597
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-97,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,32,32,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+14492,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-83,text,true,,32,32,http://www.expansys.com/more/?sbadd=274865,1075
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-83,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,32,32,http://www.expansys.com/basket/,0
+26284,Samsung-Details-Page,200,OK,Thread Group2 1-92,text,true,,31,31,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,950
+0,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-92,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,31,31,http://www.expansys.com/more/?sbadd=274865,0
+3020,Basket,200,OK,Thread Group2 1-95,text,true,,31,31,http://www.expansys.com/basket/,1009
+30710,Samsung-Details-Page,200,OK,Thread Group2 1-81,text,true,,30,30,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1299
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-81,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,30,30,http://www.expansys.com/more/?sbadd=274865,0
+818,Basket,200,OK,Thread Group2 1-92,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,30,30,http://www.expansys.com/basket/,818
+9812,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-62,text,true,,29,29,http://www.expansys.com/more/?sbadd=274865,1338
+4415,Basket,200,OK,Thread Group2 1-89,text,true,,29,29,http://www.expansys.com/basket/,1575
+4416,Basket,200,OK,Thread Group2 1-78,text,true,,28,28,http://www.expansys.com/basket/,1583
+9763,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-76,text,true,,27,27,http://www.expansys.com/more/?sbadd=274865,2109
+10805,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-50,text,true,,27,27,http://www.expansys.com/more/?sbadd=274865,1387
+4121,Basket,200,OK,Thread Group2 1-85,text,true,,27,27,http://www.expansys.com/basket/,1921
+17290,Samsung-Details-Page,200,OK,Thread Group2 1-98,text,true,,26,26,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,575
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-98,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,26,26,http://www.expansys.com/more/?sbadd=274865,0
+16449,Samsung-Details-Page,200,OK,Thread Group2 1-100,text,true,,26,26,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,524
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-100,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,26,26,http://www.expansys.com/more/?sbadd=274865,0
+13001,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-69,text,true,,26,26,http://www.expansys.com/more/?sbadd=274865,831
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-69,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,26,26,http://www.expansys.com/basket/,0
+20511,Samsung-Details-Page,200,OK,Thread Group2 1-93,text,true,,25,25,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,4335
+0,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-93,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,25,25,http://www.expansys.com/more/?sbadd=274865,0
+7071,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-82,text,true,,25,25,http://www.expansys.com/more/?sbadd=274865,900
+2447,Basket,200,OK,Thread Group2 1-81,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,25,25,http://www.expansys.com/basket/,1181
+5006,Basket,200,OK,Thread Group2 1-87,text,true,,24,24,http://www.expansys.com/basket/,1545
+5336,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-91,text,true,,23,23,http://www.expansys.com/more/?sbadd=274865,1214
+1566,Basket,200,OK,Thread Group2 1-50,text,true,,23,23,http://www.expansys.com/basket/,282
+1291,Basket,200,OK,Thread Group2 1-98,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,23,23,http://www.expansys.com/basket/,651
+35849,HomePage,200,OK,Thread Group2 1-88,text,true,,22,22,http://www.expansys.com/,1898
+4775,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-97,text,true,,21,21,http://www.expansys.com/more/?sbadd=274865,689
+1,Samsung-Details-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-88,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,21,21,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,0
+904,Basket,200,OK,Thread Group2 1-93,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,21,21,http://www.expansys.com/basket/,574
+6842,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-68,text,true,,20,20,http://www.expansys.com/more/?sbadd=274865,1775
+5253,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-94,text,true,,20,20,http://www.expansys.com/more/?sbadd=274865,751
+7585,Basket,200,OK,Thread Group2 1-73,text,true,,20,20,http://www.expansys.com/basket/,1508
+2904,Basket,200,OK,Thread Group2 1-62,text,true,,19,19,http://www.expansys.com/basket/,1275
+515,Basket,200,OK,Thread Group2 1-91,text,true,,18,18,http://www.expansys.com/basket/,514
+1583,Basket,200,OK,Thread Group2 1-100,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,17,17,http://www.expansys.com/basket/,588
+820,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-88,text,true,,16,16,http://www.expansys.com/more/?sbadd=274865,598
+5996,Basket,200,OK,Thread Group2 1-84,text,true,,16,16,http://www.expansys.com/basket/,1625
+19408,Samsung-Details-Page,200,OK,Thread Group2 1-99,text,true,,15,15,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1076
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-99,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,15,15,http://www.expansys.com/more/?sbadd=274865,0
+3058,Basket,200,OK,Thread Group2 1-76,text,true,,15,15,http://www.expansys.com/basket/,1391
+10678,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-90,text,true,,14,14,http://www.expansys.com/more/?sbadd=274865,1545
+376,Basket,200,OK,Thread Group2 1-88,text,true,,14,14,http://www.expansys.com/basket/,375
+2119,Basket,200,OK,Thread Group2 1-82,text,true,,13,13,http://www.expansys.com/basket/,1421
+1257,Basket,200,OK,Thread Group2 1-68,text,true,,13,13,http://www.expansys.com/basket/,607
+240,Basket,200,OK,Thread Group2 1-90,text,true,,11,11,http://www.expansys.com/basket/,174
+1507,Basket,200,OK,Thread Group2 1-97,text,true,,10,10,http://www.expansys.com/basket/,870
+608,Basket,200,OK,Thread Group2 1-99,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,9,9,http://www.expansys.com/basket/,515
+33518,Samsung-Details-Page,200,OK,Thread Group2 1-74,text,true,,9,9,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1297
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-74,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,8,8,http://www.expansys.com/more/?sbadd=274865,0
+34582,Samsung-Details-Page,200,OK,Thread Group2 1-79,text,true,,8,8,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1267
+1,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-79,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,8,8,http://www.expansys.com/more/?sbadd=274865,0
+268,Basket,200,OK,Thread Group2 1-74,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,8,8,http://www.expansys.com/basket/,227
+171,Basket,200,OK,Thread Group2 1-79,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,7,7,http://www.expansys.com/basket/,171
+24175,Samsung-Details-Page,200,OK,Thread Group2 1-96,text,true,,6,6,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1287
+0,Samsung-AddConfirm-Page,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-96,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,6,6,http://www.expansys.com/more/?sbadd=274865,0
+298,Basket,200,OK,Thread Group2 1-96,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,6,6,http://www.expansys.com/basket/,259
+2594,Basket,200,OK,Thread Group2 1-94,text,true,,5,5,http://www.expansys.com/basket/,1309
+16759,Samsung-AddConfirm-Page,200,OK,Thread Group2 1-75,text,true,,4,4,http://www.expansys.com/more/?sbadd=274865,1387
+1,Basket,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: The target server failed to respond,Thread Group2 1-75,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,4,4,http://www.expansys.com/basket/,0
+184425,Samsung-Details-Page,Non HTTP response code: java.net.SocketException,Non HTTP response message: Socket closed,Thread Group2 1-58,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,3,3,http://www.expansys.com/samsung-galaxy-s6-32gb-black-sapphire-274865/?partner=MKTGWEB&utm_source=web&utm_medium=top-banner&utm_campaign=banner-top31-s6,1096
+194452,HomePage,Non HTTP response code: java.net.SocketException,Non HTTP response message: Socket closed,Thread Group2 1-60,text,false,Test failed: text expected to contain / Samsung Galaxy S6/,3,3,http://www.expansys.com/,1799
+177400,Samsung-AddConfirm-Page,Non HTTP response code: java.net.SocketException,Non HTTP response message: Socket closed,Thread Group2 1-23,text,false,Test failed: text expected to contain /Samsung Galaxy S6/,3,3,http://www.expansys.com/more/?sbadd=274865,0

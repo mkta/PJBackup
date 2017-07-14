@@ -1,0 +1,22 @@
+#removecookies-hello
+{
+  color: red ! important;
+}
+
+#removecookies-toolbar-button
+{
+  list-style-image: url("chrome://removecookies/skin/removecookies-button.png");
+  -moz-image-region: rect(0px 24px 24px 0px);
+}
+#removecookies-toolbar-button:hover
+{
+  -moz-image-region: rect(24px 24px 48px  0px);
+}
+[iconsize="small"] #removecookies-toolbar-button
+{
+  -moz-image-region: rect( 0px 40px 16px 24px);
+}
+[iconsize="small"] #removecookies-toolbar-button:hover
+{
+  -moz-image-region: rect(24px 40px 40px 24px);
+}

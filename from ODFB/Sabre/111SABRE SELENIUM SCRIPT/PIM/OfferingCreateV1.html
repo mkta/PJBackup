@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://pimtest.brandpath.com:8080/" />
+<title>OfferingCreateV1</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">OfferingCreateV1</td></tr>
+</thead><tbody>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://pimtest.brandpath.com:8080/pim-web/pim/dashboard/dashboard.xhtml</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>xpath=//*[@id='kc-login']</td>
+	<td>LogIn</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>LogIn = ${LogIn}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${LogIn}==false</td>
+	<td>noLogin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>QAZ123wsx</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>catalinf</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=rememberMe</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=kc-login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>noLogin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='0_2']/a/span[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[@id='0_2']/ul/li/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=offeringVersionFilterForm:j_idt81:addButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{(new Date().getHours()+&quot;:&quot; + new Date().getMinutes() + &quot;:&quot; + new Date().getSeconds() + &quot;(&quot; + new Date().getFullYear() + &quot;/&quot; + (new Date().getMonth() +1) + &quot;/&quot; + new Date().getDate().toString() + &quot;)&quot;)}</td>
+	<td>nameDateOffering</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=offeringTabsForm:offeringTabViewId:name</td>
+	<td>GeaniScriptSku-${nameDateOffering}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=offeringTabsForm:offeringTabViewId:type_label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=offeringTabsForm:offeringTabViewId:type_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{(new Date().getHours()+&quot;&quot; + new Date().getMinutes() + &quot;&quot; + new Date().getSeconds() + &quot;&quot; + new Date().getFullYear() + &quot;&quot; + (new Date().getMonth() +1) + &quot;&quot; + new Date().getDate().toString() + &quot;&quot;)}</td>
+	<td>skuDateOffering</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=offeringTabsForm:offeringTabViewId:code</td>
+	<td>GSSku-${skuDateOffering}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//*[@id='offeringTabsForm:offeringTabViewId:j_idt123']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//*[@id='offeringTabsForm:offeringTabViewId:j_idt119:1:j_idt120']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=offeringTabsForm:offeringTabViewId:j_idt108</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//*[@id='offeringProductsForm']/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/div[2]/select[1]/*</td>
+	<td>numberOfProducts</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${numberOfProducts}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='offeringProductsForm:products']/div[3]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.numberOfProducts-1}</td>
+	<td>offselect</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${offselect}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=offeringProductsForm:products_${offselect}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=offeringProductsForm:taxRate</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=offeringProductsForm:j_idt385</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Price Lists')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='offeringTabsForm:offeringTabViewId:j_idt228:priceTypeId']/div[3]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='offeringTabsForm:offeringTabViewId:j_idt228:priceTypeId_panel']/div[2]/ul/li[2]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='offeringTabsForm:offeringTabViewId:j_idt228:priceTypeId_panel']/div[2]/ul/li[4]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=offeringTabsForm:offeringTabViewId:j_idt228:priceListsWithoutOfferingId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='offeringTabsForm:offeringTabViewId:j_idt228:siteId']/div[3]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='offeringTabsForm:offeringTabViewId:j_idt228:siteId_panel']/div[2]/ul/li/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='offeringTabsForm:offeringTabViewId:j_idt228:siteId_panel']/div[2]/ul/li[7]/div/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=offeringTabsForm:offeringTabViewId:j_idt228:filterTab</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=offeringTabsForm:offeringTabViewId:j_idt228:submitButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=offeringTabsForm:offeringTabViewId:offeringPricelists:0:j_idt504</td>
+	<td>900</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=offeringTabsForm:offeringTabViewId:offeringPricelists:0:j_idt507</td>
+	<td>600</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=offeringTabsForm:offeringTabViewId:offeringPricelists:0:j_idt510</td>
+	<td>750</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=General</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=offeringTabsForm:offeringTabViewId:j_idt123</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=offeringTabsForm:offeringTabViewId:j_idt119:0:j_idt120</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=offeringTabsForm:offeringTabViewId:j_idt119:1:j_idt120</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>fbMainContainer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=fbCloseButton</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

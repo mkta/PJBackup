@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://pimtest.brandpath.com:8080/" />
+<title>#description test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">#description test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://pimtest.brandpath.com:8080/pim-web/pim/offerings/versionView/tabs/offeringTabs.xhtml?mode=edit&amp;id=1502</td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td>offeringTabsForm:offeringTabViewId:j_idt109:1:j_idt110:4:description_input</td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>id=offeringTabsForm:offeringTabViewId:j_idt109:1:j_idt110:4:description_frame</td>
+	<td></td>
+</tr>
+<tr>
+	<td>focus</td>
+	<td>xpath=//*[@id='offeringTabsForm:offeringTabViewId:j_idt109:1:j_idt110:4:description']/div/iframe</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>xpath=//*[@id=&quot;offeringTabsForm:offeringTabViewId:j_idt109:1:j_idt110:4:description&quot;]/div/iframe</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=//*[@id=&quot;offeringTabsForm:offeringTabViewId:j_idt109:1:j_idt110:4:description&quot;]/div/iframe</td>
+	<td>aaaa</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>var $frm = $(&quot;data-gramm_id&quot;); var $doc = $frm[0].contentWindow ? $frm[0].contentWindow.document : $frm[0].contentDocument; var $body = $($doc.body); $body.html('');&nbsp;&nbsp;$body.append('&lt;i&gt;Writing into the iFrame...&lt;/i&gt;');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>document.getElementById('data-gramm_id').value='text to be displayed' </td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{document.getElementById('1111').value='text to be displayed'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{document.getElementById('offeringTabsForm:offeringTabViewId:j_idt109:1:j_idt110:4:description_input').value='text to be displayed'&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>$(&quot;offeringTabsForm:offeringTabViewId:j_idt109:1:j_idt110:4:description_input&quot;).contents().find(&quot;body&quot;).append('Test');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>var i = 0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function doThing() {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var a = document.getElementById(&quot;offeringTabsForm:offeringTabViewId:j_idt109:1:j_idt110:4:description_input&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.contentWindow.document.write(&quot;Here again &quot; + i + &quot;&lt;br/&gt;&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.contentWindow.document.close();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

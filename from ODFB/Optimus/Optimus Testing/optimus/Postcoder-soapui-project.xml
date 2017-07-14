@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="Postcoder" soapui-version="4.5.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="Postcoder.cfcSoapBinding" type="wsdl" bindingName="{http://ws}Postcoder.cfcSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://rapidstg01/ws/Postcoder.cfc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://rapidstg01/ws/Postcoder.cfc?wsdl"><con:part><con:url>http://rapidstg01/ws/Postcoder.cfc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://ws" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ws" xmlns:intf="http://ws" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="http://rpc.xml.coldfusion" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--WSDL created by ColdFusion version 9,0,1,274733-->
+  <wsdl:types>
+    <schema targetNamespace="http://xml.apache.org/xml-soap" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://ws"/>
+      <import namespace="http://rpc.xml.coldfusion"/>
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <complexType name="mapItem">
+        <sequence>
+          <element name="key" nillable="true" type="xsd:anyType"/>
+          <element name="value" nillable="true" type="xsd:anyType"/>
+        </sequence>
+      </complexType>
+      <complexType name="Map">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="item" type="apachesoap:mapItem"/>
+        </sequence>
+      </complexType>
+    </schema>
+    <schema targetNamespace="http://rpc.xml.coldfusion" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://ws"/>
+      <import namespace="http://xml.apache.org/xml-soap"/>
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <complexType name="CFCInvocationException">
+        <sequence/>
+      </complexType>
+      <complexType name="QueryBean">
+        <sequence>
+          <element name="columnList" nillable="true" type="impl:ArrayOf_xsd_string"/>
+          <element name="data" nillable="true" type="impl:ArrayOfArrayOf_xsd_anyType"/>
+        </sequence>
+      </complexType>
+    </schema>
+    <schema targetNamespace="http://ws" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://xml.apache.org/xml-soap"/>
+      <import namespace="http://rpc.xml.coldfusion"/>
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <complexType name="ArrayOf_xsd_string">
+        <complexContent>
+          <restriction base="soapenc:Array">
+            <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/>
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfArrayOf_xsd_anyType">
+        <complexContent>
+          <restriction base="soapenc:Array">
+            <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:anyType[][]"/>
+          </restriction>
+        </complexContent>
+      </complexType>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="CFCInvocationException">
+    <wsdl:part name="fault" type="tns1:CFCInvocationException"/>
+  </wsdl:message>
+  <wsdl:message name="extFetchAddressResponse">
+    <wsdl:part name="extFetchAddressReturn" type="apachesoap:Map"/>
+  </wsdl:message>
+  <wsdl:message name="extFetchAddressRequest">
+    <wsdl:part name="addressid" type="xsd:string"/>
+    <wsdl:part name="accountId" type="xsd:string"/>
+    <wsdl:part name="accountPassword" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="PostCoderLookupXMLRequest">
+    <wsdl:part name="XMLrequest" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="PostCoderLookupXMLResponse">
+    <wsdl:part name="PostCoderLookupXMLReturn" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="extByPostCodeResponse">
+    <wsdl:part name="extByPostCodeReturn" type="apachesoap:Map"/>
+  </wsdl:message>
+  <wsdl:message name="extByPostCodeRequest">
+    <wsdl:part name="postcode" type="xsd:string"/>
+    <wsdl:part name="accountId" type="xsd:string"/>
+    <wsdl:part name="accountPassword" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:portType name="Postcoder">
+    <wsdl:operation name="extFetchAddress" parameterOrder="addressid accountId accountPassword">
+      <wsdl:input message="impl:extFetchAddressRequest" name="extFetchAddressRequest"/>
+      <wsdl:output message="impl:extFetchAddressResponse" name="extFetchAddressResponse"/>
+      <wsdl:fault message="impl:CFCInvocationException" name="CFCInvocationException"/>
+    </wsdl:operation>
+    <wsdl:operation name="extByPostCode" parameterOrder="postcode accountId accountPassword">
+      <wsdl:input message="impl:extByPostCodeRequest" name="extByPostCodeRequest"/>
+      <wsdl:output message="impl:extByPostCodeResponse" name="extByPostCodeResponse"/>
+      <wsdl:fault message="impl:CFCInvocationException" name="CFCInvocationException"/>
+    </wsdl:operation>
+    <wsdl:operation name="PostCoderLookupXML" parameterOrder="XMLrequest">
+      <wsdl:input message="impl:PostCoderLookupXMLRequest" name="PostCoderLookupXMLRequest"/>
+      <wsdl:output message="impl:PostCoderLookupXMLResponse" name="PostCoderLookupXMLResponse"/>
+      <wsdl:fault message="impl:CFCInvocationException" name="CFCInvocationException"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Postcoder.cfcSoapBinding" type="impl:Postcoder">
+    <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="extFetchAddress">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="extFetchAddressRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://ws" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="extFetchAddressResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://ws" use="encoded"/>
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="CFCInvocationException" namespace="http://ws" use="encoded"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="extByPostCode">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="extByPostCodeRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://ws" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="extByPostCodeResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://ws" use="encoded"/>
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="CFCInvocationException" namespace="http://ws" use="encoded"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PostCoderLookupXML">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="PostCoderLookupXMLRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://ws" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="PostCoderLookupXMLResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://ws" use="encoded"/>
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="CFCInvocationException" namespace="http://ws" use="encoded"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PostcoderService">
+    <wsdl:port binding="impl:Postcoder.cfcSoapBinding" name="Postcoder.cfc">
+      <wsdlsoap:address location="http://rapidstg01/ws/Postcoder.cfc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://rapidstg01/ws/Postcoder.cfc</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="extByPostCode" bindingOperationName="extByPostCode" type="Request-Response" outputName="extByPostCodeResponse" inputName="extByPostCodeRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://rapidstg01/ws/Postcoder.cfc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:extByPostCode soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <postcode xsi:type="xsd:string">?</postcode>
+         <accountId xsi:type="xsd:string">?</accountId>
+         <accountPassword xsi:type="xsd:string">?</accountPassword>
+      </ws:extByPostCode>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws/Postcoder/extByPostCodeRequest"/></con:call></con:operation><con:operation isOneWay="false" action="" name="extFetchAddress" bindingOperationName="extFetchAddress" type="Request-Response" outputName="extFetchAddressResponse" inputName="extFetchAddressRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://rapidstg01/ws/Postcoder.cfc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:extFetchAddress soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <addressid xsi:type="xsd:string">?</addressid>
+         <accountId xsi:type="xsd:string">?</accountId>
+         <accountPassword xsi:type="xsd:string">?</accountPassword>
+      </ws:extFetchAddress>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws/Postcoder/extFetchAddressRequest"/></con:call></con:operation><con:operation isOneWay="false" action="" name="PostCoderLookupXML" bindingOperationName="PostCoderLookupXML" type="Request-Response" outputName="PostCoderLookupXMLResponse" inputName="PostCoderLookupXMLRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://rapidstg01/ws/Postcoder.cfc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:PostCoderLookupXML soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <XMLrequest xsi:type="xsd:string"><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"> 
+                               <soapenv:Header> 
+                                      <accountId>3</accountId> 
+                                      <accountPassword>test</accountPassword> 
+                               </soapenv:Header> 
+                               <soapenv:Body>
+                                      <method>extByPostCode</method>
+                                      <parameters>
+                                              <postcode></postcode>
+                                              <addressid></addressid> 
+                                      </parameters> 
+                               </soapenv:Body> 
+                       </soapenv:Envelope>
+]]]]>><![CDATA[
+         </XMLrequest>
+      </ws:PostCoderLookupXML>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws/Postcoder/PostCoderLookupXMLRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Copy of Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://rapidstg01/ws/Postcoder.cfc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:PostCoderLookupXML soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <XMLrequest xsi:type="xsd:string"><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"> 
+                               <soapenv:Header> 
+                                      <accountId>3</accountId> 
+                                      <accountPassword>test</accountPassword> 
+                               </soapenv:Header> 
+                               <soapenv:Body>
+                                      <method>extFetchAddress</method>
+                                      <parameters>
+                                              <postcode></postcode>
+                                              <addressid>27946413.00</addressid> 
+                                      </parameters> 
+                               </soapenv:Body> 
+                       </soapenv:Envelope> 
+
+]]]]>><![CDATA[
+         </XMLrequest>
+      </ws:PostCoderLookupXML>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws/Postcoder/PostCoderLookupXMLRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>

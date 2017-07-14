@@ -1,0 +1,24 @@
+Depency needed:
+
+SAB-2274 - https://brandpath.atlassian.net/browse/SAB-2708 
+
+To be release:
+
+Back End:
+sab-2730 - https://brandpath.atlassian.net/browse/SAB-2730 
+SAB-2708 - https://brandpath.atlassian.net/browse/SAB-2708 
+SAB-2671 - https://brandpath.atlassian.net/browse/SAB-2671 
+sab-2724 - https://brandpath.atlassian.net/browse/SAB-2724
+sab-2755 - https://brandpath.atlassian.net/browse/SAB-2755
+
+
+Front End:
+SAB-2739 - https://brandpath.atlassian.net/browse/SAB-2739
+
+
+
+
+SUK0XD-NPFP-YZGH - paypal - 2 products - I695646
+SUK0NM-ETGG-KLXE - paypal - 1 products - I695647
+SUK0EF-JYAP-VZBN - paypal - 1 products - I695648
+SUK0OX-XEGT-NHBZ - paypal - 2 products - I695649

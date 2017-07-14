@@ -1,0 +1,115 @@
+{
+	"id": "f7d9b5e2-b7b1-f0a5-bbec-31932c4bb36d",
+	"name": "Sabre",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"owner": "214945",
+			"lastUpdatedBy": "106257",
+			"lastRevision": 161384350,
+			"id": "07fc37c5-7c15-e4dc-2108-d095e53f6b12",
+			"name": "Local",
+			"description": "",
+			"order": [
+				"e1b67bd2-eb59-1720-6aaa-917c9c17aad6",
+				"4c1bd5eb-ad72-d53d-d7c5-8d2b3a83d26f"
+			]
+		},
+		{
+			"owner": "214945",
+			"lastUpdatedBy": "106257",
+			"lastRevision": 161384350,
+			"id": "e42233e1-6be3-d9ab-5ae5-8787515228de",
+			"name": "Test",
+			"description": "",
+			"order": [
+				"1aee940e-0b42-78a4-b963-945f7ad281ae",
+				"6d9dbf0d-467f-561b-22b9-93ef5d8d5bd2"
+			]
+		}
+	],
+	"timestamp": 0,
+	"owner": "214945",
+	"public": false,
+	"hasRequests": true,
+	"requests": [
+		{
+			"id": "1aee940e-0b42-78a4-b963-945f7ad281ae",
+			"headers": "Content-Type: application/json\nsitePublicId: 5b7d3ff1-c560-4879-a4c7-4ec1962ee1c9\ntoken: 73a415f8-5696-4559-ad3e-5596d4be6651\n",
+			"url": "http://10.41.7.31/sabre-uk-site-service/ws/offering/cache?page=1&pageSize=15&sort=sortPriceDesc&filterTYPES=DEVICE%2CBUNDLE%2CPROMO_BUNDLE&filterHIERARCHY=TABLETS,CASES_COVERS",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1460572388864,
+			"name": "GET offering/cache",
+			"description": "",
+			"collectionId": "f7d9b5e2-b7b1-f0a5-bbec-31932c4bb36d"
+		},
+		{
+			"id": "4c1bd5eb-ad72-d53d-d7c5-8d2b3a83d26f",
+			"headers": "Content-Type: application/json\nsitePublicId: 5b7d3ff1-c560-4879-a4c7-4ec1962ee1c9\n",
+			"url": "http://reftest.sabre.local/sabre-uk-site-service/ws/site/sessiontoken",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "var data = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"token\", data.token);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1460535613282,
+			"name": "POST sessiontoken",
+			"description": "",
+			"collectionId": "f7d9b5e2-b7b1-f0a5-bbec-31932c4bb36d",
+			"responses": [],
+			"rawModeData": "5b7d3ff1-c560-4879-a4c7-4ec1962ee1c9",
+			"folder": "07fc37c5-7c15-e4dc-2108-d095e53f6b12"
+		},
+		{
+			"id": "6d9dbf0d-467f-561b-22b9-93ef5d8d5bd2",
+			"headers": "Content-Type: application/json\nsitePublicId: 5b7d3ff1-c560-4879-a4c7-4ec1962ee1c9\n",
+			"url": "http://10.41.7.31/sabre-uk-site-service/ws/site/sessiontoken",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "var data = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"token\", data.token);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1460536112439,
+			"name": "POST sessiontoken",
+			"description": "",
+			"collectionId": "f7d9b5e2-b7b1-f0a5-bbec-31932c4bb36d",
+			"responses": [],
+			"rawModeData": "5b7d3ff1-c560-4879-a4c7-4ec1962ee1c9",
+			"folder": "e42233e1-6be3-d9ab-5ae5-8787515228de"
+		},
+		{
+			"id": "e1b67bd2-eb59-1720-6aaa-917c9c17aad6",
+			"headers": "Content-Type: application/json\nsitePublicId: 5b7d3ff1-c560-4879-a4c7-4ec1962ee1c9\ntoken: 92bf064b-7da2-4007-956f-92640991e6d2\nfilterHIERARCHY: MOBILES_WEARABLES\n",
+			"url": "http://reftest.sabre.local/sabre-uk-site-service/ws/offering/cache?page=1&pageSize=15&sort=sortPriceDesc&filterTYPES=DEVICE&filterHIERARCHY=MOBILES_WEARABLES",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1460534749149,
+			"name": "GET offering/cache",
+			"description": "",
+			"collectionId": "f7d9b5e2-b7b1-f0a5-bbec-31932c4bb36d",
+			"folder": "07fc37c5-7c15-e4dc-2108-d095e53f6b12"
+		}
+	]
+}

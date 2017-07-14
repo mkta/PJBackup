@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="Shukran" resourceRoot="" soapui-version="5.2.0" abortOnError="false" runType="SEQUENTIAL" id="3b44826d-486a-4315-9192-c2c21ae49612" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="SmsQueue.cfcSoapBinding" type="wsdl" bindingName="{http://sms.com.rapid}SmsQueue.cfcSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://rapidshukran/com/sms/SmsQueue.cfc?wsdl" id="be9e2781-7844-4ad2-aac7-c318f7a84022" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://rapidshukran/com/sms/SmsQueue.cfc?wsdl"><con:part><con:url>http://rapidshukran/com/sms/SmsQueue.cfc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://sms.com.rapid" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://sms.com.rapid" xmlns:intf="http://sms.com.rapid" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="http://rpc.xml.coldfusion" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--WSDL created by ColdFusion version 9,0,1,274733-->
+  <wsdl:types>
+    <schema targetNamespace="http://xml.apache.org/xml-soap" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://sms.com.rapid"/>
+      <import namespace="http://rpc.xml.coldfusion"/>
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <complexType name="mapItem">
+        <sequence>
+          <element name="key" nillable="true" type="xsd:anyType"/>
+          <element name="value" nillable="true" type="xsd:anyType"/>
+        </sequence>
+      </complexType>
+      <complexType name="Map">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="item" type="apachesoap:mapItem"/>
+        </sequence>
+      </complexType>
+    </schema>
+    <schema targetNamespace="http://rpc.xml.coldfusion" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://sms.com.rapid"/>
+      <import namespace="http://xml.apache.org/xml-soap"/>
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <complexType name="CFCInvocationException">
+        <sequence/>
+      </complexType>
+      <complexType name="QueryBean">
+        <sequence>
+          <element name="columnList" nillable="true" type="impl:ArrayOf_xsd_string"/>
+          <element name="data" nillable="true" type="impl:ArrayOfArrayOf_xsd_anyType"/>
+        </sequence>
+      </complexType>
+    </schema>
+    <schema targetNamespace="http://sms.com.rapid" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://xml.apache.org/xml-soap"/>
+      <import namespace="http://rpc.xml.coldfusion"/>
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <complexType name="ArrayOf_xsd_string">
+        <complexContent>
+          <restriction base="soapenc:Array">
+            <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/>
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOfArrayOf_xsd_anyType">
+        <complexContent>
+          <restriction base="soapenc:Array">
+            <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:anyType[][]"/>
+          </restriction>
+        </complexContent>
+      </complexType>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="onIncomingMessageResponse">
+    <wsdl:part name="onIncomingMessageReturn" type="xsd:anyType"/>
+  </wsdl:message>
+  <wsdl:message name="onIncomingMessageRequest">
+    <wsdl:part name="CFevent" type="apachesoap:Map"/>
+  </wsdl:message>
+  <wsdl:message name="CFCInvocationException">
+    <wsdl:part name="fault" type="tns1:CFCInvocationException"/>
+  </wsdl:message>
+  <wsdl:portType name="SmsQueue">
+    <wsdl:operation name="onIncomingMessage" parameterOrder="CFevent">
+      <wsdl:input message="impl:onIncomingMessageRequest" name="onIncomingMessageRequest"/>
+      <wsdl:output message="impl:onIncomingMessageResponse" name="onIncomingMessageResponse"/>
+      <wsdl:fault message="impl:CFCInvocationException" name="CFCInvocationException"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SmsQueue.cfcSoapBinding" type="impl:SmsQueue">
+    <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="onIncomingMessage">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="onIncomingMessageRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sms.com.rapid" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="onIncomingMessageResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sms.com.rapid" use="encoded"/>
+      </wsdl:output>
+      <wsdl:fault name="CFCInvocationException">
+        <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="CFCInvocationException" namespace="http://sms.com.rapid" use="encoded"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SmsQueueService">
+    <wsdl:port binding="impl:SmsQueue.cfcSoapBinding" name="SmsQueue.cfc">
+      <wsdlsoap:address location="http://rapidshukran/com/sms/SmsQueue.cfc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://rapidshukran/com/sms/SmsQueue.cfc</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="onIncomingMessage" bindingOperationName="onIncomingMessage" type="Request-Response" outputName="onIncomingMessageResponse" inputName="onIncomingMessageRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="21a9a632-de44-45a5-961f-1b216caa31a7"><con:settings/><con:call name="Request 1" id="59d1a592-233e-49e5-a31c-a8b161d70feb"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://rapidshukran/com/sms/SmsQueue.cfc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sms="http://sms.com.rapid">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sms:onIncomingMessage soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <CFevent xsi:type="x-:Map" xmlns:x-="http://xml.apache.org/xml-soap">
+            <!--Zero or more repetitions:-->
+            <item xsi:type="x-:mapItem">
+               <key xsi:type="xsd:string">gatewayType</key>
+               <value xsi:type="xsd:string">SMS</value>
+            </item>
+            <item xsi:type="x-:mapItem">
+               <key xsi:type="xsd:string">originatorId</key>
+               <value xsi:type="xsd:string">SMSGateway</value>
+            </item>
+		  <item xsi:type="x-:mapItem">
+               <key xsi:type="xsd:string">cfcMethod</key>
+               <value xsi:type="xsd:string">onIncomingMessage</value>
+            </item>
+            <item xsi:type="x-:mapItem">
+               <key xsi:type="xsd:string">cfcPath</key>
+               <value xsi:type="xsd:string">D:\Web\RAPIDShukran\com\sms\SmsQueue.cfc</value>
+            </item>
+            <item xsi:type="x-:mapItem">
+               <key xsi:type="xsd:string">gatewayId</key>
+               <value xsi:type="xsd:string">SMSQueue</value>
+            </item>
+            <item xsi:type="x-:mapItem">
+               <key xsi:type="xsd:string">data</key>
+               <value xsi:type="x-:Map" xmlns:x-="http://xml.apache.org/xml-soap">
+               	<item xsi:type="x-:mapItem">
+	               	<key xsi:type="xsd:string">destAddress</key>
+	               	<value xsi:type="xsd:string">5551212</value>
+	            	</item>
+	            	<item xsi:type="x-:mapItem">
+	               	<key xsi:type="xsd:string">sourceAddress</key>
+	               	<value xsi:type="xsd:string">55551234</value>
+	            	</item>
+	            	<item xsi:type="x-:mapItem">
+	               	<key xsi:type="xsd:string">message</key>
+	               	<value xsi:type="xsd:string">55551234</value>
+	            	</item>
+	            	<item xsi:type="x-:mapItem">
+	               	<key xsi:type="xsd:string">priority</key>
+	               	<value xsi:type="xsd:string">0</value>
+	            	</item>
+	            	<item xsi:type="x-:mapItem">
+	               	<key xsi:type="xsd:string">messageLength</key>
+	               	<value xsi:type="xsd:string">8</value>
+	            	</item>
+	            	<item xsi:type="x-:mapItem">
+	               	<key xsi:type="xsd:string">protocol</key>
+	               	<value xsi:type="xsd:string">0</value>
+	            	</item>
+	            	<item xsi:type="x-:mapItem">
+	               	<key xsi:type="xsd:string">registeredDelivery</key>
+	               	<value xsi:type="xsd:string">0</value>
+	            	</item>
+	            	<item xsi:type="x-:mapItem">
+	               	<key xsi:type="xsd:string">dataCoding</key>
+	               	<value xsi:type="xsd:string">0</value>
+	            	</item>
+	            	<item xsi:type="x-:mapItem">
+	               	<key xsi:type="xsd:string">esmClass</key>
+	               	<value xsi:type="xsd:string">0</value>
+	            	</item>
+               </value>
+            </item>
+         </CFevent>
+      </sms:onIncomingMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sms.com.rapid/SmsQueue/onIncomingMessageRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite name="TestSuite 1" id="277e2f73-5823-4e9a-be5e-a83ccee35c93"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true" id="69f13d85-e0a6-4173-a06f-800eb3d7c3b6"><con:settings/><con:testStep type="groovy" name="sourceAddressScript" id="2ca0d0ba-9e03-445f-bf8a-f34a317e6d0a"><con:settings/><con:config><script>//Tip to generate a random element from an array
+def myTestCase = context.testCase
+source_address = ['00001084', '00005950', '00001118', '00002975', '00008434', '00001704', '00003040', '00004731', '00003024', '00007646', '00001949', '00003432', '00007265', '00004492', '00009256', '00003009', '00009775', '00002680', '00006876', '00003541', '00005372', '00006115', '00003754', '00006156', '00008080', '00007274', '00004560', '00007712', '00008212', '00001963', '00007240', '00008525', '00003554', '00001954', '00003302', '00004839', '00006542', '00007778', '00003054', '00006911', '00002172', '00001769', '00005540', '00003911', '00009309', '00001329', '00003829', '00009096', '00003339', '00001376', '00005216', '00001091', '00002020', '00009617', '00004707', '00004264', '00008185', '00009368', '00008232', '00004727', '00006933', '00005712', '00005005', '00008774', '00006753', '00004995', '00001190', '00004804', '00006938', '00005810', '00001330', '00008473', '00003087', '00008680', '00009061', '00008025', '00008815', '00006956', '00004141', '00003042', '00005873', '00008937', '00002307', '00005570', '00004862', '00007724', '00003651', '00003576', '00001185', '00003457', '00006532', '00008689', '00007834', '00003230', '00003242', '00003907', '00002909', '00006044', '00008131', '00008405', '00002187', '00002018', '00003969', '00001562', '00003282', '00007869', '00008862', '00006913', '00005009', '00003831', '00002125', '00005274', '00008805', '00006120', '00007237', '00009065', '00007970', '00004836', '00006887', '00005902', '00003587', '00005618', '00003323', '00006922', '00002093', '00007681', '00002549', '00002140', '00006185', '00004240', '00002195', '00004757', '00009807', '00008786', '00005472', '00002334', '00006497', '00001313', '00007747', '00006373', '00002060', '00006188', '00003046', '00007248', '00008609', '00007146', '00002489', '00006637', '00001441', '00004573', '00004821', '00007101', '00005114', '00003371', '00006650', '00001231', '00003645', '00009239', '00003706', '00006466', '00001857', '00007200', '00007451', '00009553', '00002854', '00008553', '00005378', '00003162', '00006288', '00002297', '00002387', '00001964', '00002695', '00005615', '00002847', '00009463', '00001976', '00004942', '00004330', '00001784', '00002377', '00009731', '00007006', '00009832', '00008186', '00001450', '00002120', '00001583', '00004934', '00005993', '00002557', '00005175', '00005601', '00005742', '00001128', '00001276', '00001959', '00003329', '00007384', '00008566', '00003752', '00002604', '00008590', '00008514', '00001574', '00007990', '00003822', '00007315', '00004368', '00004602', '00006462', '00006513', '00006870', '00009505', '00002500', '00006066', '00006683', '00009928', '00007597', '00008069', '00006898', '00009440', '00005488', '00005698', '00002290', '00005269', '00007293', '00009176', '00007292', '00008948', '00003271', '00006411', '00004062', '00003475', '00004341', '00009187', '00002979', '00005053', '00001927', '00005882', '00003478', '00008517', '00008829', '00003849', '00007208', '00008918', '00003965', '00002481', '00009322', '00004546', '00008298', '00004732', '00001648', '00006905', '00007194', '00002418', '00009962', '00004812', '00003747', '00009867', '00003061', '00003874', '00002658', '00006040', '00008655', '00004937', '00008214', '00001707', '00007921', '00007946', '00008299', '00001332', '00007292', '00008948', '00003271', '00006411', '00004062', '00003475', '00004341', '00009187', '00002979', '00005053', '00001927', '00005882', '00003478', '00008517', '00008829', '00003849', '00007208', '00008918', '00003965', '00002481', '00009322', '00004546', '00008298', '00004732', '00001648', '00006905', '00007194', '00002418', '00009962', '00004812', '00003747', '00009867', '00003061', '00003874', '00002658', '00006040', '00008655', '00004937', '00008214', '00001707', '00007921', '00007946', '00008299', '00001332', '00004747', '00007359', '00009123', '00005938', '00006883', '00001941', '00004547', '00002904', '00008248', '00004940', '00005978', '00006106', '00001175', '00001485', '00001045', '00001239', '00003888', '00003079', '00009526', '00008584', '00007805', '00008137', '00008927', '00005478', '00002265', '00004279', '00006308', '00009392', '00009428', '00007818', '00003249', '00001566', '00009334', '00003482', '00006129', '00005336', '00004640', '00004854', '00009943', '00007894', '00003398', '00003900', '00006925', '00006512', '00009662', '00001059', '00008081', '00002434', '00003411', '00004261', '00010000', '00009113', '00001274', '00003420', '00006299', '00007873', '00005959', '00008695', '00007329', '00006557', '00009442', '00006360', '00005623', '00002665', '00002833', '00004753', '00008756', '00009756', '00006268', '00003267', '00008429', '00002168', '00004286', '00003387', '00005411', '00009852', '00003681', '00006766', '00003386', '00003556', '00002546', '00009804', '00002396', '00006500', '00009498', '00008940', '00004932', '00004028', '00002563', '00004015', '00006036', '00002313', '00007310', '00002164', '00002003', '00009520', '00006660', '00008326', '00007586', '00006875', '00007273', '00008428', '00006280', '00004165', '00002643', '00004842', '00002627', '00005190', '00008347', '00006563', '00005025', '00003843', '00005181', '00004755', '00004245', '00008724', '00005774', '00003335', '0005428', '00005500', '00004304', '00006861', '00008102', '00005188', '00001884', '00008100', '00004499', '00008649', '00004145', '00007537', '00002561', '00002691', '00006339', '00007134', '00004667', '00004700', '00004224', '00008153', '00007567', '00004764', '00005160', '00008835', '00005688', '00005296', '00008229', '00009399', '00005680', '00004204', '00005577', '00004857', '00004623', '00004270', '00001635', '00004537', '00009917', '00004719', '00002009', '00001587', '00003190', '00002031', '00004381', '00005171', '00003092', '00008535', '00006492', '00008066']
+
+random = new Random()
+log.info source_address[random.nextInt(482)]
+propTestStep = myTestCase.getTestStepByName("Properties") // get the Property TestStep
+propTestStep.setPropertyValue("sourceAddress", source_address[random.nextInt(482)].toString())</script></con:config></con:testStep><con:testStep type="groovy" name="messageScript" id="1cf394e5-bb05-48a7-af47-a5c3ff6cbb65"><con:settings/><con:config><script>//Tip to generate a random element from an array
+def myTestCase = context.testCase
+message = ['00001084','00005950','00001118','00002975','00008434','00001704','00003040','00004731','00003024','00007646','00001949','00003432','00007265','00004492','00009256','00003009','00009775','00002680','00006876','00003541','00005372','00006115','00003754','00006156','00008080','00007274','00004560','00007712','00008212','00001963','00007240','00008525','00003554','00001954','00003302','00004839','00006542','00007778','00003054','00006911','00002172','00001769','00005540','00003911','00009309','00001329','00003829','00009096','00003339','00001376','00005216','00001091','00002020','00009617','00004707','00004264','00008185','00009368','00008232','00004727','00006933','00005712','00005005','00008774','00006753','00004995','00001190','00004804','00006938','00005810','00001330','00008473','00003087','00008680','00009061','00008025','00008815','00006956','00004141','00003042','00005873','00008937','00002307','00005570','00004862','00007724','00003651','00003576','00001185','00003457','00006532','00008689','00007834','00003230','00003242','00003907','00002909','00006044','00008131','00008405','00002187','00002018','00003969','00001562','00003282','00007869','00008862','00006913','00005009','00003831','00002125','00005274','00008805','00006120','00007237','00009065','00007970','00004836','00006887','00005902','00003587','00005618','00003323','00006922','00002093','00007681','00002549','00002140','00006185','00004240','00002195','00004757','00009807','00008786','00005472','00002334','00006497','00001313','00007747','00006373','00002060','00006188','00003046','00007248','00008609','00007146','00002489','00006637','00001441','00004573','00004821','00007101','00005114','00003371','00006650','00001231','00003645','00009239','00003706','00006466','00001857','00007200','00007451','00009553','00002854','00008553','00005378','00003162','00006288','00002297','00002387','00001964','00002695','00005615','00002847','00009463','00001976','00004942','00004330','00001784','00002377','00009731','00007006','00009832','00008186','00001450','00002120','00001583','00004934','00005993','00002557','00005175','00005601','00005742','00001128','00001276','00001959','00003329','00007384','00008566','00003752','00002604','00008590','00008514','00001574','00007990','00003822','00007315','00004368','00004602','00006462','00006513','00006870','00009505','00002500','00006066','00006683','00009928','00007597','00008069','00006898','00009440','00005488','00005698','00002290','00005269','00007293','00009176','00007292','00008948','00003271','00006411','00004062','00003475','00004341','00009187','00002979','00005053','00001927','00005882','00003478','00008517','00008829','00003849','00007208','00008918','00003965','00002481','00009322','00004546','00008298','00004732','00001648','00006905','00007194','00002418','00009962','00004812','00003747','00009867','00003061','00003874','00002658','00006040','00008655','00004937','00008214','00001707','00007921','00007946','00008299','00001332','00007292','00008948','00003271','00006411','00004062','00003475','00004341','00009187','00002979','00005053','00001927','00005882','00003478','00008517','00008829','00003849','00007208','00008918','00003965','00002481','00009322','00004546','00008298','00004732','00001648','00006905','00007194','00002418','00009962','00004812','00003747','00009867','00003061','00003874','00002658','00006040','00008655','00004937','00008214','00001707','00007921','00007946','00008299','00001332','00004747','00007359','00009123','00005938','00006883','00001941','00004547','00002904','00008248','00004940','00005978','00006106','00001175','00001485','00001045','00001239','00003888','00003079','00009526','00008584','00007805','00008137','00008927','00005478','00002265','00004279','00006308','00009392','00009428','00007818','00003249','00001566','00009334','00003482','00006129','00005336','00004640','00004854','00009943','00007894','00003398','00003900','00006925','00006512','00009662','00001059','00008081','00002434','00003411','00004261','00010000','00009113','00001274','00003420','00006299','00007873','00005959','00008695','00007329','00006557','00009442','00006360','00005623','00002665','00002833','00004753','00008756','00009756','00006268','00003267','00008429','00002168','00004286','00003387','00005411','00009852','00003681','00006766','00003386','00003556','00002546','00009804','00002396','00006500','00009498','00008940','00004932','00004028','00002563','00004015','00006036','00002313','00007310','00002164','00002003','00009520','00006660','00008326','00007586','00006875','00007273','00008428','00006280','00004165','00002643','00004842','00002627','00005190','00008347','00006563','00005025','00003843','00005181','00004755','00004245','00008724','00005774','00003335','00005428','00005500','00004304','00006861','00008102','00005188','00001884','00008100','00004499','00008649','00004145','00007537','00002561','00002691','00006339','00007134','00004667','00004700','00004224','00008153','00007567','00004764','00005160','00008835','00005688','00005296','00008229','00009399','00005680','00004204','00005577','00004857','00004623','00004270','00001635','00004537','00009917','00004719','00002009','00001587','00003190','00002031','00004381','00005171','00003092','00008535','00006492','00008066', 'thanks', 'thank you', 'cheers', 'shukran', 'shokran','offer', 'gratias!', '4567' ]
+
+random = new Random()
+log.info message[random.nextInt(490)]
+propTestStep = myTestCase.getTestStepByName("Properties") // get the Property TestStep
+propTestStep.setPropertyValue("message", message[random.nextInt(490)].toString())</script></con:config></con:testStep><con:testStep type="groovy" name="messageLenghtScript" id="5c5925b0-e570-4b13-9f19-2151dcf86682"><con:settings/><con:config><script>def myTestCase = context.testCase
+propTestStep = myTestCase.getTestStepByName("Properties") // get the Property TestStep
+propTestStep.getPropertyValue("message")
+message = propTestStep.getPropertyValue("message").toString()
+messageLength = message.toString().size()
+setLenght = myTestCase.getTestStepByName("Properties")
+setLenght.setPropertyValue("messageLength", messageLength.toString())</script></con:config></con:testStep><con:testStep type="groovy" name="destAddressScript" id="b50531ef-c421-4380-a26c-b21258548821"><con:settings/><con:config><script>//Tip to generate a random element from an array
+def myTestCase = context.testCase
+dest_address = ['5551212','5551213']
+
+random = new Random()
+log.info dest_address[random.nextInt(2)]
+propTestStep = myTestCase.getTestStepByName("Properties") // get the Property TestStep
+propTestStep.setPropertyValue("destAddress", dest_address[random.nextInt(2)].toString())</script></con:config></con:testStep><con:testStep type="properties" name="Properties" id="9b6fd15e-3fe4-4a41-b248-e5e543eed825"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>sourceAddress</con:name><con:value>00006373</con:value></con:property><con:property><con:name>message</con:name><con:value>00004368</con:value></con:property><con:property><con:name>messageLength</con:name><con:value>8</con:value></con:property><con:property><con:name>destAddress</con:name><con:value>5551212</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" name="onIncomingMessage - Request 1" id="3b761b9c-4ab0-4191-b1d9-52335e69e97b"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SmsQueue.cfcSoapBinding</con:interface><con:operation>onIncomingMessage</con:operation><con:request name="onIncomingMessage - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="47a912f4-807d-4c30-a3a3-828099277214"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://rapidshukran/com/sms/SmsQueue.cfc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sms="http://sms.com.rapid">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sms:onIncomingMessage soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <CFevent xsi:type="x-:Map" xmlns:x-="http://xml.apache.org/xml-soap">
+            <!--Zero or more repetitions:-->
+            <item xsi:type="x-:mapItem">
+               <key xsi:type="xsd:string">gatewayType</key>
+               <value xsi:type="xsd:string">SMS</value>
+            </item>
+            <item xsi:type="x-:mapItem">
+               <key xsi:type="xsd:string">originatorId</key>
+               <value xsi:type="xsd:string">SMSGateway</value>
+            </item>
+		  <item xsi:type="x-:mapItem">
+               <key xsi:type="xsd:string">cfcMethod</key>
+               <value xsi:type="xsd:string">onIncomingMessage</value>
+            </item>
+            <item xsi:type="x-:mapItem">
+               <key xsi:type="xsd:string">cfcPath</key>
+               <value xsi:type="xsd:string">D:\Web\RAPIDShukran\com\sms\SmsQueue.cfc</value>
+            </item>
+            <item xsi:type="x-:mapItem">
+               <key xsi:type="xsd:string">gatewayId</key>
+               <value xsi:type="xsd:string">SMSQueue</value>
+            </item>
+            <item xsi:type="x-:mapItem">
+               <key xsi:type="xsd:string">data</key>
+               <value xsi:type="x-:Map" xmlns:x-="http://xml.apache.org/xml-soap">
+               	<item xsi:type="x-:mapItem">
+	               	<key xsi:type="xsd:string">destAddress</key>
+	               	<value xsi:type="xsd:string">${destAddress}</value>
+	            	</item>
+	            	<item xsi:type="x-:mapItem">
+	               	<key xsi:type="xsd:string">sourceAddress</key>
+	               	<value xsi:type="xsd:string">${sourceAddress}</value>
+	            	</item>
+	            	<item xsi:type="x-:mapItem">
+	               	<key xsi:type="xsd:string">message</key>
+	               	<value xsi:type="xsd:string">${message}</value>
+	            	</item>
+	            	<item xsi:type="x-:mapItem">
+	               	<key xsi:type="xsd:string">priority</key>
+	               	<value xsi:type="xsd:string">0</value>
+	            	</item>
+	            	<item xsi:type="x-:mapItem">
+	               	<key xsi:type="xsd:string">messageLength</key>
+	               	<value xsi:type="xsd:string">${messageLength}</value>
+	            	</item>
+	            	<item xsi:type="x-:mapItem">
+	               	<key xsi:type="xsd:string">protocol</key>
+	               	<value xsi:type="xsd:string">0</value>
+	            	</item>
+	            	<item xsi:type="x-:mapItem">
+	               	<key xsi:type="xsd:string">registeredDelivery</key>
+	               	<value xsi:type="xsd:string">0</value>
+	            	</item>
+	            	<item xsi:type="x-:mapItem">
+	               	<key xsi:type="xsd:string">dataCoding</key>
+	               	<value xsi:type="xsd:string">0</value>
+	            	</item>
+	            	<item xsi:type="x-:mapItem">
+	               	<key xsi:type="xsd:string">esmClass</key>
+	               	<value xsi:type="xsd:string">0</value>
+	            	</item>
+               </value>
+            </item>
+         </CFevent>
+      </sms:onIncomingMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response" id="d53daa3c-d29f-45b5-87b8-b966c6dc9dba"/><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sms.com.rapid/SmsQueue/onIncomingMessageRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest name="LoadTest 1" id="9cf4ac08-3bb0-45f8-87fc-d26b08624680"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>10</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type><con:config><testDelay>1000</testDelay><randomFactor>0.5</randomFactor></con:config></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

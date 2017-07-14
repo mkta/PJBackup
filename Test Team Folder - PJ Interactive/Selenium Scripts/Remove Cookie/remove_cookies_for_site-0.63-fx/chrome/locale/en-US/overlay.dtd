@@ -1,0 +1,8 @@
+<!ENTITY removecookies.label "Remove Cookies for Site">
+<!ENTITY removecookiesContext.label "Remove Cookies for Site">
+<!ENTITY removecookiesContext.accesskey "">
+<!ENTITY removecookiesToolbarButton.label "Remove Cookies">
+<!ENTITY removecookiesToolbarButton.tooltip "Remove Cookies for Site">
+<!ENTITY removecookiesSidebar.label "Remove Cookies">
+<!ENTITY removecookiesToolbar.name  "removecookiestoolbar">
+<!ENTITY removecookiesToolbar.label "Remove Cookies for Site">

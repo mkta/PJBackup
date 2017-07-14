@@ -1,0 +1,72 @@
+Issue Type,Summary,BUG Description,Linked issue,Epic Link,Labels,Priority,Dev. owner,Comments
+Bug,"""View by"" grid buttons does not modify the grid.","Product Listing Page, ""View by"" grid buttons does not modify the grid.",SAB-25,Product Listing - Web,Nominal,Medium,Bogdan.Arvinte,Designs being worked on by Bogdan E
+Bug,Left panel filters don't work,"Product Listing Page, Left panel filters don't work",SAB-25,Product Listing - Web,Nominal,Medium,Bogdan.Arvinte,Business decision
+Bug,Sometimes when you add multiple products on basket an error occurs,"Product Listing Page, this error happens sometimes when you add multiple products on basket 
+Internal Server Error
+It seems there was a problem with that request
+Object is NULL !",SAB-25,Product Listing - Web,Nominal,Medium,Bogdan.Arvinte,"Needs more testing as this issue is random (occured twice at 13 prodcuts diffrent products and at 10 diffrent prodcuts, note that some products had around 10 quantity)"
+Bug,Delay in page initialisation / loading,"Delay in page initialisation / loading
+Note: On IE 11 the time is around 30seconds - 1 minute",SAB-76,Generic requirements - Web,Nominal,High,Bogdan.Arvinte,Issue related to dev packaging
+Bug,Find more/Shop now buttons don't work,Home page - Find more/Shop now buttons don't work,SAB-18,Home page - Web,Nominal,Low,Bogdan.Arvinte,
+,,,,,,,,
+Bug,"Add to basket / details from ""Offers available""","Product listing - Add to basket / details from ""Offers available"" redirect to home page",SAB-25,Product Listing - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,"""Quick view"" and ""Full details"" or ""Add to basket""","Product listing - Pressing ""Quick view"" and ""Full details"" or ""Add to basket"" redirects to home page",SAB-25,Product Listing - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,Address and company display wrong result,"Thank you page - Address and company display wrong result 
+Example 
+Company: geani test adress
+Address: geani test addition address
+NOTE: There is no company firled on checkout form",SAB-48,Order Confrimation Page - Web,Nominal,Medium,Bogdan.Arvinte,We currently don't have a company field (address line 1 is being displayed there)
+Bug,Basket quantity modifiers,"While in basket a product can be added with maximum quantity of 10.
+But if spamming add to basket button from product listing the quantity can reach higher values ( i managed 33)",SAB-37,Shopping Basket - Web,Nominal,Medium,Bogdan.Arvinte,"Does the quantity 10 limitation apply to Sabre? If so, it will also be added on the listing / pdp"
+Bug,Hard coded colour & memory variations,Hard coded colour & memory variations. Data is there but not yet rendered. Will be part of nominal flow.,SAB-25,Product Listing - Web,Nominal,High,Bogdan.Arvinte,Added by Simon T
+Bug,Add to basket - lightbox,Add to basket - MASSIVE lightbox required when customer adds to basket. Or similar,SAB-25,Product Listing - Web,Nominal,High,Bogdan.Arvinte,Added by Simon T
+Bug,Basket colour,Basket – grey is wrong colour. Need white,SAB-37,Shopping Basket - Web,Nominal,Medium,Bogdan.Arvinte,Added by Simon T
+Bug,Basket alignment/decimal points/consistency,"Basket alignment, decimal points, and consistency",SAB-37,Shopping Basket - Web,Nominal,Medium,Bogdan.Arvinte,Added by Simon T
+Bug,Proceed to checkout button,Proceed to checkout button should be duplicated at top of page as well as bottom,SAB-43,Checkout - Web,Nominal,Low,Bogdan.Arvinte,The user must select the payment method and agree to t&c before checkout
+Bug,Remove button in basket,Remove button in basket is misaligned,SAB-37,Shopping Basket - Web,Nominal,Low,Bogdan.Arvinte,Please clarify (screenshot)
+Bug,VAT calculations,No VAT calculations,SAB-42,Checkout - Web,Nominal,High,Bogdan.Arvinte,See Bug ID 78 (PIM Bug List)
+Bug,Thousand separation,1000 seperate is missing on amounts,SAB-42,Checkout - Web,Nominal,High,Bogdan.Arvinte,
+Bug,"Add ""You save"" calculation price","Add ""You save"" calculation price",SAB-25,Product Listing - Web,Nominal,High,Bogdan.Arvinte,
+Bug,SKU code,Add SKU code on details page,SAB-31,Product/Bundle - Web,Nominal,High,Bogdan.Arvinte,
+Bug,Samsung black banner,Will black banner (samsung Bespoke at this momment) automatically change?,SAB-18,Home page - Web,Nominal,Low,Bogdan.Arvinte,Oz: It should after implementation
+Bug,Price range finder,Price range finder is randomizing variants everytime filter is clicked,SAB-25,Product Listing - Web,Nominal,Medium,Bogdan.Arvinte,Similar to the sorting issue
+Bug,Shop by TV Screen Size filters,Shop By TV Screen Size filters don't work,SAB-25,Product Listing - Web,Nominal,Medium,Bogdan.Arvinte,
+Bug,Shop by TV Feature filters,Shop by TV Feature filters don't work,SAB-25,Product Listing - Web,Nominal,Medium,Bogdan.Arvinte,
+Bug,Add to basket - Upsell,"Add to basket from ""UPSELL"" page redirects to homepage",SAB-36,Shopping Basket - Web,Nominal,Medium,Bogdan.Arvinte,
+Bug,UPSELL page,UPSELL page - proceed to basket and continue shopping are missaligned,SAB-36,Shopping Basket - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,Back to top link,Back to top link should be more visible and not only at the bottom of the page,SAB-24,Generic requirements - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,Footer links,Footer link don't work,SAB-24,"Header, footer,menu - Web",Nominal,Low,Bogdan.Arvinte,
+Bug,Footer search,Footer search doesn't work,SAB-24,"Header, footer,menu - Web",Nominal,Low,Bogdan.Arvinte,
+Bug,Shopping basket /checkout - step 2,"Too much empty space around ""Continue as guest""",SAB-35,Shopping Basket - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,Product listing page issue,Having only 15 products and the filter to list only 15 products will generate an empty second page. This issue can be seen at this moment (18/03/2016 11:57) on TV page,SAB-25,Product Listing - Web,Nominal,Medium,Bogdan.Arvinte,Returns incorrect number of pages
+Bug,Product listing page issue,Selecting page Two (for example) on another category (e.g. TV) and then selecting another category (e.g. Phones) will display page Two of phoens instead of page one,SAB-25,Product Listing - Web,Nominal,Medium,Bogdan.Arvinte,
+Bug,Checkout flow - Payment Error,"If pressing back after redirecting to the payment page, without completing the payment) and then pressing on the 4th step icon, the user can reach the order confirmation page. Presssing ""place your order"" will result in error It seems there was a problem with that request
+Charge failed: transaction is at an invalid mainStatus/subStatus: INPROGRESS/PAYPAL_SETEC_COMPLETED",SAB-42,Checkout - Web,Nominal,High,Bogdan.Arvinte,Also disable the checkout stepper steps when navigation is not allowed
+Bug,Checkout flow - Confirmation page / Thank you page payment options,"Confirmation page / Thank you page - Paymant details are missing. Only Visa, mastercard icons displayed",SAB-48,Order Confrimation Page - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,Checkout flow - Confirmation page / Thank you page,Confirmation page / Thank you page - If select different biling and shipping address .. only shipping details are displayed,SAB-48,Order Confrimation Page - Web,Nominal,Medium,Bogdan.Arvinte,
+Bug,Checkout flow - Confirmation page / Thank you page information,"Confirmation page / Thank you page - First name, Last name, email, phone are hard coded",SAB-48,Order Confrimation Page - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,Checkout flow - Confirmation page / Thank you page,Confirmation page / Thank you page - CART TOTAL should be aligned with subtotal,SAB-48,Order Confrimation Page - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,Checkout flow - Thank you page,Thank you page - Lorem ipsum dolor sit amet....... text present,SAB-48,Order Confrimation Page - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,Product details - Color and size,Product details - Color and size doesn't update name/price,SAB-31,Product/Bundle - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,Add to basket buttons from product details,Product details - Add to basket buttons redirect to home page,SAB-31,Product/Bundle - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,"""Shop deals"" button","Product details - ""Shop deals"" button from the top of the page does nothing and remains clicked",SAB-31,Product/Bundle - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,Additional images,Product details - aditional images can't be clicked/ changed,SAB-31,Product/Bundle - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,"Bundle ""detail"" buttons","Product details - Bundle ""detail"" buttons don't work/ redirect to homepage",SAB-31,Product/Bundle - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,"Accessory ""More details"" , "" Quick view"" ,""Offers available""","Product details - Accesorry ""More details"" , "" Quick view"" ,""Offers available"" buttons don't work
+NOTE: Same issues occurs for ""Similar items"" category",SAB-31,Product/Bundle - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,"Page sections (e.g. About, Features, Specifications)","Product details - Page sections (e.g. About, Features, Specifications) should be more clearly delimited",SAB-31,Product/Bundle - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,Show more features button,Product details - [+] Show more features link redirects to home page,SAB-31,Product/Bundle - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,Product Fiche functionality,Product details - Product Fiche functionality is missing,SAB-31,Product/Bundle - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,"Basket pricing, rounding","Summing a £4499.99 product 5 times resulted in £22499.949999999997 price
+£4499.99
+x10 = £44999.899999999994
+Tested with 75"" JU7000 7 Series Flat UHD 4K Smart 3D LED TV",SAB-37,Shopping Basket - Web,Nominal,High,Bogdan.Arvinte,
+Bug,Basket items links,"Link to the product details should be added in the basket, checkout, minibasket and all occurences",SAB-35,Shopping Basket - Web,Nominal,Medium,Bogdan.Arvinte,
+Bug,Basket pricing,Price too long can break basket design. Please see bug id 99 screenshot,SAB-37,Shopping Basket - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,Basket items count,Basket page - pressing + or - buttons will display an _ under the button transforming - into = and + in ±,SAB-37,Shopping Basket - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,Checkout flow - Paypal price,Shouldn't on paypall page display the payment price? At this moment only the address is displayed.,SAB-48,Order Confrimation Page - Web,Nominal,Medium,Bogdan.Arvinte,
+Bug,Upsell - Additional Options,"On the Upsell page you have ""Additional Options"" for your product which can be close or expanded.
+If you add a product and try to close the ""Additional Options"" tab it won't close, but when the page is refreshed, it works.",SAB-36,Shopping Basket - Web,Nominal,Low,Bogdan.Arvinte,
+Bug,Checkout flow - Links,"On Checkout page if your press ""Go back to your Cart - To update your items"" you will be redirected to homepage",SAB-42,Checkout - Web,Nominal,Medium,Bogdan.Arvinte,
+Bug,Breadcrumbs Links,"Product details page, breadcrumbs redirect to homepage.",SAB-31,Product/Bundle - Web,Nominal,Medium,Bogdan.Arvinte,
+Bug,Checkout page TaC,"Checkout page, ""Terms and Conditions"" redirect to homepage",SAB-43,Checkout - Web,Nominal,Low,Bogdan.Arvinte,

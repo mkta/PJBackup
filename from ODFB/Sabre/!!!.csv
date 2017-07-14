@@ -1,0 +1,20 @@
+Issue Type,Summary,BUG Description,Linked issue,Epic Link,Labels,Priority,Comments
+Bug,"After adding all Billing Details and pressing Checkout, then clicking back ""Checkout"" button becomes unavailable","Checkout - After adding all Billing Details and pressing Checkout, then clicking back ""Checkout"" button becomes unavailable",,Checkout - Web,Nominal,Medium,Oz to clarify behaviour
+Bug,"""Same as shipping address"" checkbox should be moved down the list after the ""Phone field""","""Same as shipping address"" checkbox should be moved down the list after the ""Phone field""",,Checkout - Web,Nominal,High,
+Bug,£0 should be displayed as FREE,£0 should be displayed as FREE,,Checkout - Web,Nominal,High,
+Bug,Product count is displayed on VAT field,Product count is displayed on VAT field,,Checkout - Web,Nominal,High,
+Bug,"Specific validation required (e.g. email, phone)","Specific validation required (e.g. email, phone)",,Checkout - Web,Nominal,High,See Bogdan for details
+Bug,Confirm email address field,Confirm email address field,,Checkout - Web,Nominal,High,
+Bug,Session time out time is too small.,"If the order takes too long to complete, internal server error will occur or redirect to the home page. Session time out time is too small.",,Generic requirements - Web,Nominal,High,Server Side Issue. Needs more testing for session expiry.
+Bug,Pressing the numbers steps circle the user can bypass steps in the buying flow,Basket page - pressing the numbers steps circle the user can bypass steps in the buying flow,,Shopping Basket - Web,Nominal,Medium,Related to Bug ID 75
+Bug,Buying flow steps,Completed steps from buying flow shold be marked (e.g. green text),,Shopping Basket - Web,Nominal,Low,
+Bug,Shopping basket table is missing top line,"Shopping basket table is missing top line
+NOTE: this issue also occurs on checkout page and confirmation page an thank you page",,Shopping Basket - Web,Nominal,Low,
+Bug,Receiving an error during payment will not reset sesion,Receiving an error during payment will not reset sesion. Further payments cant be completed displaying http://10.41.7.31/null,,Checkout - Web,Nominal,High,Speak to Gowthami / Andrei
+Bug,Lots of Internal server errors during payment on Chrome,I'm receiving a lot of Internal Server Error at payment on Chrome and need to delete browser data to work again once or twice then again the error. On IE11 it is ok.,,Checkout - Web,Nominal,High,"Internal Server Error
+It seems there was a problem with that request
+java.lang.NullPointerException
+
+Possibly related to Bug ID 76"
+Bug,Pressing back after leaving thank you page (http://10.41.7.31/#/cart/complete) will display a blank white page,Pressing back after leaving thank you page (http://10.41.7.31/#/cart/complete) will display a blank white page,,Checkout - Web,Nominal,Medium,Bogdan: please provide scenario details
+Bug,"Pressing ""More"" from Samsung Galaxy S6"" mouse over refreshes the page","Home page - Pressing ""More"" from Samsung Galaxy S6"" mouse over refreshes the page",SAB-18,Home page - Web,Nominal,Low,

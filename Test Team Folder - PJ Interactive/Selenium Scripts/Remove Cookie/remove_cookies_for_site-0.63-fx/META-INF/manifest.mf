@@ -1,0 +1,67 @@
+Manifest-Version: 1.0
+
+Name: install.rdf
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: UNxavqUR5yqYGVkMgX7lug==
+SHA1-Digest: hA4i7tOIeeSg8xB/dCUJXsUUq2E=
+
+Name: chrome.manifest
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: rwjLPe9rHuq61dsaR3b4Bw==
+SHA1-Digest: p1euoDcooqM45Yvc1gvZ/mReRyk=
+
+Name: chrome/content/about.xul
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: IRclt6klEmPNVT06omDHHA==
+SHA1-Digest: RW+u8X1whByP5MwBy1uYh/VtMeE=
+
+Name: chrome/content/ff-overlay.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: kWqNTiuks4EnuMsce++khQ==
+SHA1-Digest: bBez03WOo8KiRkAyPpxyN+4wA2w=
+
+Name: chrome/content/ff-overlay.xul
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: fimnN9BkTo869ciraPVvYQ==
+SHA1-Digest: gPG/F3S5/B6TaHal6PmpPsLWNnk=
+
+Name: chrome/content/overlay.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: F5/Lu1zMDJeB3dVzZ3JIZQ==
+SHA1-Digest: 1SeC7D4MAYC/4XtZ6dS77YrwDOs=
+
+Name: chrome/locale/en-US/about.dtd
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: gsZcS8q2Y6KjKN4ZExXjgA==
+SHA1-Digest: 3BAQ3xgovC3FPCCsDuxe+78RV+4=
+
+Name: chrome/locale/en-US/overlay.dtd
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 52X446cFsfMblhlc/gfKfw==
+SHA1-Digest: Um5wDbV5QUomksDvWWKTp/3QrGc=
+
+Name: chrome/locale/en-US/overlay.properties
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: gIfUYJsC/3GOjrDRfmTzSg==
+SHA1-Digest: wvq+wRyRhUgf2Pp45LVrb8vZGJE=
+
+Name: chrome/skin/overlay.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: TL4PxKBtuD8ZVtCA2F1Ovg==
+SHA1-Digest: b/734O7eWlzaVF0HamaMaQT7I8s=
+
+Name: chrome/skin/removecookies-button.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: L8/V0TzpsVZoLHbb714zAw==
+SHA1-Digest: qS/j3ealhuu9h5w/QvUwZMqBIy8=
+
+Name: chrome/skin/removecookies-logo.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: WreVUCJn4GzQJGyNLNVtCA==
+SHA1-Digest: cksi5K8AEeAJ3P0tl3RDyLR8cA4=
+
+Name: defaults/preferences/prefs.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: SgOhh4zgelhAgj67mYy9Bw==
+SHA1-Digest: RtTUzICzytzvaiDoljbx3Qkr07w=
+

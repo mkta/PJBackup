@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://vfq-preprod.pjmedia.ro/" />
+<title>TS12-Red-StarNumber-NoPrivilege-Nophone-NoAccessories</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TS12-Red-StarNumber-NoPrivilege-Nophone-NoAccessories</td></tr>
+</thead><tbody>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>planCount</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>TS12-Red-StarNumber-NoPrivilege-Nophone-NoAccessories</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>repeat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://www.vodafone.qa/en</td>
+	<td></td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Plans &amp; Numbers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Get Red</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=//*/div[3]/div/div/div/div[4]/div/ul/li[${planCount}]/a/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=/html/body/div[3]/div/div/div/div[4]/div/ul/li[*]</td>
+	<td>planNumber</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Red Plan Number : ${planCount}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//*/div[3]/div/div/div/div[4]/div/ul/li[${planCount}]/a/div</td>
+	<td>planLabel</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Red Plan : ${planLabel}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeTextPresent</td>
+	<td>Learn more</td>
+	<td>QNB</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//*/div[3]/div/div/div/div[4]/div/div[${planCount}]/div/div[1]/div[2]/a</td>
+	<td></td>
+</tr>
+<!--number-->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.PrimaryButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=td.select. &gt; div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=add2</td>
+	<td></td>
+</tr>
+<!--privilege-->
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='Continue to next step']</td>
+	<td></td>
+</tr>
+<!--phone-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Continue to next step</td>
+	<td></td>
+</tr>
+<!--accessories-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Continue to next step</td>
+	<td></td>
+</tr>
+<!--basket-->
+<tr>
+	<td>storeText</td>
+	<td>css=p.title</td>
+	<td>BP</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Basket plan = ${BP} / Selected plan = ${planLabel}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.planCount++}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>javascript{storedVars.planCount == storedVars.planNumber}</td>
+	<td>end</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Empty basket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotolabel</td>
+	<td>repeat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>end</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

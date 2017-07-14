@@ -1,0 +1,3080 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.9" jmeter="3.0 r1743807">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Sabre - SabTST - LoadTesting" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Mobiles And Wearebls" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1473160502000</longProp>
+        <longProp name="ThreadGroup.end_time">1473160502000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+        </CookieManager>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">sitePublicId</stringProp>
+              <stringProp name="Header.value">5b7d3ff1-c560-4879-a4c7-4ec1962ee1c9</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Host</stringProp>
+              <stringProp name="Header.value">sabtstws.brandpath.net</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Origin</stringProp>
+              <stringProp name="Header.value">https://sabtst.brandpath.net</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Referer</stringProp>
+              <stringProp name="Header.value">https://sabtst.brandpath.net</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Token</stringProp>
+              <stringProp name="Header.value">${token}</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Mobile And wearebles - Recording Controller" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Mobiles - Get Sesion-HTTP Request" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">5b7d3ff1-c560-4879-a4c7-4ec1962ee1c9</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/sabre-uk-site-service/ws/site/sessiontoken</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="sessionId Token" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">token</stringProp>
+              <stringProp name="RegexExtractor.regex">[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}</stringProp>
+              <stringProp name="RegexExtractor.template">$0$</stringProp>
+              <stringProp name="RegexExtractor.default">0</stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1417456299">{&quot;code&quot;:&quot;CREATED&quot;,&quot;token&quot;:</stringProp>
+                <stringProp name="-2103328108">&quot;message&quot;:&quot;Authorised&quot;}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Mobiles - Cart-HTTP Request" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/sabre-uk-site-service/ws/cart</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="936138717">{&quot;cartPublicId&quot;:null,&quot;consumerReference&quot;:null,&quot;cartReference&quot;:null}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Mobiles - Main product Color - HTTP Request" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/sabre-uk-site-service/ws/filter/cache/dynamicFilter?filterNAME=mainProductColour&amp;filterTYPES=DEVICE,PROMO_BUNDLE&amp;filterHIERARCHY=MOBILES_WEARABLES</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-1481526537">{&quot;code&quot;:&quot;SUCCESS&quot;,&quot;result&quot;:{&quot;tag&quot;:&quot;MAINPRODUCTCOLOUR&quot;</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Mobiles - Offerings - HTTP Request" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/sabre-uk-site-service/ws/offering/cache?page=1&amp;pageSize=15&amp;sort=sortRankAsc&amp;filterTYPES=DEVICE%2CPROMO_BUNDLE&amp;filterHIERARCHY=MOBILES_WEARABLES</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-2015460334">{&quot;code&quot;:&quot;SUCCESS&quot;,&quot;pagination&quot;:{&quot;pages&quot;:10,&quot;pageSize&quot;:15,&quot;pageSizes&quot;:[15,30,45,60,75,90,105,120,135,150],&quot;offeringsCount&quot;:148,&quot;currentPage&quot;:1}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Mobiles - Prices - HTTP Request" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/sabre-uk-site-service/ws/filter/cache/dynamicFilter?page=1&amp;pageSize=15&amp;sort=sortRankAsc&amp;filterTYPES=DEVICE%2CPROMO_BUNDLE&amp;filterHIERARCHY=MOBILES_WEARABLES&amp;filterNAME=priceIndexDbl</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-805949612">{&quot;code&quot;:&quot;SUCCESS&quot;,&quot;result&quot;:{&quot;tag&quot;:&quot;PRICEINDEXDBL&quot;</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Mobiles - Sort A-Z + All - HTTP Request" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/sabre-uk-site-service/ws/offering/cache?page=1&amp;pageSize=999&amp;sort=sortNameAsc&amp;filterTYPES=DEVICE%2CPROMO_BUNDLE&amp;filterHIERARCHY=MOBILES_WEARABLES&amp;minPrice=4&amp;maxPrice=5000</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="851753869">{&quot;code&quot;:&quot;SUCCESS&quot;,&quot;pagination&quot;:{&quot;pages&quot;:1,&quot;pageSize&quot;:999,&quot;pageSizes&quot;:[999],&quot;offeringsCount&quot;:148,&quot;currentPage&quot;:1}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Mobiles - Debug Sampler" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-1266925338">JMeterVariables:
+JMeterThread.last_sample_ok=true</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Tablets" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1473677306000</longProp>
+        <longProp name="ThreadGroup.end_time">1473677306000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">sitePublicId</stringProp>
+              <stringProp name="Header.value">5b7d3ff1-c560-4879-a4c7-4ec1962ee1c9</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Host</stringProp>
+              <stringProp name="Header.value">sabtstws.brandpath.net</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Origin</stringProp>
+              <stringProp name="Header.value">https://sabtst.brandpath.net</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Referer</stringProp>
+              <stringProp name="Header.value">https://sabtst.brandpath.net</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Token</stringProp>
+              <stringProp name="Header.value">${token}</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+        </CookieManager>
+        <hashTree/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Tablets - Recording Controller" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Tablets - Get Sesion-HTTP Request" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">5b7d3ff1-c560-4879-a4c7-4ec1962ee1c9</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/sabre-uk-site-service/ws/site/sessiontoken</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="sessionId Token" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">token</stringProp>
+              <stringProp name="RegexExtractor.regex">[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}</stringProp>
+              <stringProp name="RegexExtractor.template">$0$</stringProp>
+              <stringProp name="RegexExtractor.default">0</stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1417456299">{&quot;code&quot;:&quot;CREATED&quot;,&quot;token&quot;:</stringProp>
+                <stringProp name="-2103328108">&quot;message&quot;:&quot;Authorised&quot;}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Tablets - Cart-HTTP Request" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/sabre-uk-site-service/ws/cart</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="936138717">{&quot;cartPublicId&quot;:null,&quot;consumerReference&quot;:null,&quot;cartReference&quot;:null}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Tablets - Main product Color - HTTP Request" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/sabre-uk-site-service/ws/filter/cache/dynamicFilter?filterNAME=mainProductColour&amp;filterTYPES=DEVICE,PROMO_BUNDLE&amp;filterHIERARCHY=TABLETS</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-1481526537">{&quot;code&quot;:&quot;SUCCESS&quot;,&quot;result&quot;:{&quot;tag&quot;:&quot;MAINPRODUCTCOLOUR&quot;</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Tablets - Offerings - HTTP Request" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/sabre-uk-site-service/ws/offering/cache?page=1&amp;pageSize=15&amp;sort=sortRankAsc&amp;filterTYPES=DEVICE%2CPROMO_BUNDLE&amp;filterHIERARCHY=TABLETS</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-1352989029">{&quot;code&quot;:&quot;SUCCESS&quot;,&quot;pagination&quot;:{&quot;pages&quot;:2,&quot;pageSize&quot;:15,&quot;pageSizes&quot;:[15,30],&quot;offeringsCount&quot;:23,&quot;currentPage&quot;:1}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Tablets - Prices - HTTP Request" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/sabre-uk-site-service/ws/filter/cache/dynamicFilter?page=1&amp;pageSize=15&amp;sort=sortRankAsc&amp;filterTYPES=DEVICE%2CPROMO_BUNDLE&amp;filterHIERARCHY=TABLETS&amp;filterNAME=priceIndexDbl</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-805949612">{&quot;code&quot;:&quot;SUCCESS&quot;,&quot;result&quot;:{&quot;tag&quot;:&quot;PRICEINDEXDBL&quot;</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Tablets - Sort by high Prices - HTTP Request" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">sabre-uk-site-service/ws/offering/cache?page=1&amp;pageSize=15&amp;sort=sortPriceDesc&amp;filterTYPES=DEVICE%2CPROMO_BUNDLE&amp;filterHIERARCHY=TABLETS&amp;minPrice=15&amp;maxPrice=849</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="517963515">{&quot;code&quot;:&quot;SUCCESS&quot;,&quot;pagination&quot;:{&quot;pages&quot;:2,&quot;pageSize&quot;:15,&quot;pageSizes&quot;:[15,30],&quot;offeringsCount&quot;:23</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Tablets - Debug Sampler" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-1266925338">JMeterVariables:
+JMeterThread.last_sample_ok=true</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="TV + Audio" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1473677359000</longProp>
+        <longProp name="ThreadGroup.end_time">1473677359000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">sitePublicId</stringProp>
+              <stringProp name="Header.value">5b7d3ff1-c560-4879-a4c7-4ec1962ee1c9</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Host</stringProp>
+              <stringProp name="Header.value">sabtstws.brandpath.net</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Origin</stringProp>
+              <stringProp name="Header.value">https://sabtst.brandpath.net</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Referer</stringProp>
+              <stringProp name="Header.value">https://sabtst.brandpath.net</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Token</stringProp>
+              <stringProp name="Header.value">${token}</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+        </CookieManager>
+        <hashTree/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="TV - Recording Controller" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="TV - Get Sesion-HTTP Request" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">5b7d3ff1-c560-4879-a4c7-4ec1962ee1c9</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/sabre-uk-site-service/ws/site/sessiontoken</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="sessionId Token" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">token</stringProp>
+              <stringProp name="RegexExtractor.regex">[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}</stringProp>
+              <stringProp name="RegexExtractor.template">$0$</stringProp>
+              <stringProp name="RegexExtractor.default">0</stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1417456299">{&quot;code&quot;:&quot;CREATED&quot;,&quot;token&quot;:</stringProp>
+                <stringProp name="-2103328108">&quot;message&quot;:&quot;Authorised&quot;}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="TV - Cart-HTTP Request" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/sabre-uk-site-service/ws/cart</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="936138717">{&quot;cartPublicId&quot;:null,&quot;consumerReference&quot;:null,&quot;cartReference&quot;:null}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="TV - Main product Color - HTTP Request" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/sabre-uk-site-service/ws/filter/cache/dynamicFilter?filterNAME=mainProductColour&amp;filterTYPES=DEVICE,PROMO_BUNDLE&amp;filterHIERARCHY=TV_AV</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-1481526537">{&quot;code&quot;:&quot;SUCCESS&quot;,&quot;result&quot;:{&quot;tag&quot;:&quot;MAINPRODUCTCOLOUR&quot;</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="TV - Offerings - HTTP Request" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/sabre-uk-site-service/ws/offering/cache?page=1&amp;pageSize=15&amp;sort=sortRankAsc&amp;filterTYPES=DEVICE%2CPROMO_BUNDLE&amp;filterHIERARCHY=TV_AV</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-583892979">{&quot;code&quot;:&quot;SUCCESS&quot;,&quot;pagination&quot;:{&quot;pages&quot;:6,&quot;pageSize&quot;:15,&quot;pageSizes&quot;:[15,30,45,60,75,90],&quot;offeringsCount&quot;:78</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="TV - Prices - HTTP Request" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/sabre-uk-site-service/ws/filter/cache/dynamicFilter?page=1&amp;pageSize=15&amp;sort=sortRankAsc&amp;filterTYPES=DEVICE%2CPROMO_BUNDLE&amp;filterHIERARCHY=TV_AV&amp;filterNAME=priceIndexDbl</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-805949612">{&quot;code&quot;:&quot;SUCCESS&quot;,&quot;result&quot;:{&quot;tag&quot;:&quot;PRICEINDEXDBL&quot;</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="TV - Sory by SCREEN SIZE 65 + AND PRICE - HTTP Request" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">sabre-uk-site-service/ws/offering/cache?page=1&amp;pageSize=15&amp;sort=sortRankAsc&amp;filterTYPES=DEVICE%2CPROMO_BUNDLE&amp;filterHIERARCHY=TV_AV%2CTELEVISIONS&amp;minPrice=145&amp;maxPrice=4170&amp;filterPROPERTY_RANGE=DISPLAY%2CSCREEN_SIZE%2C65%2C999</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-1349533088">{&quot;code&quot;:&quot;SUCCESS&quot;,&quot;pagination&quot;:{&quot;pages&quot;:1,&quot;pageSize&quot;:15,&quot;pageSizes&quot;:[15],&quot;offeringsCount&quot;:8</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="TV - Debug Sampler" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-1266925338">JMeterVariables:
+JMeterThread.last_sample_ok=true</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Homepage" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1473677364000</longProp>
+        <longProp name="ThreadGroup.end_time">1473677364000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+        </CookieManager>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">sitePublicId</stringProp>
+              <stringProp name="Header.value">5b7d3ff1-c560-4879-a4c7-4ec1962ee1c9</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Host</stringProp>
+              <stringProp name="Header.value">sabtstws.brandpath.net</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Origin</stringProp>
+              <stringProp name="Header.value">https://sabtst.brandpath.net</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Referer</stringProp>
+              <stringProp name="Header.value">https://sabtst.brandpath.net</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Token</stringProp>
+              <stringProp name="Header.value">${token}</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="HomePage - Recording Controller" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Homepage - Get Sesion-HTTP Request" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">5b7d3ff1-c560-4879-a4c7-4ec1962ee1c9</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/sabre-uk-site-service/ws/site/sessiontoken</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="sessionId Token" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">token</stringProp>
+              <stringProp name="RegexExtractor.regex">[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}</stringProp>
+              <stringProp name="RegexExtractor.template">$0$</stringProp>
+              <stringProp name="RegexExtractor.default">0</stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1417456299">{&quot;code&quot;:&quot;CREATED&quot;,&quot;token&quot;:</stringProp>
+                <stringProp name="-2103328108">&quot;message&quot;:&quot;Authorised&quot;}</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Homepage - Cart-HTTP Request" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">sabtstws.brandpath.net</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/sabre-uk-site-service/ws/cart</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+          </hashTree>
+          <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Homepage - Recording Controller" enabled="true"/>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">sitePublicId</stringProp>
+                  <stringProp name="Header.value">5b7d3ff1-c560-4879-a4c7-4ec1962ee1c9</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Host</stringProp>
+                  <stringProp name="Header.value">sabtst.brandpath.net</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">https://sabtst.brandpath.net</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://sabtst.brandpath.net</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Token</stringProp>
+                  <stringProp name="Header.value">${token}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Homepage - Categoriest-HTTP Request" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">sabtst.brandpath.net</stringProp>
+              <stringProp name="HTTPSampler.port">443</stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/db/categories.json</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>false</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-1128273382">
+[
+    {
+        &quot;path&quot;: &quot;mobiles&quot;,
+        &quot;title&quot;: &quot;Mobiles&quot;,
+        &quot;filter&quot;: &quot;MOBILES_WEARABLES&quot;,
+        &quot;promo&quot;: {
+            &quot;title&quot;: &quot;Wearables just went up a gear&quot;,
+            &quot;path&quot;: &quot;mobiles+wearables&quot;,
+            &quot;description&quot;: &quot;Shop the latest in wearables now&quot;,
+            &quot;contrast&quot;: &quot;normal&quot;,
+            &quot;bgContrast&quot;: &quot;light&quot;,
+            &quot;imgPosition&quot;: &quot;contain&quot;,
+            &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+        },
+        &quot;subcategories&quot;: [
+            {
+                &quot;path&quot;: &quot;all-mobiles&quot;,
+                &quot;title&quot;: &quot;All mobiles&quot;,
+                &quot;filter&quot;: &quot;MOBILES&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;Wearables just went up a gear&quot;,
+                    &quot;path&quot;: &quot;mobiles&quot;,
+                    &quot;description&quot;: &quot;Shop the latest in wearables now&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;contain&quot;,
+                    &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;mobile-offers&quot;,
+                &quot;title&quot;: &quot;Mobile offers&quot;,
+                &quot;filter&quot;: &quot;MOBILE_OFFERS&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;Wearables just went up a gear&quot;,
+                    &quot;path&quot;: &quot;mobiles+wearables&quot;,
+                    &quot;description&quot;: &quot;Shop the latest in wearables now&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;contain&quot;,
+                    &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;mobile-accessories&quot;,
+                &quot;title&quot;: &quot;Mobile Accessories&quot;,
+                &quot;filter&quot;: &quot;MA_MOBILE_ACCESSORIES&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;Wearables just went up a gear&quot;,
+                    &quot;path&quot;: &quot;mobiles+wearables&quot;,
+                    &quot;description&quot;: &quot;Shop the latest in wearables now&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;contain&quot;,
+                    &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;mobiles-expertise&quot;,
+                &quot;title&quot;: &quot;Expertise&quot;,
+                &quot;filter&quot;: &quot;&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;Wearables just went up a gear&quot;,
+                    &quot;path&quot;: &quot;wearables&quot;,
+                    &quot;description&quot;: &quot;Shop the latest in wearables now&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;contain&quot;,
+                    &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                },
+                &quot;filters&quot;: [
+                    {
+                        &quot;path&quot;: &quot;note7&quot;,
+                        &quot;title&quot;: &quot;Note7&quot;,
+                        &quot;filter&quot;: &quot;GALAXY_NOTE7&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;Galaxy Tabpro S&quot;,
+                            &quot;path&quot;: &quot;tablets&quot;,
+                            &quot;description&quot;: &quot;The latest 2-in-1 Windows 10 Tablet, for work and play.&quot;,
+                            &quot;contrast&quot;: &quot;normal&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;contain&quot;,
+                            &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                        }
+                    },
+                    {
+                        &quot;path&quot;: &quot;s7&quot;,
+                        &quot;title&quot;: &quot;S7&quot;,
+                        &quot;filter&quot;: &quot;GALAXY_S7&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;Galaxy Tabpro S&quot;,
+                            &quot;path&quot;: &quot;tablets&quot;,
+                            &quot;description&quot;: &quot;The latest 2-in-1 Windows 10 Tablet, for work and play.&quot;,
+                            &quot;contrast&quot;: &quot;normal&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;contain&quot;,
+                            &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                        }
+                    },
+                    {
+                        &quot;path&quot;: &quot;upgrade-programme&quot;,
+                        &quot;title&quot;: &quot;Upgrade Programme&quot;,
+                        &quot;filter&quot;: &quot;UPGRADE_PROGRAMME&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;Galaxy Tabpro S&quot;,
+                            &quot;path&quot;: &quot;tablets&quot;,
+                            &quot;description&quot;: &quot;The latest 2-in-1 Windows 10 Tablet, for work and play.&quot;,
+                            &quot;contrast&quot;: &quot;normal&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;contain&quot;,
+                            &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                        }
+                    },
+                    {
+                        &quot;path&quot;: &quot;samsung-mobile-care&quot;,
+                        &quot;title&quot;: &quot;Samsung Mobile Care&quot;,
+                        &quot;filter&quot;: &quot;SAMSUNG_MOBILE_CARE&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;Galaxy Tabpro S&quot;,
+                            &quot;path&quot;: &quot;tablets&quot;,
+                            &quot;description&quot;: &quot;The latest 2-in-1 Windows 10 Tablet, for work and play.&quot;,
+                            &quot;contrast&quot;: &quot;normal&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;contain&quot;,
+                            &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                        }
+                    },
+                    {
+                        &quot;path&quot;: &quot;find-your-sim-only&quot;,
+                        &quot;title&quot;: &quot;Find your Sim Only&quot;,
+                        &quot;filter&quot;: &quot;FIND_YOUR_SIM_ONLY&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;Galaxy Tabpro S&quot;,
+                            &quot;path&quot;: &quot;tablets&quot;,
+                            &quot;description&quot;: &quot;The latest 2-in-1 Windows 10 Tablet, for work and play.&quot;,
+                            &quot;contrast&quot;: &quot;normal&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;contain&quot;,
+                            &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;path&quot;: &quot;tablets&quot;,
+        &quot;title&quot;: &quot;Tablets&quot;,
+        &quot;filter&quot;: &quot;TABLETS&quot;,
+        &quot;promo&quot;: {
+            &quot;title&quot;: &quot;Galaxy Tabpro S&quot;,
+            &quot;path&quot;: &quot;tablets&quot;,
+            &quot;description&quot;: &quot;The latest 2-in-1 Windows 10 Tablet, for work and play.&quot;,
+            &quot;contrast&quot;: &quot;normal&quot;,
+            &quot;bgContrast&quot;: &quot;light&quot;,
+            &quot;imgPosition&quot;: &quot;contain&quot;,
+            &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+        },
+        &quot;subcategories&quot;: [
+            {
+                &quot;path&quot;: &quot;all-tablets&quot;,
+                &quot;title&quot;: &quot;All Tablets&quot;,
+                &quot;filter&quot;: &quot;ALL_TABLETS&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;Galaxy Tabpro S&quot;,
+                    &quot;path&quot;: &quot;tablets&quot;,
+                    &quot;description&quot;: &quot;The latest 2-in-1 Windows 10 Tablet, for work and play.&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;contain&quot;,
+                    &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;tablet-offers&quot;,
+                &quot;title&quot;: &quot;Tablet offers&quot;,
+                &quot;filter&quot;: &quot;TABLET_OFFERS&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;Galaxy Tabpro S&quot;,
+                    &quot;path&quot;: &quot;tablets&quot;,
+                    &quot;description&quot;: &quot;The latest 2-in-1 Windows 10 Tablet, for work and play.&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;contain&quot;,
+                    &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;tablet-accesories&quot;,
+                &quot;title&quot;: &quot;Tablet Accesories&quot;,
+                &quot;filter&quot;: &quot;TABLET_ACCESSORIES&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;Galaxy Tabpro S&quot;,
+                    &quot;path&quot;: &quot;tablets&quot;,
+                    &quot;description&quot;: &quot;The latest 2-in-1 Windows 10 Tablet, for work and play.&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;contain&quot;,
+                    &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;tablets-expertise&quot;,
+                &quot;title&quot;: &quot;Expertise&quot;,
+                &quot;filter&quot;: &quot;&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;Galaxy Tabpro S&quot;,
+                    &quot;path&quot;: &quot;tablets&quot;,
+                    &quot;description&quot;: &quot;The latest 2-in-1 Windows 10 Tablet, for work and play.&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;contain&quot;,
+                    &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                },
+                &quot;filters&quot;: [
+                    {
+                        &quot;path&quot;: &quot;tabpros&quot;,
+                        &quot;title&quot;: &quot;Galaxy TabPro S&quot;,
+                        &quot;filter&quot;: &quot;GALAXY_TABPRO_S&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;Galaxy Tabpro S&quot;,
+                            &quot;path&quot;: &quot;tablets&quot;,
+                            &quot;description&quot;: &quot;The latest 2-in-1 Windows 10 Tablet, for work and play.&quot;,
+                            &quot;contrast&quot;: &quot;normal&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;contain&quot;,
+                            &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;path&quot;: &quot;wearables&quot;,
+        &quot;title&quot;: &quot;Wearables&quot;,
+        &quot;filter&quot;: &quot;WEARABLES&quot;,
+        &quot;promo&quot;: {
+            &quot;title&quot;: &quot;360&amp;deg; Sound. All Around You&quot;,
+            &quot;path&quot;: &quot;wearables&quot;,
+            &quot;description&quot;: &quot;The ultimate in wireless omni-directional sound&quot;,
+            &quot;contrast&quot;: &quot;normal&quot;,
+            &quot;bgContrast&quot;: &quot;light&quot;,
+            &quot;imgPosition&quot;: &quot;contain&quot;,
+            &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+        },
+        &quot;subcategories&quot;: [
+            {
+                &quot;path&quot;: &quot;all-smartwatches&quot;,
+                &quot;title&quot;: &quot;All Smartwatches&quot;,
+                &quot;filter&quot;: &quot;GEARS_WATCHES&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;360&amp;deg; Sound. All Around You&quot;,
+                    &quot;path&quot;: &quot;wearables&quot;,
+                    &quot;description&quot;: &quot;The ultimate in wireless omni-directional sound&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;contain&quot;,
+                    &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;all-wearables&quot;,
+                &quot;title&quot;: &quot;All wearables&quot;,
+                &quot;filter&quot;: &quot;&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;360&amp;deg; Sound. All Around You&quot;,
+                    &quot;path&quot;: &quot;wearables&quot;,
+                    &quot;description&quot;: &quot;The ultimate in wireless omni-directional sound&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;contain&quot;,
+                    &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;wearables-accesories&quot;,
+                &quot;title&quot;: &quot;Accessories&quot;,
+                &quot;filter&quot;: &quot;WEARABLES_ACCESSORIES&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;360&amp;deg; Sound. All Around You&quot;,
+                    &quot;path&quot;: &quot;wearables&quot;,
+                    &quot;description&quot;: &quot;The ultimate in wireless omni-directional sound&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;contain&quot;,
+                    &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;wearables-expertise&quot;,
+                &quot;title&quot;: &quot;Expertise&quot;,
+                &quot;filter&quot;: &quot;&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;360&amp;deg; Sound. All Around You&quot;,
+                    &quot;path&quot;: &quot;wearables&quot;,
+                    &quot;description&quot;: &quot;The ultimate in wireless omni-directional sound&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;contain&quot;,
+                    &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                },
+                &quot;filters&quot;: [
+                    {
+                        &quot;path&quot;: &quot;gear-360&quot;,
+                        &quot;title&quot;: &quot;Gear 360&quot;,
+                        &quot;filter&quot;: &quot;GEARS_360&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;Galaxy Tabpro S&quot;,
+                            &quot;path&quot;: &quot;wearables&quot;,
+                            &quot;description&quot;: &quot;The latest 2-in-1 Windows 10 Tablet, for work and play.&quot;,
+                            &quot;contrast&quot;: &quot;normal&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;contain&quot;,
+                            &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                        }
+                    },
+                    {
+                        &quot;path&quot;: &quot;gear-fit2&quot;,
+                        &quot;title&quot;: &quot;Gear Fit2&quot;,
+                        &quot;filter&quot;: &quot;GEAR_FIT2&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;Galaxy Tabpro S&quot;,
+                            &quot;path&quot;: &quot;wearables&quot;,
+                            &quot;description&quot;: &quot;The latest 2-in-1 Windows 10 Tablet, for work and play.&quot;,
+                            &quot;contrast&quot;: &quot;normal&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;contain&quot;,
+                            &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                        }
+                    },
+                    {
+                        &quot;path&quot;: &quot;icon-x&quot;,
+                        &quot;title&quot;: &quot;Icon X&quot;,
+                            &quot;filter&quot;: &quot;ICON_X&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;Galaxy Tabpro S&quot;,
+                            &quot;path&quot;: &quot;wearables&quot;,
+                            &quot;description&quot;: &quot;The latest 2-in-1 Windows 10 Tablet, for work and play.&quot;,
+                            &quot;contrast&quot;: &quot;normal&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;contain&quot;,
+                            &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;path&quot;: &quot;tv+audio&quot;,
+        &quot;title&quot;: &quot;TV &amp; Audio&quot;,
+        &quot;filter&quot;: &quot;TV_AV&quot;,
+        &quot;promo&quot;: {
+            &quot;title&quot;: &quot;Real Curve, Real Immersion&quot;,
+            &quot;path&quot;: &quot;tv+av&quot;,
+            &quot;description&quot;: &quot;Discover Samsung&apos;s curved monitor range&quot;,
+            &quot;contrast&quot;: &quot;inverted&quot;,
+            &quot;bgContrast&quot;: &quot;light&quot;,
+            &quot;imgPosition&quot;: &quot;contain&quot;,
+            &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+        },
+        &quot;subcategories&quot;: [
+            {
+                &quot;path&quot;: &quot;all-tvs&quot;,
+                &quot;title&quot;: &quot;All TVs&quot;,
+                &quot;filter&quot;: &quot;TELEVISIONS&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;Real Curve, Real Immersion&quot;,
+                    &quot;path&quot;: &quot;tv+av&quot;,
+                    &quot;description&quot;: &quot;Discover Samsung&apos;s curved monitor range&quot;,
+                    &quot;contrast&quot;: &quot;inverted&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;contain&quot;,
+                    &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;all-audio&quot;,
+                &quot;title&quot;: &quot;All Audio&quot;,
+                &quot;filter&quot;: &quot;AV_PRODUCTS&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;Real Curve, Real Immersion&quot;,
+                    &quot;path&quot;: &quot;av-products&quot;,
+                    &quot;description&quot;: &quot;Discover Samsung&apos;s curved monitor range&quot;,
+                    &quot;contrast&quot;: &quot;inverted&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;contain&quot;,
+                    &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;tv+audio-accesories&quot;,
+                &quot;title&quot;: &quot;TV &amp; Audio Accessories&quot;,
+                &quot;filter&quot;: &quot;TV_AV_ACCESSORIES&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;Real Curve, Real Immersion&quot;,
+                    &quot;path&quot;: &quot;av-products&quot;,
+                    &quot;description&quot;: &quot;Discover Samsung&apos;s curved monitor range&quot;,
+                    &quot;contrast&quot;: &quot;inverted&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;contain&quot;,
+                    &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;tv+audio-expertise&quot;,
+                &quot;title&quot;: &quot;Expertise&quot;,
+                &quot;filter&quot;: &quot;&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;Real Curve, Real Immersion&quot;,
+                    &quot;path&quot;: &quot;av-products&quot;,
+                    &quot;description&quot;: &quot;Discover Samsung&apos;s curved monitor range&quot;,
+                    &quot;contrast&quot;: &quot;inverted&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;contain&quot;,
+                    &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                },
+                &quot;filters&quot;: [
+                    {
+                        &quot;path&quot;: &quot;smart-speakers&quot;,
+                        &quot;title&quot;: &quot;Smart Speakers&quot;,
+                        &quot;filter&quot;: &quot;SMART_SPEAKER&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;Real Curve, Real Immersion&quot;,
+                            &quot;path&quot;: &quot;av-products&quot;,
+                            &quot;description&quot;: &quot;Discover Samsung&apos;s curved monitor range&quot;,
+                            &quot;contrast&quot;: &quot;inverted&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;contain&quot;,
+                            &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                        }
+                    },
+                    {
+                        &quot;path&quot;: &quot;serif-tvs&quot;,
+                        &quot;title&quot;: &quot;Serif TVs&quot;,
+                        &quot;filter&quot;: &quot;SERIF_TV_DESIGN&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;Real Curve, Real Immersion&quot;,
+                            &quot;path&quot;: &quot;tv+av&quot;,
+                            &quot;description&quot;: &quot;Discover Samsung&apos;s curved monitor range&quot;,
+                            &quot;contrast&quot;: &quot;inverted&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;contain&quot;,
+                            &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;path&quot;: &quot;appliances&quot;,
+        &quot;title&quot;: &quot;Appliances&quot;,
+        &quot;filter&quot;: &quot;HOME_APPLIANCES&quot;,
+        &quot;promo&quot;: {
+            &quot;title&quot;: &quot;ADD TO THE WASH. DURING THE WASH.&quot;,
+            &quot;path&quot;: &quot;home-appliances&quot;,
+            &quot;description&quot;: &quot;with the new Samsung AddWashâ&#x84;¢&quot;,
+            &quot;contrast&quot;: &quot;inverted&quot;,
+            &quot;bgContrast&quot;: &quot;light&quot;,
+            &quot;imgPosition&quot;: &quot;center&quot;,
+            &quot;link&quot;: &quot;/uk/uk/home-appliances/cleaning/washing-machines&quot;
+        },
+        &quot;subcategories&quot;: [
+            {
+                &quot;path&quot;: &quot;all-appliances&quot;,
+                &quot;title&quot;: &quot;All Appliances&quot;,
+                &quot;filter&quot;: &quot;&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;ADD TO THE WASH. DURING THE WASH.&quot;,
+                    &quot;path&quot;: &quot;home-appliances&quot;,
+                    &quot;description&quot;: &quot;with the new Samsung AddWashâ&#x84;¢&quot;,
+                    &quot;contrast&quot;: &quot;inverted&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;center&quot;,
+                    &quot;link&quot;: &quot;/uk/home-appliances/cleaning/washing-machines&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;all-refrigeration&quot;,
+                &quot;title&quot;: &quot;All Refrigeration&quot;,
+                &quot;filter&quot;: &quot;REFRIGERATION&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;ADD TO THE WASH. DURING THE WASH.&quot;,
+                    &quot;path&quot;: &quot;home-appliances&quot;,
+                    &quot;description&quot;: &quot;with the new Samsung AddWashâ&#x84;¢&quot;,
+                    &quot;contrast&quot;: &quot;inverted&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;center&quot;,
+                    &quot;link&quot;: &quot;/uk/home-appliances/cleaning/washing-machines&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;all-cooking&quot;,
+                &quot;title&quot;: &quot;All Cooking&quot;,
+                &quot;filter&quot;: &quot;COOKING&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;ADD TO THE WASH. DURING THE WASH.&quot;,
+                    &quot;path&quot;: &quot;cooking&quot;,
+                    &quot;description&quot;: &quot;with the new Samsung AddWashâ&#x84;¢&quot;,
+                    &quot;contrast&quot;: &quot;inverted&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;contain&quot;,
+                    &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;all-cleaning&quot;,
+                &quot;title&quot;: &quot;All Cleaning&quot;,
+                &quot;filter&quot;: &quot;CLEANING&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;ADD TO THE WASH. DURING THE WASH.&quot;,
+                    &quot;path&quot;: &quot;home-appliances&quot;,
+                    &quot;description&quot;: &quot;with the new Samsung AddWashâ&#x84;¢&quot;,
+                    &quot;contrast&quot;: &quot;inverted&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;center&quot;,
+                    &quot;link&quot;: &quot;/uk/home-appliances/cleaning/washing-machines&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;all-smart-things&quot;,
+                &quot;title&quot;: &quot;All Smart things&quot;,
+                &quot;filter&quot;: &quot;SMARTTHINGS&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;ADD TO THE WASH. DURING THE WASH.&quot;,
+                    &quot;path&quot;: &quot;cooking&quot;,
+                    &quot;description&quot;: &quot;with the new Samsung AddWashâ&#x84;¢&quot;,
+                    &quot;contrast&quot;: &quot;inverted&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;center&quot;,
+                    &quot;link&quot;: &quot;/uk/home-appliances/cleaning/washing-machines&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;appliances-expertise&quot;,
+                &quot;title&quot;: &quot;Expertise&quot;,
+                &quot;filter&quot;: &quot;&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;ADD TO THE WASH. DURING THE WASH.&quot;,
+                    &quot;path&quot;: &quot;home-appliances&quot;,
+                    &quot;description&quot;: &quot;with the new Samsung AddWashâ&#x84;¢&quot;,
+                    &quot;contrast&quot;: &quot;inverted&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;center&quot;,
+                    &quot;link&quot;: &quot;/uk/home-appliances/cleaning/washing-machines&quot;
+                },
+                &quot;filters&quot;: [
+                    {
+                        &quot;path&quot;: &quot;chef-collection&quot;,
+                        &quot;title&quot;: &quot;Chef Collection&quot;,
+                        &quot;filter&quot;: &quot;CHEF_COLLECTION&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;WIRELESS CHARGING PAD&quot;,
+                            &quot;path&quot;: &quot;cooking&quot;,
+                            &quot;description&quot;: &quot;Buy now&quot;,
+                            &quot;contrast&quot;: &quot;normal&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;contain&quot;,
+                            &quot;bgTextHidden&quot;: &quot;text-hidden&quot;
+                        }
+                    },
+                    {
+                        &quot;path&quot;: &quot;find-your-washin-machine&quot;,
+                        &quot;title&quot;: &quot;Find your Washing Machine&quot;,
+                        &quot;filter&quot;: &quot;FIND_YOUR_WASHING_MACHINE&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;WIRELESS CHARGING PAD&quot;,
+                            &quot;path&quot;: &quot;mobile-accessories&quot;,
+                            &quot;description&quot;: &quot;Buy now&quot;,
+                            &quot;contrast&quot;: &quot;normal&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;left&quot;
+                        }
+                    },
+                    {
+                        &quot;path&quot;: &quot;find-your-fridge&quot;,
+                        &quot;title&quot;: &quot;Find your Fridge&quot;,
+                        &quot;filter&quot;: &quot;FIND_YOUR_FRIDGE&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;WIRELESS CHARGING PAD&quot;,
+                            &quot;path&quot;: &quot;mobile-accessories&quot;,
+                            &quot;description&quot;: &quot;Buy now&quot;,
+                            &quot;contrast&quot;: &quot;normal&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;left&quot;
+                        }
+                    },
+                    {
+                        &quot;path&quot;: &quot;add-wash&quot;,
+                        &quot;title&quot;: &quot;Add Wash&quot;,
+                        &quot;filter&quot;: &quot;ADDWASH&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;WIRELESS CHARGING PAD&quot;,
+                            &quot;path&quot;: &quot;mobile-accessories&quot;,
+                            &quot;description&quot;: &quot;Buy now&quot;,
+                            &quot;contrast&quot;: &quot;normal&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;left&quot;
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;path&quot;: &quot;home-office&quot;,
+        &quot;title&quot;: &quot;Home Office&quot;,
+        &quot;filter&quot;: &quot;PC_MONITORS&quot;,
+        &quot;promo&quot;: {
+            &quot;title&quot;: &quot;HAND PICK YOUR ACCESSORIES&quot;,
+            &quot;path&quot;: &quot;accessories&quot;,
+            &quot;description&quot;: &quot;Get more out of your Samsung devices&quot;,
+            &quot;contrast&quot;: &quot;normal&quot;,
+            &quot;imgPosition&quot;: &quot;left&quot;,
+            &quot;link&quot;: &quot;&quot;
+        },
+        &quot;subcategories&quot;: [
+            {
+                &quot;path&quot;: &quot;all-home-office&quot;,
+                &quot;title&quot;: &quot;All Home Office&quot;,
+                &quot;filter&quot;: &quot;&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;WIRELESS CHARGING PAD&quot;,
+                    &quot;path&quot;: &quot;mobile-accessories&quot;,
+                    &quot;description&quot;: &quot;Buy now&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;imgPosition&quot;: &quot;left&quot;,
+                    &quot;link&quot;: &quot;/uk/details/fast-charging-wireless-charging-pad&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;all-monitors&quot;,
+                &quot;title&quot;: &quot;All Monitors&quot;,
+                &quot;filter&quot;: &quot;MONITORS&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;WIRELESS CHARGING PAD&quot;,
+                    &quot;path&quot;: &quot;mobile-accessories&quot;,
+                    &quot;description&quot;: &quot;Buy now&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;left&quot;,
+                    &quot;link&quot;: &quot;/uk/details/fast-charging-wireless-charging-pad&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;all-printers&quot;,
+                &quot;title&quot;: &quot;All Printers&quot;,
+                &quot;filter&quot;: &quot;PRINTERS&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;WIRELESS CHARGING PAD&quot;,
+                    &quot;path&quot;: &quot;mobile-accessories&quot;,
+                    &quot;description&quot;: &quot;Buy now&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;left&quot;,
+                    &quot;link&quot;: &quot;/uk/details/fast-charging-wireless-charging-pad&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;all-print-cartridges&quot;,
+                &quot;title&quot;: &quot;All Print Cartridges&quot;,
+                &quot;filter&quot;: &quot;PRINTER_CARTRIDGES&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;WIRELESS CHARGING PAD&quot;,
+                    &quot;path&quot;: &quot;mobile-accessories&quot;,
+                    &quot;description&quot;: &quot;Buy now&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;left&quot;,
+                    &quot;link&quot;: &quot;/uk/details/fast-charging-wireless-charging-pad&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;home-office-expertise&quot;,
+                &quot;title&quot;: &quot;Expertise&quot;,
+                &quot;filter&quot;: &quot;&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;WIRELESS CHARGING PAD&quot;,
+                    &quot;path&quot;: &quot;mobile-accessories&quot;,
+                    &quot;description&quot;: &quot;Buy now&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;left&quot;,
+                    &quot;link&quot;: &quot;/uk/details/fast-charging-wireless-charging-pad&quot;
+                },
+                &quot;filters&quot;: [
+                    {
+                        &quot;path&quot;: &quot;tabpro-s&quot;,
+                        &quot;title&quot;: &quot;TabPro S&quot;,
+                        &quot;filter&quot;: &quot;GALAXY_TABPRO_S&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;Real Curve, Real Immersion&quot;,
+                            &quot;path&quot;: &quot;pc+monitors&quot;,
+                            &quot;description&quot;: &quot;Discover Samsung&apos;s curved monitor range&quot;,
+                            &quot;contrast&quot;: &quot;inverted&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;center&quot;
+                        }
+                    },
+                    {
+                        &quot;path&quot;: &quot;curved-monitors-edit&quot;,
+                        &quot;title&quot;: &quot;Curved Monitors Edit&quot;,
+                        &quot;filter&quot;: &quot;CURVED_MONITORS&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;Real Curve, Real Immersion&quot;,
+                            &quot;path&quot;: &quot;pc+monitors&quot;,
+                            &quot;description&quot;: &quot;Discover Samsung&apos;s curved monitor range&quot;,
+                            &quot;contrast&quot;: &quot;inverted&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;center&quot;
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        &quot;path&quot;: &quot;accessories&quot;,
+        &quot;title&quot;: &quot;Accessories&quot;,
+        &quot;filter&quot;: &quot;ACCESSORIES&quot;,
+        &quot;promo&quot;: {
+            &quot;title&quot;: &quot;HAND PICK YOUR ACCESSORIES&quot;,
+            &quot;path&quot;: &quot;accessories&quot;,
+            &quot;description&quot;: &quot;Get more out of your Samsung devices&quot;,
+            &quot;contrast&quot;: &quot;normal&quot;,
+            &quot;imgPosition&quot;: &quot;left&quot;,
+            &quot;link&quot;: &quot;&quot;
+        },
+        &quot;subcategories&quot;: [
+            {
+                &quot;path&quot;: &quot;mobile-accessories&quot;,
+                &quot;title&quot;: &quot;Mobile Accessories&quot;,
+                &quot;filter&quot;: &quot;ACCESSORIES_MOBILE&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;WIRELESS CHARGING PAD&quot;,
+                    &quot;path&quot;: &quot;mobile-accessories&quot;,
+                    &quot;description&quot;: &quot;Buy now&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;imgPosition&quot;: &quot;left&quot;,
+                    &quot;link&quot;: &quot;/uk/details/fast-charging-wireless-charging-pad&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;tablet-accessories&quot;,
+                &quot;title&quot;: &quot;Tablet Accessories&quot;,
+                &quot;filter&quot;: &quot;ACCESSORIES_PC_TABLET&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;WIRELESS CHARGING PAD&quot;,
+                    &quot;path&quot;: &quot;mobile-accessories&quot;,
+                    &quot;description&quot;: &quot;Buy now&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;left&quot;,
+                    &quot;link&quot;: &quot;/uk/details/fast-charging-wireless-charging-pad&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;tv+audio-accessoriess&quot;,
+                &quot;title&quot;: &quot;TV &amp; Audio Accessories&quot;,
+                &quot;filter&quot;: &quot;TV_AV_ACCESSORIES&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;WIRELESS CHARGING PAD&quot;,
+                    &quot;path&quot;: &quot;mobile-accessories&quot;,
+                    &quot;description&quot;: &quot;Buy now&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;left&quot;,
+                    &quot;link&quot;: &quot;/uk/details/fast-charging-wireless-charging-pad&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;appliance-accessories&quot;,
+                &quot;title&quot;: &quot;Appliance Accessories&quot;,
+                &quot;filter&quot;: &quot;APPLIANCE_ACCESSORIES&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;WIRELESS CHARGING PAD&quot;,
+                    &quot;path&quot;: &quot;mobile-accessories&quot;,
+                    &quot;description&quot;: &quot;Buy now&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;left&quot;,
+                    &quot;link&quot;: &quot;/uk/details/fast-charging-wireless-charging-pad&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;pc-accessories&quot;,
+                &quot;title&quot;: &quot;PC Accessories&quot;,
+                &quot;filter&quot;: &quot;ACCESSORIES_PC_TABLET&quot;,
+                &quot;cls&quot;: &quot;grouped&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;WIRELESS CHARGING PAD&quot;,
+                    &quot;path&quot;: &quot;mobile-accessories&quot;,
+                    &quot;description&quot;: &quot;Buy now&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;left&quot;,
+                    &quot;link&quot;: &quot;/uk/details/fast-charging-wireless-charging-pad&quot;
+                }
+            },
+            {
+                &quot;path&quot;: &quot;accessories-expertise&quot;,
+                &quot;title&quot;: &quot;Expertise&quot;,
+                &quot;filter&quot;: &quot;&quot;,
+                &quot;promo&quot;: {
+                    &quot;title&quot;: &quot;WIRELESS CHARGING PAD&quot;,
+                    &quot;path&quot;: &quot;mobile-accessories&quot;,
+                    &quot;description&quot;: &quot;Buy now&quot;,
+                    &quot;contrast&quot;: &quot;normal&quot;,
+                    &quot;bgContrast&quot;: &quot;light&quot;,
+                    &quot;imgPosition&quot;: &quot;left&quot;,
+                    &quot;link&quot;: &quot;/uk/details/fast-charging-wireless-charging-pad&quot;
+                },
+                &quot;filters&quot;: [
+                    {
+                        &quot;path&quot;: &quot;accessory-finder&quot;,
+                        &quot;title&quot;: &quot;Accessory Finder&quot;,
+                        &quot;filter&quot;: &quot;ACCESSORY_FINDER&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;Real Curve, Real Immersion&quot;,
+                            &quot;path&quot;: &quot;pc+monitors&quot;,
+                            &quot;description&quot;: &quot;Discover Samsung&apos;s curved monitor range&quot;,
+                            &quot;contrast&quot;: &quot;inverted&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;center&quot;
+                        }
+                    },
+                    {
+                        &quot;path&quot;: &quot;luxury-mobile-accessories&quot;,
+                        &quot;title&quot;: &quot;Luxury Mobile Accessories&quot;,
+                        &quot;filter&quot;: &quot;LUXURY_MOBILE_ACCESSORIES&quot;,
+                        &quot;promo&quot;: {
+                            &quot;title&quot;: &quot;Real Curve, Real Immersion&quot;,
+                            &quot;path&quot;: &quot;pc+monitors&quot;,
+                            &quot;description&quot;: &quot;Discover Samsung&apos;s curved monitor range&quot;,
+                            &quot;contrast&quot;: &quot;inverted&quot;,
+                            &quot;bgContrast&quot;: &quot;light&quot;,
+                            &quot;imgPosition&quot;: &quot;center&quot;
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]
+</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Homepage - HTTP Request" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">sabtst.brandpath.net</stringProp>
+              <stringProp name="HTTPSampler.port">443</stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path"></stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                <boolProp name="ResultCollector.error_logging">false</boolProp>
+                <objProp>
+                  <name>saveConfig</name>
+                  <value class="SampleSaveConfiguration">
+                    <time>true</time>
+                    <latency>true</latency>
+                    <timestamp>true</timestamp>
+                    <success>true</success>
+                    <label>true</label>
+                    <code>true</code>
+                    <message>true</message>
+                    <threadName>true</threadName>
+                    <dataType>true</dataType>
+                    <encoding>false</encoding>
+                    <assertions>true</assertions>
+                    <subresults>true</subresults>
+                    <responseData>false</responseData>
+                    <samplerData>false</samplerData>
+                    <xml>false</xml>
+                    <fieldNames>true</fieldNames>
+                    <responseHeaders>false</responseHeaders>
+                    <requestHeaders>false</requestHeaders>
+                    <responseDataOnError>false</responseDataOnError>
+                    <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                    <assertionsResultsToSave>0</assertionsResultsToSave>
+                    <bytes>true</bytes>
+                    <threadCounts>true</threadCounts>
+                    <idleTime>true</idleTime>
+                  </value>
+                </objProp>
+                <stringProp name="filename"></stringProp>
+              </ResultCollector>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="-1888620897">&lt;a href=&quot;#&quot; type=&quot;button&quot; data-toggle=&quot;modal&quot; data-target=&quot;#sign-in&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-user&quot;&gt;&lt;/span&gt; SIGN IN&lt;/a&gt;</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Homepage - Debug Sampler" enabled="true">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree>
+            <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-1266925338">JMeterVariables:
+JMeterThread.last_sample_ok=true</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

@@ -1,0 +1,32 @@
+/* Promo images used as backgrounds */
+
+#homepage-jumbotron {
+	/*background:url('../../images/hero/hero-layer1-lg.png') no-repeat right 25% bottom 0, 
+	url('../../images/hero/hero-bg-1900.jpg') no-repeat;*/
+	background:url('../../images/hero/hero-layer1-lg.png') no-repeat, url('../../images/hero/hero-bg-1900.jpg') repeat-x;	
+	background-position: right 25% bottom 0, left top;
+	background-position-x: 75%, 0%;
+	background-position-y: 100%, 0%;
+}
+
+#homepage-feature1 {
+	
+}
+
+#homepage-tab-1 {
+	background:url('../../images/promos/tab-htc.jpg') no-repeat left top;
+}
+
+.samsung-dark-grey {
+	background-color: #3c3839;
+	color: #FFF;
+}
+
+.samsung-dark-grey p {
+	color: #FFF;
+}
+
+.samsung-dark-grey h3 {
+	color: #FFF;
+	margin-top: 0;
+}

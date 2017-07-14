@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://rodc-opt-tst-14-qkm1:8080/" />
+<title>WEb testv1</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">WEb testv1</td></tr>
+</thead><tbody>
+<tr>
+	<td>createCookie</td>
+	<td>JSESSIONID=</td>
+	<td>path=/</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://10.41.7.31/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>createCookie</td>
+	<td>JSESSIONID=</td>
+	<td>path=/</td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>deleteCookie</td>
+	<td>JSESSIONID</td>
+	<td>domain=10.41.7.31.local,recurse=true,path=/</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://10.41.7.31/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Mobiles &amp; Wearables</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#basketModal &gt; div.modal-dialog &gt; div.modal-content &gt; div.modal-header &gt; button.close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>if(driver.manage().getCookieNamed(&quot;JSESSIONID&quot;) != null) return driver.manage().getCookieNamed(&quot;JSESSIONID&quot;).getValue();</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

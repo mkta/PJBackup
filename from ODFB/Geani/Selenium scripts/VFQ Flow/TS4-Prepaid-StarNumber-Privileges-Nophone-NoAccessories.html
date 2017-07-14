@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://vfq-preprod.pjmedia.ro/" />
+<title>TS4-Prepaid-StarNumber-Privileges-Nophone-NoAccessories</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TS4-Prepaid-StarNumber-Privileges-Nophone-NoAccessories</td></tr>
+</thead><tbody>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>planCount</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>TS4-Prepaid-StarNumber-Privileges-Nophone-NoAccessories</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>repeat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://www.vodafone.qa/en</td>
+	<td></td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Plans &amp; Numbers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Get Prepaid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.selectPlanPrepaidStyle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='prepaidOptions']/div[2]/div[${planCount}]/span[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@id='prepaidOptions']/div[2]/div[*]/span[1]</td>
+	<td>planNumber</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Prepaid Plan Number : ${planCount}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//*[@id='prepaidPlans']/div[1]/div[1]/div[1]</td>
+	<td>planLabel</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Prepaid Plan : ${planLabel}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.blockUI.blockOverlay</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[name=&quot;Add to basket&quot;]</td>
+	<td></td>
+</tr>
+<!--number-->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input.PrimaryButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=td.select. &gt; div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=add2</td>
+	<td></td>
+</tr>
+<!--privilege-->
+<tr>
+	<td>storeText</td>
+	<td>css=.addonSection.addonInfo&gt;h3&gt;label</td>
+	<td>addonName</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='anghami-prepaid']/div[3]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='Continue to next step']</td>
+	<td></td>
+</tr>
+<!--phone-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Continue to next step</td>
+	<td></td>
+</tr>
+<!--accessories-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Continue to next step</td>
+	<td></td>
+</tr>
+<!--basket-->
+<tr>
+	<td>verifyText</td>
+	<td>css=p.title</td>
+	<td>${planLabel}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#addons</td>
+	<td>${addonName}</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.planCount++}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>javascript{storedVars.planCount == storedVars.planNumber + 1}</td>
+	<td>end</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Empty basket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotolabel</td>
+	<td>repeat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>end</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

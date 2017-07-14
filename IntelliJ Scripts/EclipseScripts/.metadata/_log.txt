@@ -1,0 +1,1614 @@
+!SESSION 2017-04-05 10:52:19.395 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.testing.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.testing.product
+
+!ENTRY org.eclipse.epp.mpc.core 4 0 2017-04-05 11:05:19.712
+!MESSAGE Failed to stream using org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport@68705775 - falling back to org.eclipse.epp.internal.mpc.core.util.TransportFactory$1@5a35ad9a: Service Unavailable
+!STACK 1
+org.eclipse.epp.mpc.core.service.ServiceUnavailableException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:220)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:725)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:390)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:863)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:505)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$7.run(MarketplaceWizard.java:924)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	... 11 more
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:05:19.737
+!MESSAGE Service Unavailable
+!STACK 0
+org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:725)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:390)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:863)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:505)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$7.run(MarketplaceWizard.java:924)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:05:19.737
+!MESSAGE Service Unavailable
+!STACK 0
+org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:725)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:390)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:863)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:505)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$7.run(MarketplaceWizard.java:924)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.epp.mpc.ui 4 0 2017-04-05 11:06:15.063
+!MESSAGE Query failed to complete
+!SUBENTRY 1 org.eclipse.equinox.p2.discovery 4 0 2017-04-05 11:06:15.064
+!MESSAGE MarketplaceDiscoveryStrategy failed with an error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot complete request to http://marketplace.eclipse.org/news/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:198)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:725)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:390)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:863)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:505)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$7.run(MarketplaceWizard.java:924)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.epp.mpc.core.service.ServiceUnavailableException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:220)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	... 9 more
+Caused by: org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	... 11 more
+!SUBENTRY 2 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:06:15.064
+!MESSAGE Cannot complete request to http://marketplace.eclipse.org/news/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400: Service Unavailable
+!STACK 1
+org.eclipse.epp.mpc.core.service.ServiceUnavailableException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:220)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:725)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:390)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:863)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:505)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$7.run(MarketplaceWizard.java:924)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	... 11 more
+!SUBENTRY 3 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:06:15.064
+!MESSAGE Service Unavailable
+!STACK 0
+org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:725)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:390)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:863)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:505)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$7.run(MarketplaceWizard.java:924)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.epp.mpc.core 4 0 2017-04-05 11:11:24.551
+!MESSAGE Marketplace service is temporarily unavailable.  Please try again later.
+!STACK 1
+org.eclipse.epp.internal.mpc.core.service.ServiceUnavailableException: Marketplace service is temporarily unavailable.  Please try again later.
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleServiceUnavailable(TransportFactory.java:326)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleStreamExceptions(TransportFactory.java:307)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:287)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.primaryFailed(FallbackTransportFactory.java:129)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:79)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:468)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$1.run(MarketplaceCatalog.java:76)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:448)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:74)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer$9.run(MarketplaceViewer.java:618)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.stream(CachingTransport.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:285)
+	... 14 more
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:667)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:428)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:278)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 21 more
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 503 2017-04-05 11:11:24.554
+!MESSAGE Marketplace service is temporarily unavailable.  Please try again later.
+!STACK 1
+org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.stream(CachingTransport.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:285)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.primaryFailed(FallbackTransportFactory.java:129)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:79)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:468)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$1.run(MarketplaceCatalog.java:76)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:448)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:74)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer$9.run(MarketplaceViewer.java:618)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:667)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:428)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:278)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 21 more
+!SUBENTRY 2 org.eclipse.equinox.p2.transport.ecf 4 1002 2017-04-05 11:11:24.554
+!MESSAGE HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400
+!STACK 1
+org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:667)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:428)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:278)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.stream(CachingTransport.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:285)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.primaryFailed(FallbackTransportFactory.java:129)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:79)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:468)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$1.run(MarketplaceCatalog.java:76)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:448)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:74)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer$9.run(MarketplaceViewer.java:618)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SUBENTRY 3 org.eclipse.ecf.identity 4 0 2017-04-05 11:11:24.554
+!MESSAGE HttpComponents connection error response code 503.
+
+!ENTRY org.eclipse.equinox.p2.discovery 4 0 2017-04-05 11:13:03.962
+!MESSAGE MarketplaceDiscoveryStrategy failed with an error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot complete request to http://marketplace.eclipse.org/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:198)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.popular(MarketplaceDiscoveryStrategy.java:628)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$5.run(MarketplaceCatalog.java:108)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:448)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.popular(MarketplaceCatalog.java:106)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer$9.run(MarketplaceViewer.java:587)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.epp.mpc.core.service.ServiceUnavailableException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:220)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	... 11 more
+Caused by: org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	... 13 more
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:13:03.963
+!MESSAGE Cannot complete request to http://marketplace.eclipse.org/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400: Service Unavailable
+!STACK 1
+org.eclipse.epp.mpc.core.service.ServiceUnavailableException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:220)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.popular(MarketplaceDiscoveryStrategy.java:628)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$5.run(MarketplaceCatalog.java:108)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:448)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.popular(MarketplaceCatalog.java:106)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer$9.run(MarketplaceViewer.java:587)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	... 13 more
+!SUBENTRY 2 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:13:03.963
+!MESSAGE Service Unavailable
+!STACK 0
+org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.popular(MarketplaceDiscoveryStrategy.java:628)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$5.run(MarketplaceCatalog.java:108)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:448)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.popular(MarketplaceCatalog.java:106)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer$9.run(MarketplaceViewer.java:587)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.epp.mpc.ui 4 0 2017-04-05 11:13:13.810
+!MESSAGE Query failed to complete
+!SUBENTRY 1 org.eclipse.equinox.p2.discovery 4 0 2017-04-05 11:13:13.810
+!MESSAGE MarketplaceDiscoveryStrategy failed with an error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot complete request to http://marketplace.eclipse.org/news/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:198)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:725)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:390)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:863)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:505)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$7.run(MarketplaceWizard.java:924)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.epp.mpc.core.service.ServiceUnavailableException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:220)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	... 9 more
+Caused by: org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	... 11 more
+!SUBENTRY 2 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:13:13.811
+!MESSAGE Cannot complete request to http://marketplace.eclipse.org/news/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400: Service Unavailable
+!STACK 1
+org.eclipse.epp.mpc.core.service.ServiceUnavailableException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:220)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:725)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:390)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:863)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:505)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$7.run(MarketplaceWizard.java:924)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	... 11 more
+!SUBENTRY 3 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:13:13.811
+!MESSAGE Service Unavailable
+!STACK 0
+org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:725)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:390)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:863)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:505)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$7.run(MarketplaceWizard.java:924)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.epp.mpc.core 4 0 2017-04-05 11:14:13.445
+!MESSAGE Marketplace service is temporarily unavailable.  Please try again later.
+!STACK 1
+org.eclipse.epp.internal.mpc.core.service.ServiceUnavailableException: Marketplace service is temporarily unavailable.  Please try again later.
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleServiceUnavailable(TransportFactory.java:326)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleStreamExceptions(TransportFactory.java:307)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:287)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.primaryFailed(FallbackTransportFactory.java:129)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:79)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.processSearchRequest(DefaultMarketplaceService.java:499)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:412)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService$1.doSearch(CachingMarketplaceService.java:271)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.performSearch(CachingMarketplaceService.java:296)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.search(CachingMarketplaceService.java:268)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:497)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$1.run(MarketplaceCatalog.java:76)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:448)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:74)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer$9.run(MarketplaceViewer.java:618)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/api/p/search/apachesolr_search/color?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.stream(CachingTransport.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:285)
+	... 17 more
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:667)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:428)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:278)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 24 more
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 503 2017-04-05 11:14:13.448
+!MESSAGE Marketplace service is temporarily unavailable.  Please try again later.
+!STACK 1
+org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/api/p/search/apachesolr_search/color?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.stream(CachingTransport.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:285)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.primaryFailed(FallbackTransportFactory.java:129)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:79)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.processSearchRequest(DefaultMarketplaceService.java:499)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:412)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService$1.doSearch(CachingMarketplaceService.java:271)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.performSearch(CachingMarketplaceService.java:296)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.search(CachingMarketplaceService.java:268)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:497)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$1.run(MarketplaceCatalog.java:76)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:448)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:74)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer$9.run(MarketplaceViewer.java:618)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:667)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:428)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:278)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 24 more
+!SUBENTRY 2 org.eclipse.equinox.p2.transport.ecf 4 1002 2017-04-05 11:14:13.449
+!MESSAGE HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/api/p/search/apachesolr_search/color?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400
+!STACK 1
+org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:667)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:428)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:278)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.stream(CachingTransport.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:285)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.primaryFailed(FallbackTransportFactory.java:129)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:79)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.processSearchRequest(DefaultMarketplaceService.java:499)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:412)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService$1.doSearch(CachingMarketplaceService.java:271)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.performSearch(CachingMarketplaceService.java:296)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.search(CachingMarketplaceService.java:268)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:497)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$1.run(MarketplaceCatalog.java:76)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:448)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:74)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer$9.run(MarketplaceViewer.java:618)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SUBENTRY 3 org.eclipse.ecf.identity 4 0 2017-04-05 11:14:13.449
+!MESSAGE HttpComponents connection error response code 503.
+!SESSION 2017-04-05 11:14:47.272 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.testing.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.testing.product
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2017-04-05 11:19:24.530
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at jar:file:/C:/Users/catalinf/Downloads/eclipse-color-theme-update-site/update/artifacts.jar!/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:340)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:239)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:463)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2017-04-05 11:19:24.531
+!MESSAGE No repository found at jar:file:/C:/Users/catalinf/Downloads/eclipse-color-theme-update-site/update/artifacts.jar!/.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2017-04-05 11:19:24.548
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at C:%255CUsers%255Ccatalinf%255CDownloads%255Ceclipse-color-theme-update-site.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:340)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:239)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:463)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2017-04-05 11:19:24.549
+!MESSAGE No repository found at C:%255CUsers%255Ccatalinf%255CDownloads%255Ceclipse-color-theme-update-site.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2017-04-05 11:19:24.573
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at jar:file:/C:/Users/catalinf/Downloads/eclipse-color-theme-update-site.zip!/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:340)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:239)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:463)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2017-04-05 11:19:24.574
+!MESSAGE No repository found at jar:file:/C:/Users/catalinf/Downloads/eclipse-color-theme-update-site.zip!/.
+
+!ENTRY org.eclipse.epp.mpc.core 4 0 2017-04-05 11:20:32.042
+!MESSAGE Failed to stream using org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport@7fb2e71e - falling back to org.eclipse.epp.internal.mpc.core.util.TransportFactory$1@1388f5f9: Service Unavailable
+!STACK 1
+org.eclipse.epp.mpc.core.service.ServiceUnavailableException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:220)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:725)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:390)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:863)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:505)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$7.run(MarketplaceWizard.java:924)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	... 11 more
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:20:32.042
+!MESSAGE Service Unavailable
+!STACK 0
+org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:725)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:390)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:863)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:505)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$7.run(MarketplaceWizard.java:924)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:20:32.042
+!MESSAGE Service Unavailable
+!STACK 0
+org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:725)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:390)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:863)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:505)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$7.run(MarketplaceWizard.java:924)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.epp.mpc.ui 4 0 2017-04-05 11:20:32.057
+!MESSAGE Query failed to complete
+!SUBENTRY 1 org.eclipse.equinox.p2.discovery 4 0 2017-04-05 11:20:32.057
+!MESSAGE MarketplaceDiscoveryStrategy failed with an error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot complete request to http://marketplace.eclipse.org/news/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:198)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:725)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:390)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:863)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:505)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$7.run(MarketplaceWizard.java:924)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.epp.mpc.core.service.ServiceUnavailableException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:220)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	... 9 more
+Caused by: org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	... 11 more
+!SUBENTRY 2 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:20:32.058
+!MESSAGE Cannot complete request to http://marketplace.eclipse.org/news/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400: Service Unavailable
+!STACK 1
+org.eclipse.epp.mpc.core.service.ServiceUnavailableException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:220)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:725)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:390)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:863)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:505)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$7.run(MarketplaceWizard.java:924)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	... 11 more
+!SUBENTRY 3 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:20:32.058
+!MESSAGE Service Unavailable
+!STACK 0
+org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:725)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:390)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:863)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:505)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$7.run(MarketplaceWizard.java:924)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.epp.mpc.core 4 0 2017-04-05 11:20:33.407
+!MESSAGE Failed to stream using org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport@7fb2e71e - falling back to org.eclipse.epp.internal.mpc.core.util.TransportFactory$1@1388f5f9: Connection failed
+
+This is most often caused by a problem with your internet connection. Please check your internet connection and retry.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Connection failed
+
+This is most often caused by a problem with your internet connection. Please check your internet connection and retry.
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:226)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performDiscovery(MarketplaceDiscoveryStrategy.java:209)
+	at org.eclipse.equinox.internal.p2.discovery.Catalog.performDiscovery(Catalog.java:85)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:368)
+	at org.eclipse.equinox.internal.p2.ui.discovery.wizards.CatalogViewer$6.run(CatalogViewer.java:569)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:153)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.ExecutorClientWrapper.execute(ExecutorClientWrapper.java:61)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.execute(HttpClientTransport.java:198)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:91)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	... 12 more
+Contains: Connection failed
+
+This is most often caused by a problem with your internet connection. Please check your internet connection and retry.
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:153)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.ExecutorClientWrapper.execute(ExecutorClientWrapper.java:61)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.execute(HttpClientTransport.java:198)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:91)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performDiscovery(MarketplaceDiscoveryStrategy.java:209)
+	at org.eclipse.equinox.internal.p2.discovery.Catalog.performDiscovery(Catalog.java:85)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:368)
+	at org.eclipse.equinox.internal.p2.ui.discovery.wizards.CatalogViewer$6.run(CatalogViewer.java:569)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:20:33.408
+!MESSAGE Connection failed
+
+This is most often caused by a problem with your internet connection. Please check your internet connection and retry.
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:153)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.ExecutorClientWrapper.execute(ExecutorClientWrapper.java:61)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.execute(HttpClientTransport.java:198)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:91)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performDiscovery(MarketplaceDiscoveryStrategy.java:209)
+	at org.eclipse.equinox.internal.p2.discovery.Catalog.performDiscovery(Catalog.java:85)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:368)
+	at org.eclipse.equinox.internal.p2.ui.discovery.wizards.CatalogViewer$6.run(CatalogViewer.java:569)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SUBENTRY 2 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:20:33.408
+!MESSAGE Connection failed
+
+This is most often caused by a problem with your internet connection. Please check your internet connection and retry.
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:153)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.ExecutorClientWrapper.execute(ExecutorClientWrapper.java:61)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.execute(HttpClientTransport.java:198)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:91)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performDiscovery(MarketplaceDiscoveryStrategy.java:209)
+	at org.eclipse.equinox.internal.p2.discovery.Catalog.performDiscovery(Catalog.java:85)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:368)
+	at org.eclipse.equinox.internal.p2.ui.discovery.wizards.CatalogViewer$6.run(CatalogViewer.java:569)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:20:33.408
+!MESSAGE Connection failed
+
+This is most often caused by a problem with your internet connection. Please check your internet connection and retry.
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:153)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.ExecutorClientWrapper.execute(ExecutorClientWrapper.java:61)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.execute(HttpClientTransport.java:198)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:91)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performDiscovery(MarketplaceDiscoveryStrategy.java:209)
+	at org.eclipse.equinox.internal.p2.discovery.Catalog.performDiscovery(Catalog.java:85)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:368)
+	at org.eclipse.equinox.internal.p2.ui.discovery.wizards.CatalogViewer$6.run(CatalogViewer.java:569)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.epp.mpc.core 4 0 2017-04-05 11:20:35.345
+!MESSAGE Marketplace service is temporarily unavailable.  Please try again later.
+!STACK 1
+org.eclipse.epp.internal.mpc.core.service.ServiceUnavailableException: Marketplace service is temporarily unavailable.  Please try again later.
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleServiceUnavailable(TransportFactory.java:326)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleStreamExceptions(TransportFactory.java:307)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:287)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.primaryFailed(FallbackTransportFactory.java:129)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:85)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performDiscovery(MarketplaceDiscoveryStrategy.java:209)
+	at org.eclipse.equinox.internal.p2.discovery.Catalog.performDiscovery(Catalog.java:85)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:368)
+	at org.eclipse.equinox.internal.p2.ui.discovery.wizards.CatalogViewer$6.run(CatalogViewer.java:569)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.stream(CachingTransport.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:285)
+	... 13 more
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:667)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:428)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:278)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 20 more
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 503 2017-04-05 11:20:35.346
+!MESSAGE Marketplace service is temporarily unavailable.  Please try again later.
+!STACK 1
+org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.stream(CachingTransport.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:285)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.primaryFailed(FallbackTransportFactory.java:129)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:85)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performDiscovery(MarketplaceDiscoveryStrategy.java:209)
+	at org.eclipse.equinox.internal.p2.discovery.Catalog.performDiscovery(Catalog.java:85)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:368)
+	at org.eclipse.equinox.internal.p2.ui.discovery.wizards.CatalogViewer$6.run(CatalogViewer.java:569)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:667)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:428)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:278)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 20 more
+!SUBENTRY 2 org.eclipse.equinox.p2.transport.ecf 4 1002 2017-04-05 11:20:35.346
+!MESSAGE HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400
+!STACK 1
+org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:667)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:428)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:278)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.stream(CachingTransport.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:285)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.primaryFailed(FallbackTransportFactory.java:129)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:85)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performDiscovery(MarketplaceDiscoveryStrategy.java:209)
+	at org.eclipse.equinox.internal.p2.discovery.Catalog.performDiscovery(Catalog.java:85)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:368)
+	at org.eclipse.equinox.internal.p2.ui.discovery.wizards.CatalogViewer$6.run(CatalogViewer.java:569)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SUBENTRY 3 org.eclipse.ecf.identity 4 0 2017-04-05 11:20:35.346
+!MESSAGE HttpComponents connection error response code 503.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2017-04-05 11:20:37.840
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at jar:file:/C:/Users/catalinf/Downloads/eclipse-color-theme-update-site/update/artifacts.jar!/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at sun.reflect.GeneratedMethodAccessor56.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:340)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:239)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:463)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2017-04-05 11:20:37.840
+!MESSAGE No repository found at jar:file:/C:/Users/catalinf/Downloads/eclipse-color-theme-update-site/update/artifacts.jar!/.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2017-04-05 11:20:37.847
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at C:%255CUsers%255Ccatalinf%255CDownloads%255Ceclipse-color-theme-update-site.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at sun.reflect.GeneratedMethodAccessor56.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:340)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:239)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:463)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2017-04-05 11:20:37.847
+!MESSAGE No repository found at C:%255CUsers%255Ccatalinf%255CDownloads%255Ceclipse-color-theme-update-site.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2017-04-05 11:20:37.874
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at jar:file:/C:/Users/catalinf/Downloads/eclipse-color-theme-update-site.zip!/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at sun.reflect.GeneratedMethodAccessor56.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:340)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:239)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:463)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2017-04-05 11:20:37.875
+!MESSAGE No repository found at jar:file:/C:/Users/catalinf/Downloads/eclipse-color-theme-update-site.zip!/.
+
+!ENTRY org.eclipse.epp.mpc.core 4 0 2017-04-05 11:25:11.311
+!MESSAGE Marketplace service is temporarily unavailable.  Please try again later.
+!STACK 1
+org.eclipse.epp.internal.mpc.core.service.ServiceUnavailableException: Marketplace service is temporarily unavailable.  Please try again later.
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleServiceUnavailable(TransportFactory.java:326)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleStreamExceptions(TransportFactory.java:307)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:287)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.primaryFailed(FallbackTransportFactory.java:129)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:79)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:468)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$1.run(MarketplaceCatalog.java:76)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:448)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:74)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer$9.run(MarketplaceViewer.java:618)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.stream(CachingTransport.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:285)
+	... 14 more
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:667)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:428)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:278)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 21 more
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 503 2017-04-05 11:25:11.312
+!MESSAGE Marketplace service is temporarily unavailable.  Please try again later.
+!STACK 1
+org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.stream(CachingTransport.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:285)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.primaryFailed(FallbackTransportFactory.java:129)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:79)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:468)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$1.run(MarketplaceCatalog.java:76)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:448)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:74)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer$9.run(MarketplaceViewer.java:618)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:667)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:428)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:278)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 21 more
+!SUBENTRY 2 org.eclipse.equinox.p2.transport.ecf 4 1002 2017-04-05 11:25:11.312
+!MESSAGE HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400
+!STACK 1
+org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:667)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:428)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:278)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.stream(CachingTransport.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:285)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.primaryFailed(FallbackTransportFactory.java:129)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:79)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:468)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$1.run(MarketplaceCatalog.java:76)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:448)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:74)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer$9.run(MarketplaceViewer.java:618)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SUBENTRY 3 org.eclipse.ecf.identity 4 0 2017-04-05 11:25:11.312
+!MESSAGE HttpComponents connection error response code 503.
+
+!ENTRY org.eclipse.equinox.p2.discovery 4 0 2017-04-05 11:26:27.005
+!MESSAGE MarketplaceDiscoveryStrategy failed with an error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot complete request to http://marketplace.eclipse.org/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:198)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:468)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$1.run(MarketplaceCatalog.java:76)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:448)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:74)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer$9.run(MarketplaceViewer.java:618)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.epp.mpc.core.service.ServiceUnavailableException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:220)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	... 11 more
+Caused by: org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	... 13 more
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:26:27.006
+!MESSAGE Cannot complete request to http://marketplace.eclipse.org/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400: Service Unavailable
+!STACK 1
+org.eclipse.epp.mpc.core.service.ServiceUnavailableException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:220)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:468)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$1.run(MarketplaceCatalog.java:76)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:448)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:74)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer$9.run(MarketplaceViewer.java:618)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	... 13 more
+!SUBENTRY 2 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:26:27.006
+!MESSAGE Service Unavailable
+!STACK 0
+org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.listMarkets(DefaultMarketplaceService.java:218)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.listMarkets(CachingMarketplaceService.java:65)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.findMarketplaceCategory(MarketplaceDiscoveryStrategy.java:842)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:468)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$1.run(MarketplaceCatalog.java:76)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:448)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:74)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer$9.run(MarketplaceViewer.java:618)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SESSION 2017-04-05 11:37:06.302 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.testing.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.testing.product
+
+!ENTRY org.eclipse.epp.mpc.core 4 0 2017-04-05 11:38:23.299
+!MESSAGE Failed to stream using org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport@11ecd500 - falling back to org.eclipse.epp.internal.mpc.core.util.TransportFactory$1@75c636e5: Service Unavailable
+!STACK 1
+org.eclipse.epp.mpc.core.service.ServiceUnavailableException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:220)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.processSearchRequest(DefaultMarketplaceService.java:499)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.tagged(DefaultMarketplaceService.java:525)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.tagged(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService$2.doSearch(CachingMarketplaceService.java:281)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.performSearch(CachingMarketplaceService.java:296)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.tagged(CachingMarketplaceService.java:278)
+	at org.eclipse.epp.internal.mpc.ui.AskMarketPlaceForFileSupportStrategy$1.run(AskMarketPlaceForFileSupportStrategy.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	... 12 more
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:38:23.300
+!MESSAGE Service Unavailable
+!STACK 0
+org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.processSearchRequest(DefaultMarketplaceService.java:499)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.tagged(DefaultMarketplaceService.java:525)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.tagged(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService$2.doSearch(CachingMarketplaceService.java:281)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.performSearch(CachingMarketplaceService.java:296)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.tagged(CachingMarketplaceService.java:278)
+	at org.eclipse.epp.internal.mpc.ui.AskMarketPlaceForFileSupportStrategy$1.run(AskMarketPlaceForFileSupportStrategy.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:38:23.300
+!MESSAGE Service Unavailable
+!STACK 0
+org.apache.http.client.HttpResponseException: Service Unavailable
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.handleResponseStatus(RequestTemplate.java:133)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:243)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport$1.handleResponse(HttpClientTransport.java:1)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.executeImpl(RequestTemplate.java:92)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:50)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:211)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:68)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.processSearchRequest(DefaultMarketplaceService.java:499)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.tagged(DefaultMarketplaceService.java:525)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.tagged(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService$2.doSearch(CachingMarketplaceService.java:281)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.performSearch(CachingMarketplaceService.java:296)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.tagged(CachingMarketplaceService.java:278)
+	at org.eclipse.epp.internal.mpc.ui.AskMarketPlaceForFileSupportStrategy$1.run(AskMarketPlaceForFileSupportStrategy.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.epp.mpc.ui 4 0 2017-04-05 11:38:24.333
+!MESSAGE Unexpected exception: Cannot complete request to http://marketplace.eclipse.org/category/free-tagging/fileExtension_java/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400: Marketplace service is temporarily unavailable.  Please try again later.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot complete request to http://marketplace.eclipse.org/category/free-tagging/fileExtension_java/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400: Marketplace service is temporarily unavailable.  Please try again later.
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:198)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.processSearchRequest(DefaultMarketplaceService.java:499)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.tagged(DefaultMarketplaceService.java:525)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.tagged(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService$2.doSearch(CachingMarketplaceService.java:281)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.performSearch(CachingMarketplaceService.java:296)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.tagged(CachingMarketplaceService.java:278)
+	at org.eclipse.epp.internal.mpc.ui.AskMarketPlaceForFileSupportStrategy$1.run(AskMarketPlaceForFileSupportStrategy.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.epp.internal.mpc.core.service.ServiceUnavailableException: Marketplace service is temporarily unavailable.  Please try again later.
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleServiceUnavailable(TransportFactory.java:326)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleStreamExceptions(TransportFactory.java:307)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:287)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.primaryFailed(FallbackTransportFactory.java:129)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:79)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	... 10 more
+Caused by: org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/category/free-tagging/fileExtension_java/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.stream(CachingTransport.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:285)
+	... 13 more
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:667)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:428)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:278)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 20 more
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 0 2017-04-05 11:38:24.333
+!MESSAGE Cannot complete request to http://marketplace.eclipse.org/category/free-tagging/fileExtension_java/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400: Marketplace service is temporarily unavailable.  Please try again later.
+!STACK 1
+org.eclipse.epp.internal.mpc.core.service.ServiceUnavailableException: Marketplace service is temporarily unavailable.  Please try again later.
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleServiceUnavailable(TransportFactory.java:326)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleStreamExceptions(TransportFactory.java:307)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:287)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.primaryFailed(FallbackTransportFactory.java:129)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:79)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.processSearchRequest(DefaultMarketplaceService.java:499)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.tagged(DefaultMarketplaceService.java:525)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.tagged(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService$2.doSearch(CachingMarketplaceService.java:281)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.performSearch(CachingMarketplaceService.java:296)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.tagged(CachingMarketplaceService.java:278)
+	at org.eclipse.epp.internal.mpc.ui.AskMarketPlaceForFileSupportStrategy$1.run(AskMarketPlaceForFileSupportStrategy.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/category/free-tagging/fileExtension_java/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.stream(CachingTransport.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:285)
+	... 13 more
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:667)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:428)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:278)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 20 more
+!SUBENTRY 2 org.eclipse.epp.mpc.core 4 503 2017-04-05 11:38:24.334
+!MESSAGE Marketplace service is temporarily unavailable.  Please try again later.
+!STACK 1
+org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/category/free-tagging/fileExtension_java/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.stream(CachingTransport.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:285)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.primaryFailed(FallbackTransportFactory.java:129)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:79)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.processSearchRequest(DefaultMarketplaceService.java:499)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.tagged(DefaultMarketplaceService.java:525)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.tagged(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService$2.doSearch(CachingMarketplaceService.java:281)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.performSearch(CachingMarketplaceService.java:296)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.tagged(CachingMarketplaceService.java:278)
+	at org.eclipse.epp.internal.mpc.ui.AskMarketPlaceForFileSupportStrategy$1.run(AskMarketPlaceForFileSupportStrategy.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:667)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:428)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:278)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 20 more
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2017-04-05 11:38:24.334
+!MESSAGE HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/category/free-tagging/fileExtension_java/api/p?client=org.eclipse.epp.mpc.core&client.version=1.5.4.v20170222-1921&os=win32&ws=win32&nl=en_US&java.version=1.8.0_121&product=org.eclipse.epp.package.testing.product&product.version=4.6.3.M20170301-0400&runtime.version=3.12.0.v20160606-1342&platform.version=4.6.3.v20170301-0400
+!STACK 1
+org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:667)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:428)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:278)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	at org.eclipse.oomph.p2.internal.core.CachingTransport.stream(CachingTransport.java:261)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:285)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.primaryFailed(FallbackTransportFactory.java:129)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:79)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:163)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:115)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.processSearchRequest(DefaultMarketplaceService.java:499)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.tagged(DefaultMarketplaceService.java:525)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.tagged(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService$2.doSearch(CachingMarketplaceService.java:281)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.performSearch(CachingMarketplaceService.java:296)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.tagged(CachingMarketplaceService.java:278)
+	at org.eclipse.epp.internal.mpc.ui.AskMarketPlaceForFileSupportStrategy$1.run(AskMarketPlaceForFileSupportStrategy.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 4 org.eclipse.ecf.identity 4 0 2017-04-05 11:38:24.334
+!MESSAGE HttpComponents connection error response code 503.
+!SESSION 2017-04-05 17:41:11.303 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.testing.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.testing.product
+
+!ENTRY org.eclipse.core.resources 4 567 2017-04-05 17:41:24.638
+!MESSAGE Workspace restored, but some problems occurred.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2017-04-05 17:41:24.638
+!MESSAGE Could not read metadata for 'Desi_FE_LOOP_Script'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: The project description file (.project) for 'Desi_FE_LOOP_Script' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:907)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:904)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:884)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:735)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1587)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2399)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2156)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:464)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:774)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:767)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:724)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:932)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:309)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:470)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:325)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:419)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:372)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:364)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:161)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2017-04-05 17:41:24.657
+!MESSAGE The project description file (.project) for 'Desi_FE_LOOP_Script' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.

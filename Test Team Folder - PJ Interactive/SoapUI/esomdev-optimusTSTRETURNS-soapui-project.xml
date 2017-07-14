@@ -1,0 +1,2248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="0cc56759-4c6a-41fe-96b5-d0a78c43a841" activeEnvironment="Default" name="esomdev.optimusTSTRETURNS" resourceRoot="" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="f2948d52-e338-4cd0-a520-de2122fd3a76" wsaVersion="NONE" name="ERPProcessingServiceSoapBinding" type="wsdl" bindingName="{http://sei.ws.esom.brandpath.com/}ERPProcessingServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://esomdev.optimus.local:8080/esom-ws/ERPProcessingService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://esomdev.optimus.local:8080/esom-ws/ERPProcessingService?wsdl"><con:part><con:url>http://esomdev.optimus.local:8080/esom-ws/ERPProcessingService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ERPProcessingService" targetNamespace="http://sei.ws.esom.brandpath.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://sei.ws.esom.brandpath.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://sei.ws.esom.brandpath.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="AllocateStockResult" type="tns:allocateStockResult"/>
+      <xs:element name="CancelSalesOrderResult" type="tns:cancelSalesOrderResult"/>
+      <xs:element name="CreateProductResult" type="tns:createProductResult"/>
+      <xs:element name="CreateSalesOrderResult" type="tns:createSalesOrderResult"/>
+      <xs:element name="GetProductDetailsResult" type="tns:getProductDetailsResult"/>
+      <xs:element name="GetSalesOrderStatusResult" type="tns:getSalesOrderStatusResult"/>
+      <xs:element name="QueryERPStocksResult" type="tns:queryERPStocksResult"/>
+      <xs:element name="QueryProductListResult" type="tns:queryProductListResult"/>
+      <xs:element name="QueryProductStockResult" type="tns:queryProductStockResult"/>
+      <xs:element name="QuerySalesOrderListResult" type="tns:querySalesOrderListResult"/>
+      <xs:element name="RemoveProductResult" type="tns:removeProductResult"/>
+      <xs:element name="UpdateProductResult" type="tns:updateProductResult"/>
+      <xs:element name="UpdateSalesOrderResult" type="tns:updateSalesOrderResult"/>
+      <xs:element name="allocateStock" type="tns:allocateStock"/>
+      <xs:element name="allocateStockResponse" type="tns:allocateStockResponse"/>
+      <xs:element name="cancelSalesOrder" type="tns:cancelSalesOrder"/>
+      <xs:element name="cancelSalesOrderResponse" type="tns:cancelSalesOrderResponse"/>
+      <xs:element name="createProduct" type="tns:createProduct"/>
+      <xs:element name="createProductResponse" type="tns:createProductResponse"/>
+      <xs:element name="createSalesOrder" type="tns:createSalesOrder"/>
+      <xs:element name="createSalesOrderResponse" type="tns:createSalesOrderResponse"/>
+      <xs:element name="getProductDetails" type="tns:getProductDetails"/>
+      <xs:element name="getProductDetailsResponse" type="tns:getProductDetailsResponse"/>
+      <xs:element name="getSalesOrderStatus" type="tns:getSalesOrderStatus"/>
+      <xs:element name="getSalesOrderStatusResponse" type="tns:getSalesOrderStatusResponse"/>
+      <xs:element name="queryERPStocks" type="tns:queryERPStocks"/>
+      <xs:element name="queryERPStocksResponse" type="tns:queryERPStocksResponse"/>
+      <xs:element name="queryProductList" type="tns:queryProductList"/>
+      <xs:element name="queryProductListResponse" type="tns:queryProductListResponse"/>
+      <xs:element name="queryProductStock" type="tns:queryProductStock"/>
+      <xs:element name="queryProductStockResponse" type="tns:queryProductStockResponse"/>
+      <xs:element name="querySalesOrderList" type="tns:querySalesOrderList"/>
+      <xs:element name="querySalesOrderListResponse" type="tns:querySalesOrderListResponse"/>
+      <xs:element name="removeProduct" type="tns:removeProduct"/>
+      <xs:element name="removeProductResponse" type="tns:removeProductResponse"/>
+      <xs:element name="returnsUpdate" type="tns:returnsUpdate"/>
+      <xs:element name="returnsUpdateResponse" type="tns:returnsUpdateResponse"/>
+      <xs:element name="updateProduct" type="tns:updateProduct"/>
+      <xs:element name="updateProductResponse" type="tns:updateProductResponse"/>
+      <xs:element name="updateSalesOrder" type="tns:updateSalesOrder"/>
+      <xs:element name="updateSalesOrderResponse" type="tns:updateSalesOrderResponse"/>
+      <xs:complexType name="removeProduct">
+        <xs:sequence>
+          <xs:element name="erpProduct" type="tns:erpProduct"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="erpProduct">
+        <xs:sequence>
+          <xs:element name="description" type="xs:string"/>
+          <xs:element name="discount" type="xs:double"/>
+          <xs:element name="grossPrice" type="xs:double"/>
+          <xs:element name="listprice" type="xs:double"/>
+          <xs:element name="name" type="xs:string"/>
+          <xs:element name="netprice" type="xs:double"/>
+          <xs:element name="percentagediscount" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="productProperties" type="tns:erpProductProperties"/>
+          <xs:element name="skuCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="erpProductProperties">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="productProperty" type="tns:erpGenericProperty"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="erpGenericProperty">
+        <xs:sequence>
+          <xs:element name="erpTag" type="xs:string"/>
+          <xs:element minOccurs="0" name="group" type="xs:string"/>
+          <xs:element name="name" type="xs:string"/>
+          <xs:element name="value" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="removeProductResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="removeProductReturn" type="tns:removeProductResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="removeProductResult">
+        <xs:sequence>
+          <xs:element name="result" type="xs:boolean"/>
+          <xs:element name="message" type="xs:string"/>
+          <xs:element name="erpProduct" type="tns:erpProduct"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createSalesOrder">
+        <xs:sequence>
+          <xs:element name="erpSalesOrder" type="tns:erpSalesOrder"/>
+          <xs:element name="siteId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="erpSalesOrder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dealerCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="erpOrderNumber" type="xs:string"/>
+          <xs:element name="orderReference" type="xs:string"/>
+          <xs:element minOccurs="0" name="salesOrderAddresses" type="tns:erpSalesOrderAddresses"/>
+          <xs:element minOccurs="0" name="salesOrderLines" type="tns:erpSalesOrderLines"/>
+          <xs:element minOccurs="0" name="salesOrderProperties" type="tns:erpSalesOrderProperties"/>
+          <xs:element minOccurs="0" name="warehouse" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="erpSalesOrderAddresses">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="salesOrderAddress" type="tns:erpSalesOrderAddress"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="erpSalesOrderAddress">
+        <xs:sequence>
+          <xs:element name="city" type="xs:string"/>
+          <xs:element name="line1" type="xs:string"/>
+          <xs:element minOccurs="0" name="line2" type="xs:string"/>
+          <xs:element name="postcode" type="xs:string"/>
+          <xs:element minOccurs="0" name="region" type="xs:string"/>
+          <xs:element minOccurs="0" name="salesOrderAddressProperties" type="tns:erpSalesOrderAddressProperties"/>
+          <xs:element name="territory" type="xs:string"/>
+          <xs:element name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="erpSalesOrderAddressProperties">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="salesOrderAddressProperty" type="tns:erpGenericProperty"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="erpSalesOrderLines">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="salesOrderLine" type="tns:erpSalesOrderLine"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="erpSalesOrderLine">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="erpProduct" type="tns:erpProduct"/>
+          <xs:element name="quantity" type="xs:int"/>
+          <xs:element minOccurs="0" name="salesOrderLineProperties" type="tns:erpSalesOrderLineProperties"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="erpSalesOrderLineProperties">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="salesOrderLineProperty" type="tns:erpGenericProperty"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="erpSalesOrderProperties">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="salesOrderProperty" type="tns:erpGenericProperty"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createSalesOrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="createSalesOrderReturn" type="tns:createSalesOrderResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createSalesOrderResult">
+        <xs:sequence>
+          <xs:element name="result" type="xs:boolean"/>
+          <xs:element name="message" type="xs:string"/>
+          <xs:element name="erpSalesOrder" type="tns:erpSalesOrder"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateProduct">
+        <xs:sequence>
+          <xs:element name="erpProduct" type="tns:erpProduct"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateProductResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="updateProductReturn" type="tns:updateProductResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateProductResult">
+        <xs:sequence>
+          <xs:element name="result" type="xs:boolean"/>
+          <xs:element name="message" type="xs:string"/>
+          <xs:element name="erpProduct" type="tns:erpProduct"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createProduct">
+        <xs:sequence>
+          <xs:element name="erpProduct" type="tns:erpProduct"/>
+          <xs:element name="siteId" type="xs:int"/>
+          <xs:element name="warehouse" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createProductResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="createProductReturn" type="tns:createProductResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createProductResult">
+        <xs:sequence>
+          <xs:element name="result" type="xs:boolean"/>
+          <xs:element name="message" type="xs:string"/>
+          <xs:element name="erpProduct" type="tns:erpProduct"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="returnsUpdate">
+        <xs:sequence>
+          <xs:element name="returnsXML" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="returnsUpdateResponse">
+        <xs:sequence>
+          <xs:element name="returnsUpdateReturn" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateSalesOrder">
+        <xs:sequence>
+          <xs:element name="erpSalesOrder" type="tns:erpSalesOrder"/>
+          <xs:element name="siteId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateSalesOrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="updateSalesOrderReturn" type="tns:updateSalesOrderResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateSalesOrderResult">
+        <xs:sequence>
+          <xs:element name="result" type="xs:boolean"/>
+          <xs:element name="message" type="xs:string"/>
+          <xs:element name="erpSalesOrder" type="tns:erpSalesOrder"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="queryProductStock">
+        <xs:sequence>
+          <xs:element name="erpProduct" type="tns:erpProduct"/>
+          <xs:element name="siteId" type="xs:int"/>
+          <xs:element name="warehouse" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="queryProductStockResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="queryProductStockReturn" type="tns:queryProductStockResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="queryProductStockResult">
+        <xs:sequence>
+          <xs:element name="result" type="xs:boolean"/>
+          <xs:element name="message" type="xs:string"/>
+          <xs:element minOccurs="0" name="erpStock" type="tns:erpStock"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="erpStock">
+        <xs:sequence>
+          <xs:element name="allocatedQty" type="xs:int"/>
+          <xs:element name="backorderQty" type="xs:int"/>
+          <xs:element name="erpProduct" type="tns:erpProduct"/>
+          <xs:element name="onorderQty" type="xs:int"/>
+          <xs:element name="physicalQty" type="xs:int"/>
+          <xs:element name="warehouse" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getSalesOrderStatus">
+        <xs:sequence>
+          <xs:element name="erpSalesOrder" type="tns:erpSalesOrder"/>
+          <xs:element name="siteId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getSalesOrderStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="getSalesOrderStatusReturn" type="tns:getSalesOrderStatusResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getSalesOrderStatusResult">
+        <xs:sequence>
+          <xs:element name="result" type="xs:boolean"/>
+          <xs:element name="message" type="xs:string"/>
+          <xs:element name="erpSalesOrderStatus" type="tns:erpSalesOrderStatus"/>
+          <xs:element minOccurs="0" name="erpProperties" type="tns:erpProperties"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="erpSalesOrderStatus">
+        <xs:sequence>
+          <xs:element name="statusCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="statusDescription" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="erpProperties">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="erpProperty" type="tns:erpGenericProperty"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cancelSalesOrder">
+        <xs:sequence>
+          <xs:element name="erpSalesOrder" type="tns:erpSalesOrder"/>
+          <xs:element name="siteId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cancelSalesOrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cancelSalesOrderReturn" type="tns:cancelSalesOrderResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cancelSalesOrderResult">
+        <xs:sequence>
+          <xs:element name="result" type="xs:boolean"/>
+          <xs:element name="message" type="xs:string"/>
+          <xs:element name="erpSalesOrder" type="tns:erpSalesOrder"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="querySalesOrderList">
+        <xs:sequence>
+          <xs:element name="salesOrderFilters" type="tns:erpSalesOrderFilters"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="erpSalesOrderFilters">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="querySalesOrderListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="querySalesOrderListReturn" type="tns:querySalesOrderListResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="querySalesOrderListResult">
+        <xs:sequence>
+          <xs:element name="result" type="xs:boolean"/>
+          <xs:element name="message" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="erpSalesOrderList" type="tns:erpSalesOrder"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="queryERPStocks">
+        <xs:sequence>
+          <xs:element name="erpStockFilters" type="tns:erpStockFilters"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="erpStockFilters">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="queryERPStocksResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="queryERPStocksReturn" type="tns:queryERPStocksResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="queryERPStocksResult">
+        <xs:sequence>
+          <xs:element name="result" type="xs:boolean"/>
+          <xs:element name="message" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" name="erpStockList" type="tns:erpStock"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="queryProductList">
+        <xs:sequence>
+          <xs:element name="erpProductFilters" type="tns:erpProductFilters"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="erpProductFilters">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="queryProductListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="queryProductListReturn" type="tns:queryProductListResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="queryProductListResult">
+        <xs:sequence>
+          <xs:element name="result" type="xs:boolean"/>
+          <xs:element name="message" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="erpProductList" type="tns:erpProduct"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="allocateStock">
+        <xs:sequence>
+          <xs:element name="erpSalesOrder" type="tns:erpSalesOrder"/>
+          <xs:element name="siteId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="allocateStockResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="allocateStockReturn" type="tns:allocateStockResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="allocateStockResult">
+        <xs:sequence>
+          <xs:element name="result" type="xs:boolean"/>
+          <xs:element name="message" type="xs:string"/>
+          <xs:element name="erpStock" type="tns:erpStock"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getProductDetails">
+        <xs:sequence>
+          <xs:element name="erpProduct" type="tns:erpProduct"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getProductDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="getProductDetailsReturn" type="tns:getProductDetailsResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getProductDetailsResult">
+        <xs:sequence>
+          <xs:element name="result" type="xs:boolean"/>
+          <xs:element name="message" type="xs:string"/>
+          <xs:element name="erpProduct" type="tns:erpProduct"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="createSalesOrder">
+    <wsdl:part element="tns:createSalesOrder" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createProduct">
+    <wsdl:part element="tns:createProduct" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryERPStocksResponse">
+    <wsdl:part element="tns:queryERPStocksResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createProductResponse">
+    <wsdl:part element="tns:createProductResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryProductList">
+    <wsdl:part element="tns:queryProductList" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryProductListResponse">
+    <wsdl:part element="tns:queryProductListResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="allocateStock">
+    <wsdl:part element="tns:allocateStock" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProductDetails">
+    <wsdl:part element="tns:getProductDetails" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeProduct">
+    <wsdl:part element="tns:removeProduct" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateProduct">
+    <wsdl:part element="tns:updateProduct" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProductDetailsResponse">
+    <wsdl:part element="tns:getProductDetailsResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="returnsUpdate">
+    <wsdl:part element="tns:returnsUpdate" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateSalesOrder">
+    <wsdl:part element="tns:updateSalesOrder" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryProductStock">
+    <wsdl:part element="tns:queryProductStock" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="allocateStockResponse">
+    <wsdl:part element="tns:allocateStockResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSalesOrderStatus">
+    <wsdl:part element="tns:getSalesOrderStatus" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelSalesOrder">
+    <wsdl:part element="tns:cancelSalesOrder" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeProductResponse">
+    <wsdl:part element="tns:removeProductResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSalesOrderStatusResponse">
+    <wsdl:part element="tns:getSalesOrderStatusResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryProductStockResponse">
+    <wsdl:part element="tns:queryProductStockResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="querySalesOrderList">
+    <wsdl:part element="tns:querySalesOrderList" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryERPStocks">
+    <wsdl:part element="tns:queryERPStocks" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateProductResponse">
+    <wsdl:part element="tns:updateProductResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createSalesOrderResponse">
+    <wsdl:part element="tns:createSalesOrderResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateSalesOrderResponse">
+    <wsdl:part element="tns:updateSalesOrderResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="querySalesOrderListResponse">
+    <wsdl:part element="tns:querySalesOrderListResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelSalesOrderResponse">
+    <wsdl:part element="tns:cancelSalesOrderResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="returnsUpdateResponse">
+    <wsdl:part element="tns:returnsUpdateResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ERPProcessing">
+    <wsdl:operation name="removeProduct">
+      <wsdl:input message="tns:removeProduct" name="removeProduct"></wsdl:input>
+      <wsdl:output message="tns:removeProductResponse" name="removeProductResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createSalesOrder">
+      <wsdl:input message="tns:createSalesOrder" name="createSalesOrder"></wsdl:input>
+      <wsdl:output message="tns:createSalesOrderResponse" name="createSalesOrderResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateProduct">
+      <wsdl:input message="tns:updateProduct" name="updateProduct"></wsdl:input>
+      <wsdl:output message="tns:updateProductResponse" name="updateProductResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createProduct">
+      <wsdl:input message="tns:createProduct" name="createProduct"></wsdl:input>
+      <wsdl:output message="tns:createProductResponse" name="createProductResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="returnsUpdate">
+      <wsdl:input message="tns:returnsUpdate" name="returnsUpdate"></wsdl:input>
+      <wsdl:output message="tns:returnsUpdateResponse" name="returnsUpdateResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateSalesOrder">
+      <wsdl:input message="tns:updateSalesOrder" name="updateSalesOrder"></wsdl:input>
+      <wsdl:output message="tns:updateSalesOrderResponse" name="updateSalesOrderResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryProductStock">
+      <wsdl:input message="tns:queryProductStock" name="queryProductStock"></wsdl:input>
+      <wsdl:output message="tns:queryProductStockResponse" name="queryProductStockResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSalesOrderStatus">
+      <wsdl:input message="tns:getSalesOrderStatus" name="getSalesOrderStatus"></wsdl:input>
+      <wsdl:output message="tns:getSalesOrderStatusResponse" name="getSalesOrderStatusResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelSalesOrder">
+      <wsdl:input message="tns:cancelSalesOrder" name="cancelSalesOrder"></wsdl:input>
+      <wsdl:output message="tns:cancelSalesOrderResponse" name="cancelSalesOrderResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="querySalesOrderList">
+      <wsdl:input message="tns:querySalesOrderList" name="querySalesOrderList"></wsdl:input>
+      <wsdl:output message="tns:querySalesOrderListResponse" name="querySalesOrderListResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryERPStocks">
+      <wsdl:input message="tns:queryERPStocks" name="queryERPStocks"></wsdl:input>
+      <wsdl:output message="tns:queryERPStocksResponse" name="queryERPStocksResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryProductList">
+      <wsdl:input message="tns:queryProductList" name="queryProductList"></wsdl:input>
+      <wsdl:output message="tns:queryProductListResponse" name="queryProductListResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="allocateStock">
+      <wsdl:input message="tns:allocateStock" name="allocateStock"></wsdl:input>
+      <wsdl:output message="tns:allocateStockResponse" name="allocateStockResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductDetails">
+      <wsdl:input message="tns:getProductDetails" name="getProductDetails"></wsdl:input>
+      <wsdl:output message="tns:getProductDetailsResponse" name="getProductDetailsResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ERPProcessingServiceSoapBinding" type="tns:ERPProcessing">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="removeProduct">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="removeProduct">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeProductResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createSalesOrder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createSalesOrder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createSalesOrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateProduct">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateProduct">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateProductResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createProduct">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createProduct">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createProductResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="returnsUpdate">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="returnsUpdate">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="returnsUpdateResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateSalesOrder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateSalesOrder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateSalesOrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryProductStock">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="queryProductStock">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="queryProductStockResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSalesOrderStatus">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getSalesOrderStatus">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getSalesOrderStatusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelSalesOrder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cancelSalesOrder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cancelSalesOrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="querySalesOrderList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="querySalesOrderList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="querySalesOrderListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryERPStocks">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="queryERPStocks">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="queryERPStocksResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryProductList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="queryProductList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="queryProductListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="allocateStock">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="allocateStock">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="allocateStockResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getProductDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProductDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ERPProcessingService">
+    <wsdl:port binding="tns:ERPProcessingServiceSoapBinding" name="ERPProcessingPort">
+      <soap:address location="http://localhost:8080/esom-ws/ERPProcessingService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/esom-ws/ERPProcessingService</con:endpoint></con:endpoints><con:operation id="5c8fa2a5-cfa6-4acb-90f4-4a2aac2f69f9" isOneWay="false" action="" name="allocateStock" bindingOperationName="allocateStock" type="Request-Response" outputName="allocateStockResponse" inputName="allocateStock" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="57bfec1b-b61b-4f8a-be1a-5c07aab4dea5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/esom-ws/ERPProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.esom.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:allocateStock>
+         <erpSalesOrder>
+            <!--Optional:-->
+            <dealerCode>?</dealerCode>
+            <!--Optional:-->
+            <erpOrderNumber>?</erpOrderNumber>
+            <orderReference>?</orderReference>
+            <!--Optional:-->
+            <salesOrderAddresses>
+               <!--Zero or more repetitions:-->
+               <salesOrderAddress>
+                  <city>?</city>
+                  <line1>?</line1>
+                  <!--Optional:-->
+                  <line2>?</line2>
+                  <postcode>?</postcode>
+                  <!--Optional:-->
+                  <region>?</region>
+                  <!--Optional:-->
+                  <salesOrderAddressProperties>
+                     <!--1 or more repetitions:-->
+                     <salesOrderAddressProperty>
+                        <erpTag>?</erpTag>
+                        <!--Optional:-->
+                        <group>?</group>
+                        <name>?</name>
+                        <value>?</value>
+                     </salesOrderAddressProperty>
+                  </salesOrderAddressProperties>
+                  <territory>?</territory>
+                  <type>?</type>
+               </salesOrderAddress>
+            </salesOrderAddresses>
+            <!--Optional:-->
+            <salesOrderLines>
+               <!--Zero or more repetitions:-->
+               <salesOrderLine>
+                  <!--Optional:-->
+                  <erpProduct>
+                     <description>?</description>
+                     <discount>?</discount>
+                     <grossPrice>?</grossPrice>
+                     <listprice>?</listprice>
+                     <name>?</name>
+                     <netprice>?</netprice>
+                     <percentagediscount>?</percentagediscount>
+                     <!--Optional:-->
+                     <productProperties>
+                        <!--1 or more repetitions:-->
+                        <productProperty>
+                           <erpTag>?</erpTag>
+                           <!--Optional:-->
+                           <group>?</group>
+                           <name>?</name>
+                           <value>?</value>
+                        </productProperty>
+                     </productProperties>
+                     <skuCode>?</skuCode>
+                     <!--Optional:-->
+                     <type>?</type>
+                  </erpProduct>
+                  <quantity>?</quantity>
+                  <!--Optional:-->
+                  <salesOrderLineProperties>
+                     <!--1 or more repetitions:-->
+                     <salesOrderLineProperty>
+                        <erpTag>?</erpTag>
+                        <!--Optional:-->
+                        <group>?</group>
+                        <name>?</name>
+                        <value>?</value>
+                     </salesOrderLineProperty>
+                  </salesOrderLineProperties>
+               </salesOrderLine>
+            </salesOrderLines>
+            <!--Optional:-->
+            <salesOrderProperties>
+               <!--Zero or more repetitions:-->
+               <salesOrderProperty>
+                  <erpTag>?</erpTag>
+                  <!--Optional:-->
+                  <group>?</group>
+                  <name>?</name>
+                  <value>?</value>
+               </salesOrderProperty>
+            </salesOrderProperties>
+            <!--Optional:-->
+            <warehouse>?</warehouse>
+         </erpSalesOrder>
+         <siteId>?</siteId>
+      </sei:allocateStock>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.esom.brandpath.com/ERPProcessing/allocateStock"/></con:call></con:operation><con:operation id="426e574c-7a97-4696-9114-e4b823e1d547" isOneWay="false" action="" name="cancelSalesOrder" bindingOperationName="cancelSalesOrder" type="Request-Response" outputName="cancelSalesOrderResponse" inputName="cancelSalesOrder" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f77047e0-76f0-4332-a14a-7ba440ea3691" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/esom-ws/ERPProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.esom.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:cancelSalesOrder>
+         <erpSalesOrder>
+            <!--Optional:-->
+            <dealerCode>?</dealerCode>
+            <!--Optional:-->
+            <erpOrderNumber>?</erpOrderNumber>
+            <orderReference>?</orderReference>
+            <!--Optional:-->
+            <salesOrderAddresses>
+               <!--Zero or more repetitions:-->
+               <salesOrderAddress>
+                  <city>?</city>
+                  <line1>?</line1>
+                  <!--Optional:-->
+                  <line2>?</line2>
+                  <postcode>?</postcode>
+                  <!--Optional:-->
+                  <region>?</region>
+                  <!--Optional:-->
+                  <salesOrderAddressProperties>
+                     <!--1 or more repetitions:-->
+                     <salesOrderAddressProperty>
+                        <erpTag>?</erpTag>
+                        <!--Optional:-->
+                        <group>?</group>
+                        <name>?</name>
+                        <value>?</value>
+                     </salesOrderAddressProperty>
+                  </salesOrderAddressProperties>
+                  <territory>?</territory>
+                  <type>?</type>
+               </salesOrderAddress>
+            </salesOrderAddresses>
+            <!--Optional:-->
+            <salesOrderLines>
+               <!--Zero or more repetitions:-->
+               <salesOrderLine>
+                  <!--Optional:-->
+                  <erpProduct>
+                     <description>?</description>
+                     <discount>?</discount>
+                     <grossPrice>?</grossPrice>
+                     <listprice>?</listprice>
+                     <name>?</name>
+                     <netprice>?</netprice>
+                     <percentagediscount>?</percentagediscount>
+                     <!--Optional:-->
+                     <productProperties>
+                        <!--1 or more repetitions:-->
+                        <productProperty>
+                           <erpTag>?</erpTag>
+                           <!--Optional:-->
+                           <group>?</group>
+                           <name>?</name>
+                           <value>?</value>
+                        </productProperty>
+                     </productProperties>
+                     <skuCode>?</skuCode>
+                     <!--Optional:-->
+                     <type>?</type>
+                  </erpProduct>
+                  <quantity>?</quantity>
+                  <!--Optional:-->
+                  <salesOrderLineProperties>
+                     <!--1 or more repetitions:-->
+                     <salesOrderLineProperty>
+                        <erpTag>?</erpTag>
+                        <!--Optional:-->
+                        <group>?</group>
+                        <name>?</name>
+                        <value>?</value>
+                     </salesOrderLineProperty>
+                  </salesOrderLineProperties>
+               </salesOrderLine>
+            </salesOrderLines>
+            <!--Optional:-->
+            <salesOrderProperties>
+               <!--Zero or more repetitions:-->
+               <salesOrderProperty>
+                  <erpTag>?</erpTag>
+                  <!--Optional:-->
+                  <group>?</group>
+                  <name>?</name>
+                  <value>?</value>
+               </salesOrderProperty>
+            </salesOrderProperties>
+            <!--Optional:-->
+            <warehouse>?</warehouse>
+         </erpSalesOrder>
+         <siteId>?</siteId>
+      </sei:cancelSalesOrder>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.esom.brandpath.com/ERPProcessing/cancelSalesOrder"/></con:call></con:operation><con:operation id="467a4b23-761e-41f5-95a2-37e9bea22f37" isOneWay="false" action="" name="createProduct" bindingOperationName="createProduct" type="Request-Response" outputName="createProductResponse" inputName="createProduct" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7b8b7257-d23a-479d-b096-1572e92591be" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/esom-ws/ERPProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.esom.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:createProduct>
+         <erpProduct>
+            <description>?</description>
+            <discount>?</discount>
+            <grossPrice>?</grossPrice>
+            <listprice>?</listprice>
+            <name>?</name>
+            <netprice>?</netprice>
+            <percentagediscount>?</percentagediscount>
+            <!--Optional:-->
+            <productProperties>
+               <!--1 or more repetitions:-->
+               <productProperty>
+                  <erpTag>?</erpTag>
+                  <!--Optional:-->
+                  <group>?</group>
+                  <name>?</name>
+                  <value>?</value>
+               </productProperty>
+            </productProperties>
+            <skuCode>?</skuCode>
+            <!--Optional:-->
+            <type>?</type>
+         </erpProduct>
+         <siteId>?</siteId>
+         <warehouse>?</warehouse>
+      </sei:createProduct>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.esom.brandpath.com/ERPProcessing/createProduct"/></con:call></con:operation><con:operation id="2982f431-018a-45da-adec-86cc7af34f92" isOneWay="false" action="" name="createSalesOrder" bindingOperationName="createSalesOrder" type="Request-Response" outputName="createSalesOrderResponse" inputName="createSalesOrder" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c5de6192-890b-4b69-91ba-fa2068d42690" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/esom-ws/ERPProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.esom.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:createSalesOrder>
+         <erpSalesOrder>
+            <!--Optional:-->
+            <dealerCode>?</dealerCode>
+            <!--Optional:-->
+            <erpOrderNumber>?</erpOrderNumber>
+            <orderReference>?</orderReference>
+            <!--Optional:-->
+            <salesOrderAddresses>
+               <!--Zero or more repetitions:-->
+               <salesOrderAddress>
+                  <city>?</city>
+                  <line1>?</line1>
+                  <!--Optional:-->
+                  <line2>?</line2>
+                  <postcode>?</postcode>
+                  <!--Optional:-->
+                  <region>?</region>
+                  <!--Optional:-->
+                  <salesOrderAddressProperties>
+                     <!--1 or more repetitions:-->
+                     <salesOrderAddressProperty>
+                        <erpTag>?</erpTag>
+                        <!--Optional:-->
+                        <group>?</group>
+                        <name>?</name>
+                        <value>?</value>
+                     </salesOrderAddressProperty>
+                  </salesOrderAddressProperties>
+                  <territory>?</territory>
+                  <type>?</type>
+               </salesOrderAddress>
+            </salesOrderAddresses>
+            <!--Optional:-->
+            <salesOrderLines>
+               <!--Zero or more repetitions:-->
+               <salesOrderLine>
+                  <!--Optional:-->
+                  <erpProduct>
+                     <description>?</description>
+                     <discount>?</discount>
+                     <grossPrice>?</grossPrice>
+                     <listprice>?</listprice>
+                     <name>?</name>
+                     <netprice>?</netprice>
+                     <percentagediscount>?</percentagediscount>
+                     <!--Optional:-->
+                     <productProperties>
+                        <!--1 or more repetitions:-->
+                        <productProperty>
+                           <erpTag>?</erpTag>
+                           <!--Optional:-->
+                           <group>?</group>
+                           <name>?</name>
+                           <value>?</value>
+                        </productProperty>
+                     </productProperties>
+                     <skuCode>?</skuCode>
+                     <!--Optional:-->
+                     <type>?</type>
+                  </erpProduct>
+                  <quantity>?</quantity>
+                  <!--Optional:-->
+                  <salesOrderLineProperties>
+                     <!--1 or more repetitions:-->
+                     <salesOrderLineProperty>
+                        <erpTag>?</erpTag>
+                        <!--Optional:-->
+                        <group>?</group>
+                        <name>?</name>
+                        <value>?</value>
+                     </salesOrderLineProperty>
+                  </salesOrderLineProperties>
+               </salesOrderLine>
+            </salesOrderLines>
+            <!--Optional:-->
+            <salesOrderProperties>
+               <!--Zero or more repetitions:-->
+               <salesOrderProperty>
+                  <erpTag>?</erpTag>
+                  <!--Optional:-->
+                  <group>?</group>
+                  <name>?</name>
+                  <value>?</value>
+               </salesOrderProperty>
+            </salesOrderProperties>
+            <!--Optional:-->
+            <warehouse>?</warehouse>
+         </erpSalesOrder>
+         <siteId>?</siteId>
+      </sei:createSalesOrder>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.esom.brandpath.com/ERPProcessing/createSalesOrder"/></con:call></con:operation><con:operation id="d4bb9953-2d1d-4907-913d-5d84ef809364" isOneWay="false" action="" name="getProductDetails" bindingOperationName="getProductDetails" type="Request-Response" outputName="getProductDetailsResponse" inputName="getProductDetails" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1d39b3c4-cbae-47da-91de-ce5ed435b561" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/esom-ws/ERPProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.esom.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:getProductDetails>
+         <erpProduct>
+            <description>?</description>
+            <discount>?</discount>
+            <grossPrice>?</grossPrice>
+            <listprice>?</listprice>
+            <name>?</name>
+            <netprice>?</netprice>
+            <percentagediscount>?</percentagediscount>
+            <!--Optional:-->
+            <productProperties>
+               <!--1 or more repetitions:-->
+               <productProperty>
+                  <erpTag>?</erpTag>
+                  <!--Optional:-->
+                  <group>?</group>
+                  <name>?</name>
+                  <value>?</value>
+               </productProperty>
+            </productProperties>
+            <skuCode>?</skuCode>
+            <!--Optional:-->
+            <type>?</type>
+         </erpProduct>
+      </sei:getProductDetails>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.esom.brandpath.com/ERPProcessing/getProductDetails"/></con:call></con:operation><con:operation id="72270f3b-7810-46e4-9e20-8f14047acb89" isOneWay="false" action="" name="getSalesOrderStatus" bindingOperationName="getSalesOrderStatus" type="Request-Response" outputName="getSalesOrderStatusResponse" inputName="getSalesOrderStatus" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="790277b0-6c17-497b-a2a8-19b62a994e26" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/esom-ws/ERPProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.esom.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:getSalesOrderStatus>
+         <erpSalesOrder>
+            <!--Optional:-->
+            <dealerCode>?</dealerCode>
+            <!--Optional:-->
+            <erpOrderNumber>?</erpOrderNumber>
+            <orderReference>?</orderReference>
+            <!--Optional:-->
+            <salesOrderAddresses>
+               <!--Zero or more repetitions:-->
+               <salesOrderAddress>
+                  <city>?</city>
+                  <line1>?</line1>
+                  <!--Optional:-->
+                  <line2>?</line2>
+                  <postcode>?</postcode>
+                  <!--Optional:-->
+                  <region>?</region>
+                  <!--Optional:-->
+                  <salesOrderAddressProperties>
+                     <!--1 or more repetitions:-->
+                     <salesOrderAddressProperty>
+                        <erpTag>?</erpTag>
+                        <!--Optional:-->
+                        <group>?</group>
+                        <name>?</name>
+                        <value>?</value>
+                     </salesOrderAddressProperty>
+                  </salesOrderAddressProperties>
+                  <territory>?</territory>
+                  <type>?</type>
+               </salesOrderAddress>
+            </salesOrderAddresses>
+            <!--Optional:-->
+            <salesOrderLines>
+               <!--Zero or more repetitions:-->
+               <salesOrderLine>
+                  <!--Optional:-->
+                  <erpProduct>
+                     <description>?</description>
+                     <discount>?</discount>
+                     <grossPrice>?</grossPrice>
+                     <listprice>?</listprice>
+                     <name>?</name>
+                     <netprice>?</netprice>
+                     <percentagediscount>?</percentagediscount>
+                     <!--Optional:-->
+                     <productProperties>
+                        <!--1 or more repetitions:-->
+                        <productProperty>
+                           <erpTag>?</erpTag>
+                           <!--Optional:-->
+                           <group>?</group>
+                           <name>?</name>
+                           <value>?</value>
+                        </productProperty>
+                     </productProperties>
+                     <skuCode>?</skuCode>
+                     <!--Optional:-->
+                     <type>?</type>
+                  </erpProduct>
+                  <quantity>?</quantity>
+                  <!--Optional:-->
+                  <salesOrderLineProperties>
+                     <!--1 or more repetitions:-->
+                     <salesOrderLineProperty>
+                        <erpTag>?</erpTag>
+                        <!--Optional:-->
+                        <group>?</group>
+                        <name>?</name>
+                        <value>?</value>
+                     </salesOrderLineProperty>
+                  </salesOrderLineProperties>
+               </salesOrderLine>
+            </salesOrderLines>
+            <!--Optional:-->
+            <salesOrderProperties>
+               <!--Zero or more repetitions:-->
+               <salesOrderProperty>
+                  <erpTag>?</erpTag>
+                  <!--Optional:-->
+                  <group>?</group>
+                  <name>?</name>
+                  <value>?</value>
+               </salesOrderProperty>
+            </salesOrderProperties>
+            <!--Optional:-->
+            <warehouse>?</warehouse>
+         </erpSalesOrder>
+         <siteId>?</siteId>
+      </sei:getSalesOrderStatus>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.esom.brandpath.com/ERPProcessing/getSalesOrderStatus"/></con:call></con:operation><con:operation id="b667946b-7bfe-46a9-8902-b93f58db185e" isOneWay="false" action="" name="queryERPStocks" bindingOperationName="queryERPStocks" type="Request-Response" outputName="queryERPStocksResponse" inputName="queryERPStocks" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c7abdec5-4586-4ce0-be14-025a2cbcbeec" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/esom-ws/ERPProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.esom.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:queryERPStocks>
+         <erpStockFilters/>
+      </sei:queryERPStocks>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.esom.brandpath.com/ERPProcessing/queryERPStocks"/></con:call></con:operation><con:operation id="a49966c3-e31e-46b2-835a-d377224aa3ff" isOneWay="false" action="" name="queryProductList" bindingOperationName="queryProductList" type="Request-Response" outputName="queryProductListResponse" inputName="queryProductList" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bca3d019-07cd-41ef-a543-1a6b77035032" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/esom-ws/ERPProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.esom.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:queryProductList>
+         <erpProductFilters/>
+      </sei:queryProductList>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.esom.brandpath.com/ERPProcessing/queryProductList"/></con:call></con:operation><con:operation id="8dfd676f-2d85-4c51-8bcd-a5659dd97ff1" isOneWay="false" action="" name="queryProductStock" bindingOperationName="queryProductStock" type="Request-Response" outputName="queryProductStockResponse" inputName="queryProductStock" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="072ea383-9e2b-47e4-8e0d-274173a694dc" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/esom-ws/ERPProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.esom.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:queryProductStock>
+         <erpProduct>
+            <description>?</description>
+            <discount>?</discount>
+            <grossPrice>?</grossPrice>
+            <listprice>?</listprice>
+            <name>?</name>
+            <netprice>?</netprice>
+            <percentagediscount>?</percentagediscount>
+            <!--Optional:-->
+            <productProperties>
+               <!--1 or more repetitions:-->
+               <productProperty>
+                  <erpTag>?</erpTag>
+                  <!--Optional:-->
+                  <group>?</group>
+                  <name>?</name>
+                  <value>?</value>
+               </productProperty>
+            </productProperties>
+            <skuCode>?</skuCode>
+            <!--Optional:-->
+            <type>?</type>
+         </erpProduct>
+         <siteId>?</siteId>
+         <warehouse>?</warehouse>
+      </sei:queryProductStock>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.esom.brandpath.com/ERPProcessing/queryProductStock"/></con:call></con:operation><con:operation id="5a7f4e98-b8c5-43c0-aed9-87788f49ef9e" isOneWay="false" action="" name="querySalesOrderList" bindingOperationName="querySalesOrderList" type="Request-Response" outputName="querySalesOrderListResponse" inputName="querySalesOrderList" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f7c6ae35-d23e-4797-af3e-4914739162ea" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/esom-ws/ERPProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.esom.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:querySalesOrderList>
+         <salesOrderFilters/>
+      </sei:querySalesOrderList>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.esom.brandpath.com/ERPProcessing/querySalesOrderList"/></con:call></con:operation><con:operation id="857acfbf-6153-4d97-ae75-f384d9889fca" isOneWay="false" action="" name="removeProduct" bindingOperationName="removeProduct" type="Request-Response" outputName="removeProductResponse" inputName="removeProduct" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e73d5ec8-76b7-41cf-aa80-4a5f7bad25d5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/esom-ws/ERPProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.esom.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:removeProduct>
+         <erpProduct>
+            <description>?</description>
+            <discount>?</discount>
+            <grossPrice>?</grossPrice>
+            <listprice>?</listprice>
+            <name>?</name>
+            <netprice>?</netprice>
+            <percentagediscount>?</percentagediscount>
+            <!--Optional:-->
+            <productProperties>
+               <!--1 or more repetitions:-->
+               <productProperty>
+                  <erpTag>?</erpTag>
+                  <!--Optional:-->
+                  <group>?</group>
+                  <name>?</name>
+                  <value>?</value>
+               </productProperty>
+            </productProperties>
+            <skuCode>?</skuCode>
+            <!--Optional:-->
+            <type>?</type>
+         </erpProduct>
+      </sei:removeProduct>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.esom.brandpath.com/ERPProcessing/removeProduct"/></con:call></con:operation><con:operation id="874ec33f-207e-48b4-b202-3101822b2e5f" isOneWay="false" action="" name="returnsUpdate" bindingOperationName="returnsUpdate" type="Request-Response" outputName="returnsUpdateResponse" inputName="returnsUpdate" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="86c99fc0-9e35-4ba6-832c-25aa993f9f35" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/esom-ws/ERPProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.esom.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:returnsUpdate>
+         <returnsXML><![CDATA[<Catalogue xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		   xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2"
+		   xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2  ../UBL%202.1%20schema/maindoc/UBL-Catalogue-2.1.xsd">
+	<cbc:ID>RETURNS</cbc:ID>
+	<cbc:Name>RETURNS</cbc:Name>
+	<cbc:IssueDate>2016-06-29</cbc:IssueDate>
+	<cac:ProviderParty/>
+	<cac:ReceiverParty/>
+	<cac:ContractorCustomerParty>
+		<cbc:CustomerAssignedAccountID>expSamsung</cbc:CustomerAssignedAccountID>
+		<cbc:SupplierAssignedAccountID>DS</cbc:SupplierAssignedAccountID>
+		<cbc:AdditionalAccountID>ex3s1ms0ng</cbc:AdditionalAccountID>
+	</cac:ContractorCustomerParty>
+	<cac:CatalogueLine>
+		<cbc:ID>MB-MP16DA/EU</cbc:ID>
+		<cac:ItemComparison>
+			<cbc:PriceAmount currencyID="GBP">0</cbc:PriceAmount>
+			<cbc:Quantity>1</cbc:Quantity>
+		</cac:ItemComparison>
+		<cac:Item>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>OrderNo</cbc:Name>
+				<cbc:Value>I600442</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>CustomerOrderReference</cbc:Name>
+				<cbc:Value>66KU5523AFA2</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>ProductCode</cbc:Name>
+				<cbc:Value>MB-MP16DA/EU</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Quantity</cbc:Name>
+				<cbc:Value>1</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Serial</cbc:Name>
+				<cbc:Value/>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Reason</cbc:Name>
+				<cbc:Value>14 Day</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Comments</cbc:Name>
+				<cbc:Value>Customer change of mind.</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>RANumber</cbc:Name>
+				<cbc:Value>RMA-I600442-529107_7325</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Grading</cbc:Name>
+				<cbc:Value>5</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Customer</cbc:Name>
+				<cbc:Value>14771S</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Status</cbc:Name>
+				<cbc:Value>201</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>StatusDesc</cbc:Name>
+				<cbc:Value>Send Response Line Completed</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>return_id</cbc:Name>
+				<cbc:Value>7325</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>account_code</cbc:Name>
+				<cbc:Value>14771S</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>status_code</cbc:Name>
+				<cbc:Value>201</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>statusDesc</cbc:Name>
+				<cbc:Value>Send Response Line Completed</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Date_Issued</cbc:Name>
+				<cbc:Value>2016-06-29 17:27:26.61</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Date_Received</cbc:Name>
+				<cbc:Value>2016-06-29 19:27:01.0</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Date_Accepted</cbc:Name>
+				<cbc:Value>2016-06-29 19:27:01.0</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Product_nett_val</cbc:Name>
+				<cbc:Value>0</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>NetValue</cbc:Name>
+				<cbc:Value>0</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>bin_location</cbc:Name>
+				<cbc:Value>RET-A</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>pack_grade</cbc:Name>
+				<cbc:Value>5</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>customer_wish</cbc:Name>
+				<cbc:Value>Refund</cbc:Value>
+			</cac:AdditionalItemProperty>
+		</cac:Item>
+	</cac:CatalogueLine>
+</Catalogue>]]]]>><![CDATA[
+		</returnsXML>
+      </sei:returnsUpdate>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.esom.brandpath.com/ERPProcessing/returnsUpdate"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="46226fa4-4e17-4545-af9c-d877acf0228f" isOneWay="false" action="" name="updateProduct" bindingOperationName="updateProduct" type="Request-Response" outputName="updateProductResponse" inputName="updateProduct" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d64846ed-4f75-452b-9d77-cf79f4668ce9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/esom-ws/ERPProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.esom.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:updateProduct>
+         <erpProduct>
+            <description>?</description>
+            <discount>?</discount>
+            <grossPrice>?</grossPrice>
+            <listprice>?</listprice>
+            <name>?</name>
+            <netprice>?</netprice>
+            <percentagediscount>?</percentagediscount>
+            <!--Optional:-->
+            <productProperties>
+               <!--1 or more repetitions:-->
+               <productProperty>
+                  <erpTag>?</erpTag>
+                  <!--Optional:-->
+                  <group>?</group>
+                  <name>?</name>
+                  <value>?</value>
+               </productProperty>
+            </productProperties>
+            <skuCode>?</skuCode>
+            <!--Optional:-->
+            <type>?</type>
+         </erpProduct>
+      </sei:updateProduct>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.esom.brandpath.com/ERPProcessing/updateProduct"/></con:call></con:operation><con:operation id="7788a865-92a7-4506-a6ff-5fc3d3c44ab7" isOneWay="false" action="" name="updateSalesOrder" bindingOperationName="updateSalesOrder" type="Request-Response" outputName="updateSalesOrderResponse" inputName="updateSalesOrder" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="48d0b6b0-7166-4adf-98c6-16db91536781" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/esom-ws/ERPProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.esom.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:updateSalesOrder>
+         <erpSalesOrder>
+            <!--Optional:-->
+            <dealerCode>?</dealerCode>
+            <!--Optional:-->
+            <erpOrderNumber>?</erpOrderNumber>
+            <orderReference>?</orderReference>
+            <!--Optional:-->
+            <salesOrderAddresses>
+               <!--Zero or more repetitions:-->
+               <salesOrderAddress>
+                  <city>?</city>
+                  <line1>?</line1>
+                  <!--Optional:-->
+                  <line2>?</line2>
+                  <postcode>?</postcode>
+                  <!--Optional:-->
+                  <region>?</region>
+                  <!--Optional:-->
+                  <salesOrderAddressProperties>
+                     <!--1 or more repetitions:-->
+                     <salesOrderAddressProperty>
+                        <erpTag>?</erpTag>
+                        <!--Optional:-->
+                        <group>?</group>
+                        <name>?</name>
+                        <value>?</value>
+                     </salesOrderAddressProperty>
+                  </salesOrderAddressProperties>
+                  <territory>?</territory>
+                  <type>?</type>
+               </salesOrderAddress>
+            </salesOrderAddresses>
+            <!--Optional:-->
+            <salesOrderLines>
+               <!--Zero or more repetitions:-->
+               <salesOrderLine>
+                  <!--Optional:-->
+                  <erpProduct>
+                     <description>?</description>
+                     <discount>?</discount>
+                     <grossPrice>?</grossPrice>
+                     <listprice>?</listprice>
+                     <name>?</name>
+                     <netprice>?</netprice>
+                     <percentagediscount>?</percentagediscount>
+                     <!--Optional:-->
+                     <productProperties>
+                        <!--1 or more repetitions:-->
+                        <productProperty>
+                           <erpTag>?</erpTag>
+                           <!--Optional:-->
+                           <group>?</group>
+                           <name>?</name>
+                           <value>?</value>
+                        </productProperty>
+                     </productProperties>
+                     <skuCode>?</skuCode>
+                     <!--Optional:-->
+                     <type>?</type>
+                  </erpProduct>
+                  <quantity>?</quantity>
+                  <!--Optional:-->
+                  <salesOrderLineProperties>
+                     <!--1 or more repetitions:-->
+                     <salesOrderLineProperty>
+                        <erpTag>?</erpTag>
+                        <!--Optional:-->
+                        <group>?</group>
+                        <name>?</name>
+                        <value>?</value>
+                     </salesOrderLineProperty>
+                  </salesOrderLineProperties>
+               </salesOrderLine>
+            </salesOrderLines>
+            <!--Optional:-->
+            <salesOrderProperties>
+               <!--Zero or more repetitions:-->
+               <salesOrderProperty>
+                  <erpTag>?</erpTag>
+                  <!--Optional:-->
+                  <group>?</group>
+                  <name>?</name>
+                  <value>?</value>
+               </salesOrderProperty>
+            </salesOrderProperties>
+            <!--Optional:-->
+            <warehouse>?</warehouse>
+         </erpSalesOrder>
+         <siteId>?</siteId>
+      </sei:updateSalesOrder>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.esom.brandpath.com/ERPProcessing/updateSalesOrder"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="TokenServiceSoapBinding" type="wsdl" bindingName="{http://www.brandpath.com/oms/ws/jaxws/TokenService}TokenServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/oms-keycloak-token/TokenService?wsdl" id="08ec5a16-12db-4493-ac9d-bdfd25709a15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/oms-keycloak-token/TokenService?wsdl"><con:part><con:url>http://localhost:8080/oms-keycloak-token/TokenService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="TokenService" targetNamespace="http://www.brandpath.com/oms/ws/jaxws/TokenService" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.brandpath.com/oms/ws/jaxws/TokenService" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.brandpath.com/oms/ws/jaxws/TokenService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getToken" type="tns:getToken"/>
+      <xs:element name="getTokenResponse" type="tns:getTokenResponse"/>
+      <xs:element name="isTokenActive" type="tns:isTokenActive"/>
+      <xs:element name="isTokenActiveResponse" type="tns:isTokenActiveResponse"/>
+      <xs:complexType name="isTokenActive">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="isTokenActiveResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getToken">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="getTokenResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:accessTokenResponse"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="accessTokenResponse">
+        <xs:sequence>
+          <xs:element name="expiresIn" type="xs:long"/>
+          <xs:element minOccurs="0" name="idToken" type="xs:string"/>
+          <xs:element name="notBeforePolicy" type="xs:int"/>
+          <xs:element name="refreshExpiresIn" type="xs:long"/>
+          <xs:element minOccurs="0" name="refreshToken" type="xs:string"/>
+          <xs:element minOccurs="0" name="sessionState" type="xs:string"/>
+          <xs:element minOccurs="0" name="token" type="xs:string"/>
+          <xs:element minOccurs="0" name="tokenType" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GenericSoapFault" type="tns:GenericSoapFault"/>
+      <xs:complexType name="GenericSoapFault">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="VerificationException" type="tns:VerificationException"/>
+      <xs:complexType name="VerificationException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="isTokenActive">
+    <wsdl:part element="tns:isTokenActive" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getToken">
+    <wsdl:part element="tns:getToken" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isTokenActiveResponse">
+    <wsdl:part element="tns:isTokenActiveResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GenericSoapFault">
+    <wsdl:part element="tns:GenericSoapFault" name="GenericSoapFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="VerificationException">
+    <wsdl:part element="tns:VerificationException" name="VerificationException"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTokenResponse">
+    <wsdl:part element="tns:getTokenResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="TokenService">
+    <wsdl:operation name="isTokenActive">
+      <wsdl:input message="tns:isTokenActive" name="isTokenActive"></wsdl:input>
+      <wsdl:output message="tns:isTokenActiveResponse" name="isTokenActiveResponse"></wsdl:output>
+      <wsdl:fault message="tns:GenericSoapFault" name="GenericSoapFault"></wsdl:fault>
+      <wsdl:fault message="tns:VerificationException" name="VerificationException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getToken">
+      <wsdl:input message="tns:getToken" name="getToken"></wsdl:input>
+      <wsdl:output message="tns:getTokenResponse" name="getTokenResponse"></wsdl:output>
+      <wsdl:fault message="tns:GenericSoapFault" name="GenericSoapFault"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TokenServiceSoapBinding" type="tns:TokenService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="isTokenActive">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="isTokenActive">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isTokenActiveResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GenericSoapFault">
+        <soap:fault name="GenericSoapFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="VerificationException">
+        <soap:fault name="VerificationException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getToken">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getToken">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTokenResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GenericSoapFault">
+        <soap:fault name="GenericSoapFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TokenService">
+    <wsdl:port binding="tns:TokenServiceSoapBinding" name="Token">
+      <soap:address location="http://localhost:8080/oms-keycloak-token"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/oms-keycloak-token</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="getToken" bindingOperationName="getToken" type="Request-Response" outputName="getTokenResponse" inputName="getToken" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="a733daa4-9732-4c34-a394-6f4a223db4f9"><con:settings/><con:call name="Request 1" id="ea4a88b2-270d-44b1-8ba4-e9ed0a0d4d3e"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="userName" value="oms-ws"/>
+  &lt;con:entry key="password" value="oms-ws12.GHgfL1"/>
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/oms-keycloak-token</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tok="http://www.brandpath.com/oms/ws/jaxws/TokenService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tok:getToken/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.brandpath.com/oms/ws/jaxws/TokenService/TokenService/getToken"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="isTokenActive" bindingOperationName="isTokenActive" type="Request-Response" outputName="isTokenActiveResponse" inputName="isTokenActive" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="b92a02d1-c77d-401e-bbf2-a5b29ece3bc9"><con:settings/><con:call name="Request 1" id="4816e056-ff35-4015-add0-8e957c9e2a0d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/oms-keycloak-token</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tok="http://www.brandpath.com/oms/ws/jaxws/TokenService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tok:isTokenActive>
+         <!--Optional:-->
+         <arg0>eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiJkZGRjYzhkOC0yZTNhLTRmNzUtOGY3NC1mMjRiNmY5NWQ1NTAiLCJleHAiOjE0MjYwNjc2MTEsIm5iZiI6MCwiaWF0IjoxNDI2MDY3MzExLCJpc3MiOiJicmFuZHBhdGgiLCJhdWQiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzdWIiOiI1Y2UxZjBlZi00OTcwLTRiZmEtYjlhNC1jM2IyNTllZmFjOGEiLCJhenAiOiJvbXMta2V5Y2xvYWstdG9rZW4ifQ.VnzwkJcxZ5wX7sumILIlUAcgVtNolCTST9gFZN0iTJ_55UPcZXS3zuM--UJDE9AxKnqg5XG46TVckHPh1df7L1l4JRyT-xRHOC9-eiAnRGD9dGY9RuEp1aHxCKR37UxZMLgjuDHzDKzr_mP_O20hCrgBGeW8LbnixllfrydnGI4</arg0>
+      </tok:isTokenActive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.brandpath.com/oms/ws/jaxws/TokenService/TokenService/isTokenActive"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="OrderProcessingServiceSoapBinding" type="wsdl" bindingName="{http://sei.ws.oms.brandpath.com/}OrderProcessingServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://omsdev.optimus.local:8080/oms-ws/OrderProcessingService?wsdl" id="9aa8c463-f64c-4bd4-84e8-f28eac0e4bd4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://omsdev.optimus.local:8080/oms-ws/OrderProcessingService?wsdl"><con:part><con:url>http://omsdev.optimus.local:8080/oms-ws/OrderProcessingService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="OrderProcessingService" targetNamespace="http://sei.ws.oms.brandpath.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://sei.ws.oms.brandpath.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://sei.ws.oms.brandpath.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="CreateOrderResult" type="tns:createOrderResult"/>
+      <xs:element name="createOrder" type="tns:createOrder"/>
+      <xs:element name="createOrderResponse" type="tns:createOrderResponse"/>
+      <xs:element name="property" type="tns:property"/>
+      <xs:complexType name="createOrder">
+        <xs:sequence>
+          <xs:element name="authentication" type="tns:authentication"/>
+          <xs:element name="orderHeader" type="tns:orderHeader"/>
+          <xs:element name="orderPackages" type="tns:orderPackages"/>
+          <xs:element name="orderAddresses" type="tns:orderAddresses"/>
+          <xs:element minOccurs="0" name="orderComments" type="tns:orderComments"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="authentication">
+        <xs:sequence>
+          <xs:element name="channelTag" type="xs:string"/>
+          <xs:element name="clientTag" type="xs:string"/>
+          <xs:element name="siteTag" type="xs:string"/>
+          <xs:element name="territoryCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderHeader">
+        <xs:sequence>
+          <xs:element name="language" type="xs:string"/>
+          <xs:element name="orderReference" type="xs:string"/>
+          <xs:element name="placedDate" type="xs:dateTime"/>
+          <xs:element name="orderProperties" type="tns:orderProperties"/>
+          <xs:element name="statusLabel" type="xs:string"/>
+          <xs:element name="territoryCode" type="xs:string"/>
+          <xs:element name="totalDiscount" type="xs:decimal"/>
+          <xs:element name="totalPrice" type="xs:decimal"/>
+          <xs:element name="totalTax" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="totalWeight" type="xs:decimal"/>
+          <xs:element name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderProperties">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="orderProperty" type="tns:property"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="property">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string"/>
+          <xs:element name="value" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderPackages">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="orderPackage" type="tns:orderPackage"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderPackage">
+        <xs:sequence>
+          <xs:element name="bundleReference" type="xs:string"/>
+          <xs:element name="discount" type="xs:decimal"/>
+          <xs:element name="discountType" type="xs:string"/>
+          <xs:element minOccurs="0" name="offeringId" type="xs:string"/>
+          <xs:element name="packageItems" type="tns:packageItems"/>
+          <xs:element name="price" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="quantity" type="xs:decimal"/>
+          <xs:element name="tax" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="weight" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="packageItems">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="packageItem" type="tns:packageItem"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="packageItem">
+        <xs:sequence>
+          <xs:element name="price" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="productDescription" type="xs:string"/>
+          <xs:element name="productId" type="xs:string"/>
+          <xs:element name="itemProperties" type="tns:packageItemProperties"/>
+          <xs:element name="quantity" type="xs:decimal"/>
+          <xs:element name="quantityUnitId" type="xs:int"/>
+          <xs:element name="tax" type="xs:decimal"/>
+          <xs:element name="taxRate" type="xs:int"/>
+          <xs:element name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="packageItemProperties">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="itemProperty" type="tns:property"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderAddresses">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="orderAddress" type="tns:orderAddress"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderAddress">
+        <xs:sequence>
+          <xs:element name="city" type="xs:string"/>
+          <xs:element name="line1" type="xs:string"/>
+          <xs:element minOccurs="0" name="line2" type="xs:string"/>
+          <xs:element minOccurs="0" name="postcode" type="xs:string"/>
+          <xs:element minOccurs="0" name="region" type="xs:string"/>
+          <xs:element name="territoryCode" type="xs:string"/>
+          <xs:element name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderComments">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="orderComment" type="tns:orderComment"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderComment">
+        <xs:sequence>
+          <xs:element name="comment" type="xs:string"/>
+          <xs:element name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createOrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="createOrderReturn" type="tns:createOrderResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createOrderResult">
+        <xs:sequence>
+          <xs:element name="result" type="xs:boolean"/>
+          <xs:element name="message" type="xs:string"/>
+          <xs:element minOccurs="0" name="orderId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="createOrderResponse">
+    <wsdl:part element="tns:createOrderResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createOrder">
+    <wsdl:part element="tns:createOrder" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="OrderProcessing">
+    <wsdl:operation name="createOrder">
+      <wsdl:input message="tns:createOrder" name="createOrder"></wsdl:input>
+      <wsdl:output message="tns:createOrderResponse" name="createOrderResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OrderProcessingServiceSoapBinding" type="tns:OrderProcessing">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="createOrder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createOrder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createOrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OrderProcessingService">
+    <wsdl:port binding="tns:OrderProcessingServiceSoapBinding" name="OrderProcessingPort">
+      <soap:address location="http://localhost:8080/oms-ws/OrderProcessingService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/oms-ws-1.0.0/OrderProcessingService</con:endpoint><con:endpoint>http://localhost:8080/oms-ws/OrderProcessingService</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="createOrder" bindingOperationName="createOrder" type="Request-Response" outputName="createOrderResponse" inputName="createOrder" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="26f49f16-7127-42b2-be77-2ff71356ce2d"><con:settings/><con:call name="Request 1" id="d80198e7-a2f3-44c7-8cf7-d971adf2d121"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI2N2JkNTFkMS1hYThiLTQ1YjAtYmVhMi1iY2IxNzNhY2M5ZDEiLCJleHAiOjE0MjUzOTgzMTIsIm5iZiI6MCwiaWF0IjoxNDI1Mzk4MDEyLCJpc3MiOiJicmFuZHBhdGgiLCJhdWQiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzdWIiOiI1Y2UxZjBlZi00OTcwLTRiZmEtYjlhNC1jM2IyNTllZmFjOGEiLCJhenAiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzZXNzaW9uX3N0YXRlIjoiOGQ4NGJiNDUtNDFiMi00MDUzLTk1NWQtYjA2YTQzYmEzZTgzIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9yZGVyLWFwcHJvdmVyIiwib3JkZXItcHJvY2Vzc29yIiwib3JkZXItdmlld2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsib21zLXdzMiI6eyJyb2xlcyI6WyJvcmRlci1jcmVhdGUiXX0sIm9tcyI6eyJyb2xlcyI6WyJhY2Nlc3Mtb21zIiwidmlldy1vcmRlciIsImFwcHJvdmUtb3JkZXIiLCJhbWVuZC1vcmRlciIsImNoYW5nZS1wYXltZW50Il19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50Iiwidmlldy1wcm9maWxlIl19fX0.Ze6Yd9HasPhPdDpBMZQiJSzkzF4mFyk9WmnqlqCoY4XlC6b8ioPmfYFTin3G191nsl63w_tbquna9NmcTLcypvERzs0CXv3u3ydXwUCvKO6kWGN0_hzSNZdzJF3-9fzl0bpCGZWsNgxh052dMAWpYfd-dgWaXWENC0ItUm5GZQQ" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/oms-ws/OrderProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.oms.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:createOrder>
+         <authentication>
+            <clientTag>BRANDPATH</clientTag>
+            <channelTag>ONLINE</channelTag>
+            <siteTag>MICROSITE</siteTag>
+            <territoryCode>ROU</territoryCode>
+         </authentication>
+         <orderHeader>
+            <language>ROM</language>
+            <orderReference>test</orderReference>
+            <placedDate>2015-02-06T15:55:23.923</placedDate>
+            <orderProperties>
+            	<!--1 or more repetitions:-->
+            	<orderProperty>
+	               <name>FIRSTNAME</name>
+	               <value>test11</value>
+               </orderProperty>
+               <orderProperty>
+                    <name>EMAIL</name>
+	               <value>test40@dd.com</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>MIDDLENAME</name>
+	               <value>test12</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>LASTNAME</name>
+	               <value>test21</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>TITLE</name>
+	               <value>Mrs</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>TITLE</name>
+	               <value>Mrs</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>PHONENUMBER</name>
+	               <value>777test31</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>EMAIL</name>
+	               <value>test41@s.ss</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>EMAIL</name>
+	               <value>test4sss2@ccc.ro</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>TEST</name>
+	               <value>testr1</value>
+               </orderProperty>
+            </orderProperties>
+            <statusLabel>Awaiting</statusLabel>
+            <territory>EUR</territory>
+            <totalDiscount>333</totalDiscount>
+            <totalPrice>34</totalPrice>
+            <totalVAT>23</totalVAT>
+            <type>Basic</type>
+         </orderHeader>
+         <orderItems>
+         	   <!--1 or more repetitions:-->
+         	   <orderItem>
+	            <discount>23</discount>
+	            <discountType>test</discountType>
+	            <offeringCode>test</offeringCode>
+	            <orderItemReference>BLA!</orderItemReference>
+	            <price>44</price>
+	            <!--Zero or more repetitions:-->
+	            <itemProperties>
+	               <!--Zero or more repetitions:-->
+                  	<itemProperty>
+                       <name>WEIGHT</name>
+                       <value>12.34</value>
+                  	</itemProperty>
+                  	<itemProperty>
+                       <name>bla</name>
+                       <value>asdsad</value>
+                  	</itemProperty>
+                  	<itemProperty>
+                       <name>COLOR</name>
+                       <value>blue</value>
+                  	</itemProperty>
+                  	<itemProperty>
+                       <name>COLOR</name>
+                       <value>white</value>
+                  	</itemProperty>
+	            </itemProperties>
+	            <quantity>12</quantity>
+	            <type>HANDSET</type>
+	            <vat>3</vat>
+	        </orderItem>
+         </orderItems>
+         <orderAddresses>
+              <!--1 or more repetitions:-->
+	         <orderAddress>
+	            <city>test</city>
+	            <line1>test</line1>
+	            <!--Optional:-->
+	            <line2>test</line2>
+	            <!--Optional:-->
+	            <postcode>test</postcode>
+	            <!--Optional:-->
+	            <region>test</region>
+	            <territory>1</territory>
+	            <type>2</type>
+	         </orderAddress>
+	    </orderAddresses>
+         <!--Optional:-->
+         <orderComments>
+            <!--1 or more repetitions:-->
+            <orderComment>
+               <comment>YES Comment!</comment>
+               <type>POSITIVE</type>
+            </orderComment>
+         </orderComments>
+      </sei:createOrder>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>asd</con:username><con:password>asda</con:password><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://so.ws.oms.optimus.com/OrderProcessing/createOrder"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Request New" id="cad1c629-d803-4e84-ab18-5bb03bf68939"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/oms-ws-1.0.0/OrderProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.oms.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:createOrder>
+         <authentication>
+            <channelTag>?</channelTag>
+            <clientTag>?</clientTag>
+            <siteTag>?</siteTag>
+            <territoryCode>?</territoryCode>
+         </authentication>
+         <orderHeader>
+            <language>?</language>
+            <orderReference>?</orderReference>
+            <placedDate>?</placedDate>
+            <orderProperties>
+               <!--1 or more repetitions:-->
+               <orderProperty>
+                  <name>?</name>
+                  <value>?</value>
+               </orderProperty>
+            </orderProperties>
+            <statusLabel>?</statusLabel>
+            <territoryCode>?</territoryCode>
+            <totalDiscount>?</totalDiscount>
+            <totalPrice>?</totalPrice>
+            <totalTax>?</totalTax>
+            <!--Optional:-->
+            <totalWeight>?</totalWeight>
+            <type>?</type>
+         </orderHeader>
+         <orderPackages>
+            <!--1 or more repetitions:-->
+            <orderPackage>
+               <bundleReference>?</bundleReference>
+               <discount>?</discount>
+               <discountType>?</discountType>
+               <!--Optional:-->
+               <offeringId>?</offeringId>
+               <packageItems>
+                  <!--1 or more repetitions:-->
+                  <packageItem>
+                     <price>?</price>
+                     <!--Optional:-->
+                     <productDescription>?</productDescription>
+                     <productId>?</productId>
+                     <itemProperties>
+                        <!--Zero or more repetitions:-->
+                        <itemProperty>
+                           <name>?</name>
+                           <value>?</value>
+                        </itemProperty>
+                     </itemProperties>
+                     <quantity>?</quantity>
+                     <quantityUnitId>?</quantityUnitId>
+                     <tax>?</tax>
+                     <taxRate>?</taxRate>
+                     <type>?</type>
+                  </packageItem>
+               </packageItems>
+               <price>?</price>
+               <!--Optional:-->
+               <quantity>?</quantity>
+               <tax>?</tax>
+               <!--Optional:-->
+               <weight>?</weight>
+            </orderPackage>
+         </orderPackages>
+         <orderAddresses>
+            <!--1 or more repetitions:-->
+            <orderAddress>
+               <city>?</city>
+               <line1>?</line1>
+               <!--Optional:-->
+               <line2>?</line2>
+               <!--Optional:-->
+               <postcode>?</postcode>
+               <!--Optional:-->
+               <region>?</region>
+               <territoryCode>?</territoryCode>
+               <type>?</type>
+            </orderAddress>
+         </orderAddresses>
+         <!--Optional:-->
+         <orderComments>
+            <!--1 or more repetitions:-->
+            <orderComment>
+               <comment>?</comment>
+               <type>?</type>
+            </orderComment>
+         </orderComments>
+      </sei:createOrder>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.oms.brandpath.com/OrderProcessing/createOrder"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Copy of Request 1" id="15a01e0d-b653-4f2e-afdd-98b03b2ef995"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIyODJkYTFhMy02ZTk0LTRhZDYtOWI5MC05MGI5MGIxZDFkOGMiLCJleHAiOjE0MjU1NjgwMDQsIm5iZiI6MCwiaWF0IjoxNDI1NTY3NzA0LCJpc3MiOiJicmFuZHBhdGgiLCJhdWQiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzdWIiOiI1Y2UxZjBlZi00OTcwLTRiZmEtYjlhNC1jM2IyNTllZmFjOGEiLCJhenAiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzZXNzaW9uX3N0YXRlIjoiYTk2YTY4ZmYtOTM5Zi00MjQyLTgwODgtZDkzOGEwMGM2ZDMyIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9yZGVyLWFwcHJvdmVyIiwib3JkZXItcHJvY2Vzc29yIiwib3JkZXItdmlld2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsib21zIjp7InJvbGVzIjpbImFjY2Vzcy1vbXMiLCJ2aWV3LW9yZGVyIiwiYXBwcm92ZS1vcmRlciIsImFtZW5kLW9yZGVyIiwiY2hhbmdlLXBheW1lbnQiXX0sIm9tcy13cyI6eyJyb2xlcyI6WyJvcmRlci1jcmVhdGUiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19fQ.iwZlzbtSQXTgn9_KqdF607tUAV1OVeVLHGImaEfk6UDpR7RiXb0DRNgcQx46fRNqdefld543_9AXzCrFjIkmlQhP5DrKYemwedSdXaD8HL-KGYv3vMDeu3BHW98lW7m4StF-smYwLCV6Z9tDu4LaayTi8Hxzf_vD107aXQGPeoU" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/oms-ws/OrderProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.oms.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:createOrder>
+         <authentication>
+            <clientTag>BRANDPATH</clientTag>
+            <channelTag>ONLINE</channelTag>
+            <siteTag>MICROSITE</siteTag>
+            <territoryCode>ROU</territoryCode>
+         </authentication>
+         <orderHeader>
+            <language>ROM</language>
+            <orderReference>test</orderReference>
+            <placedDate>2015-02-06T15:55:23.923</placedDate>
+            <orderProperties>
+            	<!--1 or more repetitions:-->
+            	<orderProperty>
+	               <name>FIRSTNAME</name>
+	               <value>test11</value>
+               </orderProperty>
+               <orderProperty>
+                    <name>EMAIL</name>
+	               <value>test40@dd.com</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>MIDDLENAME</name>
+	               <value>test12</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>LASTNAME</name>
+	               <value>test21</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>TITLE</name>
+	               <value>Mrs</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>TITLE</name>
+	               <value>Mrs</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>PHONENUMBER</name>
+	               <value>777test31</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>EMAIL</name>
+	               <value>test41@s.ss</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>EMAIL</name>
+	               <value>test4sss2@ccc.ro</value>
+               </orderProperty>
+               <orderProperty>
+	               <name>TEST</name>
+	               <value>testr1</value>
+               </orderProperty>
+            </orderProperties>
+            <statusLabel>Awaiting</statusLabel>
+            <territoryCode>EUR</territoryCode>
+            <totalDiscount>333</totalDiscount>
+            <totalPrice>34</totalPrice>
+            <totalTax>23</totalTax>
+            <totalWeight>34</totalWeight>
+            <type>Basic</type>
+         </orderHeader>
+         <orderPackages>
+         		<orderPackage>
+               <bundleReference>asda</bundleReference>
+               <discount>33</discount>
+               <discountType>123</discountType>
+               <!--Optional:-->
+               <offeringId>asdas</offeringId>
+               <packageItems>
+		         	   <!--1 or more repetitions:-->
+		         	   <packageItem>
+			            <price>44</price>
+			            <!--Optional:-->
+	                     <productDescription>asdas</productDescription>
+	                     <productId>3</productId>
+			            <!--Zero or more repetitions:-->
+			            <itemProperties>
+			               <!--Zero or more repetitions:-->
+		                  	<itemProperty>
+		                       <name>WEIGHT</name>
+		                       <value>12.34</value>
+		                  	</itemProperty>
+		                  	<itemProperty>
+		                       <name>bla</name>
+		                       <value>asdsad</value>
+		                  	</itemProperty>
+		                  	<itemProperty>
+		                       <name>COLOR</name>
+		                       <value>blue</value>
+		                  	</itemProperty>
+		                  	<itemProperty>
+		                       <name>COLOR</name>
+		                       <value>white</value>
+		                  	</itemProperty>
+			            </itemProperties>
+			            <quantity>?</quantity>
+		                <quantityUnitId>3</quantityUnitId>
+		                <tax>23</tax>
+		                <taxRate>2</taxRate>
+		                <type>HANDSET</type>
+			        </packageItem>
+               </packageItems>
+               <price>?</price>
+               <!--Optional:-->
+               <quantity>?</quantity>
+               <tax>?</tax>
+               <!--Optional:-->
+               <weight>?</weight>
+            </orderPackage>
+	    </orderPackages>
+         <orderAddresses>
+              <!--1 or more repetitions:-->
+	         <orderAddress>
+	            <city>test</city>
+	            <line1>test</line1>
+	            <!--Optional:-->
+	            <line2>test</line2>
+	            <!--Optional:-->
+	            <postcode>test</postcode>
+	            <!--Optional:-->
+	            <region>test</region>
+	            <territoryCode>ROU</territoryCode>
+	            <type>2</type>
+	         </orderAddress>
+	    </orderAddresses>
+         <!--Optional:-->
+         <orderComments>
+            <!--1 or more repetitions:-->
+            <orderComment>
+               <comment>YES Comment!</comment>
+               <type>POSITIVE</type>
+            </orderComment>
+         </orderComments>
+      </sei:createOrder>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>asd</con:username><con:password>asda</con:password><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.oms.brandpath.com/OrderProcessing/createOrder"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite name="RetrunsUpdateServiceSoapBinding TestSuite" id="8034020c-1c36-4ed9-bb4b-3ce7454c3518"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="returnsUpdate TestCase" searchProperties="true" id="a9fd5305-dadc-47af-a89f-8e861513bfa5"><con:settings/><con:testStep type="request" name="GetToken Request" id="5a76cea6-0626-4257-b920-7283e8adb8bb"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>OrderProcessingServiceSoapBinding</con:interface><con:operation>createOrder</con:operation><con:request name="GetToken Request" id="d31a48ee-be0e-4fbe-802a-c1f260c44a08"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="userName" value="ctsplus"/>
+  &lt;con:entry key="password" value="cts+Zr78kgpxGQ"/>
+&lt;/xml-fragment></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://sabtstesom.brandpath.net/esom-ws/TokenService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tok="http://sei.ws.esom.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tok:getToken/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5085e5d5-e399-410e-8e10-b74f368615f6"/><con:assertion type="Simple Contains" name="Contains" id="6c2bdddb-b72b-4aa3-b8ac-1cd8ff84ca7a"><con:configuration><token>return</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Token Transfer" id="fd5356ae-8172-46c5-940b-8bad9b09cdfa"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="true" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>GetToken Request</con:sourceStep><con:sourcePath>//return/token</con:sourcePath><con:targetType>token</con:targetType><con:targetStep>Properties</con:targetStep><con:targetPath/><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="Properties" id="e3fa5985-a585-4f46-83d1-c00139064b7d"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>token</con:name><con:value>eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIwZDE1OGYzZi1iNDFjLTRlNzAtYTU2MS00Y2YwM2QzOWIyNGUiLCJleHAiOjE0ODU1MzE1MjEsIm5iZiI6MCwiaWF0IjoxNDg1NTMwOTIxLCJpc3MiOiJodHRwczovL3NhYnRzdGtjLmJyYW5kcGF0aC5uZXQvYXV0aC9yZWFsbXMvQnJhbmRwYXRoIiwiYXVkIjoiZXNvbS13cyIsInN1YiI6IjAzYWMzZDM1LWUwMmItNDg1MC04ZDdmLTU0ZTdhYmE3ODhkMyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImVzb20td3MiLCJzZXNzaW9uX3N0YXRlIjoiZDE2YjNjMzMtOTJmMi00MjA4LTliMDAtZTcyOGQ2NGVkNmMxIiwiY2xpZW50X3Nlc3Npb24iOiI2ZDQ3N2QyMi03ZDJmLTQzODQtOTUzYi05MmIyNWM1MDQyYjQiLCJhbGxvd2VkLW9yaWdpbnMiOltdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsidW1hX2F1dGhvcml6YXRpb24iLCJFU09NQVBJVXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImVzb20td2ViIjp7InJvbGVzIjpbImVycC1wcm9jZXNzIiwiYWNjZXNzLWVzb20iLCJvcmRlci1tYW5hZ2VtZW50Iiwic2VuZC1jb21tcy1hcGkiLCJwYXltZW50LXByb2Nlc3MiXX0sInJlYWxtLW1hbmFnZW1lbnQiOnsicm9sZXMiOlsibWFuYWdlLXVzZXJzIiwidmlldy11c2VycyJdfSwib21zLXdlYiI6eyJyb2xlcyI6WyJ1cGRhdGUtc28tcmV0dXJucyJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctcHJvZmlsZSJdfX0sIm5hbWUiOiJDVFMgUGx1cyIsInByZWZlcnJlZF91c2VybmFtZSI6ImN0c3BsdXMiLCJnaXZlbl9uYW1lIjoiQ1RTIiwiZmFtaWx5X25hbWUiOiJQbHVzIn0.qdNRPIpdF3dhDLSqyUGm_O5N1YLtCXAHOPtgqn0sxrLcuAw4GQ_PFvtfrrZftJhLrMphwBVo056OYc-DC-i1nnKeG79WTmOh-R06_zXuG-thUyvtlrp6hOZ71Z2sRLtMm0y0-3BojATxAgzvGqmenfmyEFRiCA9MQba29SQFpqSQfgyccIrrornFRqT03FcQno43zJGxQiiJ_IrUgF_z_yxKU3EKJY97KQTTcMyprbkIuU8nRPt0M5XWTVfDazhG63RCXHbjHKgjPVpVsAk3gLGsBUSIXHBLiCeVYFmEI7DtfGfYuH0uesEFwKccapu0VfmRERMif1aG65FJCbz-KA</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" name="IsTokenActive - Request" id="1e3d94df-1cc3-4ed5-8c5c-950053f4e7e7"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>TokenServiceSoapBinding</con:interface><con:operation>isTokenActive</con:operation><con:request name="IsTokenActive - Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="ee7ac7f4-da77-4840-9fae-b097267f6810"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://sabtstesom.brandpath.net/esom-ws/TokenService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tok="http://sei.ws.esom.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tok:isTokenActive>
+         <token>${token}</token>
+      </tok:isTokenActive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response" id="e2350d73-e632-44a5-87aa-520de0dfe12a"/><con:assertion type="Simple Contains" name="Contains" id="ade2951b-4686-414a-80c0-86952354ca21"><con:configuration><token>&lt;return>true&lt;/return></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.brandpath.com/oms/ws/jaxws/TokenService/TokenService/isTokenActive"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script - Http Header" id="e65502b5-dd13-4e2d-9de7-81cf5bdd84c7"><con:settings/><con:config><script>import com.eviware.soapui.impl.wsdl.teststeps.*
+import com.eviware.soapui.support.types.StringToStringMap ;
+def tc = testRunner.testCase.testSuite.getTestCaseByName("returnsUpdate TestCase")
+def tsp = tc.getTestStepByName("Properties")
+def token = tsp.getPropertyValue("token");
+
+def ts = tc.getTestStepByName("ReturnsUpdate")
+
+def headers = new StringToStringMap()
+
+headers.put("Authorization","Bearer "+token)
+
+testRunner.testCase.getTestStepByName("ReturnsUpdate").testRequest.setRequestHeaders(headers)
+</script></con:config></con:testStep><con:testStep type="request" name="ReturnsUpdate" id="7d151b52-0399-48db-899e-4b8589148e57"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>OrderProcessingServiceSoapBinding</con:interface><con:operation>createOrder</con:operation><con:request name="ReturnsUpdate" id="f9bae22e-dd54-4fb8-b4d6-0ff994788afa"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Bearer eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIwZDE1OGYzZi1iNDFjLTRlNzAtYTU2MS00Y2YwM2QzOWIyNGUiLCJleHAiOjE0ODU1MzE1MjEsIm5iZiI6MCwiaWF0IjoxNDg1NTMwOTIxLCJpc3MiOiJodHRwczovL3NhYnRzdGtjLmJyYW5kcGF0aC5uZXQvYXV0aC9yZWFsbXMvQnJhbmRwYXRoIiwiYXVkIjoiZXNvbS13cyIsInN1YiI6IjAzYWMzZDM1LWUwMmItNDg1MC04ZDdmLTU0ZTdhYmE3ODhkMyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImVzb20td3MiLCJzZXNzaW9uX3N0YXRlIjoiZDE2YjNjMzMtOTJmMi00MjA4LTliMDAtZTcyOGQ2NGVkNmMxIiwiY2xpZW50X3Nlc3Npb24iOiI2ZDQ3N2QyMi03ZDJmLTQzODQtOTUzYi05MmIyNWM1MDQyYjQiLCJhbGxvd2VkLW9yaWdpbnMiOltdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsidW1hX2F1dGhvcml6YXRpb24iLCJFU09NQVBJVXNlciJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImVzb20td2ViIjp7InJvbGVzIjpbImVycC1wcm9jZXNzIiwiYWNjZXNzLWVzb20iLCJvcmRlci1tYW5hZ2VtZW50Iiwic2VuZC1jb21tcy1hcGkiLCJwYXltZW50LXByb2Nlc3MiXX0sInJlYWxtLW1hbmFnZW1lbnQiOnsicm9sZXMiOlsibWFuYWdlLXVzZXJzIiwidmlldy11c2VycyJdfSwib21zLXdlYiI6eyJyb2xlcyI6WyJ1cGRhdGUtc28tcmV0dXJucyJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctcHJvZmlsZSJdfX0sIm5hbWUiOiJDVFMgUGx1cyIsInByZWZlcnJlZF91c2VybmFtZSI6ImN0c3BsdXMiLCJnaXZlbl9uYW1lIjoiQ1RTIiwiZmFtaWx5X25hbWUiOiJQbHVzIn0.qdNRPIpdF3dhDLSqyUGm_O5N1YLtCXAHOPtgqn0sxrLcuAw4GQ_PFvtfrrZftJhLrMphwBVo056OYc-DC-i1nnKeG79WTmOh-R06_zXuG-thUyvtlrp6hOZ71Z2sRLtMm0y0-3BojATxAgzvGqmenfmyEFRiCA9MQba29SQFpqSQfgyccIrrornFRqT03FcQno43zJGxQiiJ_IrUgF_z_yxKU3EKJY97KQTTcMyprbkIuU8nRPt0M5XWTVfDazhG63RCXHbjHKgjPVpVsAk3gLGsBUSIXHBLiCeVYFmEI7DtfGfYuH0uesEFwKccapu0VfmRERMif1aG65FJCbz-KA" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://sabtstesom.brandpath.net/esom-ws/ERPProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.esom.brandpath.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sei:returnsUpdate>
+         <xmlRequest><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<Catalogue xmlns="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:draft:UnqualifiedDataTypesSchemaModule:2">
+	<cbc:ID>RETURNS</cbc:ID>
+	<cbc:Name>RETURNS</cbc:Name>
+	<cbc:IssueDate>2016-09-13</cbc:IssueDate>
+	<cac:ProviderParty/>
+	<cac:ReceiverParty/>
+	<cac:ContractorCustomerParty>
+		<cbc:CustomerAssignedAccountID>expSamsung</cbc:CustomerAssignedAccountID>
+		<cbc:SupplierAssignedAccountID>DS</cbc:SupplierAssignedAccountID>
+		<cbc:AdditionalAccountID>ex3s1ms0ng</cbc:AdditionalAccountID>
+	</cac:ContractorCustomerParty>
+	<cac:CatalogueLine>
+<!--Change-->		<cbc:ID>SM-R760NDAABTU</cbc:ID>
+		<cac:ItemComparison>
+			<cbc:PriceAmount currencyID="GBP">0</cbc:PriceAmount>
+			<cbc:Quantity>1</cbc:Quantity>
+		</cac:ItemComparison>
+		<cac:Item>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>OrderNo</cbc:Name>
+<!--Change-->		<cbc:Value>I698880</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>CustomerOrderReference</cbc:Name>
+<!--Change-->		<cbc:Value>DPHGZ-EMPSGJ</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>ProductCode</cbc:Name>
+<!--Change-->		<cbc:Value>SM-R760NDAABTU</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Quantity</cbc:Name>
+				<cbc:Value>1</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Serial</cbc:Name>
+				<cbc:Value>358992076869326</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Reason</cbc:Name>
+				<cbc:Value>14 Day</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Comments</cbc:Name>
+				<cbc:Value>Customer change of mindsss.</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>RANumber</cbc:Name>
+				<cbc:Value>RMA-I639738-877845_8186</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Grading</cbc:Name>
+				<cbc:Value>4</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Customer</cbc:Name>
+				<cbc:Value>14771S</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Status</cbc:Name>
+				<cbc:Value>201</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>StatusDesc</cbc:Name>
+				<cbc:Value>Send Response Line Completed</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>return_id</cbc:Name>
+<!--Change-->		<cbc:Value>21190</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>account_code</cbc:Name>
+				<cbc:Value>14771S</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>status_code</cbc:Name>
+				<cbc:Value>201</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>statusDesc</cbc:Name>
+				<cbc:Value>Send Response Line Completed</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Date_Issued</cbc:Name>
+				<cbc:Value>2017-01-6 15:24:28.47</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Date_Received</cbc:Name>
+				<cbc:Value>2017-01-6 15:24:00.0</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Date_Accepted</cbc:Name>
+				<cbc:Value>2017-01-6 15:24:00.0</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>Product_nett_val</cbc:Name>
+				<cbc:Value>0</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>NetValue</cbc:Name>
+<!--Change-->		<cbc:Value>0</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>bin_location</cbc:Name>
+				<cbc:Value>SMR020402</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>pack_grade</cbc:Name>
+				<cbc:Value>4</cbc:Value>
+			</cac:AdditionalItemProperty>
+			<cac:AdditionalItemProperty>
+				<cbc:Name>customer_wish</cbc:Name>
+				<cbc:Value>Refund</cbc:Value>
+			</cac:AdditionalItemProperty>
+		</cac:Item>
+	</cac:CatalogueLine>
+</Catalogue>]]]]>><![CDATA[
+		</xmlRequest>
+      </sei:returnsUpdate>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:domain>eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI3NTA0NTA5MS0wNGQ3LTQyOGUtODc2Yi00ZGJjODFhNmNmOTciLCJleHAiOjE0MjU0NjE2MTIsIm5iZiI6MCwiaWF0IjoxNDI1NDYxMzEyLCJpc3MiOiJicmFuZHBhdGgiLCJhdWQiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzdWIiOiI1Y2UxZjBlZi00OTcwLTRiZmEtYjlhNC1jM2IyNTllZmFjOGEiLCJhenAiOiJvbXMta2V5Y2xvYWstdG9rZW4iLCJzZXNzaW9uX3N0YXRlIjoiODBlNjczZmItODMzZi00MmE5LTlmODItMDE4NWUwM2MyNjhlIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9yZGVyLWFwcHJvdmVyIiwib3JkZXItcHJvY2Vzc29yIiwib3JkZXItdmlld2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsib21zIjp7InJvbGVzIjpbImFjY2Vzcy1vbXMiLCJ2aWV3LW9yZGVyIiwiYXBwcm92ZS1vcmRlciIsImFtZW5kLW9yZGVyIiwiY2hhbmdlLXBheW1lbnQiXX0sIm9tcy13cyI6eyJyb2xlcyI6WyJvcmRlci1jcmVhdGUiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJ2aWV3LXByb2ZpbGUiXX19fQ.hQiEtTrh4PKx8QQ-Vjm-vmhPnfJg7mGIkx09Ms-BovI5bhne4il_ygS26UScrGXchLRQHWxwDX2ZbEl6XHtTwXz5_Fqo-l_Al9kD43Gb9dtoUqe3rpbDVUTGZcPKl1XVWWwPCZkBBsOu4QFOhYxyiJ-dIHTPMsKIY-FiO03-tHg</con:domain><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://sei.ws.oms.brandpath.com/OrderProcessing/createOrder" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

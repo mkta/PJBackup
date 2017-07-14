@@ -1,0 +1,12 @@
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.19</version>
+                    <inherited>true</inherited>
+                    <configuration>
+                        <failIfNoTests>false</failIfNoTests>
+                        <suiteXmlFiles>
+                            <suiteXmlFile>/ws/DesiFELOOPTEST.xml</suiteXmlFile>
+                        </suiteXmlFiles>
+                    </configuration>
+                </plugin>

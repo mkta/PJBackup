@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="1ee43653-5e09-4ca5-bc0b-64f974ef77b2" activeEnvironment="Default" name="omstest.brandpath" resourceRoot="" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="a3035eae-6c7b-4adf-b139-4b7098e993ae" wsaVersion="NONE" name="OrderProcessingServiceSoapBinding" type="wsdl" bindingName="{http://sei.ws.oms.brandpath.com/}OrderProcessingServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://omstest.brandpath.com:8080/oms-ws/OrderProcessingService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://omstest.brandpath.com:8080/oms-ws/OrderProcessingService?wsdl"><con:part><con:url>http://omstest.brandpath.com:8080/oms-ws/OrderProcessingService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="OrderProcessingService" targetNamespace="http://sei.ws.oms.brandpath.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://sei.ws.oms.brandpath.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://sei.ws.oms.brandpath.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="CreateOrderResult" type="tns:createOrderResult"/>
+      <xs:element name="createOrder" type="tns:createOrder"/>
+      <xs:element name="createOrderResponse" type="tns:createOrderResponse"/>
+      <xs:element name="property" type="tns:property"/>
+      <xs:complexType name="createOrder">
+        <xs:sequence>
+          <xs:element name="authentication" type="tns:authentication"/>
+          <xs:element name="order" type="tns:orderHeader"/>
+          <xs:element name="orderPackages" type="tns:orderPackages"/>
+          <xs:element name="orderAddresses" type="tns:orderAddresses"/>
+          <xs:element minOccurs="0" name="orderComments" type="tns:orderComments"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="authentication">
+        <xs:sequence>
+          <xs:element name="channelTag" type="xs:string"/>
+          <xs:element name="clientTag" type="xs:string"/>
+          <xs:element name="siteTag" type="xs:string"/>
+          <xs:element name="territoryCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderHeader">
+        <xs:sequence>
+          <xs:element name="currency" type="xs:string"/>
+          <xs:element minOccurs="0" name="customerOrderReference" type="xs:string"/>
+          <xs:element name="language" type="xs:string"/>
+          <xs:element name="orderReference" type="xs:string"/>
+          <xs:element name="paymentMethod" type="xs:string"/>
+          <xs:element name="placedDate" type="xs:dateTime"/>
+          <xs:element name="orderProperties" type="tns:orderProperties"/>
+          <xs:element name="totalDiscount" type="xs:decimal"/>
+          <xs:element name="totalPrice" type="xs:decimal"/>
+          <xs:element name="totalTax" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="totalWeight" type="xs:decimal"/>
+          <xs:element name="type" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="vouchers" type="tns:voucher"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderProperties">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="orderProperty" type="tns:property"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="property">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string"/>
+          <xs:element name="value" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="voucher">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="totalDiscount" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="voucherCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="voucherMessage" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderPackages">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="orderPackage" type="tns:orderPackage"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderPackage">
+        <xs:sequence>
+          <xs:element name="bundleReference" type="xs:string"/>
+          <xs:element name="discount" type="xs:decimal"/>
+          <xs:element name="discountType" type="xs:string"/>
+          <xs:element minOccurs="0" name="offeringId" type="xs:string"/>
+          <xs:element minOccurs="0" name="packageDescription" type="xs:string"/>
+          <xs:element name="packageItems" type="tns:packageItems"/>
+          <xs:element name="price" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="quantity" type="xs:int"/>
+          <xs:element name="tax" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="weight" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="packageItems">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="packageItem" type="tns:packageItem"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="packageItem">
+        <xs:sequence>
+          <xs:element name="price" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="productDescription" type="xs:string"/>
+          <xs:element name="productId" type="xs:string"/>
+          <xs:element name="itemProperties" type="tns:packageItemProperties"/>
+          <xs:element name="quantity" type="xs:decimal"/>
+          <xs:element name="quantityUnit" type="xs:string"/>
+          <xs:element name="tax" type="xs:decimal"/>
+          <xs:element name="taxRate" type="xs:decimal"/>
+          <xs:element name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="packageItemProperties">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="itemProperty" type="tns:property"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderAddresses">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="orderAddress" type="tns:orderAddress"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderAddress">
+        <xs:sequence>
+          <xs:element name="city" type="xs:string"/>
+          <xs:element name="line1" type="xs:string"/>
+          <xs:element minOccurs="0" name="line2" type="xs:string"/>
+          <xs:element minOccurs="0" name="postcode" type="xs:string"/>
+          <xs:element minOccurs="0" name="region" type="xs:string"/>
+          <xs:element name="territoryCode" type="xs:string"/>
+          <xs:element name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderComments">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="orderComment" type="tns:orderComment"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderComment">
+        <xs:sequence>
+          <xs:element name="comment" type="xs:string"/>
+          <xs:element name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createOrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="createOrderReturn" type="tns:createOrderResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createOrderResult">
+        <xs:sequence>
+          <xs:element name="result" type="xs:boolean"/>
+          <xs:element name="message" type="xs:string"/>
+          <xs:element minOccurs="0" name="orderId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="createOrderResponse">
+    <wsdl:part element="tns:createOrderResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createOrder">
+    <wsdl:part element="tns:createOrder" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="OrderProcessing">
+    <wsdl:operation name="createOrder">
+      <wsdl:input message="tns:createOrder" name="createOrder"></wsdl:input>
+      <wsdl:output message="tns:createOrderResponse" name="createOrderResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OrderProcessingServiceSoapBinding" type="tns:OrderProcessing">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="createOrder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createOrder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createOrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OrderProcessingService">
+    <wsdl:port binding="tns:OrderProcessingServiceSoapBinding" name="OrderProcessingPort">
+      <soap:address location="http://10.41.7.16:8080/oms-ws/OrderProcessingService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://10.41.7.16:8080/oms-ws/OrderProcessingService</con:endpoint></con:endpoints><con:operation id="632abd8e-cd50-4c64-9d21-610acfd54093" isOneWay="false" action="" name="createOrder" bindingOperationName="createOrder" type="Request-Response" outputName="createOrderResponse" inputName="createOrder" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="34c9bd9a-13c7-454d-80d5-71e7006ea558" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.41.7.16:8080/oms-ws/OrderProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.oms.brandpath.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sei:createOrder>\r
+         <authentication>\r
+            <channelTag>?</channelTag>\r
+            <clientTag>?</clientTag>\r
+            <siteTag>?</siteTag>\r
+            <territoryCode>?</territoryCode>\r
+         </authentication>\r
+         <order>\r
+            <currency>?</currency>\r
+            <!--Optional:-->\r
+            <customerOrderReference>?</customerOrderReference>\r
+            <language>?</language>\r
+            <orderReference>?</orderReference>\r
+            <paymentMethod>?</paymentMethod>\r
+            <placedDate>?</placedDate>\r
+            <orderProperties>\r
+               <!--1 or more repetitions:-->\r
+               <orderProperty>\r
+                  <name>?</name>\r
+                  <value>?</value>\r
+               </orderProperty>\r
+            </orderProperties>\r
+            <totalDiscount>?</totalDiscount>\r
+            <totalPrice>?</totalPrice>\r
+            <totalTax>?</totalTax>\r
+            <!--Optional:-->\r
+            <totalWeight>?</totalWeight>\r
+            <type>?</type>\r
+            <!--Zero or more repetitions:-->\r
+            <vouchers>\r
+               <!--Optional:-->\r
+               <totalDiscount>?</totalDiscount>\r
+               <!--Optional:-->\r
+               <voucherCode>?</voucherCode>\r
+               <!--Optional:-->\r
+               <voucherMessage>?</voucherMessage>\r
+            </vouchers>\r
+         </order>\r
+         <orderPackages>\r
+            <!--1 or more repetitions:-->\r
+            <orderPackage>\r
+               <bundleReference>?</bundleReference>\r
+               <discount>?</discount>\r
+               <discountType>?</discountType>\r
+               <!--Optional:-->\r
+               <offeringId>?</offeringId>\r
+               <!--Optional:-->\r
+               <packageDescription>?</packageDescription>\r
+               <packageItems>\r
+                  <!--1 or more repetitions:-->\r
+                  <packageItem>\r
+                     <price>?</price>\r
+                     <!--Optional:-->\r
+                     <productDescription>?</productDescription>\r
+                     <productId>?</productId>\r
+                     <itemProperties>\r
+                        <!--Zero or more repetitions:-->\r
+                        <itemProperty>\r
+                           <name>?</name>\r
+                           <value>?</value>\r
+                        </itemProperty>\r
+                     </itemProperties>\r
+                     <quantity>?</quantity>\r
+                     <quantityUnit>?</quantityUnit>\r
+                     <tax>?</tax>\r
+                     <taxRate>?</taxRate>\r
+                     <type>?</type>\r
+                  </packageItem>\r
+               </packageItems>\r
+               <price>?</price>\r
+               <!--Optional:-->\r
+               <quantity>?</quantity>\r
+               <tax>?</tax>\r
+               <!--Optional:-->\r
+               <weight>?</weight>\r
+            </orderPackage>\r
+         </orderPackages>\r
+         <orderAddresses>\r
+            <!--1 or more repetitions:-->\r
+            <orderAddress>\r
+               <city>?</city>\r
+               <line1>?</line1>\r
+               <!--Optional:-->\r
+               <line2>?</line2>\r
+               <!--Optional:-->\r
+               <postcode>?</postcode>\r
+               <!--Optional:-->\r
+               <region>?</region>\r
+               <territoryCode>?</territoryCode>\r
+               <type>?</type>\r
+            </orderAddress>\r
+         </orderAddresses>\r
+         <!--Optional:-->\r
+         <orderComments>\r
+            <!--1 or more repetitions:-->\r
+            <orderComment>\r
+               <comment>?</comment>\r
+               <type>?</type>\r
+            </orderComment>\r
+         </orderComments>\r
+      </sei:createOrder>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sei.ws.oms.brandpath.com/OrderProcessing/createOrder"/></con:call></con:operation></con:interface><con:testSuite id="a0d11135-4201-436b-98da-56087c011c46" name="OrderProcessingServiceSoapBinding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="44ca6aea-0557-44c1-9b7e-66c24b3425cf" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="createOrder TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="ff6db4bb-32c6-48f6-9eb0-d38f05b9658b" name="createOrder"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>OrderProcessingServiceSoapBinding</con:interface><con:operation>createOrder</con:operation><con:request name="createOrder" id="3a63a9de-28fb-48e4-98a2-7cc7c451e00a"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.41.7.16:8080/oms-ws/OrderProcessingService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sei="http://sei.ws.oms.brandpath.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sei:createOrder>\r
+         <authentication>\r
+            <channelTag>?</channelTag>\r
+            <clientTag>?</clientTag>\r
+            <siteTag>?</siteTag>\r
+            <territoryCode>?</territoryCode>\r
+         </authentication>\r
+         <order>\r
+            <currency>?</currency>\r
+            <!--Optional:-->\r
+            <customerOrderReference>?</customerOrderReference>\r
+            <language>?</language>\r
+            <orderReference>?</orderReference>\r
+            <paymentMethod>?</paymentMethod>\r
+            <placedDate>?</placedDate>\r
+            <orderProperties>\r
+               <!--1 or more repetitions:-->\r
+               <orderProperty>\r
+                  <name>?</name>\r
+                  <value>?</value>\r
+               </orderProperty>\r
+            </orderProperties>\r
+            <totalDiscount>?</totalDiscount>\r
+            <totalPrice>?</totalPrice>\r
+            <totalTax>?</totalTax>\r
+            <!--Optional:-->\r
+            <totalWeight>?</totalWeight>\r
+            <type>?</type>\r
+            <!--Zero or more repetitions:-->\r
+            <vouchers>\r
+               <!--Optional:-->\r
+               <totalDiscount>?</totalDiscount>\r
+               <!--Optional:-->\r
+               <voucherCode>?</voucherCode>\r
+               <!--Optional:-->\r
+               <voucherMessage>?</voucherMessage>\r
+            </vouchers>\r
+         </order>\r
+         <orderPackages>\r
+            <!--1 or more repetitions:-->\r
+            <orderPackage>\r
+               <bundleReference>?</bundleReference>\r
+               <discount>?</discount>\r
+               <discountType>?</discountType>\r
+               <!--Optional:-->\r
+               <offeringId>?</offeringId>\r
+               <!--Optional:-->\r
+               <packageDescription>?</packageDescription>\r
+               <packageItems>\r
+                  <!--1 or more repetitions:-->\r
+                  <packageItem>\r
+                     <price>?</price>\r
+                     <!--Optional:-->\r
+                     <productDescription>?</productDescription>\r
+                     <productId>?</productId>\r
+                     <itemProperties>\r
+                        <!--Zero or more repetitions:-->\r
+                        <itemProperty>\r
+                           <name>?</name>\r
+                           <value>?</value>\r
+                        </itemProperty>\r
+                     </itemProperties>\r
+                     <quantity>?</quantity>\r
+                     <quantityUnit>?</quantityUnit>\r
+                     <tax>?</tax>\r
+                     <taxRate>?</taxRate>\r
+                     <type>?</type>\r
+                  </packageItem>\r
+               </packageItems>\r
+               <price>?</price>\r
+               <!--Optional:-->\r
+               <quantity>?</quantity>\r
+               <tax>?</tax>\r
+               <!--Optional:-->\r
+               <weight>?</weight>\r
+            </orderPackage>\r
+         </orderPackages>\r
+         <orderAddresses>\r
+            <!--1 or more repetitions:-->\r
+            <orderAddress>\r
+               <city>?</city>\r
+               <line1>?</line1>\r
+               <!--Optional:-->\r
+               <line2>?</line2>\r
+               <!--Optional:-->\r
+               <postcode>?</postcode>\r
+               <!--Optional:-->\r
+               <region>?</region>\r
+               <territoryCode>?</territoryCode>\r
+               <type>?</type>\r
+            </orderAddress>\r
+         </orderAddresses>\r
+         <!--Optional:-->\r
+         <orderComments>\r
+            <!--1 or more repetitions:-->\r
+            <orderComment>\r
+               <comment>?</comment>\r
+               <type>?</type>\r
+            </orderComment>\r
+         </orderComments>\r
+      </sei:createOrder>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://sei.ws.oms.brandpath.com/OrderProcessing/createOrder"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

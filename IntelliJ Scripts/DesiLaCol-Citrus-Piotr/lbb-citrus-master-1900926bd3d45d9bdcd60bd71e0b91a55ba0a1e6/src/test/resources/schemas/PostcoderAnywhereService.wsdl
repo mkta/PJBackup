@@ -1,0 +1,144 @@
+<?xml version="1.0" ?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://sei.ws.esom.brandpath.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="PostcoderAnywhereService" targetNamespace="http://sei.ws.esom.brandpath.com/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://sei.ws.esom.brandpath.com/" elementFormDefault="unqualified" targetNamespace="http://sei.ws.esom.brandpath.com/" version="1.0">
+
+  <xs:element name="GetAddressByIdResult" type="tns:getAddressByIdResult"></xs:element>
+
+  <xs:element name="IsValidPostcodeResult" type="tns:getAddressByPostcodeResult"></xs:element>
+
+  <xs:element name="PostcoderAddress" type="tns:postcoderAddress"></xs:element>
+
+  <xs:element name="getAddressById" type="tns:getAddressById"></xs:element>
+
+  <xs:element name="getAddressByIdResponse" type="tns:getAddressByIdResponse"></xs:element>
+
+  <xs:element name="getAddressByPostcode" type="tns:getAddressByPostcode"></xs:element>
+
+  <xs:element name="getAddressByPostcodeResponse" type="tns:getAddressByPostcodeResponse"></xs:element>
+
+  <xs:complexType name="getAddressById">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string"></xs:element>
+      <xs:element name="siteId" type="xs:int"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAddressByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="getAddressByIdReturn" type="tns:getAddressByIdResult"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAddressByIdResult">
+    <xs:sequence>
+      <xs:element name="result" type="xs:boolean"></xs:element>
+      <xs:element name="message" type="xs:string"></xs:element>
+      <xs:element name="address" type="tns:postcoderAddress"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="postcoderAddress">
+    <xs:sequence>
+      <xs:element name="buildingName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="buildingNumber" type="xs:string"></xs:element>
+      <xs:element name="city" type="xs:string"></xs:element>
+      <xs:element name="company" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="countryIso" type="xs:string"></xs:element>
+      <xs:element name="countryName" type="xs:string"></xs:element>
+      <xs:element name="id" type="xs:string"></xs:element>
+      <xs:element name="label" type="xs:string"></xs:element>
+      <xs:element name="language" type="xs:string"></xs:element>
+      <xs:element name="line1" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="line2" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="line3" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="line4" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="line5" type="xs:string"></xs:element>
+      <xs:element name="postalCode" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="province" type="xs:string"></xs:element>
+      <xs:element name="provinceName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="secondaryStreet" type="xs:string"></xs:element>
+      <xs:element name="street" type="xs:string"></xs:element>
+      <xs:element name="type" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAddressByPostcode">
+    <xs:sequence>
+      <xs:element name="postCode" type="xs:string"></xs:element>
+      <xs:element name="siteId" type="xs:int"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAddressByPostcodeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="getAddressByPostcodeReturn" type="tns:getAddressByPostcodeResult"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAddressByPostcodeResult">
+    <xs:sequence>
+      <xs:element name="result" type="xs:boolean"></xs:element>
+      <xs:element name="message" type="xs:string"></xs:element>
+      <xs:element maxOccurs="unbounded" name="address" type="tns:postcoderAddress"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getAddressById">
+    <wsdl:part element="tns:getAddressById" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAddressByIdResponse">
+    <wsdl:part element="tns:getAddressByIdResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAddressByPostcodeResponse">
+    <wsdl:part element="tns:getAddressByPostcodeResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAddressByPostcode">
+    <wsdl:part element="tns:getAddressByPostcode" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PostcoderAnywhere">
+    <wsdl:operation name="getAddressById">
+      <wsdl:input message="tns:getAddressById" name="getAddressById">
+    </wsdl:input>
+      <wsdl:output message="tns:getAddressByIdResponse" name="getAddressByIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddressByPostcode">
+      <wsdl:input message="tns:getAddressByPostcode" name="getAddressByPostcode">
+    </wsdl:input>
+      <wsdl:output message="tns:getAddressByPostcodeResponse" name="getAddressByPostcodeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PostcoderAnywhereServiceSoapBinding" type="tns:PostcoderAnywhere">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+    <wsdl:operation name="getAddressById">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getAddressById">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getAddressByIdResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddressByPostcode">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getAddressByPostcode">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getAddressByPostcodeResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PostcoderAnywhereService">
+    <wsdl:port binding="tns:PostcoderAnywhereServiceSoapBinding" name="PostcoderAnywherePort">
+      <soap:address location="http://7091c19e7d72:8080/esom-ws/PostcoderAnywhereService"></soap:address>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

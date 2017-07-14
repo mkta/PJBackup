@@ -1,0 +1,12 @@
+/.settings/
+/.project
+/test-output
+
+# IntelliJ
+.idea/
+*.iws
+*.ipr
+*.iml
+
+/target/
+/.classpath

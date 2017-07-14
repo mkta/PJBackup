@@ -1,0 +1,63 @@
+
+SUK7XP-VLRP-LKBO - I696242
+
+
+
+
+
+* uk/mobiles/mobiles-expertise/note7 = uk/mobiles+wearables/mobiles/galaxy-note7
+
+* uk/mobiles/mobiles-expertise/galaxy-s7 = uk/mobiles+wearables/mobiles/galaxy-s7
+
+* uk/wearables/wearables-expertise/gear-360 = uk/mobiles+wearables/wearables/gears+360
+
+* uk/wearables/wearables-expertise/gear-fit2 = uk/mobiles+wearables/wearables/gears+fit2
+
+* uk/mobiles/mobiles-expertise/samsung-mobile-care = 
+
+* uk/appliances/appliances-expertise/find-your-washin-machine = 
+
+* uk/tablets/tablets-expertise/tabpros = uk/tablets/all-tablets/galaxy-pro-s
+
+* uk/360-speakers/ = uk/tv+av/av-products/360-speakers
+
+* uk/offers = 
+
+* uk/gear-iconxremediacampaign = 
+
+* uk/samsung-upgrade/ = 
+
+* uk/black-friday/ = 
+
+* uk/bespoke/ = 
+
+* uk/bespoke/serif-tv = 
+
+* uk/blue-box-day/ = 
+
+* uk/addwash/ = uk/home-appliances/cleaning/addwash
+
+
+
+
+
+
+
+
+
+{ route: 'uk/mobiles/mobiles-expertise/note7', name: 'note7', moduleId: 'promos/note7/note7', nav: false, title: 'Note 7' },
+            { route: 'uk/mobiles/mobiles-expertise/galaxy-s7', name: 'galaxy-s7', moduleId: 'promos/s7/s7', nav: false, title: 'Galaxy S7' },
+            { route: 'uk/wearables/wearables-expertise/gear-360', name: 'gear360', moduleId: 'promos/gear360/gear360', nav: false, title: 'Gear 360' },
+            { route: 'uk/wearables/wearables-expertise/gear-fit2', name: 'gearfit2', moduleId: 'promos/gearfit2/gearfit2', nav: false, title: 'Gear Fit2' },
+            { route: 'uk/mobiles/mobiles-expertise/samsung-mobile-care', name: 'mobilecareinsurance', moduleId: 'promos/mobilecareinsurance/mobilecareinsurance', nav: false, title: 'Mobile Care Insurance' },
+            { route: 'uk/appliances/appliances-expertise/find-your-washin-machine', name: 'washing-machine-selector', moduleId: 'promos/washing-machine/selector', nav: false, title: 'Washing Machine Selector' },
+            { route: 'uk/tablets/tablets-expertise/tabpros', name: 'tabpros', moduleId: 'promos/tabpros/tabpros', nav: false, title: 'TabPro S' },
+            { route: 'uk/360-speakers/', name: 'speakers360', moduleId: 'promos/speakers360/speakers360', nav: false, title: '360 Speakers' },
+            { route: 'uk/offers', name: 'offers', moduleId: 'promos/offers/offers', nav: false, title: 'Offers'},
+            { route: 'uk/gear-iconxremediacampaign', name: 'iconx', moduleId: 'promos/iconx/iconx', nav: false, title: 'Gear Icon' },
+            { route: 'uk/samsung-upgrade/', name: 'upgrade', moduleId: 'promos/upgrade/upgrade', nav: false, title: 'Upgrade'},
+            { route: 'uk/black-friday/', name: 'blackfriday', moduleId: 'promos/blackfriday/blackfriday', nav: false, title: 'Black Friday'},
+            { route: 'uk/bespoke/', name: 'bespoke', moduleId: 'promos/bespoke/bespoke', nav: false, title: 'Bespoke'},
+            { route: 'uk/bespoke/serif-tv', name: 'bespoke-seriftv', moduleId: 'promos/bespoke/serif-tv', nav: false, title: 'Bespoke - Serif TV'},
+            { route: 'uk/blue-box-day/', name: 'blueboxday', moduleId: 'promos/blueboxday/blueboxday', nav: false, title: 'Blue Box Day'},
+            { route: 'uk/addwash/', name: 'addwash', moduleId: 'promos/addwash/addwash', nav: false, title: 'AddWash'},

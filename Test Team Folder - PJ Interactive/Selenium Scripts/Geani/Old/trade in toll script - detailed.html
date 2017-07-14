@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://vfq-preprod.pjmedia.ro/" />
+<title>trade in toll script</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">trade in toll script</td></tr>
+</thead><tbody>
+<tr>
+	<td>store</td>
+	<td>2</td>
+	<td>brandCount</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>repeatNextBrand</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>2</td>
+	<td>modelCount</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>repeatNextPhone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>option3Count</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>repeatOption2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>option2Count</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>repeatOption</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>optionCount</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>repeat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://vfq-preprod.pjmedia.ro/?objectid=F0ECB2F0-0697-11E4-BE0D000C292E3593</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>xpath=html/body/form/div/input[3]</td>
+	<td>login</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Login page? ${login}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${login}==false</td>
+	<td>noLogin</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=User</td>
+	<td>vfqpreproduser</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password</td>
+	<td>vfqpreprodpassword02</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>noLogin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://vfq-preprod.pjmedia.ro/?objectid=F0ECB2F0-0697-11E4-BE0D000C292E3593</td>
+	<td></td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=(//*[@id='device-select']/div[1]/div/select/option)</td>
+	<td>phoneBrandNumber</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=(//*[@id='device-select']/div[1]/div/select/option[${brandCount}])</td>
+	<td>phoneBrandName</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Phone brand name : ${phoneBrandName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//*[@id='device-select']/div[1]/div/select</td>
+	<td>label=${phoneBrandName}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=(//*[@id='device-select']/div[2]/div[1]/select/option)</td>
+	<td>phoneModelNumber</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=(//*[@id='device-select']/div[2]/div/select/option[${modelCount}])</td>
+	<td>phoneModelName</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Phone model name : ${phoneModelName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//*[@id='device-select']/div[2]/div/select</td>
+	<td>label=${phoneModelName}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchDevice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//*[@id='quality-questions']/fieldset[1]/div/div[*]/label</td>
+	<td>optionNumber</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='quality-questions']/fieldset[1]/div/div[${optionCount}]/label</td>
+	<td>optionName</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[@id='quality-questions']/fieldset[1]/div/div[${optionCount}]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Does the phone power on? : ${optionName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//*[@id='quality-questions']/fieldset[2]/div/div[*]/label</td>
+	<td>option2Number</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='quality-questions']/fieldset[2]/div/div[${option2Count}]/label</td>
+	<td>option2Name</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[@id='quality-questions']/fieldset[2]/div/div[${option2Count}]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Is the screen cracked? : ${option2Name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeTextPresent</td>
+	<td>Have you signed out from iCloud?</td>
+	<td>apple</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${apple}==false</td>
+	<td>noApple</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//*[@id='quality-questions']/fieldset[3]/div/div[${option2Count}]/label</td>
+	<td>option3Number</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='quality-questions']/fieldset[3]/div/div[${option2Count}]/label</td>
+	<td>option3Name</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[@id='quality-questions']/fieldset[3]/div/div[${option2Count}]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Have you signed out from iCloud? : ${option3Name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>noApple</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submit-tradeUp</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=#price</td>
+	<td>price</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Estimated value : QR ${price}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#model</td>
+	<td>${phoneModelName}</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=email-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>catalin.fleancu@pj-interactive.ro</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=emailsubmit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.optionCount++}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>javascript{storedVars.optionCount == storedVars.optionNumber + 1}</td>
+	<td>nextOption</td>
+</tr>
+<tr>
+	<td>gotolabel</td>
+	<td>repeat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>nextOption</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.option2Count++}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>javascript{storedVars.option2Count == storedVars.option2Number + 1}</td>
+	<td>nextPhone</td>
+</tr>
+<tr>
+	<td>gotolabel</td>
+	<td>repeatOption</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.option3Count++}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>javascript{storedVars.option3Count == storedVars.option3Number + 1}</td>
+	<td>nextPhone</td>
+</tr>
+<tr>
+	<td>gotolabel</td>
+	<td>repeatOption2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>nextPhone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.modelCount++}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>javascript{storedVars.modelCount == storedVars.phoneModelNumber + 1}</td>
+	<td>nextBrand</td>
+</tr>
+<tr>
+	<td>gotolabel</td>
+	<td>repeatNextPhone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>nextBrand</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.brandCount++}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>javascript{storedVars.brandCount == storedVars.phoneBrandNumber + 1}</td>
+	<td>end</td>
+</tr>
+<tr>
+	<td>gotolabel</td>
+	<td>repeatNextBrand</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>end</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

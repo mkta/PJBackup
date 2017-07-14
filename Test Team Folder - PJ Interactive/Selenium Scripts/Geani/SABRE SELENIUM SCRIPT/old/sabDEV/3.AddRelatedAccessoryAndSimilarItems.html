@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://pimtest.brandpath.com:8080/" />
+<title>AddRelatedAccessoryAndSimilarItems</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">AddRelatedAccessoryAndSimilarItems</td></tr>
+</thead><tbody>
+<tr>
+	<td>store</td>
+	<td>javascript{new Date().getFullYear() + &quot;-&quot; + (new Date().getMonth() +1) + &quot;-&quot; + new Date().getDate().toString() + &quot;&quot;+ &quot;_&quot;+new Date().getHours()+&quot;&quot; + new Date().getMinutes() + &quot;&quot; + new Date().getSeconds()}</td>
+	<td>productCreateDate</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${productCreateDate}</td>
+	<td>roductStatus</td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://sabtstpim.brandpath.net/pim-web/</td>
+	<td></td>
+</tr>
+<!--LogIn Present?-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>xpath=//*[@id='kc-login']</td>
+	<td>LogIn</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>LogIn = ${LogIn}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${LogIn}==false</td>
+	<td>noLogin</td>
+</tr>
+<!--LogIn Data-->
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>Dorel123456</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>catalinf</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=rememberMe</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=kc-login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>noLogin</td>
+	<td></td>
+</tr>
+<!--Go To Product Listing-->
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[@id='0_1']/ul/li/a/span</td>
+	<td></td>
+</tr>
+<!--Search for Created Product-->
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div/div[1]/div[6]/span/input</td>
+	<td>${productName}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div/div[2]/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--Open Searched Product-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[3]/div[2]/table/tbody/tr/td[10]/a/img</td>
+	<td></td>
+</tr>
+<!--Create Draft-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[1]/div/div[3]/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--Edit-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[1]/div/div[3]/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--GoToRelatedProducts-->
+<tr>
+	<td>click</td>
+	<td>link=Related Products</td>
+	<td></td>
+</tr>
+<!--Add Compatible Acessory-->
+<tr>
+	<td>click</td>
+	<td>id=productTabsForm:tabViewId:relatedProductsForm:addRelatedPrdcts</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=relatedProductsForm:searchProducts_input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=relatedProductsForm:searchProducts_input</td>
+	<td>LEVEL On Wireless Pro Headphone</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.ui-autocomplete-query</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[30]/div[2]/form/table[2]/tbody/tr/td[1]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--Add SimilarItems-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='productTabsForm:tabViewId:relatedProductsForm:relationType']/div[3]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=productTabsForm:tabViewId:relatedProductsForm:relationType_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=productTabsForm:tabViewId:relatedProductsForm:searchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=productTabsForm:tabViewId:relatedProductsForm:addRelatedPrdcts</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=relatedProductsForm:searchProducts_input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=relatedProductsForm:searchProducts_input</td>
+	<td>Galaxy S7 edge Black 32 G</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.ui-autocomplete-query</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[31]/div[2]/form/table[2]/tbody/tr/td[1]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--GoToGeneral-->
+<tr>
+	<td>click</td>
+	<td>link=General</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[1]/div/div[3]/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<!--publish-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[1]/div/div[3]/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--storeStuff-->
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='main-content']/h1</td>
+	<td>ProductStatus1</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>psection1</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['ProductStatus1'].split('[')[storedVars['psection1']]}</td>
+	<td>prf</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>psection2</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['prf'].split(']')[storedVars['psection2']]}</td>
+	<td>roductStatus</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${roductStatus}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

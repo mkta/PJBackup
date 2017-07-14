@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://removecookies/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://removecookies/locale/overlay.dtd">
+<overlay id="removecookies-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="overlay.js"/>
+  <script src="ff-overlay.js"/>
+
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="removecookies-strings" src="chrome://removecookies/locale/overlay.properties"/>
+  </stringbundleset>
+
+  <popup id="contentAreaContextMenu">
+    <menuitem id="context-removecookies" label="&removecookiesContext.label;"
+              accesskey="&removecookiesContext.accesskey;"
+              insertafter="context-stop"
+              oncommand="com.dwipal.removecookies.listeners.onCommand(event);"/>
+  </popup>
+
+  <toolbarpalette id="BrowserToolbarPalette">
+  <toolbarbutton id="removecookies-toolbar-button" class="toolbarbutton-1 chromeclass-toolbar-additional"
+    label="&removecookiesToolbarButton.label;" tooltiptext="&removecookiesToolbarButton.tooltip;"
+    oncommand="com.dwipal.removecookies.listeners.onCommand(event);"/>
+  </toolbarpalette>
+</overlay>

@@ -1,0 +1,15 @@
+<sei:createLoad xmlns:sei="http://sei.service.pim.brandpath.com/">
+    <upload client="DESILACOL" security="${soapToken}" compressed="NO">
+        <![CDATA[
+            <load action="LOAD_PUBLISHED" >"
+                <price_list id="DLC_US_PL" site_id="DLC_US_ONLINE">
+                    <offering_prices code="AJO-SKU-123456788">
+                        <price type="SALEPRICE" currency="USD" net="200" />
+                        <price type="WAS" currency="USD" net="300" />
+                        <price type="RRP" currency="USD" net="400" />
+                    </offering_prices>
+                </price_list>
+            </load>
+        ]]>
+    </upload>
+</sei:createLoad>

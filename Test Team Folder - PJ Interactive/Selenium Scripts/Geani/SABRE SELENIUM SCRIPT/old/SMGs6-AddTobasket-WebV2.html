@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://pimtest.brandpath.com:8080/" />
+<title>AddTobasket-WebV2</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">AddTobasket-WebV2</td></tr>
+</thead><tbody>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://10.41.7.31</td>
+	<td></td>
+</tr>
+<!--Clear Cookies-->
+<tr>
+	<td>runScript</td>
+	<td>System.import('config').then(function(module){&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var config = module.AppConfig,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container = document.body.aurelia.container,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AppConfig = container.get(config);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AppConfig.clearSession(); });</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--Repeat point if basket empty-->
+<tr>
+	<td>label</td>
+	<td>repeat</td>
+	<td></td>
+</tr>
+<!--Go to accesssories-->
+<tr>
+	<td>click</td>
+	<td>xpath=//*[@id='bs-example-navbar-collapse-3']/ul[1]/li[1]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--Open lastest created offering PDP-->
+<tr>
+	<td>click</td>
+	<td>link=Galaxy S6 128GB White</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--Add to basket-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--Go to basket-->
+<tr>
+	<td>click</td>
+	<td>link=See basket</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--Check if basket empty-->
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='shopping-basket']/div/div/div[1]/div[1]/h1</td>
+	<td>t</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${t}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>'${t}'==&quot;Your shopping basket is empty!&quot;</td>
+	<td>repeat</td>
+</tr>
+<!--Go to chekcout-->
+<tr>
+	<td>click</td>
+	<td>link=Proceed to Checkout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--Guest login-->
+<tr>
+	<td>click</td>
+	<td>link=CONTINUE AS A GUEST</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--Add billing details-->
+<tr>
+	<td>select</td>
+	<td>id=bill_title</td>
+	<td>label=Mr</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=option[value=&quot;Mr&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_first_name</td>
+	<td>geani test first name </td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_second_name</td>
+	<td>test last name script</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_address_1</td>
+	<td>test addes 1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_address_2</td>
+	<td>test addes 2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_city</td>
+	<td>test city</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_state</td>
+	<td>test county</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_zipcode</td>
+	<td>DH98 1BT</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_email</td>
+	<td>catalin.fleancu@pj-interactive.ro</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_email_confirm</td>
+	<td>catalin.fleancu@pj-interactive.ro</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bill_phone</td>
+	<td>0766831683683</td>
+</tr>
+<!--Add Shipping Details-->
+<tr>
+	<td>click</td>
+	<td>id=ship_address_same</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ship_address_1</td>
+	<td>test shipping address 1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ship_address_2</td>
+	<td>test shipping address 2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ship_city</td>
+	<td>test shipping city</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ship_state</td>
+	<td>test shipping county</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ship_zipcode</td>
+	<td>DH00 1BT</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=terms</td>
+	<td></td>
+</tr>
+<!--Proceed to PayPall payment (checkout)-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>15000</td>
+	<td></td>
+</tr>
+<!--PayPall LogIn Info-->
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>bpc@pj-interactive.ro</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>S1nc1ty0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btnLogin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>15000</td>
+	<td></td>
+</tr>
+<!--Confirm Payment-->
+<tr>
+	<td>click</td>
+	<td>id=confirmButtonTop</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--ThankYouPage-->
+<!--Store Full order text-->
+<tr>
+	<td>storeText</td>
+	<td>xpath=//*[@id='complete-basket']/div/div/h1[2]</td>
+	<td>fullText</td>
+</tr>
+<!--Remove First Part-->
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>section1</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['fullText'].split('#')[storedVars['section1']]}</td>
+	<td>rFirstPart</td>
+</tr>
+<!--Remove Second Part And Store Order Number-->
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>section2</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['rFirstPart'].split(' s')[storedVars['section2']]}</td>
+	<td>OrderNumber</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${OrderNumber}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://pimtest.brandpath.com:8080/" />
+<title>13.1PIM Created PRoduct check on Web</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">13.1PIM Created PRoduct check on Web</td></tr>
+</thead><tbody>
+<tr>
+	<td>store</td>
+	<td>javascript{new Date().getFullYear() + &quot;-&quot; + (new Date().getMonth() +1) + &quot;-&quot; + new Date().getDate().toString() + &quot;&quot;+ &quot;_&quot;+new Date().getHours()+&quot;:&quot; + new Date().getMinutes() + &quot;:&quot; + new Date().getSeconds()}</td>
+	<td>WebScriptStartTime</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{new Date().getFullYear() + &quot;-&quot; + (new Date().getMonth() +1) + &quot;-&quot; + new Date().getDate().toString() + &quot;&quot;+ &quot;_&quot;+new Date().getHours()+&quot;&quot; + new Date().getMinutes() + &quot;&quot; + new Date().getSeconds()}</td>
+	<td>webScriptDate</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${webScriptDate}</td>
+	<td>v</td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://sabtst.brandpath.net/</td>
+	<td></td>
+</tr>
+<!--Clear Cookies-->
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>System.import('config').then(function(module){&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var config = module.AppConfig,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container = document.body.aurelia.container,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AppConfig = container.get(config);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AppConfig.clearSession(); });</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--Go to Mobiles & Wearables-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/header/nav/div[3]/div/div[3]/ul[1]/li[2]/div[2]/div/ul/li[1]/a/p</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=sizeAll</td>
+	<td></td>
+</tr>
+<!--Open lastest created offering PDP-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--Check Varinat on listing-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>link=${offeringName}</td>
+	<td>v</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Product visible on web? : ${v}</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

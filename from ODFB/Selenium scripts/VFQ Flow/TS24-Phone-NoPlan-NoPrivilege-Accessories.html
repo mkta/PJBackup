@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://vfq-preprod.pjmedia.ro/" />
+<title>TS24-Phone-NoPlan-NoPrivilege-Accessories</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TS24-Phone-NoPlan-NoPrivilege-Accessories</td></tr>
+</thead><tbody>
+<tr>
+	<td>echo</td>
+	<td>TS24-Phone-NoPlan-NoPrivilege-Accessories</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>phoneCount</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>repeatPhone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://www.vodafone.qa/en</td>
+	<td></td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=All Handsets</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=All</td>
+	<td></td>
+</tr>
+<!--phone-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=(//*[@id='product-holder']/div/ul/li[*]/div/div[3]/a)</td>
+	<td>phoneNumber</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Phone Number: ${phoneCount}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='product-holder']/div/ul/li[${phoneCount}]/div/h3</td>
+	<td>phoneName</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Phone Name: ${phoneName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//*[@id='product-holder']/div/ul/li[${phoneCount}]/div/div[3]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>xpath=//*[@id='content']/div[2]/div[1]/div[3]/div/div/div[3]/form[2]/button</td>
+	<td>OnStock</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Phone on stock? = ${OnStock}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${OnStock}==false</td>
+	<td>oos</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//*[@id='content']/div[2]/div[1]/div[3]/div/div/div[3]/form[2]/button</td>
+	<td></td>
+</tr>
+<!--accessories-->
+<tr>
+	<td>storeText</td>
+	<td>css=h3.h4.eq-height</td>
+	<td>SIMcardadaptors</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>accessories: ${SIMcardadaptors}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Buy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add to basket</td>
+	<td></td>
+</tr>
+<!--basket-->
+<tr>
+	<td>storeText</td>
+	<td>xpath=//*[@id='frmBasketTable']/table/tbody/tr[5]/td[1]/div/div[2]/p[1]</td>
+	<td>phoneNameBasket</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Phone name in basket: ${phoneNameBasket} / Phone name selected : ${phoneName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='frmBasketTable']/table/tbody/tr[7]/td/div/div[2]/p</td>
+	<td>${SIMcardadaptors}</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>oos</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.phoneCount++}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>javascript{storedVars.phoneCount == storedVars.phoneNumber + 1}</td>
+	<td>end</td>
+</tr>
+<tr>
+	<td>gotolabel</td>
+	<td>repeatPhone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>end</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

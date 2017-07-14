@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://pimtest.brandpath.com:8080/" />
+<title>OmsOrderSearch After Schedule Task - worldpay automatic approve</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">OmsOrderSearch After Schedule Task - worldpay automatic approve</td></tr>
+</thead><tbody>
+<tr>
+	<td>store</td>
+	<td>javascript{new Date().getFullYear() + &quot;-&quot; + (new Date().getMonth() +1) + &quot;-&quot; + new Date().getDate().toString() + &quot;&quot;+ &quot;_&quot;+new Date().getHours()+&quot;&quot; + new Date().getMinutes() + &quot;&quot; + new Date().getSeconds()}</td>
+	<td>omsScriptDate</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${omsScriptDate}</td>
+	<td>Statuss3</td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://sabtstoms.brandpath.net/oms-web/</td>
+	<td></td>
+</tr>
+<!--LogIn Present?-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>xpath=//*[@id='kc-login']</td>
+	<td>LogIn</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>LogIn = ${LogIn}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${LogIn}==false</td>
+	<td>noLogin</td>
+</tr>
+<!--LogIn Data-->
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>Dorel123456</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>catalinf</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=rememberMe</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=kc-login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>noLogin</td>
+	<td></td>
+</tr>
+<!--GoToAdvanceSearch-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=html/body/div[2]/div[1]/div/form/div/div/div/div/div/ul/li[2]/ul/li[8]/a/span</td>
+	<td></td>
+</tr>
+<!--SelectClient-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[18]/div/ul/li[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--selectsite-->
+<!--add order refference number-->
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div/div[1]/table[1]/tbody/tr[1]/td[10]/input</td>
+	<td>${OrderNumber3}</td>
+</tr>
+<!--search-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div/div[1]/table[2]/tbody/tr/td/button</td>
+	<td></td>
+</tr>
+<!--Order status details-->
+<!--store stuff-->
+<tr>
+	<td>storeText</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[3]/div[2]/table/tbody/tr/td[6]</td>
+	<td>Statuss3</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${OrderNumber3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Statuss3}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

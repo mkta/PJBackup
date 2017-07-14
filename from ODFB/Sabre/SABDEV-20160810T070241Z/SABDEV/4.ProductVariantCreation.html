@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://pimtest.brandpath.com:8080/" />
+<title>Product Variant Creation</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Product Variant Creation</td></tr>
+</thead><tbody>
+<tr>
+	<td>store</td>
+	<td>javascript{new Date().getFullYear() + &quot;-&quot; + (new Date().getMonth() +1) + &quot;-&quot; + new Date().getDate().toString() + &quot;&quot;+ &quot;_&quot;+new Date().getHours()+&quot;&quot; + new Date().getMinutes() + &quot;&quot; + new Date().getSeconds()}</td>
+	<td>pv1ScriptDate</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${pv1ScriptDate}</td>
+	<td>v1productName</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${pv1ScriptDate}</td>
+	<td>v1skuDate</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${pv1ScriptDate}</td>
+	<td>vroductStatus</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>############ScriptRun- ${pv1ScriptDate}</td>
+	<td>vPpID</td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>https://sabdevpim.brandpath.net/pim-web/</td>
+	<td></td>
+</tr>
+<!--LogIn Present?-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>xpath=//*[@id='kc-login']</td>
+	<td>LogIn</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>LogIn = ${LogIn}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${LogIn}==false</td>
+	<td>noLogin</td>
+</tr>
+<!--LogIn Data-->
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>Dorel123456</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>catalinf</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=rememberMe</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=kc-login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>noLogin</td>
+	<td></td>
+</tr>
+<!--Go To Product Listing-->
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[@id='0_1']/ul/li/a/span</td>
+	<td></td>
+</tr>
+<!--Search for Created Product-->
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div/div[1]/div[6]/span/input</td>
+	<td>${productName}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div/div[2]/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!--Open Searched Product-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[3]/div[2]/table/tbody/tr/td[10]/a/img</td>
+	<td></td>
+</tr>
+<!--Create Draft-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[1]/div/div[3]/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>17000</td>
+	<td></td>
+</tr>
+<!--Go to variants-->
+<tr>
+	<td>click</td>
+	<td>link=Variants</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=productTabsForm:tabViewId:createVariantButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>7000</td>
+	<td></td>
+</tr>
+<!--Name & Sku-->
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[24]/div[2]/form/table[1]/tbody/tr[1]/td[2]/input</td>
+	<td>${productName}-Var1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[24]/div[2]/form/table[1]/tbody/tr[2]/td[2]/input</td>
+	<td>${productName}</td>
+</tr>
+<!--Sku-->
+<tr>
+	<td>store</td>
+	<td>javascript{new Date().getFullYear() + &quot;&quot; + (new Date().getMonth() +1) + &quot;&quot; + new Date().getDate().toString() + &quot;&quot;+ &quot;&quot;+new Date().getHours()+&quot;&quot; + new Date().getMinutes() + &quot;&quot; + new Date().getSeconds()}</td>
+	<td>v1skuDate</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[24]/div[2]/form/table[1]/tbody/tr[3]/td[2]/input</td>
+	<td>PV1SKU-${v1skuDate}</td>
+</tr>
+<!--Memory-->
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[24]/div[2]/form/table[2]/tbody/tr/td/div/div/table/tbody/tr[1]/td[2]/input</td>
+	<td>64</td>
+</tr>
+<!--Color-->
+<tr>
+	<td>type</td>
+	<td>xpath=html/body/div[24]/div[2]/form/table[2]/tbody/tr/td/div/div/table/tbody/tr[2]/td[2]/input</td>
+	<td>Blue</td>
+</tr>
+<!--Create-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[24]/div[2]/form/table[3]/tbody/tr/td/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<!--Go to created variant-->
+<tr>
+	<td>click</td>
+	<td>link=Variants</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[4]/table[1]/tbody/tr[2]/td/div/div/div/div/div[1]/table/tbody/tr[1]/td[6]/table/tbody/tr/td[1]/button</td>
+	<td></td>
+</tr>
+<!--Publish Variant-->
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[1]/div/div[3]/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>25000</td>
+	<td></td>
+</tr>
+<!--Store Product Data-->
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${productName}-Var1</td>
+	<td>v1productName</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${v1productName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>PV1SKU-${skuDate}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='main-content']/h1</td>
+	<td>vProductStatus1</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>vpsection1</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['vProductStatus1'].split('[')[storedVars['vpsection1']]}</td>
+	<td>vprf</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>vpsection2</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['vprf'].split(']')[storedVars['vpsection2']]}</td>
+	<td>vroductStatus</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${vroductStatus}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//*[@id='productTabsForm:tabViewId:currentStockLevel']</td>
+	<td>vstock</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Stock level = ${vstock}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>xpath=html/body/div[2]/div[2]/form/div[2]/div[2]/div[1]/div/div[1]/input[4]</td>
+	<td>vPpID</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${vPpID}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

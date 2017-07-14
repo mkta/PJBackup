@@ -1,0 +1,77 @@
+Steps:
+
+1. Open SoapUI
+
+2. Import project Ctrl+I
+
+3. Select "Google Drive\###Test Team Folder\SoapUI\esomdev-optimusRETURNS-soapui-project.xml\esomdev-optimusRETURNS-soapui-project.xml"
+
+4. Wait
+
+5. Locate "esomdev.optimusRETURNS"
+
+6. Press "+" next to it
+
+7. Press "+" next to "ReturnsUpdatedServiceSoapBinding TestSuite"
+
+8. Press "+" next to "returnsUpdate TestCase
+
+9. Press "+" next to "Test Steps (6)
+
+8. Double click "ReturnUpdate"
+
+9. Notie magic windows open
+
+10. Find "<cbc:IssueDate>2016-08-02</cbc:IssueDate>" and update with current date
+
+11. Find "<cac:CatalogueLine>
+		<cbc:ID>UE75JU7000TXXU</cbc:ID>" and update with product sku that return will be created
+
+12. Find "<cac:AdditionalItemProperty>
+				<cbc:Name>OrderNo</cbc:Name>
+				<cbc:Value>I695702</cbc:Value>" and update with tetra ID 
+
+13. Find "<cbc:Name>CustomerOrderReference</cbc:Name>
+				<cbc:Value>SUKBIJ-QDHZ-OOVL</cbc:Value>" and update with order ref
+
+14. Find "<cac:AdditionalItemProperty>
+				<cbc:Name>ProductCode</cbc:Name>
+				<cbc:Value>UE75JU7000TXXU</cbc:Value>" and update with product SKU
+
+15. *OPTIONAL* Find "<cac:AdditionalItemProperty>
+				<cbc:Name>RANumber</cbc:Name>
+				<cbc:Value>RMA-I639738-877845_8186</cbc:Value>" and update with RMA number (if available)
+
+16. *IMPORTANT* Find "<cbc:Name>return_id</cbc:Name>
+				<cbc:Value>9168</cbc:Value>" and change to uniqe value 
+
+17. Find                        <cbc:Name>Date_Issued</cbc:Name>
+				<cbc:Value>2016-08-29 15:02:28.47</cbc:Value>
+
+				<cbc:Name>Date_Received</cbc:Name>
+				<cbc:Value>2016-08-29 15:02:00.0</cbc:Value>
+
+				<cbc:Name>Date_Accepted</cbc:Name>
+				<cbc:Value>2016-08-29 15:02:00.0</cbc:Value> and update to current date
+18. Find  "<cbc:Name>NetValue</cbc:Name>
+				<cbc:Value>0</cbc:Value>" and update to ammount for refund
+
+19. Double click on "Test steps (6)"
+
+20. Press play button ">" 
+
+21. If everything done correctely MAGIC WILL HAPPEN. Wait for magic to end. 
+
+22. After magic is done doubple click on "Returns update"
+
+23. On right section find "<returnsUpdateReturn>true</returnsUpdateReturn>". 
+
+24. If "false" yell at "Andrei P".
+
+25. If "true" sacrifice a virgin to Odin.
+
+26. Open order details in sabTST OMS.
+
+27. Check return creatation in "Return" tab + refund in "Payment" tab.
+
+28. Send money to Nigerian prince aka "Genie".

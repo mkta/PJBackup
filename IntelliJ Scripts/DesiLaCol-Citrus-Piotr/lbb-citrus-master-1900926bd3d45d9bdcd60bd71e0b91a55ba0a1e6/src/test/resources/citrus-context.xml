@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:citrus="http://www.citrusframework.org/schema/config"
+       xmlns:citrus-jms="http://www.citrusframework.org/schema/jms/config"
+       xmlns:citrus-ws="http://www.citrusframework.org/schema/ws/config"
+       xmlns:citrus-http="http://www.citrusframework.org/schema/http/config"
+       xmlns:citrus-test="http://www.citrusframework.org/schema/testcase"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.citrusframework.org/schema/config http://www.citrusframework.org/schema/config/citrus-config.xsd
+       http://www.citrusframework.org/schema/jms/config http://www.citrusframework.org/schema/jms/config/citrus-jms-config.xsd
+       http://www.citrusframework.org/schema/ws/config http://www.citrusframework.org/schema/ws/config/citrus-ws-config.xsd
+       http://www.citrusframework.org/schema/http/config http://www.citrusframework.org/schema/http/config/citrus-http-config.xsd
+       http://www.citrusframework.org/schema/testcase http://www.citrusframework.org/schema/testcase/citrus-testcase.xsd">
+
+  <!-- Common settings -->
+  <context:property-placeholder location="classpath:citrus-${target.env}.properties"/>
+
+  <citrus:global-variables>
+    <citrus:file path="classpath:citrus-${target.env}.properties"/>
+  </citrus:global-variables>
+
+
+
+  <bean id="pimDS" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+    <property name="url" value="${pim.db.url}" />
+    <property name="username" value="${pim.db.username}"/>
+    <property name="password" value="${pim.db.password}"/>
+  </bean>
+
+
+
+  <citrus:schema-repository id="schemaRepository">
+    <citrus:schemas>
+      <citrus:schema id="esomPostcoderWsdl" location="classpath:schemas/PostcoderAnywhereService.wsdl" />
+      <citrus:schema id="esomTokenlientWsdl" location="classpath:schemas/TokenService.wsdl" />
+    </citrus:schemas>
+  </citrus:schema-repository>
+
+
+
+  <citrus:global-variables>
+    <citrus:variable name="project.name" value="Citrus Integration Tests"/>
+  </citrus:global-variables>
+
+  <bean id="messageFactory" class="org.springframework.ws.soap.saaj.SaajSoapMessageFactory"/>
+
+  <bean id="customFactory" class="com.brandpath.utils.CookieSpecRequestFactory"/>
+
+  <bean id="jmsConnectionFactory" class="com.rabbitmq.jms.admin.RMQConnectionFactory">
+    <property name="username" value="${lbbrmq.user}" />
+    <property name="password" value="${lbbrmq.pass}" />
+    <property name="virtualHost" value="${lbbrmq.vhost}" />
+    <property name="host" value="${lbbrmq.host}" />
+    <property name="port" value="${lbbrmq.port}" />
+    <property name="ssl" value="true" />
+  </bean>
+
+  <bean id="jmsDestination" class="com.rabbitmq.jms.admin.RMQDestination" >
+    <property name="amqp"            value="true" />
+    <property name="amqpExchangeName"   value="jms.durable.queues" />
+    <property name="amqpRoutingKey"   value="siteId-8" />
+  </bean>
+
+
+  <citrus-http:client id="lbbHttpClient"
+                      request-url="${lbbws.url}"
+                      content-type="application/json"
+                      timeout="5000"
+                      request-factory="customFactory"/>
+
+  <citrus-ws:client id="pimTokenClient"
+                    request-url="${pimToken.url}"
+                    timeout="5000"/>
+
+  <citrus-ws:client id="pimImportClient"
+                    request-url="${pimImport.url}"
+                    timeout="5000"/>
+
+  <citrus-ws:client id="somTokenClient"
+                    request-url="${somwstoken.url}"
+                    timeout="5000"/>
+
+  <citrus-ws:client id="somStockClient"
+                    request-url="${somwsstock.url}"
+                    timeout="5000"/>
+
+  <!-- ESOM -->
+  <citrus-ws:client id="esomTokenClient"
+                    request-url="${esomwstoken.url}"
+                    timeout="5000"/>
+
+  <citrus-ws:client id="esomCommsClient"
+                    request-url="${esomwssendcomms.url}"
+                    timeout="5000"/>
+
+
+  <!--RMQ-->
+  <citrus-http:client id="rmqHttpClient"
+                      request-url="${lbbrmq.url}"
+                      content-type="application/json"
+                      timeout="5000"/>
+
+  <citrus-jms:endpoint id="site8Endpoint"
+                       destination="jmsDestination"
+                       connection-factory="jmsConnectionFactory"
+                       timeout="3000"/>
+
+
+</beans>

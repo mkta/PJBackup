@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.9" jmeter="3.0 r1743807">
+  <hashTree>
+    <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler" enabled="true">
+      <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart()
+WDS.browser.get(&apos;http://google.com&apos;)
+WDS.sampleResult.sampleEnd()</stringProp>
+      <stringProp name="WebDriverSampler.parameters"></stringProp>
+      <stringProp name="WebDriverSampler.language">javascript</stringProp>
+    </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>

@@ -1,0 +1,29 @@
+<sei:createLoad xmlns:sei="http://sei.service.pim.brandpath.com/">
+    <upload client="DESILACOL" security="${soapToken}" compressed="NO">
+        <![CDATA[
+            <load action="LOAD_PUBLISHED" >"
+
+                <offering code="testOfferingCode_${rand}">
+                    <name>Ultra Example Offering</name>
+                    <type>PRODUCT</type>
+                    <products>
+                        <prod_ref id="AIRJRD11_9" index="0" quantity="1"/>
+                        <prod_ref id="AIRJRD11_11" index="1" quantity="2"/>
+                    </products>
+                    <properties>
+                        <property tag="TEASER">
+                            <value>value 1</value>
+                            <index>0</index>
+                        </property>
+
+                        <property tag="SHORT_DESCRIPTION">
+                            <value lang="jp" site="DESILACOL_JP">po japonsku</value>
+                            <value>wartosc po defaultowemu</value>
+                        </property>
+                    </properties>
+                </offering>
+
+            </load>
+        ]]>
+    </upload>
+</sei:createLoad>

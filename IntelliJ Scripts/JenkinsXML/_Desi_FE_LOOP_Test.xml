@@ -1,0 +1,12 @@
+<suite name="Desi_FE_LOOP_Script">
+
+	<test name="Desi_FE_LOOP_Script">
+		<classes>
+			<class name="intConf" />
+			<class name="intXpath" />
+			<class name="_Desi_FE_LOOP_Test" />
+			<class name="Assert" />
+			<class name="Emails" />
+		</classes>
+	</test>
+</suite>

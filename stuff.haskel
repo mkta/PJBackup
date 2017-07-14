@@ -1,0 +1,316 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------
+
+Message message = new MimeMessage(session);
+                                message.setFrom(new InternetAddress(glogin));
+                                message.setRecipients(Message.RecipientType.TO,
+                                        InternetAddress.parse(gto + "," + gcc));
+                                message.setSubject(dateFormated + " - IntelliJ Script Results" + " Script FAILED");
+                                MimeBodyPart messageBodyPart1 = new MimeBodyPart();
+                                messageBodyPart1.setText("Results for " + site + ":" + "<br />" + "<br />" + "WebDriver (id) : " + drvName.get(drvIDi) + "(" + drvIDi + ")" + "<br />" + "<br />" + "Country: " + country + "<br />" + "<br />" + "At Add to basket button " + "Xpath failed : " + "<br />" + xabb);
+                                MimeBodyPart messageBodyPart2 = new MimeBodyPart();
+                                DataSource source = new FileDataSource(filename);
+                                messageBodyPart2.setDataHandler(new DataHandler(source));
+                                messageBodyPart2.setFileName(filename);
+                                Multipart multipart = new MimeMultipart();
+                                multipart.addBodyPart(messageBodyPart1);
+                                multipart.addBodyPart(messageBodyPart2);
+                                message.setContent(multipart);
+
+
+----------------------------------------------------------------------------------------------------
+
+
+
+Message message = new MimeMessage(session);
+                            message.setFrom(new InternetAddress(glogin));
+                            message.setRecipients(Message.RecipientType.TO,
+                                    InternetAddress.parse(gto + "," + gcc));
+                            if (paymentloop < 4) {
+                                message.setSubject(dateFormated + " - IntelliJ Script Results" + " Initiating next payment loop");
+                            } else {
+                                message.setSubject(dateFormated + " - IntelliJ Script Results" + " End of payment loops");
+                            }
+                            MimeBodyPart messageBodyPart1 = new MimeBodyPart();
+                            
+                           messageBodyPart1.setText("Results for " + site + ":" + "<br />" + "<br />" + "WebDriver (id) : " + drvName.get(drvIDi) + "(" + drvIDi + ")" + "<br />" + "<br />" + "Country: " + country + "<br />" + "<br />" + "Payment Type(number): " + paymentName + "(" + paymenti + ")" + "<br />" + "<br />" + "CC / CVC used: " + CC + " / " + CVC + "<br />" + "<br />" + "Product name 1: " + productNames.get(1) + "<br />" + "Product name 2: " + productNames.get(2) + "<br />" + "Product name 3: " + productNames.get(3) + "<br />" + "Product name 4: " + productNames.get(4) + "<br />" + "Product name 5: " + productNames.get(5) + "<br />" + "Product name 6: " + productNames.get(6) + "<br />" + "Product name 7: " + productNames.get(7) + "<br />" + "Product name 8: " + productNames.get(8) + "<br />" + "Product name 9: " + productNames.get(9) + "<br />" + "<br />" + "Order Refference 1: " + orderReferences.get(1) + "<br />" + "Order Refference 2: " + orderReferences.get(2) + "<br />" + "Order Refference 3: " + orderReferences.get(3) + "<br />" + "Order Refference 4: " + orderReferences.get(4) + "<br />" + "Order Refference 5: " + orderReferences.get(5) + "<br />" + "Order Refference 6: " + orderReferences.get(6) + "<br />" + "Order Refference 7: " + orderReferences.get(7) + "<br />" + "Order Refference 8: " + orderReferences.get(8) + "<br />" + "Order Refference 9: " + orderReferences.get(9));
+                           
+                            MimeBodyPart messageBodyPart2 = new MimeBodyPart();
+                            DataSource source = new FileDataSource(filename);
+                            messageBodyPart2.setDataHandler(new DataHandler(source));
+                            messageBodyPart2.setFileName(filename);
+                            Multipart multipart = new MimeMultipart();
+                            multipart.addBodyPart(messageBodyPart1);
+                            multipart.addBodyPart(messageBodyPart2);
+                            message.setContent(multipart);
+                            
+                            Transport.send(message);
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+} catch (TimeoutException e1) {
+                            System.out.println("Sending Error email");
+                            driver.get("http://mail.google.com/mail/h/");
+                            Thread.sleep(1000);
+                            if (driver.findElements(By.id("Email")).size() != 0) {
+                                System.out.println("Login");
+                                wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Email")));
+                                driver.findElement(By.id("Email")).clear();
+                                driver.findElement(By.id("Email")).sendKeys("catalin.fleancu@pj-interactive.ro");
+                                driver.findElement(By.id("next")).click();
+                                Thread.sleep(1000);
+                                driver.findElement(By.id("Passwd")).sendKeys("Dorel123");
+                                driver.findElement(By.id("signIn")).click();
+                            } else {
+                                System.out.println("No Login");
+                            }
+                            if (driver.findElements(By.id("Passwd")).size() != 0) {
+                                System.out.println("Login v2");
+                                driver.findElement(By.id("Passwd")).sendKeys("Dorel123");
+                                driver.findElement(By.id("signIn")).click();
+                            } else {
+                                System.out.println("No Login v2");
+                            }
+                            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xcm)));
+                            driver.findElement(By.xpath(xcm)).click();
+                            driver.findElement(By.id("to")).clear();
+                            driver.findElement(By.id("to")).sendKeys("catalin.fleancu@brandpath.com");
+                            driver.findElement(By.id("cc")).clear();
+                            driver.findElement(By.id("cc")).sendKeys("stefan.chiosea@brandpath.com, ionut.delcea@brandpath.com");
+                            driver.findElement(By.name("subject")).clear();
+                            driver.findElement(By.name("subject")).sendKeys(dateFormated + " - IntelliJ Script Results" + " Script FAILED");
+                            driver.findElement(By.name("body")).clear();
+                            driver.findElement(By.name("body")).sendKeys("Results for " + site + ":" + Keys.RETURN + Keys.RETURN + "Country: " + country + Keys.RETURN + Keys.RETURN + "At nav menu" + "Xpath failed : " + xnavmenu);
+                            driver.findElement(By.xpath(xsm)).click();
+                            System.out.println("Error email sent");
+                            driver.quit();
+                            throw (e1);
+                        }
+
+
+
+
+
+                        driver.findElement(By.name("body")).sendKeys("Results for " + site + ":" + Keys.RETURN + Keys.RETURN + "WebDriver (id) :" + drvName + "(" + drvIDi + ")" + Keys.RETURN + Keys.RETURN + "Country: " + country + Keys.RETURN + Keys.RETURN + "Payment Type(number): " + paymentName + "(" + paymenti + ")" + Keys.RETURN + Keys.RETURN + "CC / CVC used: " + CC + " / " + CVC + Keys.RETURN + Keys.RETURN + "Product name 1: " + productNames.get(1) + Keys.RETURN + "Product name 2: " + productNames.get(2) + Keys.RETURN + "Product name 3: " + productNames.get(3) + Keys.RETURN + "Product name 4: " + productNames.get(4) + Keys.RETURN + "Product name 5: " + productNames.get(5) + Keys.RETURN + "Product name 6: " + productNames.get(6) + Keys.RETURN + "Product name 7: " + productNames.get(7) + Keys.RETURN + "Product name 8: " + productNames.get(8) + Keys.RETURN + "Product name 9: " + productNames.get(9) + Keys.RETURN + Keys.RETURN + "Order Refference 1: " + orderReferences.get(1) + Keys.RETURN + "Order Refference 2: " + orderReferences.get(2) + Keys.RETURN + "Order Refference 3: " + orderReferences.get(3) + Keys.RETURN + "Order Refference 4: " + orderReferences.get(4) + Keys.RETURN + "Order Refference 5: " + orderReferences.get(5) + Keys.RETURN + "Order Refference 6: " + orderReferences.get(6) + Keys.RETURN + "Order Refference 7: " + orderReferences.get(7) + Keys.RETURN + "Order Refference 8: " + orderReferences.get(8) + Keys.RETURN + "Order Refference 9: " + orderReferences.get(9));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Results sabTST:
+
+\n\n\n\n***PayPal - Full Flow***\n\n  
+
+\n\nWeb Script Start Time =       ${WebScriptStartTimePPFF}
+\n\nBasketProductName     =       ${basketProductPPFF} 
+\n\nSubTotal Price        =       ${spricePPFF} 
+\n\nVoucherMsg            =       ${vouchermsgPPFF} 
+\n\nVoucherDiscout        =       ${vouchdisPPFF} 
+\n\nFinalPrice            =       ${fpricePPFF} 
+\n\nOrder Number          =       ${OrderNumberPPFF}
+\n\nOrder Number Tracking =       ${otonPPFF}
+\n\nTracking status       =       ${tsPPFF}
+
+\n\n\n\n***PayPalCredit - Full Flow***\n\n  
+
+\n\nWeb Script Start Time =       ${WebScriptStartTimePPCFF}
+\n\nBasketProductName     =       ${basketProductPPCFF} 
+\n\nSubTotal Price        =       ${spricePPCFF} 
+\n\nVoucherMsg            =       ${vouchermsgPPCFF} 
+\n\nVoucherDiscout        =       ${vouchdisPPCFF} 
+\n\nFinalPrice            =       ${fpricePPCFF} 
+\n\nOrder Number          =       ${OrderNumberPPCFF}
+\n\nOrder Number Tracking =       ${otonPPCFF}
+\n\nTracking status       =       ${tsPPCFF}
+
+\n\n\n\n***WorldPay - Full Flow***\n\n  
+
+\n\nWeb Script Start Time =       ${WebScriptStartTimeWPFF}
+\n\nBasketProductName     =       ${basketProductWPFF} 
+\n\nSubTotal Price        =       ${spriceWPFF} 
+\n\nVoucherMsg            =       ${vouchermsgWPFF} 
+\n\nVoucherDiscout        =       ${vouchdisWPFF} 
+\n\nFinalPrice            =       ${fpriceWPFF} 
+\n\nOrder Number          =       ${OrderNumberWPFF}
+\n\nOrder Number Tracking =       ${otonWPFF}
+\n\nTracking status       =       ${tsWPFF}
+
+\n\n\n\n***Bank Transfer - Full Flow***\n\n  
+
+\n\nWeb Script Start Time =       ${WebScriptStartTimeBTFF}
+\n\nBasketProductName     =       ${basketProductBTFF} 
+\n\nSubTotal Price        =       ${spriceBTFF} 
+\n\nVoucherMsg            =       ${vouchermsgBTFF} 
+\n\nVoucherDiscout        =       ${vouchdisBTFF} 
+\n\nFinalPrice            =       ${fpriceBTFF} 
+\n\nOrder Number          =       ${OrderNumberBTFF}
+\n\nOrder Number Tracking =       ${otonBTFF}
+\n\nTracking status       =       ${tsBTFF}
+
+------------------------------------------------------------------------
+
+
+javascript{new Date().getFullYear() + "-" + (new Date().getMonth() +1) + "-" + new Date().getDate().toString() + ""+ "_"+new Date().getHours()+"" + new Date().getMinutes() + "" + new Date().getSeconds()}
+
+Results sabTST:
+\n\n\n\n***Product Create***\n\n  
+
+\n\nProduct name          =       ${productName}  
+\n\nProduct Sku           =       PSKU-${skuDate}   
+\n\nProductStatus         =       ${roductStatus}  
+\n\nStock level           =       ${stock} 
+\n\nProductPID            =       ${PpID}
+\n\nPublished?            =       ${psv}
+
+\n\n\n\n***Product Variant Create***\n\n  
+
+\n\nProductVariant1 Name  =       ${v1productName}
+\n\nProductVariant1 Sku   =       PV1SKU-${v1skuDate}
+\n\nProductVariant1 Sts   =       ${vroductStatus}
+\n\nVarProductPID         =       ${vPpID}
+\n\nPublished?            =       ${pvsv}
+
+\n\n\n\n***Offering Create***\n\n  
+
+\n\nOffering Name         =       ${offeringName}   
+\n\nOffering Sku          =       OSKU-${skuDateOffering}   
+\n\nOfferingStatus        =       ${offStatus}  
+\n\nOfferingPID           =       ${OffpID}
+\n\nPublished?            =       ${osv}
+
+\n\n\n\n***Offering Variant Create***\n\n  
+
+\n\nOfferingVar name      =       ${VofferingName}
+\n\nOfferingVarSku        =       OV1SKU-${vskuDateOffering}
+\n\nOferingVarStatus      =       ${voffStatus}
+\n\nVarOfferingPID        =       ${vOffpID}
+\n\nPublished?            =       ${ovsv}
+
+\n\n\n\n***Upsell Offering 1 Create***\n\n 
+
+\n\nUpsellOffering Name   =       ${uofferingName}   
+\n\nUpsellOffering Sku    =       OSKU-${skuDateuOffering}
+\n\nUpsellOfferingStatus  =       ${uoffStatus}
+\n\nUpsellOfferingPID     =       ${upsellOffpID}
+\n\nPublished?            =       
+
+\n\n\n\n***Upsell Offering 2 Create***\n\n  
+
+\n\nUpsellOffering2 Name  =       ${uofferingName2}   
+\n\nUpsellOffering2 Sku   =       OSKU2-${skuDateuOffering2}
+\n\nUpsellOffering2Status =       ${uoffStatus2}
+\n\nUpsellOffering2PID    =       ${upsellOffpID2}
+\n\nPublished?            =       
+
+\n\n\n\n***Upsell Offering 3 Create***\n\n  
+
+\n\nUpsellOffering3 Name  =       ${uofferingName3}   
+\n\nUpsellOffering3 Sku   =       OSKU3-${skuDateuOffering3}
+\n\nUpsellOffering3Status =       ${uoffStatus3}
+\n\nUpsellOffering3PID    =       ${upsellOffpID3}
+\n\nPublished?            =       
+
+\n\n\n\n***Upsell Offering 4 Create***\n\n  
+
+\n\nUpsellOffering4 Name  =       ${uofferingName4}   
+\n\nUpsellOffering4 Sku   =       OSKU4-${skuDateuOffering4}
+\n\nUpsellOffering4Status =       ${uoffStatus4}
+\n\nUpsellOffering4PID    =       ${upsellOffpID4}
+\n\nPublished?            =       
+
+\n\n\n\n***Cash Refresh***\n\n  
+
+\n\nOriginalOfferingNR    =       ${ono}
+\n\nNewOfferingNR         =       ${nno}
+
+\n\n\n\n***Web Part - Offering visible on web***\n\n  
+
+\n\nVariant on listing?   =       Offering visible on web? : ${v}
+
+
+\n\n\n\n***Web Part - WprldPay -tetra- same shipping addres***\n\n  
+
+\n\nWeb Script Start Time =       ${WebScriptStartTimelaw}
+\n\nBasketProductName     =       ${basketProductlaw} 
+\n\nSubTotal Price        =       ${spricelaw} 
+\n\nVoucherMsg            =       ${vouchermsglaw} 
+\n\nVoucherDiscout        =       ${vouchdislaw} 
+\n\nFinalPrice            =       ${fpricelaw} 
+\n\nOrder Number          =       ${OrderNumberlaw}
+\n\nTracking status       =       ${trackingstatuslaw}
+
+\n\n\n\n***Web Part - PayPall -tetra- same shipping addres***\n\n  
+
+\n\nWeb Script Start Time =       ${WebScriptStartTimelap}
+\n\nBasketProductName     =       ${basketProductlap} 
+\n\nSubTotal Price        =       ${spricelap} 
+\n\nVoucherMsg            =       ${vouchermsglap} 
+\n\nVoucherDiscout        =       ${vouchdislap} 
+\n\nFinalPrice            =       ${fpricelap} 
+\n\nOrder Number          =       ${OrderNumberlap}
+\n\nTracking status       =       ${trackingstatuslap}
+
+\n\n\n\n***Web Part - BankTransfer -tetra- same shipping addres***\n\n  
+
+\n\nWeb Script Start Time =       ${WebScriptStartTimebt}
+\n\nBasketProductName     =       ${basketProductbt} 
+\n\nSubTotal Price        =       ${spricebt} 
+\n\nVoucherMsg            =       ${vouchermsgbt} 
+\n\nVoucherDiscout        =       ${vouchdisbt} 
+\n\nFinalPrice            =       ${fpricebt} 
+\n\nOrder Number          =       ${OrderNumberbt}
+\n\nTracking status       =       ${trackingstatusbt}
+
+\n\n\n\n***Oms Part - WorldPay -Tetra- Automatic Approve***\n\n  
+
+\n\nOrder Number          =       ${OrderNumberlaw}
+\n\nOrderCreateDate       =       ${ordercreatedatelaw}
+\n\nOder Status           =       ${Statuslaw}
+\n\nOder Status After Schedule Task   =       ${Statusslaw}
+
+\n\n\n\n***Oms Part - PayPall - Tetra- Automatic Approve***\n\n 
+
+\n\nOrder Number          =       ${OrderNumberlap}
+\n\nOrderCreateDate       =       ${ordercreatedatelap}
+\n\nOder Status           =       ${Statuslap}
+\n\nOder Status After Schedule Task   =       ${Statusslap}
+
+\n\n\n\n***Oms Part - BankTransfer - Tetra- Automatic Approve***\n\n 
+
+\n\nOrder Number          =       ${OrderNumberbt}
+\n\nOrderCreateDate       =       ${ordercreatedatebt}
+\n\nOder Status           =       ${Statusbt}
+\n\nOder Status After Schedule Task   =       ${Statussbt}

@@ -1,0 +1,8 @@
+[error] Element link=No thank you not found
+[error] Element link=No thank you not found
+[error] Element link=No, thank you not found
+[error] testCase.debugContext.currentCommand(...) is undefined
+[error] Element xpath=/html/body/div[7]/div[3]/div[2]/div/div/form/div[5]/div[2]/div[2]/li/div[1] not found
+[error] Element xpath=/html/body/div[7]/div[3]/div[2]/div/div/form/div[5]/div[2]/div[2]/li/div[1] not found
+2015-11-27 13:18:45 [error] Timed out after 60000ms
+2015-11-27 13:18:53 [error] Element css=div.blockUI.blockOverlay not found

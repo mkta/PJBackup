@@ -1,0 +1,92 @@
+<product code="code0_${rand}" index="0" quantity="0">
+                    <name>name0_${rand}</name>
+                    <type>SHOES</type>
+                    <brand tag="KATE_SPADE"/>
+                    <hierarchy>
+                       <category tag="M_SHOES"/>
+                    </hierarchy>
+                    <properties>
+                        <property tag="SIZE_GROUP">
+                            <value>Women</value>
+                        </property>
+                        <property tag="SIZE">
+                            <value>9</value>
+                        </property>
+                        <property tag="COLOUR">
+                            <value>Pink</value>
+                        </property>
+                        <property tag="RRP">
+                            <value>99</value>
+                        </property>
+                        <property tag="WEIGHT_UNIT">
+                            <value>kg</value>
+                        </property>
+                        <property tag="WEIGHT">
+                            <value>1</value>
+                        </property>
+                        <property tag="DESCRIPTION">
+                            <value>XYZ This is long desc.</value>
+                        </property>
+                        <property tag="SHORT_DESCRIPTION">
+                            <value>ABC this is short</value>
+                        </property>
+                        <property tag="TEASER">
+                            <value>Leather shoes</value>
+                        </property>
+                    </properties>
+                    <set_assets assest_name="Test Asset 1">
+                        <asset copy="true" size="STANDARD" url="https://katespade.scene7.com/is/image/KateSpade/S287693GF_001?op_sharpen=1&resMode=sharp2&wid=490&fmt=jpg"/>
+                        <asset copy="true" size="THUMB" url="https://katespade.scene7.com/is/image/KateSpade/S287693GF_001?op_sharpen=1&resMode=sharp2&wid=490&fmt=jpg"/>
+                        <asset copy="true" size="LARGE" url="https://katespade.scene7.com/is/image/KateSpade/S287693GF_001?op_sharpen=1&resMode=sharp2&wid=490&fmt=jpg"/>
+
+                    </set_assets>
+
+                    <set_assets assest_name="Test Asset 2">
+                        <asset copy="true" size="STANDARD" url="https://katespade.scene7.com/is/image/KateSpade/S287693GF_001_1?op_sharpen=1&resMode=sharp2&wid=490&fmt=jpg"/>
+                        <asset copy="true" size="THUMB" url="https://katespade.scene7.com/is/image/KateSpade/S287693GF_001_1?op_sharpen=1&resMode=sharp2&wid=490&fmt=jpg"/>
+                        <asset copy="true" size="LARGE" url="https://katespade.scene7.com/is/image/KateSpade/S287693GF_001_1?op_sharpen=1&resMode=sharp2&wid=490&fmt=jpg"/>
+
+                    </set_assets>
+
+                    <set_assets assest_name="Test Asset 3">
+                        <asset copy="true" size="STANDARD" url="https://katespade.scene7.com/is/image/KateSpade/S287693GF_001_2?op_sharpen=1&resMode=sharp2&wid=490&fmt=jpg"/>
+                        <asset copy="true" size="THUMB" url="https://katespade.scene7.com/is/image/KateSpade/S287693GF_001_2?op_sharpen=1&resMode=sharp2&wid=490&fmt=jpg"/>
+                        <asset copy="true" size="LARGE" url="https://katespade.scene7.com/is/image/KateSpade/S287693GF_001_2?op_sharpen=1&resMode=sharp2&wid=490&fmt=jpg"/>
+
+                    </set_assets>
+
+                    <offerings>
+                        <offering code="code3_${rand}">
+                            <name>name1_${rand}</name>
+                            <type>PRODUCT</type>
+                            <products>
+                                 <prod_ref code="code0_${rand}" index="0" quantity="1"/>
+                            </products>
+                            <properties>
+                                <!-- REQUIRED PROPERTIES -->
+                                <property tag="OFFERING_AVAILABILITY">
+                                    <value>IN_STOCK_OVERRIDE</value>
+                                    <index>0</index>
+                                 </property>
+                                 <property tag="USERFRIENDLY_ID">
+                                    <value>super_offering_name_1_${rand}</value>
+                                    <index>0</index>
+                                 </property>
+
+                            </properties>
+                           
+                            <price_lists>
+                                <price_list id="DLC_US_PL" siteId="DLC_US_ONLINE">
+                                    <offering_prices code="code3_${rand}">
+                                        <offering_price type="SALEPRICE" currency="USD" price="777.99"/>
+                                    </offering_prices>
+                                </price_list>
+                                <price_list id="DLC_JP_PL" siteId="DLC_US_ONLINE">
+                                    <offering_prices code="code3_${rand}">
+                                        <offering_price type="SALEPRICE" currency="JPY" price="777.99"/>
+                                    </offering_prices>
+                                </price_list>
+                             </price_lists>
+
+                        </offering>
+                    </offerings>

@@ -1,0 +1,20 @@
+<sei:createLoad xmlns:sei="http://sei.service.pim.brandpath.com/">
+    <upload client="DESILACOL" security="${soapToken}" compressed="NO">
+        <![CDATA[
+            <load action="LOAD_PUBLISHED" >"
+                <price_list id="DLC_UK_PL" site_id="DLC_UK_ONLINE">
+                    <offering_prices code="CLAUDIA-1">
+                        <price type="SALEPRICE" currency="GBP" net="2.50" />
+                        <price type="WAS" currency="GBP" net="2.50" />
+                        <price type="RRP" currency="GBP" net="2.50" />
+                    </offering_prices>
+                    <offering_prices code="DEMO01">
+                        <price type="SALEPRICE" currency="GBP" net="2.70" />
+                        <price type="WAS" currency="GBP" net="2.70" />
+                        <price type="RRP" currency="GBP" net="2.70" />
+                    </offering_prices>
+                </price_list>
+            </load>
+        ]]>
+    </upload>
+</sei:createLoad>

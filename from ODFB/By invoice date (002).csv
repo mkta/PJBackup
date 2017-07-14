@@ -1,0 +1,3 @@
+line_id,country,usergroup,type,month,week,day,channel,order_id,product_category,product_description,item_code,order_value,cancelled_value,returned_value,expected_revenue,order_value_usd,cancelled_value_usd,returned_value_usd,expected_revenue_usd,order_quantity,cancelled_quantity,returned_quantity,quantity
+20420,Online Shop UK,,RETURN,2016-10,41,07-10-16,WEB,SUKLWQ-EWEM-SQPY,TV_AV_ACCESSORIES,LEVEL Box mini Wireless Speaker (Silver),EO-SG900DSEGWW,0,0,-90,-90,0,0,-118.8,-118.8,0,0,-1,-1
+20422,Online Shop UK,,RETURN,2016-10,41,07-10-16,WEB,SUKLWQ-EWEM-SQPY,MULTIROOM_SPEAKER,R6 Wireless 360&#176; Multiroom Speaker,WAM6500/XU,0,0,-329,-329,0,0,-434.28,-434.28,0,0,-1,-1

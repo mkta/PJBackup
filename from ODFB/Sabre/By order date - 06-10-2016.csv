@@ -1,0 +1,13 @@
+line_id,country,usergroup,type,month,week,day,channel,order_id,product_category,product_description,item_code,order_value,cancelled_value,returned_value,expected_revenue,order_value_usd,cancelled_value_usd,returned_value_usd,expected_revenue_usd,order_quantity,cancelled_quantity,returned_quantity,quantity
+20398,Online Shop UK,,Order,2016-10,41,06-10-16,WEB,SUKLCX-MLKU-SQWK,SMARTPHONE,Galaxy S6 edge Gold 32 GB,SM-G925FZDABTU,1000,0,0,1000,1320,0,0,1320,1,0,0,1
+20396,Online Shop UK,,Order,2016-10,41,06-10-16,WEB,SUKLHY-YXMT-QKQA,CASES_COVERS,Galaxy S6 edge+ Clear Cover,EF-QG928CBEGWW,260,0,0,260,343.2,0,0,343.2,13,0,0,13
+20390,Online Shop UK,,Order,2016-10,41,06-10-16,WEB,SUKLRQ-MSBB-IKJI,CASES_COVERS,Galaxy S6 edge Protective Cover,EF-YG925BBEGWW,24.99,0,0,24.99,32.9868,0,0,32.9868,1,0,0,1
+20402,Online Shop UK,,Cancellation,2016-10,41,06-10-16,WEB,SUKLPR-CVOB-JFHR,CASES_COVERS,Incipio Galaxy S6 DualPro Detail Protective Case (Silver/Periwinkle),GP-G920ICCPBGU,0,-34,0,-34,0,-44.88,0,-44.88,0,-1,0,-1
+20394,Online Shop UK,,Order,2016-10,41,06-10-16,WEB,SUKLUL-IHZU-ABVR,SMARTWATCH,Gear VR,SM-R322NZWABTU,80,0,0,80,105.6,0,0,105.6,1,0,0,1
+20388,Online Shop UK,,Order,2016-10,41,06-10-16,WEB,SUKLKD-RBNZ-MCGE,HEADPHONE,Gear IconX Wireless Fitness Headphones (White),SM-R150NZWABTU,169,0,0,169,223.08,0,0,223.08,1,0,0,1
+20405,Online Shop UK,,Order,2016-10,41,06-10-16,WEB,SUKLUD-DKYQ-VQSR,WASHING_MACHINE,"WW9000 Washing Machine with ecobubble, 10 kg",WW10H9600EX/EU,1700,0,0,1700,2244,0,0,2244,1,0,0,1
+20400,Online Shop UK,,Cancellation,2016-10,41,06-10-16,WEB,SUKLKI-PVGG-LJJX,CASES_COVERS,Incipio Galaxy S6 DualPro Detail Protective Case (Silver/Periwinkle),GP-G920ICCPBGU,0,-34,0,-34,0,-44.88,0,-44.88,0,-1,0,-1
+20392,Online Shop UK,,Order,2016-10,41,06-10-16,WEB,SUKLNK-DMDL-DPTK,CASES_COVERS,Galaxy S6 edge+ Clear Cover,EF-QG928CSEGWW,19.99,0,0,19.99,26.3868,0,0,26.3868,1,0,0,1
+20406,Online Shop UK,,Order,2016-10,41,06-10-16,WEB,SUKLLX-JQCA-QPMH,TABLET,"Galaxy Tab E (9.6, Wi-Fi)",SM-T560NZKABTU,159,0,0,159,209.88,0,0,209.88,1,0,0,1
+20390,Online Shop UK,,RETURN,2016-10,41,06-10-16,WEB,SUKLRQ-MSBB-IKJI,CASES_COVERS,Galaxy S6 edge Protective Cover,EF-YG925BBEGWW,0,0,-24.99,-24.99,0,0,-32.9868,-32.9868,0,0,-1,-1
+20392,Online Shop UK,,RETURN,2016-10,41,06-10-16,WEB,SUKLNK-DMDL-DPTK,CASES_COVERS,Galaxy S6 edge+ Clear Cover,EF-QG928CSEGWW,0,0,-19.99,-19.99,0,0,-26.3868,-26.3868,0,0,-1,-1
