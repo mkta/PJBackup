@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://vfq-preprod.pjmedia.ro/" />
+<title>TS25-Phone-Plan-FreeNumber-NoPrivilege-NoAccessories</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TS25-Phone-Plan-FreeNumber-NoPrivilege-NoAccessories</td></tr>
+</thead><tbody>
+<tr>
+	<td>echo</td>
+	<td>Phone-NoAccessories-Prepaid-FreeNumber-Privilege-(PlanSuggestion)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>phoneCount</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>newPhone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>planCount</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>repeatPhone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://vfq-preprod.pjmedia.ro/en/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>deleteAllVisibleCookies</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=All Handsets</td>
+	<td></td>
+</tr>
+<!--phone-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>xpath=(//*[@id='product-holder']/div/ul/li[*]/div/div[3]/a)</td>
+	<td>phoneNumber</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Phone Number: ${phoneCount}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//*[@id='product-holder']/div/ul/li[${phoneCount}]/div/h3</td>
+	<td>phoneName</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Phone Name: ${phoneName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//*[@id='product-holder']/div/ul/li[${phoneCount}]/div/div[3]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//*[@id='content']/div[2]/div[1]/div[3]/div/div/div[3]/form[1]/button</td>
+	<td>OnStock</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Phone on stock? = ${OnStock}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${OnStock}==false</td>
+	<td>oos</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=form[name=&quot;addToBasket2&quot;] &gt; button.btn.btn-sml</td>
+	<td></td>
+</tr>
+<!--accessory-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=No, thank you</td>
+	<td></td>
+</tr>
+<!--PlanSuggestion-->
+<tr>
+	<td>storeText</td>
+	<td>xpath=//*[@id='prepaidOfferLabel']/span/span</td>
+	<td>offer</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Offer=${offer}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//*[@id='prepaidOfferLabel']/span</td>
+	<td></td>
+</tr>
+<!--PrePain Plan-->
+<tr>
+	<td>click</td>
+	<td>css=div.selectPlanPrepaidStyle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='prepaidOptions']/div[2]/div[${planCount}]/span[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@id='prepaidOptions']/div[2]/div[*]/span[1]</td>
+	<td>planNumber</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Prepaid Plan Number : ${planCount}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//*[@id='prepaidPlans']/div[1]/div[1]/div[1]</td>
+	<td>planLabel</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Prepaid Plan : ${planLabel}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.blockUI.blockOverlay</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[name=&quot;Add to basket&quot;]</td>
+	<td></td>
+</tr>
+<!--number-->
+<tr>
+	<td>click</td>
+	<td>id=tbc8_btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=generator</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>9000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//*[@id='order']</td>
+	<td></td>
+</tr>
+<!--privilege-->
+<tr>
+	<td>storeTextPresent</td>
+	<td> Prepaid Smartphone data offer 1GB </td>
+	<td>1gb</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=/html/body/div[7]/div[3]/div[2]/div/div/form/div[5]/div[2]/div[3]/li/div[1]</td>
+	<td>addonOffer</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${1gb}==true</td>
+	<td>1gbt</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=/html/body/div[7]/div[3]/div[2]/div/div/form/div[5]/div[2]/div[2]/li/div[1]</td>
+	<td>addonOffer</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>1gbt</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Addon = ${addonOffer}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=//*[@id='anghami-prepaid']/div[1]/h3/label</td>
+	<td>addon1</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Addon = ${addon1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='anghami-prepaid']/div[3]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='Continue to next step']</td>
+	<td></td>
+</tr>
+<!--basket-->
+<tr>
+	<td>storeText</td>
+	<td>css=p.title</td>
+	<td>BP</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Basket plan = ${BP} / Selected plan = ${planLabel}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=p.title</td>
+	<td>phoneNameBasket</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Phone name in basket: ${phoneNameBasket} / Phone name selected : ${phoneName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>xpath=/html/body/div[5]/div/div/div/div/div[2]/ul/li[1]/div/div[1]/form/table/tbody/tr[10]/td[1]/div/div[2]/p[1]</td>
+	<td>boffer</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Basket offer= ${boffer}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=/html/body/div[5]/div/div/div/div/div[2]/ul/li[1]/div/div[1]/form/table/tbody/tr[7]/td[1]/div/div[2]/p[1]</td>
+	<td>${addon1}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=/html/body/div[5]/div/div/div/div/div[2]/ul/li[1]/div/div[1]/form/table/tbody/tr[10]/td[1]/div/div[2]/p[1]</td>
+	<td>${addonOffer}</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.planCount++}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>javascript{storedVars.planCount == storedVars.planNumber + 1}</td>
+	<td>nextphone</td>
+</tr>
+<tr>
+	<td>gotolabel</td>
+	<td>repeatPhone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>nextphone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>oos</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars.phoneCount++}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>javascript{storedVars.phoneCount == storedVars.phoneNumber + 1}</td>
+	<td>end</td>
+</tr>
+<tr>
+	<td>gotolabel</td>
+	<td>newPhone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>end</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

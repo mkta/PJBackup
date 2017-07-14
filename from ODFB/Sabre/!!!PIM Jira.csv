@@ -1,0 +1,148 @@
+Issue Type,Summary,BUG Description,Linked issue,Epic Link,Labels,Priority,Status,Comments
+Bug,[Suggestion] Draft produs have corrupt image display.,"Draft produs have corrupt image display. 
+Please see screenshot.",,Product Lifecycle - PIM,,Low,To Do,21.01.2016 Geani: We should have an default image for all products that are in draft mode. An place holder image untill the produt is published.
+Bug,Name filter doesn't work,"Product tab - Name filter doesn't work unless selecting product from the list.
+26/01/2016 Geani: Please see comments",SAB-201,Search Products - PIM,,Medium,To Do,"04/01/2016 Geani: The filter is case senzitive ""nokia"" doesn't generate drop down list but ""Nokia"" does.
+26/01/2016: Geani Search now works but previous note still valid. "" The filter is case senzitive ""nokia"" doesn't generate drop down list but ""Nokia"" does.""
+25/02/2016 Geani: Name search only display PUBLISHED prodcuts"
+Bug,[Question] NullPointerException when creating new product,NullPointerException when creating new product com.brandpath.pim.web.controller.product.version.AssetVersion.initNewAsset(AssetVersion.java:383) com.brandpath.pim.web.controller.product.version.AssetVersion.showDimensionMin(AssetVersion.java:198) [:],,Product Lifecycle - PIM,,Medium,To Do,"5/02/2016 Geani: I didn't add this and I don't know how to retest this. It' doesn't reprodus on my side, or i don't test is correctely. 
+09/03/2016 Geani: Who added this? It was makred ""To Test"". I don't know who te retest this"
+Bug,Validation error goes out of error box.,Offerings Price list - Validation error goes out of error box.,,Offerings - PIM,,Medium,To Do,"PRICELISTTABSFORM:PRICELISTTABVIEWID:PRICELISTGENERALFORM:TYPE: VALIDATION ERROR: VALUE IS NOT VALID
+PRICELISTTABSFORM:PRICELISTTABVIEWID:PRICELISTGENERALFORM:TYPE: VALIDATION ERROR: VALUE IS NOT VALID"
+Bug,After some time (usuallty after being idle for 5 or so minutes) everything will stop working,"After some time (usuallty after being idle for 5 or so minutes) everything will stop working. To work again I need to refresh the page and log in again. then this error is displayed. After another refres everythig is working. 
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<partial-response id=""j_id1"">
+<error>
+<error-name>class javax.faces.application.ViewExpiredException</error-name>
+<error-message>
+<![CDATA[
+viewId:/pim/products/versionView/tabs/productTabs.xhtml - View /pim/products/versionView/tabs/productTabs.xhtml could not be restored.
+]]>
+</error-message>
+</error>
+</partial-response>",,Integration - PIM,,Medium,To Do,"ERROR [org.keycloak.adapters.RefreshableKeycloakSecurityContext] (default task-30) Refresh token failure status: 400 {""error_description"":""Refresh token expired"",""error"":""invalid_grant""}
+
+08/02/2016 Geani: Reopen as the issue still occurs"
+Bug,"After retiring a product, there should be an option to reaactivate the product.","Products - After retiring a product, there should be an option to reaactivate the product.
+Note: ""Back to listing"" button is not working after the product is retired. 
+Note2: No error is displayed in the logs",SAB-196,Product Lifecycle - PIM,,Medium,To Do,"08/02/2016 Geani: Can Not Test due to issue 55
+22/02/2016 Geani : Reopen, issue still occurs"
+Bug,Product variant creation doesn't work.,"Product variant creation doesn't work. Clicking ""create"" does nothing.
+
+Later update: The variant is created in product list but no message is displayed at creation, and the ""related product"" list is not updated/remains empty. 
+This issue can generate duplicate products.",SAB-209,Product Variants - PIM,,High,In Progress,"On logs, after this line 
+SEVERE [javax.enterprise.resource.webcontainer.jsf.context] (default task-18) javax.faces.el.EvaluationException: javax.ejb.EJBException: java.lang.ClassCastException: java.lang.String cannot be cast to com.brandpath.pim.model.template.TemplateProductPropertyValue
+
+lots of message appears"
+Bug,The following warning is displayed in growl when product details page is loaded: The form component needs to have a UIForm in its ancestry. Suggestion: enclose the necessary components within <h:form>,"The following warning is displayed in growl when product details page is loaded:
+The form component needs to have a UIForm in its ancestry. Suggestion: enclose the necessary components within <h:form>
+
+",,Integration - PIM,,Medium,To Do,"Probably due to lack of standard html namespace declaration in the page header or missing <h:form> tag. Should not be solved by setting ""severity"" parameter on growl component"
+Bug,Messaging service corrupted in PIM,Messaging service corrupted in PIM - list of recipients not being loaded.,,Services - PIM,,Medium,To Do,
+Bug,The default currency can't be changed.,"After creating a price list, the default currency can't be changed.",,Offerings - PIM,,Low,To Do,24/02/2016 Geani : Can not retest due to issue 63
+Bug,Assets can't be uploaded.,"Product Creation - Assets can't be uploaded.
+Afer pressing ""add"" nothing happens, the the log generates this long (the text is too long to paste it here) error 
+ERROR [com.brandpath.pim.web.controller.product.version.AssetVersion] (default task-8) ERROR: java.lang.NullPointerException
+19/02/2016 Geani: Has this fix been deployed?",,Product Lifecycle - PIM,,High,In Progress,"19/02/2016 Geani: Has this fix been deployed? 
+24/02/2016 Geani : Can not test due to issue 60
+25/02/2016 Geani: Please see issue 71 
+07/03/2016 PiotrI: Short investigation shows a problem with Calendar validation"
+Bug,"Pressing ""edit"" under the first asset image does nothing","Product Draft Edit - Pressing ""edit"" under the first asset image does nothing",,Product Lifecycle - PIM,,Medium,To Do,24/02/2016 Geani : Can not retest due to issue 60
+Bug,"While editing an already uploaded asset and changing the image, then pressing ""Save"" nothing will happen","Product Draft Edit - While editing an already uploaded asset and changing the image, then pressing ""Save"" Nothing will happen and lots of errors appear in the log (too many to paste them here)",,Product Lifecycle - PIM,,High,To Do,"24/02/2016 Geani : Can not retest due to issue 60
+25/02/2016 Geani: I need to retest this
+09/03/2016 Geani: Issue still occurs"
+Bug,[Suggestion] Product/Offerings to be able to open in browser tabs,Product/Offerings to be able to open in browser tabs,,Integration- PIM,,Low,To Do,
+Bug,Product drafts can't enter in EDIT mode.,"Product drafts can't enter in EDIT mode.
+Two errors ""May not be null"" appear when pressing EDIT.
+Because of this issue new prodcuts can't be created.
+No ERROR apprear in the logs.
+NOTE THIS ISSUE ONLY OCCURS IN TYPE ""MOBILE""",,Product Lifecycle - PIM,,Low,To Do,"25/02/2016 Geani : THIS ISSUE OCCURS ONLY ON TYPE ""MOBILE""
+07/03/2016 Piotri: The issue is related with Product Template configuration - there are dropdown properties with no values pre-populated. This should be handled gracefully, but it's not actually an error."
+Bug,Export buttons don't work,Export buttons don't work,,Integration- PIM,,Medium,To Do,
+Bug,"Creating a too long name result in a ""null"" value message","Products - manufacturer - creating a too long name result in a ""null"" value message 
+Name i tried : geani test manufacturere tag 
+Message : MAXIMUM LENGTH FOR THE PROPERTY ""NULL"": 1",,Product Properties - PIM,,Medium,To Do,
+Bug,Media Asset Tab is empty,Media Asset Tab is empty,,Integration- PIM,,Medium,To Do,
+Bug,"Catalogue type descprion generates this message MAXIMUM LENGTH FOR THE PROPERTY ""NULL"": 1","Administraction - products - catalogue type descprion generates this message MAXIMUM LENGTH FOR THE PROPERTY ""NULL"": 1
+Descprion used : adm geani test catalogue type",,Product Properties - PIM,,Medium,To Do,
+Bug,Pressing the box to select all visible voucer instances doesn't activate buttons to delete or modify the vouchers,Voucher Instancces - Pressing the box to select all visible voucer instances doesn't activate buttons to delete or modify the vouchers,SAB-228,Vouchers - PIM,,Medium,To Do,
+Bug,"After creating an offering, entering on draft mode will remove all details.","Offerings details - After creating an offering, entering on draft mode will remove all details.
+Also not all fiels added by the ""+"" have the option to be removed
+If an filed is left empy after saving the draft, trying to publish it will give validation error. But if in this state text is introduced (without editing the draft) the validation error doesn't occur but the offering is published with an empty field",,Offerings - PIM,,Medium,To Do,25/02/2016 Geani: If it isn't clear please call me on skype
+Bug,[Question] Why only pricelist without offerings are displayed?,Offerings price list - Why only pricelist without offerings are displayed?,,Offerings - PIM,,Medium,To Do,
+Bug,Publishing offerings doesn't update the title untill refreshign the page,"Offerings - publishing offerings doesn't update the title untill refreshign the page : 
+(geani offering 2602 1410 [Draft v.1)]) 
+STATUS
+PUBLISHED (V.1)",,Offerings - PIM,,High,To Do,
+Bug,"In orde to create an offering you must add the the device and click save enter in edit mode, add details, save","Offering creation - In orde to create an offering you must add the the device and click save
+enter in edit mode, add details, save
+enter edit mode again, add price list, save, publish
+Everythign should be done in one EDIT,SAVE,PUBLISH
+8/4/2016 Geani: Please see comments",,Offerings - PIM,,High,To Do,"8/4/2016 Geani: After entering in edit mode, select ""Testlist2"" add a price list THEN add a product to the offering, the details and the price list will be rest if the draft was not saved before adding the product. ## Cristian: To approve if not auto refreshing of product add is an accepted solution. Details and Pricelist tabs are not cleaned anymore before Save.
+14/03/2016 Geani: After adding product it cant be see in Draft Edit mode. After pressing save a null offering is displayed"
+Bug,Assigned pricelist can't be removed,Offerings price list - assigned pricelist can't be removed,,Offerings - PIM,,Medium,To Do,
+Bug,Search for a text in the middle of a name displays 0 result,Product name search - Search for a text in the middle of a name displays 0 result,,Search Products - PIM,,Medium,To Do,
+Bug,[Question] Assigned products can't be removed or edited after publishing,"Offerings - Assigned products can't be removed or edited after publishing.
+Note: new produts can't be added to the offering",,Offerings - PIM,,High,To Do,
+Bug,Default status filter only show Published products,Default status filter only show Published prodcuts,,Search Products - PIM,,Medium,To Do,
+Bug,"After pressing ""create"" button the form is closed but the variant is not created","Offering variant - after pressing ""create"" button the form is closed but the variant is not created",,Offerings - PIM,,High,In Progress,"10/3/2016 maciejs: offering variant can be created after filling in all mandatory input filelds.
+Offering variants list is updated as well."
+Bug,No mouse over description for copy button,Product history - no mouse over descriop for copy button,,Product Lifecycle - PIM,,Low,To Do,
+Bug,According to HLR search/filters for product history is missing.,"Product history - According to HLR search/filters for product history is missing. 
+Also details about product details is missing from history tab",,Product Lifecycle - PIM,,Low,To Do,
+Bug,According to HLR - HTML description is missing from products/offerings/bundles,According to HLR - HTML description is missing from products/offerings/bundles,,Product Lifecycle - PIM,,High,To Do,7/3/2016 PiotrI: Configuration issue
+Bug,According to HLR - Offerings (bundles) option for uploading images is missing,According to HLR - Offerings (bundles) option for uploading images is missing,,Offerings - PIM,,High,To Do,07/03/2016: Functionality is underdevlopment
+Bug,Redirects (to OMS/CAI from the upper tab buttons) are invallid,Redirects (to OMS/CAI from the upper tab buttons) are invallid,,Integration - PIM,,Low,To Do,
+Bug,According to HLR (rediness) - Ratings & Reviews functionalilty is missing from PIM,According to HLR (rediness) - Ratings & Reviews functionalilty is missing from PIM,SAB-238,Star Ratins - PIM,,Medium,To Do,
+Bug,According to HLR (rediness) - Assigning accesory to products functionality is missing,According to HLR (rediness) - Assigning accesory to products functionality is missing,SAB-242,Product Accessories - PIM,,Medium,To Do,
+Bug,"While you are on edit mode, in price listing tab, when you try to schedule the product there is a display issue","Offerings tab, While you are on edit mode, in price listing tab, when you try to schedule the product there is a display issue on ""Select time"" category 
+( check screenshot id 37 )",,Offerings - PIM,,Low,To Do,
+Bug,According to HLR (rediness) - Option to clone product is missing,According to HLR (rediness) - Option to clone product is missing,SAB-249,Cloning Products - PIM,,Medium,To Do,
+Bug,According to HLR (rediness) - Services are missing,According to HLR (rediness) - Services are missing,SAB-250,Services - PIM,,Medium,To Do,
+Bug,According to HLR (rediness) - Trade-in checkbox/field is missing,According to HLR (rediness) - Trade-in checkbox/field is missing,SAB-263,Trade-ins - PIM,,Medium,To Do,
+Bug,"Price list tab, when you set a schedule date and hour, that information is not listed anywhere.","Offerings tab - Edit the product - Price list tab, when you set a schedule date and hour, that information is not listed anywhere. Option to edit/cancel the schedule should also be available",,Offerings - PIM,,Medium,To Do,
+Bug,"Abort draft doesnt work unless you complete the ""Date"" field","Abort draft doesnt work unless you complete the ""Date"" field, 
+""May not be null"" validation error appears.",,Product Lifecycle - PIM,,High,To Do,07/03/2016: Should be fixed with Bug#51
+Bug,"Price list details, history is empty.","Price list details, history is empty.",,Offerings - PIM,,Low,To Do,
+Bug,No Popup message on product workflow actions,"No Popup message on product workflow actions (i.e. Save, Publish etc).",,Product Lifecycle - PIM,,Low,To Do,
+Bug,Errors in logs when saving Offerings,Errors in logs when saving Offerings (functionality seems to be working),,Offerings - PIM,,Medium,To Do,"2016-03-07 13:27:14,078 ERROR [org.jboss.as.ejb3.invocation] (default task-13) JBAS014134: EJB Invocation failed on component ProductVersionService for method public com.brandpath.pim.model.product.ProductVersion com.brandpath.pim.business.service.product.ProductVersionService.findProductVersionWithInitialization(java.lang.Integer) throws com.brandpath.commons.business.exception.ServiceException: javax.ejb.EJBException: javax.persistence.NoResultException: No entity found for query
+"
+Bug,Price List at offerings can't be searched,Price List at offerings can't be searched,,Offerings - PIM,,High,To Do,"2016-03-07 13:29:31,596 ERROR [org.jboss.as.ejb3] (default task-17) javax.ejb.EJBTransactionRolledbackException: Parameter value [1, BPCREFSITE, BPC Reference Site] did not match expected type [com.brandpath.pim.model.offering.PriceListType (n/a)]"
+Bug,Performance of the product details page,Performance of the product details page - over 900 queries executed when opening this page,,Integration - PIM,,Medium,To Do,
+Bug,In Related offerings tab - exception occurs,In Related offerings tab - exception occurs - can't view the offering (if related offerings exists),,Offerings - PIM,,High,In Progress,
+Bug,Price list - cannot view more than 1 price type,Price list - cannot view more than 1 price type,SAB-217,Offerings - PIM,,Medium,To Do,
+Bug,Offerings listing - cannot change paging,Offerings listing - cannot change paging,,Offerings - PIM,,Low,In Progress,"Fixed, paging is now available. Cristian"
+Bug,Images are not visible in the offerings,Images are not visible in the offerings,,Offerings - PIM,,Medium,To Do,3/7/2016 PiotrI: We need to change the logic on how images are viewed for offerings
+Bug,Product creation - Led Lamp - Error generated in the logs,"Product creation - Led Lamp - Error generated in the logs
+Details are missing
+Assets can't be uploaded. ""Choose"" button is missing
+Product can't be published.",,Product Lifecycle - PIM,,High,To Do,"2016-03-10 10:30:42,940 ERROR [com.brandpath.pim.web.controller.product.version.AssetVersion] (default task-31) ERROR: java.lang.NullPointerException
+"
+Bug,Offerings - Assets can't be uploaded,"Offerings - Assets can't be uploaded. ""Choose"" button is missing",,Offerings - PIM,,Medium,To Do,
+Bug,Offerings - The view/edit button is missing on some resolutions,"Offerings - The view/edit button is missing on some resolutions, tested on 1280x1024 resolution and 1366x768",,Offerings - PIM,,High,To Do,
+Bug,Adding multiple price list to an offering,"Offerings - Adding multiple price list to an offering will display ""Price 0"" on offering listing page",SAB-217,Offerings - PIM,,High,To Do,
+Bug,"When you add an asset there is a blue square, which if you click it and try to add another image you get the following error","Product - Asset - When you add an asset there is a blue square, which if you click it and try to add another image you get the following error : Maximum number of files exceeded, please check ( screenshot 56 )",,Product Lifecycle - PIM,,Low,To Do,
+Bug,Mobile type creates duplicate products,Product creation - Mobile type creates duplicate products,,Product Lifecycle - PIM,,High,In Progress,"As tested in pimtest(15mar.) mobile type product creation creates the right number of products - only one. ## Can someone please check if bug is reproducible elsewhere?
+
+15/03/2016 13:57 Geani: Pleasee product geani duplicate test 15032015 1325 v1, in prodcut listing appear two of them) Screenshot for confrimation attached. Please see screenshot 111"
+Bug,"Voucher ""applies to"" - not generic enough","Voucher ""applies to"" - not generic enough. What is 'an order without items'",,Vouchers - PIM,Nominal,Medium,To Do,
+Bug,Type = change from individual / open to single use / multiple use,Type = change from individual / open to single use / multiple use,,Integration - PIM,Nominal,Medium,To Do,
+Bug,Max/Min spend should have unlimited as option,Max/Min spend should have unlimited as option (and default to),,Integration - PIM,Nominal,Medium,To Do,
+Bug,Available from / to = add time (as well as date).,Available from / to = add time (as well as date). Applies to all scheduling options,,Integration - PIM,Nominal,Medium,To Do,
+Bug,Add unlimited usage option,Usage - Add unlimited usage option,,Integration - PIM,Nominal,Medium,To Do,
+Bug,Consistency of download icons across all modules,"Consistency of download icons across all modules (ie. Excel, PDF)",,Integration - PIM,Nominal,Medium,To Do,
+Bug,Vouchers nust not be included automatically to new offerings,Vouchers nust not be included automatically to new offerings - logic,,Vouchers - PIM,Nominal,Medium,To Do,
+Bug,Brandpath favicons not consistent across all modules,Brandpath favicons not consistent across all modules,,Integration - PIM,Nominal,Medium,To Do,
+Bug,"Add categories to ""applies to"" filter","Categories - Add categories to ""applies to"" filter",,Prodcut Categories - PIM,Nominal,Medium,To Do,
+Bug,Assign products - needs reviewing,Assign products - needs reviewing. Just long list of products. UI for adding products needs re-engineering. Remove drop down.,,Offerings - PIM,Nominal,Medium,To Do,
+Bug,Do not centralise code and name columns in product listing page / PIM,Do not centralise code and name columns in product listing page / PIM,,Integration - PIM,Nominal,Medium,To Do,
+Bug,Mapping of Samsung codes to Tetra codes – 20 characters max.,Mapping of Samsung codes to Tetra codes – 20 characters max.,,Integration - PIM,Nominal,High,To Do,
+Bug,Design guidelines. Consistency of signposts,Design guidelines. Consistency of signposts – buttons – all in one place etc.,,Integration - PIM,Nominal,Medium,To Do,
+Bug,Need to see main variant in related product section,Variant page – Need to see main variant in related product section,,Prodcut Variants - PIM,Nominal,Medium,To Do,
+Bug,Remove Tax Rate field when setting up offering,Remove Tax Rate field when setting up offering,,Offerings - PIM,Nominal,Medium,To Do,
+Bug,“DFCDF” - remove from offering details,“DFCDF” - remove from offering details,,Offerings - PIM,Nominal,Medium,To Do,
+Bug,Default to existing chosen prices without searching,Price lists – default settings – default to existing chosen prices without searching,,Offerings - PIM,Nominal,Medium,To Do,
+Bug,After creating a new product the initial catalogue and category will be reset,After creating a new product the initial catalogue and category will be reset on enterign for the first time in draft mode,,Product Lifecycle - PIM,,Medium,To Do,
+Bug,Offering price list are displayed only for the default (first) channel,Offering price list are displayed only for the default (first) channel,,Offerings - PIM,,High,To Do,
+Bug,Prices should have 2 decimals format (DB constraint),Prices should have 2 decimals format (DB constraint),SAB-216,Offerings - PIM,,Medium,To Do,
+Bug,VAT should be set in PIM for each shop,VAT should be set in PIM for each shop,,Product Properties - PIM,,Medium,In Progress,See Bug ID 43 (Web Page Bug List)
